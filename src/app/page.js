@@ -65,22 +65,13 @@ export default function Home() {
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             <div className="lg:col-span-6">
-              <div className="mb-8">
+              <div>
                 <Image 
-                  src="/about-arteng-team.jpg" 
+                  src="/about-arteng-team.jpg" // Replace with actual image
                   alt="ArtEng Team" 
                   width={600} 
                   height={400} 
-                  className="rounded-md"
-                />
-              </div>
-              <div>
-                <Image 
-                  src="/about-arteng-vision.jpg" 
-                  alt="ArtEng Vision" 
-                  width={600} 
-                  height={250} 
-                  className="rounded-md"
+                  className="rounded-md w-full"
                 />
               </div>
             </div>
@@ -108,9 +99,12 @@ export default function Home() {
                 </div>
               </div>
               
-              <Link href="/about-us" className="bg-arteng-dark text-white px-6 py-2 rounded inline-block hover:bg-opacity-90 transition-colors">
-                More Info
-              </Link>
+              {/* Button centered under the right column content */}
+              <div className="flex justify-center mt-6">
+                <Link href="/about-us" className="bg-arteng-dark text-white px-6 py-2 rounded inline-block hover:bg-opacity-90 transition-colors">
+                  More Info
+                </Link>
+              </div>
             </div>
           </div>
         </div>
