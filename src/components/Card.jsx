@@ -13,7 +13,7 @@ const Card = ({
   location = null
 }) => {
   return (
-    <div className="bg-white rounded-md overflow-hidden shadow-sm border border-gray-200">
+    <div className="bg-white rounded-md overflow-hidden shadow-sm border border-gray-200 flex flex-col h-full">
       <div className={`relative ${aspectRatio} bg-gray-200`}>
         {imageUrl ? (
           <Image
@@ -28,12 +28,12 @@ const Card = ({
           </div>
         )}
       </div>
-      <div className="p-4">
+      <div className="p-4 flex-grow flex flex-col">
         <h3 className="font-bold text-lg mb-2 text-arteng-dark">{title}</h3>
         <p className="text-gray-600 mb-4 text-sm line-clamp-3">{description}</p>
         
         {(dateTime || location || hostedBy) && (
-          <div className="mb-4 text-sm space-y-1">
+          <div className="mb-4 text-sm space-y-1 flex-grow">
             {dateTime && (
               <div className="flex items-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -62,9 +62,11 @@ const Card = ({
           </div>
         )}
         
-        <Link href={link} className="inline-block bg-arteng-dark text-white px-4 py-1 rounded text-sm hover:bg-opacity-90 transition-colors">
-          {linkText}
-        </Link>
+        <div className="mt-auto">
+          <Link href={link} className="inline-block bg-arteng-dark text-white px-4 py-1 rounded text-sm hover:bg-opacity-90 transition-colors w-24 text-center">
+            {linkText}
+          </Link>
+        </div>
       </div>
     </div>
   );

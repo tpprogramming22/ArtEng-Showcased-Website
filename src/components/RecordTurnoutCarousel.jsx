@@ -6,6 +6,7 @@ import Image from 'next/image';
 
 const RecordTurnoutCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
 
   // Carousel slide data with different background images
   const slides = [
@@ -32,13 +33,31 @@ const RecordTurnoutCarousel = () => {
     }
   ];
 
-  // Auto carousel every 5 seconds
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setCurrentSlide((prev) => (prev + 1) % slides.length);
-//     }, 5000);
-//     return () => clearInterval(interval);
-//   }, []);
+  // Preload all carousel images
+  useEffect(() => {
+    const preloadImages = async () => {
+      try {
+        const imagePromises = slides.map(
+          (slide) =>
+            new Promise((resolve, reject) => {
+              const img = new Image();
+              img.src = slide.backgroundImage;
+              img.onload = resolve;
+              img.onerror = reject;
+            })
+        );
+        
+        await Promise.all(imagePromises);
+        setImagesLoaded(true);
+      } catch (error) {
+        console.error("Error preloading images:", error);
+        // Still set as loaded even if there's an error to avoid blocking UI
+        setImagesLoaded(true);
+      }
+    };
+
+    preloadImages();
+  }, []);
 
   const goToSlide = (index) => {
     setCurrentSlide(index);
@@ -55,12 +74,13 @@ const RecordTurnoutCarousel = () => {
   return (
     <section className="relative">
       <div className="relative h-[400px] overflow-hidden">
-        {/* Background image - different selected image based on current slide */}
+        {/* Background image - dynamically selected based on current slide */}
         <Image 
           src={slides[currentSlide].backgroundImage}
           alt="Slide Background"
           fill
-          className="object-cover object-top transition-opacity duration-500"
+          priority={true}
+          className="object-cover object-top transition-opacity duration-300"
           style={{ objectPosition: "center 30%" }}
         />
         
@@ -88,9 +108,9 @@ const RecordTurnoutCarousel = () => {
                 {slides[currentSlide].linkText}
               </Link>
               
-              {/* Nav controls */}
+              {/* Navigation controls */}
               <div className="flex justify-center items-center space-x-4">
-                {/* Left Arrow */}
+                {/* Left arrow */}
                 <button 
                   onClick={goToPrevSlide}
                   className="bg-white bg-opacity-50 p-1 rounded hover:bg-opacity-70 transition-opacity"
@@ -100,7 +120,7 @@ const RecordTurnoutCarousel = () => {
                   </svg>
                 </button>
                 
-                {/* indicators */}
+                {/* Indicators */}
                 <div className="flex space-x-2">
                   {slides.map((_, index) => (
                     <button 
