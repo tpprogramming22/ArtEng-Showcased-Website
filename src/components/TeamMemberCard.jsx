@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const TeamMemberCard = ({ name, role, imageUrl, description }) => {
   return (
-    <div className="bg-white rounded-md overflow-hidden shadow-sm">
+    <div className="bg-white rounded-md overflow-hidden shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-300">
       <div className="relative aspect-square bg-gray-200">
         {imageUrl ? (
           <Image
