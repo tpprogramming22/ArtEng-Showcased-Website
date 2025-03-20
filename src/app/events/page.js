@@ -8,7 +8,7 @@ export default function EventsPage() {
     id: i + 1,
     title: "Why We Need Engineering",
     description: "Exploring the role of engineering in modern art and experience design, focusing on innovative approaches to problem-solving and creative execution.",
-    imageUrl: "/api/placeholder/400/300",
+    imageUrl: "/engineering-exhibition.jpg",
     dateTime: "Saturday 5th April - 09:00 AM - 5:00 PM",
     location: "Main Auditorium",
     hostedBy: "John Smith"

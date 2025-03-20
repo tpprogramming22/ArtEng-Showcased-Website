@@ -8,31 +8,31 @@ export default function PartnersPage() {
     {
       id: 1,
       name: "Honda",
-      logo: "/api/placeholder/120/80",
+      logo: "/honda-logo.jpg",
       description: "Proudly supported by Honda, committed to excellence in the field and pushing boundaries of innovation."
     },
     {
       id: 2,
       name: "Lloyd's Bank",
-      logo: "/api/placeholder/120/80",
+      logo: "/lloyds-logo.jpg",
       description: "In partnership with Lloyd's Bank, supporting innovation and creativity through financial expertise."
     },
     {
       id: 3,
       name: "KPMG",
-      logo: "/api/placeholder/120/80",
+      logo: "/kpmg-logo.jpg",
       description: "Proudly supported with professional and accounting services from KPMG, enabling our growth."
     },
     {
       id: 4,
       name: "Node.js",
-      logo: "/api/placeholder/120/80",
+      logo: "/nodejs-logo.jpg",
       description: "Powered by Node.js, enabling high-performance and scalable applications for our digital initiatives."
     },
     {
       id: 5,
       name: "Tesla",
-      logo: "/api/placeholder/120/80",
+      logo: "/tesla-logo.jpg",
       description: "Supported by Tesla, both companies share a vision for a sustainable future through innovation."
     }
   ];
@@ -40,14 +40,14 @@ export default function PartnersPage() {
   const supportingPartners = Array(8).fill().map((_, i) => ({
     id: i + 6,
     name: `Partner ${i + 1}`,
-    logo: "/api/placeholder/120/80",
+    logo: "/lloyds-logo.jpg",
     description: "Supporting ArtEng's mission to bring art and engineering together for innovative solutions."
   }));
 
   const communityPartners = Array(6).fill().map((_, i) => ({
     id: i + 14,
     name: `Community Org ${i + 1}`,
-    logo: "/api/placeholder/120/80",
+    logo: "/honda-logo.jpg",
     description: "Collaborating on community initiatives to expand access to art and technology education."
   }));
 
@@ -93,7 +93,7 @@ export default function PartnersPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative h-80 bg-gray-200 rounded-md overflow-hidden">
               <Image 
-                src="/api/placeholder/600/400" 
+                src="/engineering-forum.jpg" 
                 alt="Partnership Opportunities" 
                 fill
                 className="object-cover"

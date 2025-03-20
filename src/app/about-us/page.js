@@ -10,42 +10,42 @@ export default function AboutUsPage() {
       name: "Jane Smith",
       role: "Creative Director",
       description: "Leads our creative vision with over 15 years of experience in interactive design and digital art installations.",
-      imageUrl: "/api/placeholder/300/300"
+      imageUrl: "/jane-smith.jpg"
     },
     {
       id: 2,
       name: "John Smith",
       role: "Marketing Director",
       description: "Drives our brand strategy with innovative approaches to engagement and audience development.",
-      imageUrl: "/api/placeholder/300/300"
+      imageUrl: "/john-smith.jpg"
     },
     {
       id: 3,
       name: "Jess Smith",
       role: "Events Director",
       description: "Orchestrates our world-class events with precision and creativity, ensuring memorable experiences.",
-      imageUrl: "/api/placeholder/300/300"
+      imageUrl: "/jess-smith.jpg"
     },
     {
       id: 4,
       name: "James Wilson",
       role: "Technical Lead",
       description: "Oversees all technical aspects of our projects, bringing engineering excellence to creative concepts.",
-      imageUrl: "/api/placeholder/300/300"
+      imageUrl: "/john-smith.jpg"
     },
     {
       id: 5,
       name: "Sarah Johnson",
       role: "Operations Manager",
       description: "Ensures seamless execution of all our initiatives, maintaining high standards across the organization.",
-      imageUrl: "/api/placeholder/300/300"
+      imageUrl: "/jane-smith.jpg"
     },
     {
       id: 6,
       name: "Michael Chang",
       role: "Community Liaison",
       description: "Builds relationships with artists, engineers, and partners to foster a thriving creative ecosystem.",
-      imageUrl: "/api/placeholder/300/300"
+      imageUrl: "/john-smith.jpg"
     }
   ];
 
@@ -82,7 +82,7 @@ export default function AboutUsPage() {
             
             <div className="relative h-80 bg-gray-200 rounded-md overflow-hidden">
               <Image 
-                src="/api/placeholder/600/400" 
+                src="/award-background.png" 
                 alt="ArtEng History" 
                 fill
                 className="object-cover"

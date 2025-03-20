@@ -15,7 +15,7 @@ const RecordTurnoutCarousel = () => {
       description: "ArtEng is delighted to announce its busiest quarter yet, smashing targets by 12%.",
       link: "/news/record-turnout",
       linkText: "More Info",
-      backgroundImage: "/backgroundforarteng.png"
+      backgroundImage: "/wallpaper4.jpg"
     },
     {
       title: "New Partnerships",

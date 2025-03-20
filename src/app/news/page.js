@@ -9,21 +9,21 @@ export default function NewsPage() {
       id: 1,
       title: "ArtEng Acquires Tecla Studios",
       description: "Exciting news as we expand our capabilities with this new acquisition, providing greater opportunities for innovative projects and partnerships.",
-      imageUrl: "/api/placeholder/400/300",
+      imageUrl: "/tecla-studios.jpg",
       date: "March 5, 2025"
     },
     {
       id: 2,
       title: "CEO named as finalist for Innovation Award",
       description: "Our leadership continues to be recognized in the industry with this prestigious nomination that highlights our commitment to pushing boundaries.",
-      imageUrl: "/api/placeholder/400/300",
+      imageUrl: "/innovation-awards.jpg",
       date: "February 28, 2025"
     },
     {
       id: 3,
       title: "2024 - What a Year",
       description: "A look back at our achievements and milestones from the past year, celebrating the growth and success of our community and projects.",
-      imageUrl: "/api/placeholder/400/300",
+      imageUrl: "/eoy-celebration.jpg",
       date: "January 15, 2025"
     }
   ];
@@ -32,7 +32,7 @@ export default function NewsPage() {
     id: i + 4,
     title: `Recent Industry Development ${i + 1}`,
     description: "Exploring recent changes and innovations in the art and engineering intersection, with implications for future creative projects.",
-    imageUrl: "/api/placeholder/400/300",
+    imageUrl: "/engineering-celebration.jpg",
     date: `March ${i + 1}, 2025`
   }));
 
