@@ -3,8 +3,12 @@
 import Link from 'next/link';
 import SectionHeader from '@/components/SectionHeader';
 import Article from '@/components/Article';
+import MailtoNotifyForm from '@/components/SignUp';
+import { useState } from 'react';
 
 export default function EventsPage() {
+
+  const [showForm, setShowForm] = useState(false);
 
   const eventsMain = [
     {
@@ -51,6 +55,9 @@ export default function EventsPage() {
     }
   ];
 
+  const toggleForm = () => {
+    setShowForm(prevState => !prevState);
+  };
 
   return (
 <div className="min-h-screen flex flex-col bg-white">
@@ -67,9 +74,12 @@ export default function EventsPage() {
       <div className="bg-white p-8 rounded-lg shadow-lg text-center max-w-md mt-[-115px]">
         <h2 className="text-2xl font-bold text-gray-800 mb-3">Coming Soon</h2>
         <p className="text-gray-600 mb-4">We're working hard to bring you the highest quality content. Please check back later!</p>
-        <button className="bg-arteng-dark text-white px-6 py-2 rounded hover:bg-opacity-90 transition-colors">
-          Notify Me
-        </button>
+          <button onClick={toggleForm} className="bg-arteng-dark text-white px-6 py-2 rounded hover:bg-opacity-90 transition-colors"> {showForm ? 'Hide Form' : 'Notify Me'} </button>
+          {showForm && (
+          <div className="mt-6 border-t pt-6 border-gray-200">
+            <MailtoNotifyForm />
+          </div>
+        )}
       </div>
     </div>
 
