@@ -72,12 +72,6 @@ export default function AboutUsPage() {
               <p className="mb-4">
                 We are four individuals brought together by our expertise in our respective fields. ArtEng came from the idea that the diverse worlds of art and engineering could work together to offer innovative solutions in their own unique ways. To find out more about who we are, take a look at who are.
               </p>
-              <p className="mb-4">
-                We believe that the most innovative solutions emerge when diverse perspectives come together. By creating spaces where artists and engineers can collaborate, we've facilitated the development of groundbreaking projects that neither group could have accomplished alone.
-              </p>
-              <p>
-                Today, ArtEng hosts events, workshops, and exhibitions worldwide, bringing together creative minds from various backgrounds to explore new possibilities in art and technology.
-              </p>
             </div>
             
             <div className="relative h-80 bg-gray-200 rounded-md overflow-hidden">
