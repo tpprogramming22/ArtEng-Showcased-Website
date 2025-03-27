@@ -14,6 +14,7 @@ const Navbar = () => {
       <div className="flex items-center space-x-8">
         <Link href="/" className="text-lg hover:underline">Home</Link>
         <Link href="/events" className="text-lg hover:underline">Events</Link>
+        <Link href="/articles" className="text-lg hover:underline">Articles</Link>
         <Link href="/news" className="text-lg hover:underline">News</Link>
         <Link href="/about-us" className="text-lg hover:underline">About Us</Link>
         <Link href="/partners" className="text-lg hover:underline">Partners</Link>
