@@ -137,18 +137,30 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {/* Our Values */}
-      <section className="py-16 px-4 md:px-8 bg-gray-50">
+      <section className="py-16 px-4 md:px-8">
         <div className="container mx-auto">
           <SectionHeader 
             title="Our Story" 
             subtitle="How We Started" 
           />
           
-          <p className="mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="mb-4">
                 We are four individuals brought together by our expertise in our respective fields. ArtEng came from the idea that the diverse worlds of art and engineering could work together to offer innovative solutions in their own unique ways. To find out more about who we are, take a look at who are.
-          </p>
+              </p>
+            </div>
+            
+            <div className="relative h-80 bg-gray-200 rounded-md overflow-hidden">
+              <Image 
+                src="/award-background.png" 
+                alt="ArtEng History" 
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
       </section>
-    </div>
   );
 }
