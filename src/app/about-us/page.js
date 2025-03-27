@@ -137,30 +137,36 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      <section className="py-16 px-4 md:px-8">
+      {/* Our Values */}
+      <section className="py-16 px-4 md:px-8 bg-gray-50">
         <div className="container mx-auto">
           <SectionHeader 
-            title="Our Story" 
-            subtitle="How We Started" 
+            title="Our Values" 
+            subtitle="What We Stand For" 
           />
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="mb-4">
-                We are four individuals brought together by our expertise in our respective fields. ArtEng came from the idea that the diverse worlds of art and engineering could work together to offer innovative solutions in their own unique ways. To find out more about who we are, take a look at who are.
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-md shadow-sm">
+              <h3 className="text-xl font-bold text-arteng-dark mb-3">Creativity Without Boundaries</h3>
+              <p className="text-gray-600">
+                We believe in pushing the limits of what's possible when art and technology combine, encouraging experimentation and bold ideas.
               </p>
             </div>
-            
-            <div className="relative h-80 bg-gray-200 rounded-md overflow-hidden">
-              <Image 
-                src="/award-background.png" 
-                alt="ArtEng History" 
-                fill
-                className="object-cover"
-              />
+            <div className="bg-white p-6 rounded-md shadow-sm">
+              <h3 className="text-xl font-bold text-arteng-dark mb-3">Collaborative Excellence</h3>
+              <p className="text-gray-600">
+                We foster environments where diverse perspectives and skills can come together to create something greater than the sum of its parts.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-md shadow-sm">
+              <h3 className="text-xl font-bold text-arteng-dark mb-3">Accessible Innovation</h3>
+              <p className="text-gray-600">
+                We strive to make the intersection of art and engineering accessible to all, regardless of background or experience level.
+              </p>
             </div>
           </div>
         </div>
       </section>
+    </div>
   );
 }
