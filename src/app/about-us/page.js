@@ -70,7 +70,7 @@ export default function AboutUsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <p className="mb-4">
-                ArtEng began as a small collective of artists and engineers who shared a passion for interdisciplinary collaboration. What started as informal meetups in 2000 has grown into a respected organization at the intersection of art and technology.
+                We are four individuals brought together by our expertise in our respective fields. ArtEng came from the idea that the diverse worlds of art and engineering could work together to offer innovative solutions in their own unique ways. To find out more about who we are, take a look at who are.
               </p>
               <p className="mb-4">
                 We believe that the most innovative solutions emerge when diverse perspectives come together. By creating spaces where artists and engineers can collaborate, we've facilitated the development of groundbreaking projects that neither group could have accomplished alone.
