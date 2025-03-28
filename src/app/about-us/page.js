@@ -61,6 +61,9 @@ export default function AboutUsPage() {
 
       {/* Our Story */}
       <section className="py-8 px-4 md:px-8">
+          <div className="container mx-auto">
+          <div className="mb-4">
+          </div>
     
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
