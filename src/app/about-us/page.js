@@ -62,11 +62,12 @@ export default function AboutUsPage() {
       {/* Our Story */}
       <section className="py-8 px-4 md:px-8">
         <div className="container mx-auto">
-          <SectionHeader 
-            title="Our Story" 
-            subtitle="How We Started" 
-            className="mb-4" // if SectionHeader accepts className
-          />
+          <div className="mb-4">
+            <SectionHeader 
+              title="Our Story" 
+              subtitle="How We Started" 
+            />
+          </div>
     
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
@@ -87,6 +88,8 @@ export default function AboutUsPage() {
         </div>
       </section>
 
+
+  
       {/* Our Impact */}
       <section className="py-16 px-4 md:px-8 bg-gray-50">
         <div className="container mx-auto">
