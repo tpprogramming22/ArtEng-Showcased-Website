@@ -32,20 +32,6 @@ export default function AboutUsPage() {
       role: "Technical Lead",
       description: "Oversees all technical aspects of our projects, bringing engineering excellence to creative concepts.",
       imageUrl: "/john-smith.jpg"
-    },
-    {
-      id: 5,
-      name: "Sarah Johnson",
-      role: "Operations Manager",
-      description: "Ensures seamless execution of all our initiatives, maintaining high standards across the organization.",
-      imageUrl: "/jane-smith.jpg"
-    },
-    {
-      id: 6,
-      name: "Michael Chang",
-      role: "Community Liaison",
-      description: "Builds relationships with artists, engineers, and partners to foster a thriving creative ecosystem.",
-      imageUrl: "/john-smith.jpg"
     }
   ];
 
@@ -127,7 +113,7 @@ export default function AboutUsPage() {
             subtitle="Our Leaders" 
           />
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {teamMembers.map((member) => (
               <TeamMemberCard
                 key={member.id}
