@@ -9,10 +9,7 @@ export default function AboutUsPage() {
       id: 1,
       name: "Adam Snelleksz",
       role: "Creative Director",
-      description: "Leads our creative vision with over 15 years of experience in interactive design and digital art installations."
-        "dwadwa"
-        "ewaasad"
-          ,
+      description: "Leads our creative vision with over 15 years of experience in interactive design and digital art installations.",
       imageUrl: "/adam.png"
     },
     {
