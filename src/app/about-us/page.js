@@ -54,7 +54,7 @@ export default function AboutUsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <SectionHeader 
-                title="Our Story" 
+                title="Our Beginning" 
                 subtitle="How We Started" 
               />
               <p className="mb-4">
@@ -131,7 +131,7 @@ export default function AboutUsPage() {
       <section className="py-16 px-4 md:px-8 bg-gray-50">
         <div className="container mx-auto">
           <SectionHeader 
-            title="Our Values" 
+            title="Our Story" 
             subtitle="What We Stand For" 
           />
           
