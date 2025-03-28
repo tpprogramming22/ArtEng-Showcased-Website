@@ -73,15 +73,16 @@ const RecordTurnoutCarousel = () => {
 
   return (
     <section className="relative">
-      <div className="relative h-[400px] overflow-hidden">
+      {/* Significantly increased height for a much longer appearance */}
+      <div className="relative h-[700px] w-full overflow-hidden">
         {/* Background image - dynamically selected based on current slide */}
         <Image 
           src={slides[currentSlide].backgroundImage}
           alt="Slide Background"
           fill
           priority={true}
-          className="object-cover object-top transition-opacity duration-300"
-          style={{ objectPosition: "center 30%" }}
+          className="object-cover transition-opacity duration-300"
+          style={{ objectPosition: "center center" }}
         />
         
         <div className="absolute inset-0 flex items-center">
@@ -96,37 +97,37 @@ const RecordTurnoutCarousel = () => {
             <div className="flex flex-col items-center">
               {/* Fixed width container for title and description */}
               <div className="w-[500px] text-center">
-                <h2 className="text-6xl font-bold mb-4">{slides[currentSlide].title}</h2>
-                <p className="mb-6 h-16 flex items-center justify-center">{slides[currentSlide].description}</p>
+                <h2 className="text-6xl font-bold mb-6">{slides[currentSlide].title}</h2>
+                <p className="mb-8 h-16 flex items-center justify-center text-xl">{slides[currentSlide].description}</p>
               </div>
               
               {/* Fixed width button */}
               <Link 
                 href={slides[currentSlide].link} 
-                className="bg-white text-arteng-dark px-6 py-2 rounded inline-block hover:bg-gray-100 transition-colors mb-10 w-40 text-center"
+                className="bg-white text-arteng-dark px-8 py-3 rounded-md text-lg inline-block hover:bg-gray-100 transition-colors mb-16 w-48 text-center font-medium"
               >
                 {slides[currentSlide].linkText}
               </Link>
               
               {/* Navigation controls */}
-              <div className="flex justify-center items-center space-x-4">
+              <div className="flex justify-center items-center space-x-6">
                 {/* Left arrow */}
                 <button 
                   onClick={goToPrevSlide}
-                  className="bg-white bg-opacity-50 p-1 rounded hover:bg-opacity-70 transition-opacity"
+                  className="bg-white bg-opacity-50 p-2 rounded-full hover:bg-opacity-70 transition-opacity"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="white">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="white">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                   </svg>
                 </button>
                 
                 {/* Indicators */}
-                <div className="flex space-x-2">
+                <div className="flex space-x-3">
                   {slides.map((_, index) => (
                     <button 
                       key={index}
                       onClick={() => goToSlide(index)}
-                      className={`w-6 h-1 rounded-full transition-all ${
+                      className={`w-8 h-2 rounded-full transition-all ${
                         index === currentSlide ? "bg-white" : "bg-white bg-opacity-50"
                       }`}
                     />
@@ -136,9 +137,9 @@ const RecordTurnoutCarousel = () => {
                 {/* Right arrow */}
                 <button 
                   onClick={goToNextSlide}
-                  className="bg-white bg-opacity-50 p-1 rounded hover:bg-opacity-70 transition-opacity"
+                  className="bg-white bg-opacity-50 p-2 rounded-full hover:bg-opacity-70 transition-opacity"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="white">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="white">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </button>

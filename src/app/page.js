@@ -41,8 +41,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-arteng-dark text-white py-16">
+      {/* Hero Section - Updated with white background */}
+      <section className="bg-white text-arteng-dark py-16">
         <div className="container mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
