@@ -10,14 +10,14 @@ export default function AboutUsPage() {
       name: "Jane Smith",
       role: "Creative Director",
       description: "Leads our creative vision with over 15 years of experience in interactive design and digital art installations.",
-      imageUrl: "/jane-smith.jpg"
+      imageUrl: "/adam.png"
     },
     {
       id: 2,
       name: "John Smith",
       role: "Marketing Director",
       description: "Drives our brand strategy with innovative approaches to engagement and audience development.",
-      imageUrl: "/john-smith.jpg"
+      imageUrl: "/steve.png"
     },
     {
       id: 3,
