@@ -78,7 +78,7 @@ export default function AboutUsPage() {
       
             <div className="relative h-80 bg-gray-200 rounded-md overflow-hidden">
               <Image 
-                src="/award-background.png" 
+                src="/team-photo.png" 
                 alt="ArtEng History" 
                 fill
                 className="object-cover"
