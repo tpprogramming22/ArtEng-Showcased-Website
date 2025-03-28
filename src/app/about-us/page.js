@@ -7,21 +7,21 @@ export default function AboutUsPage() {
   const teamMembers = [
     {
       id: 1,
-      name: "Jane Smith",
+      name: "Adam Snelleksz",
       role: "Creative Director",
       description: "Leads our creative vision with over 15 years of experience in interactive design and digital art installations.",
       imageUrl: "/adam.png"
     },
     {
       id: 2,
-      name: "John Smith",
+      name: "Stephen Fletcher",
       role: "Marketing Director",
       description: "Drives our brand strategy with innovative approaches to engagement and audience development.",
       imageUrl: "/steve.png"
     },
     {
       id: 3,
-      name: "Jess Smith",
+      name: "Joan Smith",
       role: "Events Director",
       description: "Orchestrates our world-class events with precision and creativity, ensuring memorable experiences.",
       imageUrl: "/jess-smith.jpg"
