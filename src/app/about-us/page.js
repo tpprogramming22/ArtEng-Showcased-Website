@@ -7,21 +7,21 @@ export default function AboutUsPage() {
   const teamMembers = [
     {
       id: 1,
-      name: "Jane Smith",
+      name: "Adam Snelleksz",
       role: "Creative Director",
       description: "Leads our creative vision with over 15 years of experience in interactive design and digital art installations.",
-      imageUrl: "/jane-smith.jpg"
+      imageUrl: "/adam.png"
     },
     {
       id: 2,
-      name: "John Smith",
+      name: "Stephen Fletcher",
       role: "Marketing Director",
       description: "Drives our brand strategy with innovative approaches to engagement and audience development.",
-      imageUrl: "/john-smith.jpg"
+      imageUrl: "/steve.png"
     },
     {
       id: 3,
-      name: "Jess Smith",
+      name: "Joan Smith",
       role: "Events Director",
       description: "Orchestrates our world-class events with precision and creativity, ensuring memorable experiences.",
       imageUrl: "/jess-smith.jpg"
@@ -31,20 +31,6 @@ export default function AboutUsPage() {
       name: "James Wilson",
       role: "Technical Lead",
       description: "Oversees all technical aspects of our projects, bringing engineering excellence to creative concepts.",
-      imageUrl: "/john-smith.jpg"
-    },
-    {
-      id: 5,
-      name: "Sarah Johnson",
-      role: "Operations Manager",
-      description: "Ensures seamless execution of all our initiatives, maintaining high standards across the organization.",
-      imageUrl: "/jane-smith.jpg"
-    },
-    {
-      id: 6,
-      name: "Michael Chang",
-      role: "Community Liaison",
-      description: "Builds relationships with artists, engineers, and partners to foster a thriving creative ecosystem.",
       imageUrl: "/john-smith.jpg"
     }
   ];
@@ -60,29 +46,25 @@ export default function AboutUsPage() {
       </section>
 
       {/* Our Story */}
-      <section className="py-16 px-4 md:px-8">
-        <div className="container mx-auto">
-          <SectionHeader 
-            title="Our Story" 
-            subtitle="How We Started" 
-          />
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <section className="py-8 px-4 md:px-8">
+          <div className="container mx-auto">
+          <div className="mb-4">
+          </div>
+    
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
+              <SectionHeader 
+                title="Our Beginning" 
+                subtitle="How We Started" 
+              />
               <p className="mb-4">
-                ArtEng began as a small collective of artists and engineers who shared a passion for interdisciplinary collaboration. What started as informal meetups in 2000 has grown into a respected organization at the intersection of art and technology.
-              </p>
-              <p className="mb-4">
-                We believe that the most innovative solutions emerge when diverse perspectives come together. By creating spaces where artists and engineers can collaborate, we've facilitated the development of groundbreaking projects that neither group could have accomplished alone.
-              </p>
-              <p>
-                Today, ArtEng hosts events, workshops, and exhibitions worldwide, bringing together creative minds from various backgrounds to explore new possibilities in art and technology.
+                We are four individuals brought together by our expertise in our respective fields. ArtEng came from the idea that the diverse worlds of art and engineering could work together to offer innovative solutions in their own unique ways. To find out more about who we are, take a look at who are.
               </p>
             </div>
-            
+      
             <div className="relative h-80 bg-gray-200 rounded-md overflow-hidden">
               <Image 
-                src="/award-background.png" 
+                src="/team-photo.png" 
                 alt="ArtEng History" 
                 fill
                 className="object-cover"
@@ -92,6 +74,8 @@ export default function AboutUsPage() {
         </div>
       </section>
 
+
+  
       {/* Our Impact */}
       <section className="py-16 px-4 md:px-8 bg-gray-50">
         <div className="container mx-auto">
@@ -129,7 +113,7 @@ export default function AboutUsPage() {
             subtitle="Our Leaders" 
           />
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {teamMembers.map((member) => (
               <TeamMemberCard
                 key={member.id}
@@ -147,28 +131,32 @@ export default function AboutUsPage() {
       <section className="py-16 px-4 md:px-8 bg-gray-50">
         <div className="container mx-auto">
           <SectionHeader 
-            title="Our Values" 
+            title="Our Story" 
             subtitle="What We Stand For" 
           />
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-md shadow-sm">
-              <h3 className="text-xl font-bold text-arteng-dark mb-3">Creativity Without Boundaries</h3>
-              <p className="text-gray-600">
-                We believe in pushing the limits of what's possible when art and technology combine, encouraging experimentation and bold ideas.
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="mb-4">
+                ArtEng is an innovative initiative that merges the worlds of art and engineering to encourage creativity and problem-solving in industry. It was established to bridge the gap between art and engineering, offering a platform for artists, engineers, and creators to collaborate and develop groundbreaking solutions. The idea behind ArtEng is to recognise that art and engineering, when combined, can lead to fresh perspectives, new technologies and creative ideas.
+              </p>
+              <p className="mb-4">
+                ArtEng was set up to address the need for cross-industry approaches to problem-solving in today’s evolving world. In a time where technology is shaping every aspect of life, ArtEng seeks to take artistic thinking and engineering expertise to create innovative solutions that are both functional and visually impactful. We want to promote an environment where diverse perspectives thrive, encouraging participants to think outside traditional boundaries.
+              </p>
+              <p className="mb-4">
+                At ArtEng we want to foster a creative community that blurs the lines between art and engineering, providing the tools, resources and opportunities to experiment, collaborate, and develop projects that challenge traditional perspectives. In the long term, we want to inspire future generations to approach challenges with a balance of technical skill and artistic imagination.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-md shadow-sm">
-              <h3 className="text-xl font-bold text-arteng-dark mb-3">Collaborative Excellence</h3>
-              <p className="text-gray-600">
-                We foster environments where diverse perspectives and skills can come together to create something greater than the sum of its parts.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-md shadow-sm">
-              <h3 className="text-xl font-bold text-arteng-dark mb-3">Accessible Innovation</h3>
-              <p className="text-gray-600">
-                We strive to make the intersection of art and engineering accessible to all, regardless of background or experience level.
-              </p>
+
+              
+            
+            <div className="relative h-80 bg-gray-200 rounded-md overflow-hidden">
+              <Image 
+                src="/award-background.png" 
+                alt="ArtEng History" 
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
