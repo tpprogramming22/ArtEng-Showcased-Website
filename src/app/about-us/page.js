@@ -8,29 +8,29 @@ export default function AboutUsPage() {
     {
       id: 1,
       name: "Adam Snelleksz",
-      role: "Creative Director",
-      description: "Leads our creative vision with over 15 years of experience in interactive design and digital art installations.",
+      role: "Marketing Director",
+      description: "Adam is a marketing and communications expert with over 25 years of experience, including founding two successful agencies.",
       imageUrl: "/adam.png"
     },
     {
       id: 2,
       name: "Stephen Fletcher",
-      role: "Marketing Director",
-      description: "Drives our brand strategy with innovative approaches to engagement and audience development.",
+      role: "Sales Director",
+      description: "Stephen has over 45 years of experience in logistics, project management, sales, and the arts, with a strong focus on supporting student career transitions.",
       imageUrl: "/steve.png"
     },
     {
       id: 3,
       name: "Joan Smith",
-      role: "Events Director",
-      description: "Orchestrates our world-class events with precision and creativity, ensuring memorable experiences.",
+      role: "Business Director",
+      description: "Joan is an experienced business advisor who connects companies with expert support to help them grow and succeed.",
       imageUrl: "/jess-smith.jpg"
     },
     {
       id: 4,
       name: "Wendy Bennet",
       role: "Technical Lead",
-      description: "Oversees all technical aspects of our projects, bringing engineering excellence to creative concepts.",
+      description: "Wendy is a pioneering leader for women in engineering, with groundbreaking achievements in precision casting and leadership roles in multiple industry organizations.",
       imageUrl: "/wendy.png"
     }
   ];
