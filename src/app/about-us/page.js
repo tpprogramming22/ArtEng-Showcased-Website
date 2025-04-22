@@ -28,10 +28,10 @@ export default function AboutUsPage() {
     },
     {
       id: 4,
-      name: "James Wilson",
+      name: "Wendy Bennet",
       role: "Technical Lead",
       description: "Oversees all technical aspects of our projects, bringing engineering excellence to creative concepts.",
-      imageUrl: "/john-smith.jpg"
+      imageUrl: "/wendy.jpg"
     }
   ];
 
