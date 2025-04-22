@@ -7,21 +7,21 @@ export default function PartnersPage() {
   const primarySponsors = [
     {
       id: 1,
-      name: "Honda",
-      logo: "/honda-logo.jpg",
-      description: "Proudly supported by Honda, committed to excellence in the field and pushing boundaries of innovation."
+      name: "Forusall",
+      logo: "/forusall.jpg",
+      description: "Forusall is a company that is at the heart of connecting people, promoting product awareness, championing innovation and joining likeminded businesses. With a commitment to supporting and promoting engineering and manufacturing in its many forms, Forusall is passionate about the very shapes, designs and innovations that influence the everyday lives of each and everyone of us."
     },
     {
       id: 2,
-      name: "Lloyd's Bank",
-      logo: "/lloyds-logo.jpg",
-      description: "In partnership with Lloyd's Bank, supporting innovation and creativity through financial expertise."
+      name: "Business Cube",
+      logo: "/businesscube.jpg",
+      description: "The Business Cube is a place where SMEs can connect, share knowledge and collaborate with trusted experts to accelerate growth. Our multi-dimensional support is free – the only charge to your business will be for any work that goes ahead with our experts to help your business grow."
     },
     {
       id: 3,
-      name: "KPMG",
-      logo: "/kpmg-logo.jpg",
-      description: "Proudly supported with professional and accounting services from KPMG, enabling our growth."
+      name: "CMA Media",
+      logo: "/cmamedia.png",
+      description: "CMA Media provides marketing support to businesses who need assistance with digital marketing, websites, SEO, video and communications. Our experience of working with SMEs and large corporate organisations means that we can work to any particular requirements and circumstances."
     },
     {
       id: 4,
