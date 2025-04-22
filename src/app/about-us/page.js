@@ -76,34 +76,6 @@ export default function AboutUsPage() {
 
 
   
-      {/* Our Impact */}
-      <section className="py-16 px-4 md:px-8 bg-gray-50">
-        <div className="container mx-auto">
-          <SectionHeader 
-            title="Our Impact" 
-            subtitle="What We've Achieved" 
-          />
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-            <div className="bg-white p-8 rounded-md shadow-sm">
-              <h3 className="text-5xl font-bold text-arteng-dark mb-2">25+</h3>
-              <p className="text-gray-600">Years in Industry</p>
-            </div>
-            <div className="bg-white p-8 rounded-md shadow-sm">
-              <h3 className="text-5xl font-bold text-arteng-dark mb-2">75+</h3>
-              <p className="text-gray-600">Events Successfully Hosted</p>
-            </div>
-            <div className="bg-white p-8 rounded-md shadow-sm">
-              <h3 className="text-5xl font-bold text-arteng-dark mb-2">22+</h3>
-              <p className="text-gray-600">Speakers & Presenters</p>
-            </div>
-            <div className="bg-white p-8 rounded-md shadow-sm">
-              <h3 className="text-5xl font-bold text-arteng-dark mb-2">50+</h3>
-              <p className="text-gray-600">Collaborative Projects</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Meet the Team */}
       <section className="py-16 px-4 md:px-8">
