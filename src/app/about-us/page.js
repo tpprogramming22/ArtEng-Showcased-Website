@@ -31,7 +31,7 @@ export default function AboutUsPage() {
       name: "Wendy Bennet",
       role: "Technical Lead",
       description: "Oversees all technical aspects of our projects, bringing engineering excellence to creative concepts.",
-      imageUrl: "/wendy.jpg"
+      imageUrl: "/wendy.png"
     }
   ];
 
