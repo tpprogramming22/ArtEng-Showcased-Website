@@ -78,7 +78,7 @@ export default function AboutUsPage() {
   
 
       {/* Meet the Team */}
-      <section className="py-16 px-4 md:px-8">
+      <section className="py-16 px-4 md:px-8 bg-gray-50">
         <div className="container mx-auto">
           <SectionHeader 
             title="Meet The Team" 
@@ -100,7 +100,7 @@ export default function AboutUsPage() {
       </section>
 
       {/* Our Values */}
-      <section className="py-16 px-4 md:px-8 bg-gray-50">
+      <section className="py-16 px-4 md:px-8 bg-gray-200">
         <div className="container mx-auto">
           <SectionHeader 
             title="Our Story" 
