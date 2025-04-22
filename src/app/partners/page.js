@@ -61,26 +61,7 @@ export default function PartnersPage() {
         </div>
       </section>
 
-      {/* Primary Sponsors */}
-      <section className="py-16 px-4 md:px-8">
-        <div className="container mx-auto">
-          <SectionHeader 
-            title="Our Sponsors" 
-            subtitle="Primary Sponsors" 
-          />
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {primarySponsors.map((sponsor) => (
-              <SponsorCard
-                key={sponsor.id}
-                name={sponsor.name}
-                logo={sponsor.logo}
-                description={sponsor.description}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* Partnership Information */}
       <section className="py-16 px-4 md:px-8 bg-gray-50">
@@ -116,47 +97,28 @@ export default function PartnersPage() {
         </div>
       </section>
 
-      {/* Supporting Partners */}
+
+      {/* Primary Sponsors */}
       <section className="py-16 px-4 md:px-8">
         <div className="container mx-auto">
           <SectionHeader 
-            title="Supporting Partners" 
-            subtitle="Additional Support" 
+            title="Our Sponsors" 
+            subtitle="Primary Sponsors" 
           />
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {supportingPartners.map((partner) => (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {primarySponsors.map((sponsor) => (
               <SponsorCard
-                key={partner.id}
-                name={partner.name}
-                logo={partner.logo}
-                description={partner.description}
+                key={sponsor.id}
+                name={sponsor.name}
+                logo={sponsor.logo}
+                description={sponsor.description}
               />
             ))}
           </div>
         </div>
       </section>
 
-      {/* Community Partners */}
-      <section className="py-16 px-4 md:px-8 bg-gray-50">
-        <div className="container mx-auto">
-          <SectionHeader 
-            title="Community Partners" 
-            subtitle="Local Collaborations" 
-          />
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
-            {communityPartners.map((partner) => (
-              <SponsorCard
-                key={partner.id}
-                name={partner.name}
-                logo={partner.logo}
-                description={partner.description}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Become a Partner */}
       <section className="py-16 px-4 md:px-8 bg-arteng-dark text-white">
