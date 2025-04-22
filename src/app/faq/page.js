@@ -6,44 +6,48 @@ export default function FAQPage() {
   const faqs = [
     {
       question: "What is ArtEng?",
-      answer: "ArtEng is an organization dedicated to bringing together artists and engineers to collaborate on innovative projects. We host events, workshops, and exhibitions that explore the intersection of art and technology."
+      answer: "We are a membership organisation which will bring the art and engineering sectors together through business networking to introduce professionals, from both sectors, to join forces to share ideas and best practice. We also host events to our members to offer networking opportunities to engage with key businesses to help their businesses to grow."
     },
     {
-      question: "How can I participate in ArtEng events?",
-      answer: "Most of our events are open to the public and can be found on our Events page. Some specialized workshops may require registration. You can sign up for our newsletter to stay informed about upcoming opportunities."
+      question: "Who can become a member?",
+      answer: "Membership is open to all businesses and individuals who are interested in meeting likeminded businesses and business owners."
     },
     {
-      question: "Do I need a technical background to attend your events?",
-      answer: "Not at all! Our events are designed to be accessible to people with diverse backgrounds. Whether you're an artist curious about technology or an engineer interested in creative applications, you'll find something valuable in our programming."
+      question: "How do I join?",
+      answer: "You can become a member by visiting our membership page on our website. You can complete the application form and make payment, or if you prefer you can contact us at info@arteng.co.uk Once your application is processed, you will receive a confirmation email with further details about your membership, the art sector and the engineering sector."
     },
     {
-      question: "Can my organization partner with ArtEng?",
-      answer: "Yes, we're always interested in new partnerships. Please visit our Partners page for more information on collaboration opportunities, or contact us directly to discuss potential partnerships."
+      question: "What are the benefits of membership?",
+      answer: "Members enjoy a range of benefits, including access to exclusive events and networking opportunities, discounts on services, products, or events, access to member-only events and seminars and much more."
     },
     {
-      question: "Are there opportunities to volunteer with ArtEng?",
-      answer: "Absolutely! We rely on volunteers for many of our events and initiatives. If you're interested in volunteering, please reach out to us through the contact form on this website."
+      question: "How much does membership cost?",
+      answer: "Our standard membership fee is £495 per annum. Under this membership options, access to member events will be limited to two per organisation. We also offer a partner package with the price available on application. Please contact us to find out more."
     },
     {
-      question: "How can I exhibit my work at an ArtEng event?",
-      answer: "We regularly put out calls for proposals for our exhibitions. These are announced on our website and social media channels. You can also contact us directly if you have a specific project you'd like to propose."
+      question: "How long does membership last?",
+      answer: "Membership is valid for one year from the date of joining. You will receive a reminder before your membership expires so you can renew it on time."
     },
     {
-      question: "Does ArtEng offer funding for collaborative projects?",
-      answer: "We occasionally offer grants and financial support for projects that align with our mission. Check our News section for announcements about funding opportunities."
+      question: "How can I renew my membership?",
+      answer: "Renewal is simple. Log into your account on our website, navigate to the membership renewal section, and follow the prompts to make your payment. If you want change or amend your membership or upgrade to become a partner, please contact us at info@arteng.co.uk"
     },
     {
-      question: "Can I book ArtEng for a private event or workshop?",
-      answer: "Yes, we offer custom workshops and presentations for private events, educational institutions, and corporate settings. Please contact us with details about your needs, and we'll work with you to create a tailored experience."
+      question: "Can I upgrade or change my membership level?",
+      answer: "Yes. If you wish to upgrade or change your membership type, please contact our membership team on info@arteng.co.uk"
     },
     {
-      question: "How did ArtEng start?",
-      answer: "ArtEng began in 2000 as informal meetups between artists and engineers interested in interdisciplinary collaboration. Over the years, it has grown into a formal organization with a global presence, but we maintain our commitment to fostering creative connections across disciplines."
+      question: "What if I need to cancel my membership?",
+      answer: "You can cancel your membership at any time by contacting our team however, please note that membership fees are non-refundable."
     },
     {
-      question: "I have more questions. How can I contact ArtEng?",
-      answer: "You can reach us through the contact form on this website, or email us directly at info@arteng.org. We aim to respond to all inquiries within 2-3 business days."
-    }
+      question: "How can I get involved in the organisation?",
+      answer: "We offer many opportunities for members to get involved, speaking and participating in events as well as sponsoring various elements of our events, the website and communications methods."
+    },
+    {
+      question: "Who do I contact for further questions?",
+      answer: "If you have any additional questions, feel free to reach out to us at info@arteng.co.uk or come and talk to us at one of our many networking events, speaker events or business activation events."
+    },
   ];
 
   return (
