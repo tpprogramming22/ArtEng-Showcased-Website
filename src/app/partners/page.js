@@ -25,13 +25,13 @@ export default function PartnersPage() {
     },
     {
       id: 4,
-      name: "Node.js",
+      name: "Tool Life",
       logo: "/nodejs-logo.jpg",
       description: "Powered by Node.js, enabling high-performance and scalable applications for our digital initiatives."
     },
     {
       id: 5,
-      name: "Tesla",
+      name: "T3O Solutions",
       logo: "/tesla-logo.jpg",
       description: "Supported by Tesla, both companies share a vision for a sustainable future through innovation."
     }
