@@ -142,7 +142,7 @@ export default function AboutUsPage() {
             >
               &times;
             </button>
-            <div className="relative w-100 h-100 flex-shrink-0">
+            <div className="relative w-64 h-64 flex-shrink-0">
               <Image src={selectedMember.imageUrl} alt={selectedMember.name} fill className="object-cover rounded-md" />
             </div>
             <div className="flex flex-col">
