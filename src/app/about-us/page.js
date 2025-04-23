@@ -83,7 +83,7 @@ export default function AboutUsPage() {
             className={`cursor-pointer flex items-center justify-center transition-all duration-500 ease-in-out 
               ${isExpanded ? 'w-64 h-64 bg-blue-500' : 'w-32 h-32 bg-gray-300'}`}
           >
-            {isExpanded && <span className="text-white text-xl">hello</span>}
+            <span className={`text-xl ${isExpanded ? 'text-white' : 'text-black'}`}>hello</span>
           </div>
         </div>
       </section>
