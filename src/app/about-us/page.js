@@ -147,7 +147,7 @@ export default function AboutUsPage() {
             </div>
             <div className="flex flex-col">
               <h2 className="text-2xl font-bold mb-2">{selectedMember.name}</h2>
-              <p className="text-lg mb-4">{selectedMember.role}</p>
+              <p className="text-xl mb-4">{selectedMember.role}</p>
               <p className="text-black mb-4">{selectedMember.long1}</p>
               <p className="text-black mb-4">{selectedMember.long2}</p>
               <p className="text-black mb-4">{selectedMember.long3}</p>
