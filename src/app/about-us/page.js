@@ -87,18 +87,6 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {/* Expandable Square */}
-      <section className="py-16 px-4 md:px-8">
-        <div className="flex items-center justify-center">
-          <div
-            onClick={() => setIsExpanded(!isExpanded)}
-            className={`cursor-pointer flex items-center justify-center transition-all duration-500 ease-in-out 
-              ${isExpanded ? 'w-64 h-64 bg-blue-500' : 'w-32 h-32 bg-gray-300'}`}
-          >
-            <span className={`text-xl ${isExpanded ? 'text-white' : 'text-black'}`}>hello</span>
-          </div>
-        </div>
-      </section>
 
       {/* Meet the Team */}
       <section className="py-16 px-4 md:px-8 bg-gray-50">
