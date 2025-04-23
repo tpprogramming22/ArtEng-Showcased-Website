@@ -7,6 +7,7 @@ import TeamMemberCard from '@/components/TeamMemberCard';
 
 export default function AboutUsPage() {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [selectedMemberId, setSelectedMemberId] = useState(null);
 
   const teamMembers = [
     {
@@ -95,22 +96,24 @@ export default function AboutUsPage() {
             subtitle="Our Leaders" 
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {teamMembers.map((member) => (
-              <TeamMemberCard
-                key={member.id}
-                name={member.name}
-                role={member.role}
-                description={member.description}
-                imageUrl={member.imageUrl}
-              />
-          <div
-            onClick={() => setIsExpanded(!isExpanded)}
-            className={`cursor-pointer flex items-center justify-center transition-all duration-500 ease-in-out 
-              ${isExpanded ? 'w-64 h-64 bg-blue-500' : 'w-32 h-32 bg-gray-300'}`}
-          >
-            {isExpanded && <span className="text-white text-xl">hello</span>}
-          </div>
-            ))}
+            {teamMembers.map((member) => {
+              const isSelected = selectedMemberId === member.id;
+              return (
+                <div
+                  key={member.id}
+                  onClick={() => setSelectedMemberId(isSelected ? null : member.id)}
+                  className={`cursor-pointer flex flex-col items-center justify-center p-4 transition-all duration-500 ease-in-out rounded-lg 
+                    ${isSelected ? 'scale-110 bg-blue-500 text-white' : 'bg-white text-black'}`}
+                >
+                  <div className="relative w-32 h-32 mb-4">
+                    <Image src={member.imageUrl} alt={member.name} fill className="object-cover rounded-full" />
+                  </div>
+                  <h3 className="text-lg font-bold">{member.name}</h3>
+                  <p className="text-sm">{member.role}</p>
+                  {isSelected && <p className="mt-2 text-center">{member.description}</p>}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
