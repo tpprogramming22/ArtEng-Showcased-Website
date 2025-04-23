@@ -75,6 +75,19 @@ export default function AboutUsPage() {
         </div>
       </section>
 
+      {/* Expandable Square */}
+      <section className="py-16 px-4 md:px-8">
+        <div className="flex items-center justify-center">
+          <div
+            onClick={() => setIsExpanded(!isExpanded)}
+            className={`cursor-pointer flex items-center justify-center transition-all duration-500 ease-in-out 
+              ${isExpanded ? 'w-64 h-64 bg-blue-500' : 'w-32 h-32 bg-gray-300'}`}
+          >
+            {isExpanded && <span className="text-white text-xl">hello</span>}
+          </div>
+        </div>
+      </section>
+
       {/* Meet the Team */}
       <section className="py-16 px-4 md:px-8 bg-gray-50">
         <div className="container mx-auto">
@@ -107,7 +120,7 @@ export default function AboutUsPage() {
           onClick={() => setSelectedMember(null)}
         >
           <div 
-            className="bg-white text-black rounded-lg p-8 max-w-md w-full relative"
+            className="bg-blue-500 text-white rounded-lg p-8 max-w-3xl w-11/12 relative flex flex-col md:flex-row items-center gap-6"
             onClick={(e) => e.stopPropagation()}
           >
             <button 
@@ -116,13 +129,13 @@ export default function AboutUsPage() {
             >
               &times;
             </button>
-            <div className="flex flex-col items-center">
-              <div className="relative w-40 h-40 mb-4">
-                <Image src={selectedMember.imageUrl} alt={selectedMember.name} fill className="object-cover rounded-md" />
-              </div>
+            <div className="relative w-64 h-64 flex-shrink-0">
+              <Image src={selectedMember.imageUrl} alt={selectedMember.name} fill className="object-cover rounded-md" />
+            </div>
+            <div className="flex flex-col">
               <h2 className="text-2xl font-bold mb-2">{selectedMember.name}</h2>
               <p className="text-lg mb-4">{selectedMember.role}</p>
-              <p className="text-center">{selectedMember.description}</p>
+              <p className="text-white">{selectedMember.description}</p>
             </div>
           </div>
         </div>
