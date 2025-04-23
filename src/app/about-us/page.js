@@ -107,7 +107,7 @@ export default function AboutUsPage() {
                 </div>
                 <h3 className="text-lg font-bold">{member.name}</h3>
                 <p className="text-sm">{member.role}</p>
-                <p className="text-sm">{member.description}</p>
+                <p className="text-sm text-center">{member.description}</p>
               </div>
             ))}
           </div>
