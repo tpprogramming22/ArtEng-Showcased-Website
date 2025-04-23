@@ -121,7 +121,7 @@ export default function AboutUsPage() {
           onClick={() => setSelectedMember(null)}
         >
           <div 
-            className="bg-blue-500 text-white rounded-lg p-8 max-w-3xl w-11/12 relative flex flex-col md:flex-row items-center gap-6"
+            className="bg-white text-black rounded-lg p-8 max-w-3xl w-11/12 relative flex flex-col md:flex-row items-center gap-6"
             onClick={(e) => e.stopPropagation()}
           >
             <button 
