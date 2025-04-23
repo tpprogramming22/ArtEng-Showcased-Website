@@ -87,6 +87,19 @@ export default function AboutUsPage() {
         </div>
       </section>
 
+      {/* Expandable Square */}
+      <section className="py-16 px-4 md:px-8">
+        <div className="flex items-center justify-center">
+          <div
+            onClick={() => setIsExpanded(!isExpanded)}
+            className={`cursor-pointer flex items-center justify-center transition-all duration-500 ease-in-out 
+              ${isExpanded ? 'w-64 h-64 bg-blue-500' : 'w-32 h-32 bg-gray-300'}`}
+          >
+            <span className={`text-xl ${isExpanded ? 'text-white' : 'text-black'}`}>hello</span>
+          </div>
+        </div>
+      </section>
+
       {/* Meet the Team */}
       <section className="py-16 px-4 md:px-8 bg-gray-50">
         <div className="container mx-auto">
@@ -129,12 +142,12 @@ export default function AboutUsPage() {
             >
               &times;
             </button>
-            <div className="relative w-32 h-32 mb-4">
+            <div className="relative w-64 h-64 flex-shrink-0">
               <Image src={selectedMember.imageUrl} alt={selectedMember.name} fill className="object-cover rounded-md" />
             </div>
             <div className="flex flex-col">
               <h2 className="text-2xl font-bold mb-2">{selectedMember.name}</h2>
-              <p className="text-xl mb-4">{selectedMember.role}</p>
+              <p className="text-lg mb-4">{selectedMember.role}</p>
               <p className="text-black mb-4">{selectedMember.long1}</p>
               <p className="text-black mb-4">{selectedMember.long2}</p>
               <p className="text-black mb-4">{selectedMember.long3}</p>
