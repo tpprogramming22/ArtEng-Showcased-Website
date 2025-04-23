@@ -4,6 +4,8 @@ import Image from 'next/image';
 import SectionHeader from '@/components/SectionHeader';
 import TeamMemberCard from '@/components/TeamMemberCard';
 
+'use client';
+
 export default function AboutUsPage() {
   const [selectedMember, setSelectedMember] = useState(null);
 
@@ -51,9 +53,7 @@ export default function AboutUsPage() {
 
       {/* Our Story */}
       <section className="py-8 px-4 md:px-8">
-          <div className="container mx-auto">
-          <div className="mb-4">
-          </div>
+        <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <SectionHeader 
@@ -105,26 +105,28 @@ export default function AboutUsPage() {
           onClick={() => setSelectedMember(null)}
         >
           <div 
-            className="bg-white rounded-lg p-6 max-w-md w-full relative"
+            className="bg-white rounded-lg p-8 w-11/12 max-w-3xl relative shadow-lg"
             onClick={(e) => e.stopPropagation()}
           >
             <button 
-              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl"
               onClick={() => setSelectedMember(null)}
             >
               &times;
             </button>
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col md:flex-row items-center gap-6">
               <Image 
                 src={selectedMember.imageUrl} 
                 alt={selectedMember.name}
-                width={150}
-                height={150}
-                className="rounded-full mb-4"
+                width={200}
+                height={200}
+                className="rounded-full"
               />
-              <h2 className="text-xl font-bold">{selectedMember.name}</h2>
-              <p className="text-gray-600">{selectedMember.role}</p>
-              <p className="mt-4 text-center">{selectedMember.description}</p>
+              <div>
+                <h2 className="text-2xl font-bold">{selectedMember.name}</h2>
+                <p className="text-gray-600 mb-4">{selectedMember.role}</p>
+                <p>{selectedMember.description}</p>
+              </div>
             </div>
           </div>
         </div>
