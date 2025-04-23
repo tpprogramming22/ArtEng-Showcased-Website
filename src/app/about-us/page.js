@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import Image from 'next/image';
 import SectionHeader from '@/components/SectionHeader';
 import TeamMemberCard from '@/components/TeamMemberCard';
 
 export default function AboutUsPage() {
+  const [selectedMember, setSelectedMember] = useState(null);
+
   // sample data
   const teamMembers = [
     {
@@ -50,7 +53,6 @@ export default function AboutUsPage() {
           <div className="container mx-auto">
           <div className="mb-4">
           </div>
-    
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <SectionHeader 
@@ -61,7 +63,6 @@ export default function AboutUsPage() {
                 We are four individuals brought together by our expertise in our respective fields. ArtEng came from the idea that the diverse worlds of art and engineering could work together to offer innovative solutions in their own unique ways. To find out more about who we are, take a look at who are.
               </p>
             </div>
-      
             <div className="relative h-80 bg-gray-200 rounded-md overflow-hidden">
               <Image 
                 src="/team-photo.png" 
@@ -74,9 +75,6 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-
-  
-
       {/* Meet the Team */}
       <section className="py-16 px-4 md:px-8 bg-gray-50">
         <div className="container mx-auto">
@@ -84,7 +82,6 @@ export default function AboutUsPage() {
             title="Meet The Team" 
             subtitle="Our Leaders" 
           />
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {teamMembers.map((member) => (
               <TeamMemberCard
@@ -93,11 +90,44 @@ export default function AboutUsPage() {
                 role={member.role}
                 description={member.description}
                 imageUrl={member.imageUrl}
+                onClick={() => setSelectedMember(member)}
               />
             ))}
           </div>
         </div>
       </section>
+
+      {/* Modal */}
+      {selectedMember && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+          onClick={() => setSelectedMember(null)}
+        >
+          <div 
+            className="bg-white rounded-lg p-6 max-w-md w-full relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button 
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+              onClick={() => setSelectedMember(null)}
+            >
+              &times;
+            </button>
+            <div className="flex flex-col items-center">
+              <Image 
+                src={selectedMember.imageUrl} 
+                alt={selectedMember.name}
+                width={150}
+                height={150}
+                className="rounded-full mb-4"
+              />
+              <h2 className="text-xl font-bold">{selectedMember.name}</h2>
+              <p className="text-gray-600">{selectedMember.role}</p>
+              <p className="mt-4 text-center">{selectedMember.description}</p>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Our Values */}
       <section className="py-16 px-4 md:px-8">
@@ -106,7 +136,6 @@ export default function AboutUsPage() {
             title="Our Story" 
             subtitle="What We Stand For" 
           />
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <p className="mb-4">
@@ -119,9 +148,6 @@ export default function AboutUsPage() {
                 At ArtEng we want to foster a creative community that blurs the lines between art and engineering, providing the tools, resources and opportunities to experiment, collaborate, and develop projects that challenge traditional perspectives. In the long term, we want to inspire future generations to approach challenges with a balance of technical skill and artistic imagination.
               </p>
             </div>
-
-              
-            
             <div className="relative h-80 rounded-md overflow-hidden">
               <Image 
                 src="/award-background.png" 
