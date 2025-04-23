@@ -7,7 +7,7 @@ import TeamMemberCard from '@/components/TeamMemberCard';
 
 export default function AboutUsPage() {
   const [isExpanded, setIsExpanded] = useState(false);
-  const [selectedMemberId, setSelectedMemberId] = useState(null);
+  const [selectedMember, setSelectedMember] = useState(null);
 
   const teamMembers = [
     {
@@ -96,27 +96,50 @@ export default function AboutUsPage() {
             subtitle="Our Leaders" 
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {teamMembers.map((member) => {
-              const isSelected = selectedMemberId === member.id;
-              return (
-                <div
-                  key={member.id}
-                  onClick={() => setSelectedMemberId(isSelected ? null : member.id)}
-                  className={`cursor-pointer flex flex-col items-center justify-center p-4 transition-all duration-500 ease-in-out rounded-lg 
-                    ${isSelected ? 'scale-110 bg-blue-500 text-white' : 'bg-white text-black'}`}
-                >
-                  <div className="relative w-32 h-32 mb-4">
-                    <Image src={member.imageUrl} alt={member.name} fill className="object-cover rounded-full" />
-                  </div>
-                  <h3 className="text-lg font-bold">{member.name}</h3>
-                  <p className="text-sm">{member.role}</p>
-                  {isSelected && <p className="mt-2 text-center">{member.description}</p>}
+            {teamMembers.map((member) => (
+              <div
+                key={member.id}
+                onClick={() => setSelectedMember(member)}
+                className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all"
+              >
+                <div className="relative w-32 h-32 mb-4">
+                  <Image src={member.imageUrl} alt={member.name} fill className="object-cover rounded-md" />
                 </div>
-              );
-            })}
+                <h3 className="text-lg font-bold">{member.name}</h3>
+                <p className="text-sm">{member.role}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
+
+      {/* Member Modal */}
+      {selectedMember && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+          onClick={() => setSelectedMember(null)}
+        >
+          <div 
+            className="bg-blue-500 text-white rounded-lg p-8 max-w-md w-full relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button 
+              className="absolute top-4 right-4 text-white text-2xl"
+              onClick={() => setSelectedMember(null)}
+            >
+              &times;
+            </button>
+            <div className="flex flex-col items-center">
+              <div className="relative w-40 h-40 mb-4">
+                <Image src={selectedMember.imageUrl} alt={selectedMember.name} fill className="object-cover rounded-md" />
+              </div>
+              <h2 className="text-2xl font-bold mb-2">{selectedMember.name}</h2>
+              <p className="text-lg mb-4">{selectedMember.role}</p>
+              <p className="text-center">{selectedMember.description}</p>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Our Values */}
       <section className="py-16 px-4 md:px-8">
