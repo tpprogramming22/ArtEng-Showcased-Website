@@ -22,34 +22,8 @@ export default function PartnersPage() {
       name: "CMA Media",
       logo: "/cmamedia.png",
       description: "CMA Media provides marketing support to businesses who need assistance with digital marketing, websites, SEO, video and communications. Our experience of working with SMEs and large corporate organisations means that we can work to any particular requirements and circumstances."
-    },
-    {
-      id: 4,
-      name: "Tool Life",
-      logo: "/nodejs-logo.jpg",
-      description: "Powered by Node.js, enabling high-performance and scalable applications for our digital initiatives."
-    },
-    {
-      id: 5,
-      name: "T3O Solutions",
-      logo: "/tesla-logo.jpg",
-      description: "Supported by Tesla, both companies share a vision for a sustainable future through innovation."
     }
   ];
-
-  const supportingPartners = Array(8).fill().map((_, i) => ({
-    id: i + 6,
-    name: `Partner ${i + 1}`,
-    logo: "/lloyds-logo.jpg",
-    description: "Supporting ArtEng's mission to bring art and engineering together for innovative solutions."
-  }));
-
-  const communityPartners = Array(6).fill().map((_, i) => ({
-    id: i + 14,
-    name: `Community Org ${i + 1}`,
-    logo: "/honda-logo.jpg",
-    description: "Collaborating on community initiatives to expand access to art and technology education."
-  }));
 
   return (
     <div className="min-h-screen">
@@ -60,8 +34,6 @@ export default function PartnersPage() {
           <p className="text-lg">The organisations and companies that make our work possible.</p>
         </div>
       </section>
-
-
 
       {/* Partnership Information */}
       <section className="py-16 px-4 md:px-8 ">
@@ -77,7 +49,7 @@ export default function PartnersPage() {
                 src="/engineering-forum.jpg" 
                 alt="Partnership Opportunities" 
                 fill
-                className="object-cover"
+                className="object-cover grayscale" // Added grayscale for black and white theme
               />
             </div>
             
@@ -97,7 +69,6 @@ export default function PartnersPage() {
         </div>
       </section>
 
-
       {/* Primary Sponsors */}
       <section className="py-16 px-4 md:px-8 bg-gray-50">
         <div className="container mx-auto">
@@ -106,7 +77,7 @@ export default function PartnersPage() {
             subtitle="Primary Partners" 
           />
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {primarySponsors.map((sponsor) => (
               <SponsorCard
                 key={sponsor.id}
@@ -118,7 +89,6 @@ export default function PartnersPage() {
           </div>
         </div>
       </section>
-
 
       {/* Become a Partner */}
       <section className="py-16 px-4 md:px-8 bg-arteng-dark text-white">

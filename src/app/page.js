@@ -139,7 +139,7 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Latest News Section - Already had a gray background */}
+      {/* Latest News Section - COMMENTED OUT
       <section className="py-16 px-4 md:px-8 bg-gray-50">
         <div className="container mx-auto">
           <SectionHeader 
@@ -170,8 +170,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+      */}
       
-      {/* Upcoming Events Section - Changed to white background */}
+      {/* Upcoming Events Section - COMMENTED OUT
       <section className="py-16 px-4 md:px-8 bg-white">
         <div className="container mx-auto">
           <SectionHeader 
@@ -196,45 +197,36 @@ export default function Home() {
           </div>
         </div>
       </section>
+      */}
       
-{/* Our Partners Section (renamed from Sponsors) */}
-<section className="py-16 px-4 md:px-8 bg-gray-50">
-  <div className="container mx-auto">
-    <SectionHeader 
-      title="Our Partners" 
-      subtitle="Primary Partners" 
-      viewAllLink="/partners" 
-    />
-    
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-      <SponsorCard 
-        name="Forusall" 
-        logo="/forusall.jpg" 
-        description="Forusall is a company that is at the heart of connecting people, promoting product awareness, championing innovation and joining likeminded businesses."
-      />
-      <SponsorCard 
-        name="Business Cube" 
-        logo="/businesscube.jpg" 
-        description="The Business Cube is a place where SMEs can connect, share knowledge and collaborate with trusted experts to accelerate growth."
-      />
-      <SponsorCard 
-        name="CMA Media" 
-        logo="/cmamedia.png" 
-        description="CMA Media provides marketing support to businesses who need assistance with digital marketing, websites, SEO, video and communications."
-      />
-      <SponsorCard 
-        name="Tool Life" 
-        logo="/nodejs-logo.jpg" 
-        description="Powered by Node.js, enabling high-performance and scalable applications for our digital initiatives."
-      />
-      <SponsorCard 
-        name="T3O Solutions" 
-        logo="/tesla-logo.jpg" 
-        description="Supported by Tesla, both companies share a vision for a sustainable future through innovation."
-      />
-    </div>
-  </div>
-</section>
+      {/* Our Partners Section (renamed from Sponsors) */}
+      <section className="py-16 px-4 md:px-8 bg-gray-50">
+        <div className="container mx-auto">
+          <SectionHeader 
+            title="Our Partners" 
+            subtitle="Primary Partners" 
+            viewAllLink="/partners" 
+          />
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <SponsorCard 
+              name="Forusall" 
+              logo="/forusall.jpg" 
+              description="Forusall is a company that is at the heart of connecting people, promoting product awareness, championing innovation and joining likeminded businesses."
+            />
+            <SponsorCard 
+              name="Business Cube" 
+              logo="/businesscube.jpg" 
+              description="The Business Cube is a place where SMEs can connect, share knowledge and collaborate with trusted experts to accelerate growth."
+            />
+            <SponsorCard 
+              name="CMA Media" 
+              logo="/cmamedia.png" 
+              description="CMA Media provides marketing support to businesses who need assistance with digital marketing, websites, SEO, video and communications."
+            />
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

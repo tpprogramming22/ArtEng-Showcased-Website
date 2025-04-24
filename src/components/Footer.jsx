@@ -9,7 +9,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-4">About ArtEng</h3>
             <p className="text-sm mb-4">
-              Bringing art and engineering together to transform ideas into unforgettable experiences.
+              Bringing creatives and innovators together to transform ideas into unforgettable experiences.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="hover:text-gray-300">
@@ -34,7 +34,7 @@ const Footer = () => {
                 <Link href="/events" className="text-sm hover:text-gray-300">Events</Link>
               </li>
               <li>
-                <Link href="/news" className="text-sm hover:text-gray-300">News</Link>
+                <Link href="/news" className="text-sm hover:text-gray-300">Articles</Link>
               </li>
               <li>
                 <Link href="/partners" className="text-sm hover:text-gray-300">Partners</Link>

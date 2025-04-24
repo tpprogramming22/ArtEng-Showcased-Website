@@ -71,7 +71,7 @@ export default function SignUpPage() {
             
             <div>
               <label htmlFor="account-type" className="block text-sm font-medium text-gray-700 mb-1">
-                I am a
+                I want to be
               </label>
               <select
                 id="account-type"
