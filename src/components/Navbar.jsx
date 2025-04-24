@@ -22,6 +22,7 @@ const Navbar = () => {
         <Link href="/events" className="text-lg hover:underline">Events</Link>
         <Link href="/news" className="text-lg hover:underline">Articles</Link>
         <Link href="/about-us" className="text-lg hover:underline">About Us</Link>
+        <Link href="/membership" className="text-lg hover:underline">Membership</Link>
         <Link href="/partners" className="text-lg hover:underline">Partners</Link>
         <Link href="/faq" className="text-lg hover:underline">FAQ</Link>
         <Link href="/login" className="ml-4 px-6 py-2 rounded bg-arteng-dark text-white hover:bg-opacity-90 transition-colors font-bold text-lg flex items-center justify-center">
