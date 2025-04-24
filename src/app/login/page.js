@@ -54,7 +54,7 @@ export default function SignUpPage() {
               />
             </div>
             
-            <div>
+            {/* <div>
               <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
                 Password
               </label>
@@ -67,7 +67,7 @@ export default function SignUpPage() {
                 className="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-arteng-dark focus:border-arteng-dark focus:z-10 sm:text-sm"
                 placeholder="Password"
               />
-            </div>
+            </div> */}
             
             <div>
               <label htmlFor="account-type" className="block text-sm font-medium text-gray-700 mb-1">

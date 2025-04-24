@@ -60,7 +60,7 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} ArtEng. All rights reserved.
           </div>
           <div className="mt-4 md:mt-0 flex space-x-6">
-            <Link href="#" className="text-sm hover:text-gray-300">Privacy Policy</Link>
+            <Link href="/privacy-policy" className="text-sm hover:text-gray-300">Privacy Policy</Link>
           </div>
         </div>
       </div>
