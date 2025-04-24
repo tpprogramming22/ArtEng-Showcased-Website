@@ -70,9 +70,11 @@ export default function MembershipPage() {
               </div>
             </CardContent>
             <CardFooter className="pt-0">
-              <Button size="lg" className="w-full bg-black hover:bg-[rgb(40,40,40)] text-lg py-6 font-bold shadow-lg hover:shadow-xl transition-all duration-200">
-                Become a Member
-              </Button>
+              <Link href="/login">
+                <Button size="lg" className="w-full bg-black hover:bg-[rgb(40,40,40)] text-lg py-6 font-bold shadow-lg hover:shadow-xl transition-all duration-200">
+                  Become a Member
+                </Button>
+              </Link>
             </CardFooter>
           </Card>
         </TabsContent>
@@ -124,9 +126,11 @@ export default function MembershipPage() {
               </p>
             </CardContent>
             <CardFooter className="pt-0">
-              <Button size="lg" className="w-full bg-black hover:bg-[rgb(40,40,40)] text-lg py-6 font-bold shadow-lg hover:shadow-xl transition-all duration-200">
-                Discuss Partnership
-              </Button>
+              <Link href="/login">
+                <Button size="lg" className="w-full bg-black hover:bg-[rgb(40,40,40)] text-lg py-6 font-bold shadow-lg hover:shadow-xl transition-all duration-200">
+                  Discuss Partnership
+                </Button>
+              </Link>
             </CardFooter>
           </Card>
         </TabsContent>

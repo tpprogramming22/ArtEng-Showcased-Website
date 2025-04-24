@@ -1,9 +1,10 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import SectionHeader from '@/components/SectionHeader';
 import SponsorCard from '@/components/SponsorCard';
 
 export default function PartnersPage() {
-  // random data that we'd pull from an API usually
+  // Primary sponsors data
   const primarySponsors = [
     {
       id: 1,
@@ -49,7 +50,7 @@ export default function PartnersPage() {
                 src="/engineering-forum.jpg" 
                 alt="Partnership Opportunities" 
                 fill
-                className="object-cover grayscale" // Added grayscale for black and white theme
+                className="object-cover grayscale"
               />
             </div>
             
@@ -61,9 +62,11 @@ export default function PartnersPage() {
               <p className="mb-6">
                 We offer various partnership levels to accommodate organizations of all sizes and objectives, from financial sponsorship to in-kind support and collaborative projects.
               </p>
-              <button className="bg-arteng-dark text-white px-6 py-2 rounded hover:bg-opacity-90 transition-colors">
-                Contact Us
-              </button>
+              <Link href="/login">
+                <button className="bg-arteng-dark text-white px-6 py-2 rounded hover:bg-opacity-90 transition-colors">
+                  Contact Us
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -97,9 +100,11 @@ export default function PartnersPage() {
           <p className="max-w-2xl mx-auto mb-8">
             Interested in supporting our mission to bring art and engineering together? We're always looking for new partners who share our vision.
           </p>
-          <button className="bg-white text-arteng-dark px-8 py-3 rounded-md font-bold hover:bg-gray-100 transition-colors">
-            Get In Touch
-          </button>
+          <Link href="/login">
+            <button className="bg-white text-arteng-dark px-8 py-3 rounded-md font-bold hover:bg-gray-100 transition-colors">
+              Get In Touch
+            </button>
+          </Link>
         </div>
       </section>
     </div>
