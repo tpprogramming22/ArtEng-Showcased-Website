@@ -7,31 +7,31 @@ export default function PartnersPage() {
   const primarySponsors = [
     {
       id: 1,
-      name: "Honda",
-      logo: "/honda-logo.jpg",
-      description: "Proudly supported by Honda, committed to excellence in the field and pushing boundaries of innovation."
+      name: "Forusall",
+      logo: "/forusall.jpg",
+      description: "Forusall is a company that is at the heart of connecting people, promoting product awareness, championing innovation and joining likeminded businesses. With a commitment to supporting and promoting engineering and manufacturing in its many forms, Forusall is passionate about the very shapes, designs and innovations that influence the everyday lives of each and everyone of us."
     },
     {
       id: 2,
-      name: "Lloyd's Bank",
-      logo: "/lloyds-logo.jpg",
-      description: "In partnership with Lloyd's Bank, supporting innovation and creativity through financial expertise."
+      name: "Business Cube",
+      logo: "/businesscube.jpg",
+      description: "The Business Cube is a place where SMEs can connect, share knowledge and collaborate with trusted experts to accelerate growth. Our multi-dimensional support is free – the only charge to your business will be for any work that goes ahead with our experts to help your business grow."
     },
     {
       id: 3,
-      name: "KPMG",
-      logo: "/kpmg-logo.jpg",
-      description: "Proudly supported with professional and accounting services from KPMG, enabling our growth."
+      name: "CMA Media",
+      logo: "/cmamedia.png",
+      description: "CMA Media provides marketing support to businesses who need assistance with digital marketing, websites, SEO, video and communications. Our experience of working with SMEs and large corporate organisations means that we can work to any particular requirements and circumstances."
     },
     {
       id: 4,
-      name: "Node.js",
+      name: "Tool Life",
       logo: "/nodejs-logo.jpg",
       description: "Powered by Node.js, enabling high-performance and scalable applications for our digital initiatives."
     },
     {
       id: 5,
-      name: "Tesla",
+      name: "T3O Solutions",
       logo: "/tesla-logo.jpg",
       description: "Supported by Tesla, both companies share a vision for a sustainable future through innovation."
     }
@@ -61,29 +61,10 @@ export default function PartnersPage() {
         </div>
       </section>
 
-      {/* Primary Sponsors */}
-      <section className="py-16 px-4 md:px-8">
-        <div className="container mx-auto">
-          <SectionHeader 
-            title="Our Sponsors" 
-            subtitle="Primary Sponsors" 
-          />
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {primarySponsors.map((sponsor) => (
-              <SponsorCard
-                key={sponsor.id}
-                name={sponsor.name}
-                logo={sponsor.logo}
-                description={sponsor.description}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* Partnership Information */}
-      <section className="py-16 px-4 md:px-8 bg-gray-50">
+      <section className="py-16 px-4 md:px-8 ">
         <div className="container mx-auto">
           <SectionHeader 
             title="Partner With Us" 
@@ -116,47 +97,28 @@ export default function PartnersPage() {
         </div>
       </section>
 
-      {/* Supporting Partners */}
-      <section className="py-16 px-4 md:px-8">
+
+      {/* Primary Sponsors */}
+      <section className="py-16 px-4 md:px-8 bg-gray-50">
         <div className="container mx-auto">
           <SectionHeader 
-            title="Supporting Partners" 
-            subtitle="Additional Support" 
+            title="Our Sponsors" 
+            subtitle="Primary Sponsors" 
           />
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {supportingPartners.map((partner) => (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {primarySponsors.map((sponsor) => (
               <SponsorCard
-                key={partner.id}
-                name={partner.name}
-                logo={partner.logo}
-                description={partner.description}
+                key={sponsor.id}
+                name={sponsor.name}
+                logo={sponsor.logo}
+                description={sponsor.description}
               />
             ))}
           </div>
         </div>
       </section>
 
-      {/* Community Partners */}
-      <section className="py-16 px-4 md:px-8 bg-gray-50">
-        <div className="container mx-auto">
-          <SectionHeader 
-            title="Community Partners" 
-            subtitle="Local Collaborations" 
-          />
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
-            {communityPartners.map((partner) => (
-              <SponsorCard
-                key={partner.id}
-                name={partner.name}
-                logo={partner.logo}
-                description={partner.description}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Become a Partner */}
       <section className="py-16 px-4 md:px-8 bg-arteng-dark text-white">

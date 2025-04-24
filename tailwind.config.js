@@ -17,7 +17,7 @@ module.exports = {
   	extend: {
   		colors: {
   			arteng: {
-  				dark: '#1A193F'
+  				dark: '#000000'
   			},
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',
