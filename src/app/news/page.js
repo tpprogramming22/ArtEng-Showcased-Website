@@ -9,38 +9,76 @@ import { useState } from 'react';
 export default function ArticlesPage() {
   const [showForm, setShowForm] = useState(false);
 
-  // sample data
+  // Updated with more diverse images
   const featuredArticles = [
     {
       id: 1,
       title: "ArtEng Acquires Tecla Studios",
       description: "Exciting news as we expand our capabilities with this new acquisition, providing greater opportunities for innovative projects and partnerships.",
-      imageUrl: "/tecla-studios.jpg",
+      imageUrl: "/acquisition-news.jpg",
       date: "March 5, 2025"
     },
     {
       id: 2,
       title: "CEO named as finalist for Innovation Award",
       description: "Our leadership continues to be recognized in the industry with this prestigious nomination that highlights our commitment to pushing boundaries.",
-      imageUrl: "/innovation-awards.jpg",
+      imageUrl: "/engineering-forum.jpg", 
       date: "February 28, 2025"
     },
     {
       id: 3,
       title: "2024 - What a Year",
       description: "A look back at our achievements and milestones from the past year, celebrating the growth and success of our community and projects.",
-      imageUrl: "/eoy-celebration.jpg",
+      imageUrl: "/digital-art-workshop.jpg",
       date: "January 15, 2025"
     }
   ];
 
-  const recentArticles = Array(6).fill().map((_, i) => ({
-    id: i + 4,
-    title: `Recent Industry Development ${i + 1}`,
-    description: "Exploring recent changes and innovations in the art and engineering intersection, with implications for future creative projects.",
-    imageUrl: "/engineering-celebration.jpg",
-    date: `March ${i + 1}, 2025`
-  }));
+  // Updated with more diverse images from across the site
+  const recentArticles = [
+    {
+      id: 4,
+      title: "The Intersection of Art and Engineering",
+      description: "Exploring how creative vision and technical expertise can combine to create innovative solutions that serve both practical and aesthetic purposes.",
+      imageUrl: "/exhibition-opening.jpg",
+      date: "March 1, 2025"
+    },
+    {
+      id: 5,
+      title: "Innovation Through Collaboration",
+      description: "How partnerships between artists and engineers lead to groundbreaking projects that neither discipline could achieve alone.",
+      imageUrl: "/ceo-award.jpg",
+      date: "March 2, 2025"
+    },
+    {
+      id: 6,
+      title: "The Future of Creative Technology",
+      description: "Examining emerging trends at the intersection of art and engineering that are shaping the next generation of experiences.",
+      imageUrl: "/award-background.png",
+      date: "March 3, 2025"
+    },
+    {
+      id: 7,
+      title: "Sustainability in Design",
+      description: "How art and engineering collaborate to create sustainable solutions that address environmental challenges while maintaining aesthetic appeal.",
+      imageUrl: "/partnership-background.png",
+      date: "March 4, 2025"
+    },
+    {
+      id: 8,
+      title: "Art-Inspired Engineering Solutions",
+      description: "Case studies of engineering projects that found inspiration and innovative approaches through artistic thinking and creative processes.",
+      imageUrl: "/year-review.jpg",
+      date: "March 5, 2025"
+    },
+    {
+      id: 9,
+      title: "Building Bridges Between Disciplines",
+      description: "The importance of cross-disciplinary education and collaboration in fostering innovation across art and engineering sectors.",
+      imageUrl: "/eoy-celebration.jpg",
+      date: "March 6, 2025"
+    }
+  ];
 
   const toggleForm = () => {
     setShowForm(prevState => !prevState);
