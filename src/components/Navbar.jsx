@@ -24,8 +24,8 @@ const Navbar = () => {
         <Link href="/about-us" className="text-lg hover:underline">About Us</Link>
         <Link href="/partners" className="text-lg hover:underline">Partners</Link>
         <Link href="/faq" className="text-lg hover:underline">FAQ</Link>
-        <Link href="/login" className="ml-4 px-6 py-2 rounded bg-arteng-dark text-white hover:bg-opacity-90 transition-colors font-bold text-lg">
-          LOG IN
+        <Link href="/login" className="ml-4 px-6 py-2 rounded bg-arteng-dark text-white hover:bg-opacity-90 transition-colors font-bold text-lg flex items-center justify-center">
+          SIGN UP
         </Link>
       </div>
     </nav>

@@ -34,15 +34,11 @@
 
     --radius: 0.5rem;
 
-    --chart-1: 12 76% 61%;
-
-    --chart-2: 173 58% 39%;
-
-    --chart-3: 197 37% 24%;
-
-    --chart-4: 43 74% 66%;
-
-    --chart-5: 27 87% 67%;
+    --chart-1: 0 0% 0%;
+    --chart-2: 0 0% 20%;
+    --chart-3: 0 0% 40%;
+    --chart-4: 0 0% 60%;
+    --chart-5: 0 0% 80%;
   }
 
   .dark {
@@ -73,11 +69,11 @@
     --border: 0 0% 14.9%;
     --input: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+    --chart-1: 0 0% 20%;
+    --chart-2: 0 0% 35%;
+    --chart-3: 0 0% 50%;
+    --chart-4: 0 0% 65%;
+    --chart-5: 0 0% 80%;
   }
 }
 
@@ -91,18 +87,18 @@
 }
 
 .hero-section {
-  background-color: #1A193F;
+  background-color: #000000;
   color: white;
 }
 
 .section-title {
   font-weight: 700;
   font-size: 2rem;
-  color: #1A193F;
+  color: #000000;
 }
 
 .more-info-btn {
-  background-color: #1A193F;
+  background-color: #000000;
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
@@ -114,6 +110,7 @@
   background-image: url('/fresh-arteng-website/public/backgroundforarteng.png');
   background-size: cover;
   background-position: center;
+  filter: grayscale(100%);
 }
 
 .diagonal-overlay {
@@ -153,4 +150,9 @@
 
 .carousel-indicator.active {
   opacity: 1;
+}
+
+/* Add grayscale filter to all images by default */
+img {
+  filter: grayscale(100%);
 }

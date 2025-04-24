@@ -8,28 +8,28 @@ const RecordTurnoutCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [imagesLoaded, setImagesLoaded] = useState(false);
 
-  // Carousel slide data with different background images
+  // Updated carousel slide data with different background images
   const slides = [
     {
-      title: "Record Turnout",
-      description: "ArtEng is delighted to announce its busiest quarter yet, smashing targets by 12%.",
+      title: "Bringing Art & Engineering Together",
+      description: "ArtEng is dedicated to fostering creativity, innovation, and collaboration between artists and engineers.",
       link: "/news/record-turnout",
       linkText: "More Info",
       backgroundImage: "/backgroundforarteng.png"
     },
     {
-      title: "New Partnerships",
-      description: "We've established exciting new collaborations with industry leaders this month.",
+      title: "Networking Opportunities",
+      description: "Connect with professionals from both art and engineering fields to create unique solutions.",
       link: "/news/new-partnerships",
       linkText: "Learn More",
-      backgroundImage: "/partnership-background.png" // Replace with actual image
+      backgroundImage: "/partnership-background.png"
     },
     {
-      title: "Innovation Award",
-      description: "Our team has been recognized for excellence in creative technology solutions.",
+      title: "Upcoming Events",
+      description: "Join us for workshops, exhibitions, and forums that bring together creative minds and technical expertise.",
       link: "/news/innovation-award",
       linkText: "See Details",
-      backgroundImage: "/award-background.png" // Replace with actual image
+      backgroundImage: "/award-background.png"
     }
   ];
 
@@ -73,7 +73,7 @@ const RecordTurnoutCarousel = () => {
 
   return (
     <section className="relative">
-      {/* Significantly increased height for a much longer appearance */}
+      {/* Fixed height for carousel */}
       <div className="relative h-[700px] w-full overflow-hidden">
         {/* Background image - dynamically selected based on current slide */}
         <Image 
@@ -81,7 +81,7 @@ const RecordTurnoutCarousel = () => {
           alt="Slide Background"
           fill
           priority={true}
-          className="object-cover transition-opacity duration-300"
+          className="object-cover transition-opacity duration-300 grayscale"
           style={{ objectPosition: "center center" }}
         />
         
@@ -92,25 +92,27 @@ const RecordTurnoutCarousel = () => {
             transform: 'translateX(0)'
           }}></div>
           
-          {/* Content positioned on the right */}
-          <div className="absolute right-0 w-2/3 pr-12 text-white">
+          {/* Content positioned on the right with fixed heights */}
+          <div className="absolute right-0 w-2/3 pr-12 text-white flex items-center justify-center h-full">
             <div className="flex flex-col items-center">
-              {/* Fixed width container for title and description */}
-              <div className="w-[500px] text-center">
+              {/* Fixed width and height container for title and description */}
+              <div className="w-[500px] text-center h-[200px] flex flex-col justify-center">
                 <h2 className="text-6xl font-bold mb-6">{slides[currentSlide].title}</h2>
-                <p className="mb-8 h-16 flex items-center justify-center text-xl">{slides[currentSlide].description}</p>
+                <p className="mb-8 flex items-center justify-center text-xl h-[60px]">{slides[currentSlide].description}</p>
               </div>
               
-              {/* Fixed width button */}
-              <Link 
-                href={slides[currentSlide].link} 
-                className="bg-white text-arteng-dark px-8 py-3 rounded-md text-lg inline-block hover:bg-gray-100 transition-colors mb-16 w-48 text-center font-medium"
-              >
-                {slides[currentSlide].linkText}
-              </Link>
+              {/* Fixed width button with consistent positioning */}
+              <div className="h-[80px] flex items-center justify-center">
+                <Link 
+                  href={slides[currentSlide].link} 
+                  className="bg-white text-arteng-dark px-8 py-3 rounded-md text-lg inline-block hover:bg-gray-100 transition-colors w-48 text-center font-medium"
+                >
+                  {slides[currentSlide].linkText}
+                </Link>
+              </div>
               
-              {/* Navigation controls */}
-              <div className="flex justify-center items-center space-x-6">
+              {/* Navigation controls with fixed height */}
+              <div className="flex justify-center items-center space-x-6 h-[60px]">
                 {/* Left arrow */}
                 <button 
                   onClick={goToPrevSlide}

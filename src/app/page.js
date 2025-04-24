@@ -67,7 +67,7 @@ export default function Home() {
             <div className="lg:col-span-6">
               <div>
                 <Image 
-                  src="/about-arteng-team.jpg" // Replace with actual image
+                  src="/about-arteng-team.jpg" 
                   alt="ArtEng Team" 
                   width={600} 
                   height={400} 
@@ -78,26 +78,13 @@ export default function Home() {
             
             <div className="lg:col-span-6">
               <p className="mb-4 text-gray-800">
-                At ArtEng, we're a group of creators and engineers who share a passion for blending art with technology. We've come together to build a space where artists and engineers can inspire each other.
+                ArtEng is an organisation dedicated to bridging the worlds of art and engineering together by fostering creativity, innovation, and collaboration. We aim to inspire and connect individuals and businesses to create unique solutions that enhance both fields.
               </p>
               <p className="mb-4 text-gray-800">
-                Our events are all about connecting people so they can create something unforgettable — whether it's an interactive installation, a digital experience, or an innovative product. For us, it's all just about having fun and pushing boundaries in a space where imagination knows no limits.
+                Through networking, events and a programme of activities, ArtEng is striving to cultivate a dynamic space where imagination meets engineering, resulting in groundbreaking works that shape the future of both art and technology.
               </p>
               
-              <div className="grid grid-cols-3 gap-6 my-8">
-                <div className="text-center bg-gray-50 p-4 rounded-md shadow-sm">
-                  <h3 className="text-4xl font-bold text-arteng-dark">25+</h3>
-                  <p className="text-gray-600">Years in Industry</p>
-                </div>
-                <div className="text-center bg-gray-50 p-4 rounded-md shadow-sm">
-                  <h3 className="text-4xl font-bold text-arteng-dark">75+</h3>
-                  <p className="text-gray-600">Events Successfully Hosted</p>
-                </div>
-                <div className="text-center bg-gray-50 p-4 rounded-md shadow-sm">
-                  <h3 className="text-4xl font-bold text-arteng-dark">22+</h3>
-                  <p className="text-gray-600">Speakers</p>
-                </div>
-              </div>
+              {/* Removed the 3 numbers boxes as requested */}
               
               {/* Button centered under the right column content */}
               <div className="flex justify-center mt-6">
@@ -116,31 +103,37 @@ export default function Home() {
           <div className="flex justify-between items-center mb-6">
             <div>
               <h2 className="text-2xl font-bold text-arteng-dark">Meet The Team</h2>
-              <p className="text-gray-600">Our Leaders</p>
+              <p className="text-gray-600">Meet the team behind ArtEng, click here to find out more about us all</p>
             </div>
             <Link href="/about-us" className="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition-colors">
               More Info
             </Link>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <TeamMemberCard
-              name="Jane Smith"
-              role="Creative Director"
-              imageUrl="/jane-smith.jpg" 
-              description="Leads our creative vision with over 15 years of experience in interactive design."
-            />
-            <TeamMemberCard
-              name="John Smith"
+              name="Adam Snelleksz"
               role="Marketing Director"
-              imageUrl="/john-smith.jpg" 
-              description="Drives our brand strategy with innovative approaches to engagement."
+              imageUrl="/adam.png" 
+              description="Adam is a marketing and communications expert with over 25 years of experience, including founding two successful agencies."
             />
             <TeamMemberCard
-              name="Jess Smith"
-              role="Events Director"
+              name="Stephen Fletcher"
+              role="Sales Director"
+              imageUrl="/steve.png" 
+              description="Stephen has over 45 years of experience in logistics, projects, sales, and the arts, focusing on supporting student career transitions."
+            />
+            <TeamMemberCard
+              name="Wendy Bennet"
+              role="Technical Lead"
+              imageUrl="/wendy.png" 
+              description="Wendy is a pioneering leader for women in engineering, with achievements in precision casting and leadership roles in industry."
+            />
+            <TeamMemberCard
+              name="Joan Smith"
+              role="Business Director"
               imageUrl="/jess-smith.jpg" 
-              description="Orchestrates our world-class events with precision and creativity."
+              description="Joan is an experienced business advisor who connects companies with expert support to help them grow and succeed."
             />
           </div>
         </div>
@@ -151,7 +144,7 @@ export default function Home() {
         <div className="container mx-auto">
           <SectionHeader 
             title="Latest News" 
-            subtitle="What's Happening" 
+            subtitle="Keep up to date with what's happening, what our partners have been up to and all our news" 
             viewAllLink="/news" 
           />
           
@@ -183,7 +176,7 @@ export default function Home() {
         <div className="container mx-auto">
           <SectionHeader 
             title="Upcoming Events" 
-            subtitle="What's Coming Soon" 
+            subtitle="Events coming soon, to book and find out more click on each image" 
             viewAllLink="/events" 
           />
           
@@ -204,44 +197,44 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Our Sponsors Section - Already had a gray background */}
-      <section className="py-16 px-4 md:px-8 bg-gray-50">
-        <div className="container mx-auto">
-          <SectionHeader 
-            title="Our Sponsors" 
-            subtitle="Primary Sponsors" 
-            viewAllLink="/partners" 
-          />
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            <SponsorCard 
-              name="Honda" 
-              logo="/honda-logo.jpg" 
-              description="Proudly supported by Honda, committed to excellence in the field."
-            />
-            <SponsorCard 
-              name="Lloyd's Bank" 
-              logo="/lloyds-logo.jpg" 
-              description="In partnership with Lloyd's Bank, supporting innovation and creativity."
-            />
-            <SponsorCard 
-              name="KPMG" 
-              logo="/kpmg-logo.jpg" 
-              description="Proudly supported with professional and accounting services from KPMG."
-            />
-            <SponsorCard 
-              name="Node.js" 
-              logo="/nodejs-logo.jpg" 
-              description="Powered by Node.js, enabling high-performance and scalable applications."
-            />
-            <SponsorCard 
-              name="Tesla" 
-              logo="/tesla-logo.jpg" 
-              description="Supported by Tesla, both companies share a vision for a sustainable future."
-            />
-          </div>
-        </div>
-      </section>
+{/* Our Partners Section (renamed from Sponsors) */}
+<section className="py-16 px-4 md:px-8 bg-gray-50">
+  <div className="container mx-auto">
+    <SectionHeader 
+      title="Our Partners" 
+      subtitle="Primary Partners" 
+      viewAllLink="/partners" 
+    />
+    
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+      <SponsorCard 
+        name="Forusall" 
+        logo="/forusall.jpg" 
+        description="Forusall is a company that is at the heart of connecting people, promoting product awareness, championing innovation and joining likeminded businesses."
+      />
+      <SponsorCard 
+        name="Business Cube" 
+        logo="/businesscube.jpg" 
+        description="The Business Cube is a place where SMEs can connect, share knowledge and collaborate with trusted experts to accelerate growth."
+      />
+      <SponsorCard 
+        name="CMA Media" 
+        logo="/cmamedia.png" 
+        description="CMA Media provides marketing support to businesses who need assistance with digital marketing, websites, SEO, video and communications."
+      />
+      <SponsorCard 
+        name="Tool Life" 
+        logo="/nodejs-logo.jpg" 
+        description="Powered by Node.js, enabling high-performance and scalable applications for our digital initiatives."
+      />
+      <SponsorCard 
+        name="T3O Solutions" 
+        logo="/tesla-logo.jpg" 
+        description="Supported by Tesla, both companies share a vision for a sustainable future through innovation."
+      />
+    </div>
+  </div>
+</section>
     </div>
   );
 }

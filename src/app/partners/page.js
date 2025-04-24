@@ -56,8 +56,8 @@ export default function PartnersPage() {
       {/* Hero Section */}
       <section className="bg-arteng-dark text-white py-12">
         <div className="container mx-auto px-4 md:px-8">
-          <h1 className="text-4xl font-bold mb-4">Our Sponsors</h1>
-          <p className="text-lg">The organizations and companies that make our work possible.</p>
+          <h1 className="text-4xl font-bold mb-4">Our Partners</h1>
+          <p className="text-lg">The organisations and companies that make our work possible.</p>
         </div>
       </section>
 
@@ -102,8 +102,8 @@ export default function PartnersPage() {
       <section className="py-16 px-4 md:px-8 bg-gray-50">
         <div className="container mx-auto">
           <SectionHeader 
-            title="Our Sponsors" 
-            subtitle="Primary Sponsors" 
+            title="Our Partners" 
+            subtitle="Primary Partners" 
           />
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">

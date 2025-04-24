@@ -20,7 +20,7 @@ const Card = ({
             src={imageUrl}
             alt={title}
             fill
-            className="object-cover"
+            className="object-cover grayscale" // Added grayscale class
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-gray-200">
