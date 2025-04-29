@@ -162,7 +162,7 @@ export default function EventsPage() {
           </div>
 
           <div className="flex justify-center w-full mt-8">
-            <Link href="/events" className="inline-block bg-arteng-dark text-white px-4 py-1 rounded text-sm hover:bg-opacity-90 transition-colors w-24 text-center">
+            <Link href="/events" className="inline-block text-white px-4 py-1 rounded text-sm hover:bg-opacity-90 transition-colors w-24 text-center">
               View All
             </Link>
         </div>
