@@ -8,7 +8,32 @@ import TeamMemberCard from '@/components/TeamMemberCard';
 import RecordTurnoutCarousel from '@/components/RecordTurnoutCarousel';
 
 export default function Home() {
-  // random
+  // Featured news articles
+  const featuredNews = [
+    {
+      id: 1,
+      title: "ArtEng Acquires Tecla Studios",
+      description: "Exciting news as we expand our capabilities with this new acquisition, providing greater opportunities for innovative projects and partnerships.",
+      imageUrl: "/acquisition-news.jpg", 
+      date: "March 5, 2025"
+    },
+    {
+      id: 2,
+      title: "CEO named as finalist for Innovation Award",
+      description: "Our leadership continues to be recognized in the industry with this prestigious nomination that highlights our commitment to pushing boundaries.",
+      imageUrl: "/ceo-award.jpg", 
+      date: "February 28, 2025"
+    },
+    {
+      id: 3,
+      title: "2024 - What a Year",
+      description: "A look back at our achievements and milestones from the past year, celebrating the growth and success of our community and projects.",
+      imageUrl: "/year-review.jpg",
+      date: "January 15, 2025"
+    }
+  ];
+
+  // Upcoming events
   const upcomingEvents = [
     {
       id: 1,
@@ -41,8 +66,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section - Updated with white background */}
-      <section className="bg-white text-arteng-dark py-16">
+      {/* Hero Section - Updated with white background and extra padding for navbar */}
+      <section className="bg-white text-arteng-dark py-16 pt-24">
         <div className="container mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -78,13 +103,14 @@ export default function Home() {
             
             <div className="lg:col-span-6">
               <p className="mb-4 text-gray-800">
-                ArtEng is an organisation dedicated to bridging the worlds of art and engineering together by fostering creativity, innovation, and collaboration. We aim to inspire and connect individuals and businesses to create unique solutions that enhance both fields.
+                ArtEng is an innovative initiative that merges the worlds of art and engineering to encourage creativity and problem-solving in industry. It was established to bridge the gap between art and engineering, offering a platform for artists, engineers, and creators to collaborate and develop groundbreaking solutions.
               </p>
               <p className="mb-4 text-gray-800">
                 Through networking, events and a programme of activities, ArtEng is striving to cultivate a dynamic space where imagination meets engineering, resulting in groundbreaking works that shape the future of both art and technology.
               </p>
-              
-              {/* Removed the 3 numbers boxes as requested */}
+              <p className="mb-4 text-gray-800">
+                At ArtEng we want to foster a creative community that blurs the lines between art and engineering, providing the tools, resources and opportunities to experiment, collaborate, and develop projects that challenge traditional perspectives.
+              </p>
               
               {/* Button centered under the right column content */}
               <div className="flex justify-center mt-6">
@@ -111,36 +137,37 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {/* Team members arranged by surname alphabetical order */}
             <TeamMemberCard
-              name="Adam Snelleksz"
-              role="Marketing Director"
-              imageUrl="/adam.png" 
-              description="Adam is a marketing and communications expert with over 25 years of experience, including founding two successful agencies."
+              name="Wendy Bennett"
+              role="Technical Director"
+              imageUrl="/wendy.png" 
+              description="Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields."
             />
             <TeamMemberCard
               name="Stephen Fletcher"
-              role="Sales Director"
+              role="Business Development Director"
               imageUrl="/steve.png" 
-              description="Stephen has over 45 years of experience in logistics, projects, sales, and the arts, focusing on supporting student career transitions."
+              description="Stephen's career spans more than 45 years covering a range of roles including Logistics/Transport management, Project management, Key Account management and Sales Business Development."
             />
             <TeamMemberCard
-              name="Wendy Bennet"
-              role="Technical Lead"
-              imageUrl="/wendy.png" 
-              description="Wendy is a pioneering leader for women in engineering, with achievements in precision casting and leadership roles in industry."
+              name="Adam Snelleksz"
+              role="Marketing and Communications Director"
+              imageUrl="/adam.png" 
+              description="Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations."
             />
             <TeamMemberCard
               name="Joan Smith"
-              role="Business Director"
+              role="Membership Director"
               imageUrl="/jess-smith.jpg" 
-              description="Joan is an experienced business advisor who connects companies with expert support to help them grow and succeed."
+              description="With over 20 years of experience in business advice and guidance, Joan brings a wealth of knowledge in all areas of business support."
             />
           </div>
         </div>
       </section>
       
-      {/* Latest News Section - COMMENTED OUT
-      <section className="py-16 px-4 md:px-8 bg-gray-50">
+      {/* Latest News Section */}
+      <section className="py-16 px-4 md:px-8 bg-white">
         <div className="container mx-auto">
           <SectionHeader 
             title="Latest News" 
@@ -149,31 +176,22 @@ export default function Home() {
           />
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card
-              imageUrl="/acquisition-news.jpg" 
-              title="ArtEng Acquires Tecla Studios"
-              description="Exciting news as we expand our capabilities with this new acquisition."
-              link="/news/acquisition"
-            />
-            <Card
-              imageUrl="/ceo-award.jpg" 
-              title="CEO named as finalist for Innovation Award"
-              description="Our leadership continues to be recognized in the industry."
-              link="/news/ceo-award"
-            />
-            <Card
-              imageUrl="/year-review.jpg" 
-              title="2024 - What a Year"
-              description="A look back at our achievements and milestones from the past year."
-              link="/news/year-review"
-            />
+            {featuredNews.map((article) => (
+              <Card
+                key={article.id}
+                imageUrl={article.imageUrl}
+                title={article.title}
+                description={article.description}
+                dateTime={article.date}
+                link={`/news/${article.id}`}
+              />
+            ))}
           </div>
         </div>
       </section>
-      */}
       
-      {/* Upcoming Events Section - COMMENTED OUT
-      <section className="py-16 px-4 md:px-8 bg-white">
+      {/* Upcoming Events Section */}
+      <section className="py-16 px-4 md:px-8 bg-gray-50">
         <div className="container mx-auto">
           <SectionHeader 
             title="Upcoming Events" 
@@ -197,10 +215,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      */}
       
       {/* Our Partners Section (renamed from Sponsors) */}
-      <section className="py-16 px-4 md:px-8 bg-gray-50">
+      <section className="py-16 px-4 md:px-8 bg-white">
         <div className="container mx-auto">
           <SectionHeader 
             title="Our Partners" 
@@ -208,7 +225,7 @@ export default function Home() {
             viewAllLink="/partners" 
           />
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <SponsorCard 
               name="Forusall" 
               logo="/forusall.jpg" 
@@ -223,6 +240,11 @@ export default function Home() {
               name="CMA Media" 
               logo="/cmamedia.png" 
               description="CMA Media provides marketing support to businesses who need assistance with digital marketing, websites, SEO, video and communications."
+            />
+            <SponsorCard 
+              name="Toolife" 
+              logo="/toolife.png" 
+              description="Toolife provides innovative tools and solutions for creative professionals and engineers, bridging the gap between artistic vision and technical implementation."
             />
           </div>
         </div>
