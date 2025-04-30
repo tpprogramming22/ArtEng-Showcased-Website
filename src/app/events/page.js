@@ -120,19 +120,7 @@ export default function EventsPage() {
       
       <div className='relative'>
       
-      {/* Coming Soon overlay - updated to fixed position to follow scrolling */}
-      <div className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-md flex items-center justify-center z-10">
-        <div className="bg-white p-8 rounded-lg shadow-lg text-center max-w-md mt-[-100px]">
-          <h2 className="text-2xl font-bold text-gray-800 mb-3">Coming Soon</h2>
-          <p className="text-gray-600 mb-4">We're working hard to bring you our event schedule. Please check back later!</p>
-          <button onClick={toggleForm} className="bg-arteng-dark text-white px-6 py-2 rounded hover:bg-opacity-90 transition-colors"> {showForm ? 'Hide Form' : 'Notify Me'} </button>
-          {showForm && (
-          <div className="mt-6 border-t pt-6 border-gray-200">
-            <MailtoNotifyForm />
-          </div>
-        )}
-        </div>
-      </div>
+    
 
 
       <section className="py-16 px-4 md:px-8 bg-gray-50">
@@ -174,7 +162,7 @@ export default function EventsPage() {
           </div>
 
           <div className="flex justify-center w-full mt-8">
-            <Link href="/events" className="inline-block bg-arteng-dark text-white px-4 py-1 rounded text-sm hover:bg-opacity-90 transition-colors w-24 text-center">
+            <Link href="/events" className="inline-block text-white px-4 py-1 rounded text-sm hover:bg-opacity-90 transition-colors w-24 text-center">
               View All
             </Link>
         </div>
