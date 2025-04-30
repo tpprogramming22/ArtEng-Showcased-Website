@@ -53,7 +53,7 @@ export default function FAQPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-arteng-dark text-white py-12">
+      <section className="bg-arteng-dark text-white py-12 pt-24">
         <div className="container mx-auto px-4 md:px-8">
           <h1 className="text-4xl font-bold mb-4">Frequently Asked Questions</h1>
           <p className="text-lg">Have a question about ArtEng? Whether it’s about membership, becoming a partner, one of our networking events or how to get the best out of ArtEng, your question could be answered here. If you can’t find what you’re looking for in our Frequently Asked Questions then please get in touch with us at info@arteng.co.uk</p>

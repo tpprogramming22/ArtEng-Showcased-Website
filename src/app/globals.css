@@ -110,7 +110,6 @@
   background-image: url('/fresh-arteng-website/public/backgroundforarteng.png');
   background-size: cover;
   background-position: center;
-  filter: grayscale(100%);
 }
 
 .diagonal-overlay {
@@ -150,9 +149,4 @@
 
 .carousel-indicator.active {
   opacity: 1;
-}
-
-/* Add grayscale filter to all images by default */
-img {
-  filter: grayscale(100%);
 }

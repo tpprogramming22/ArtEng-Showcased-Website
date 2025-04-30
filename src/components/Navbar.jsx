@@ -10,8 +10,8 @@ const Navbar = () => {
             <Image
               src="/logo.svg"
               alt="ArtEng Logo"
-              width={120}
-              height={40}
+              width={180}
+              height={60}
               priority
             />
           </div>
@@ -25,6 +25,7 @@ const Navbar = () => {
         <Link href="/membership" className="text-lg hover:underline">Membership</Link>
         <Link href="/partners" className="text-lg hover:underline">Partners</Link>
         <Link href="/faq" className="text-lg hover:underline">FAQ</Link>
+        <Link href="/contact" className="text-lg hover:underline">Contact</Link>
         <Link href="/login" className="ml-4 px-6 py-2 rounded bg-arteng-dark text-white hover:bg-opacity-90 transition-colors font-bold text-lg flex items-center justify-center">
           SIGN UP
         </Link>

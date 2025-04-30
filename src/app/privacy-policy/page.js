@@ -5,7 +5,7 @@ export default function PrivacyPolicyPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-arteng-dark text-white py-12">
+      <section className="bg-arteng-dark text-white py-12 pt-24">
         <div className="container mx-auto px-4 md:px-8">
           <h1 className="text-4xl font-bold mb-4">Privacy Policy</h1>
           <p className="text-lg">Our commitment to your privacy and data protection</p>

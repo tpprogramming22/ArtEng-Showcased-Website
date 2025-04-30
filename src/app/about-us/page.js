@@ -55,7 +55,7 @@ export default function AboutUsPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-arteng-dark text-white py-12">
+      <section className="bg-arteng-dark text-white py-12 pt-24">
         <div className="container mx-auto px-4 md:px-8">
           <h1 className="text-4xl font-bold mb-4">About Us</h1>
           <p className="text-lg">Learn about our mission, values, and the team behind ArtEng.</p>

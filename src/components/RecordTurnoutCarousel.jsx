@@ -7,6 +7,14 @@ import Image from 'next/image';
 const RecordTurnoutCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [imagesLoaded, setImagesLoaded] = useState(false);
+  
+  // Carousel dimensions - these can be used for image preparation
+  // The carousel is 100% width of the viewport
+  // The height is fixed at 700px
+  const carouselDimensions = {
+    width: '100% viewport width',
+    height: '700px'
+  };
 
   // Updated carousel slide data with different background images
   const slides = [
@@ -59,6 +67,15 @@ const RecordTurnoutCarousel = () => {
     preloadImages();
   }, []);
 
+  useEffect(() => {
+    // Auto-rotate slides every 5 seconds
+    const intervalId = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    
+    return () => clearInterval(intervalId);
+  }, []);
+
   const goToSlide = (index) => {
     setCurrentSlide(index);
   };
@@ -81,7 +98,7 @@ const RecordTurnoutCarousel = () => {
           alt="Slide Background"
           fill
           priority={true}
-          className="object-cover transition-opacity duration-300 grayscale"
+          className="object-cover transition-opacity duration-300"
           style={{ objectPosition: "center center" }}
         />
         
