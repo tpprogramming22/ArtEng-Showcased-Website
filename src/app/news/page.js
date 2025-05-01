@@ -94,6 +94,9 @@ export default function ArticlesPage() {
         </div>
       </section>
 
+    
+      <div className="relative">
+
         {/* Featured Articles */}
         <section className="py-16 px-4 md:px-8">
           <div className="container mx-auto">
