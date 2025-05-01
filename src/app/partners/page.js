@@ -1,4 +1,4 @@
-wimport Image from 'next/image';
+import Image from 'next/image';
 import Link from 'next/link';
 import SectionHeader from '@/components/SectionHeader';
 import SponsorCard from '@/components/SponsorCard';
