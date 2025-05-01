@@ -1,7 +1,16 @@
-import Image from 'next/image';
+wwimport Image from 'next/image';
 import Link from 'next/link';
 import SectionHeader from '@/components/SectionHeader';
 import SponsorCard from '@/components/SponsorCard';
+const SponsorCard = ({ name, logo, description }) => (
+  <div className="bg-white p-4 rounded shadow text-center">
+    <div className="relative w-32 h-32 md:w-40 md:h-40 mx-auto mb-4">
+      <Image src={logo} alt={name} fill className="object-contain" />
+    </div>
+    <h3 className="text-lg font-semibold">{name}</h3>
+    <p className="text-sm text-gray-600">{description}</p>
+  </div>
+);
 
 export default function PartnersPage() {
   // Primary sponsors data
@@ -80,21 +89,16 @@ export default function PartnersPage() {
             subtitle="Primary Partners" 
           />
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {primarySponsors.map((sponsor) => (
-              const SponsorCard = ({ name, logo, description }) => {
-                return (
-                  <div className="bg-white p-4 rounded shadow text-center">
-                    <div className="relative w-32 h-32 md:w-40 md:h-40 mx-auto mb-4">
-                      <Image src={logo} alt={name} fill className="object-contain" />
-                    </div>
-                    <h3 className="text-lg font-semibold">{name}</h3>
-                    <p className="text-sm text-gray-600">{description}</p>
-                  </div>
-                );
-              };
-            ))}
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {primarySponsors.map((sponsor) => (
+            <SponsorCard
+              key={sponsor.id}
+              name={sponsor.name}
+              logo={sponsor.logo}
+              description={sponsor.description}
+            />
+          ))}
+        </div>
         </div>
       </section>
 
