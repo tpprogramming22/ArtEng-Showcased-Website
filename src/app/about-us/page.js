@@ -89,13 +89,7 @@ export default function AboutUsPage() {
 
       {/* Our Values */}
       <section className="py-16 px-4 md:px-8 bg-gray-50">
-        <div className="container mx-auto text-right">
-          <div className="text-right">
-            <SectionHeader 
-              title="Our Story" 
-              subtitle="What We Stand For" 
-            />
-          </div>
+        <div className="container mx-auto">
                 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative h-80 rounded-md overflow-hidden">
@@ -107,6 +101,12 @@ export default function AboutUsPage() {
               />
             </div>
             <div>
+              <div className="text-right">
+                <SectionHeader 
+                  title="Our Story" 
+                  subtitle="What We Stand For" 
+                />
+              </div>
               <p className="mb-4">
                 ArtEng is an innovative initiative that merges the worlds of art and engineering to encourage creativity and problem-solving in industry. It was established to bridge the gap between art and engineering, offering a platform for artists, engineers, and creators to collaborate and develop groundbreaking solutions. The idea behind ArtEng is to recognise that art and engineering, when combined, can lead to fresh perspectives, new technologies and creative ideas.
               </p>
