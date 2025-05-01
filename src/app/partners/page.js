@@ -56,7 +56,6 @@ export default function PartnersPage() {
                 src="/engineering-forum.jpg" 
                 alt="Partnership Opportunities" 
                 fill
-                className="object-cover grayscale"
               />
             </div>
             
