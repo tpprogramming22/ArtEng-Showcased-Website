@@ -1,15 +1,7 @@
 wimport Image from 'next/image';
 import Link from 'next/link';
 import SectionHeader from '@/components/SectionHeader';
-const SponsorCard = ({ name, logo, description }) => (
-  <div className="bg-white p-4 rounded shadow text-center">
-    <div className="relative w-32 h-32 md:w-40 md:h-40 mx-auto mb-4">
-      <Image src={logo} alt={name} fill className="object-contain" />
-    </div>
-    <h3 className="text-lg font-semibold">{name}</h3>
-    <p className="text-sm text-gray-600">{description}</p>
-  </div>
-);
+import SponsorCard from '@/components/SponsorCard';
 
 export default function PartnersPage() {
   // Primary sponsors data
