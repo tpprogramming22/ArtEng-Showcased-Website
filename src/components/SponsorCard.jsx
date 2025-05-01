@@ -3,7 +3,7 @@ import Image from 'next/image';
 const SponsorCard = ({ name, logo, description }) => {
   return (
     <div className="bg-white rounded-md overflow-hidden shadow-sm border border-gray-200 p-4 flex flex-col items-center">
-      <div className="w-54 h-36 relative mb-4">
+      <div className="w-56 h-36 relative mb-4">
         {logo ? (
           <Image
             src={logo}
