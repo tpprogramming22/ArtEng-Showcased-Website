@@ -13,7 +13,7 @@ const SponsorCard = ({ name, logo, description }) => {
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-gray-100 rounded">
-            <span className="text-gray-400 text-xs">{name}</span>
+            <span className="text-gray-400 text-s">{name}</span>
           </div>
         )}
       </div>
