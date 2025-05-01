@@ -89,11 +89,14 @@ export default function AboutUsPage() {
 
       {/* Our Values */}
       <section className="py-16 px-4 md:px-8 bg-gray-50">
-        <div className="container mx-auto text-right">
-          <SectionHeader 
-            title="Our Story" 
-            subtitle="What We Stand For" 
-          />
+        <div className="container mx-auto">
+          <div className="flex justify-end">
+            <SectionHeader 
+              title="Our Story" 
+              subtitle="What We Stand For" 
+            />
+          </div>
+        </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative h-80 rounded-md overflow-hidden">
               <Image 
