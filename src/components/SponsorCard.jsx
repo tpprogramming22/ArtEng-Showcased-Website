@@ -17,7 +17,7 @@ const SponsorCard = ({ name, logo, description }) => {
           </div>
         )}
       </div>
-      <p className="text-xs text-gray-600 text-center">{description}</p>
+      <p className="text-s text-gray-600 text-center">{description}</p>
     </div>
   );
 };
