@@ -31,16 +31,6 @@ export default function AboutUsPage() {
       long3: "Stephen's experience has led to a passion for supporting the transition of students in the move towards a career environment, allowing them access to as much information as they need to complete their studies, because anything is possible if you are supported by the right people."
     },
     {
-      id: 1,
-      name: "Adam Snelleksz",
-      role: "Marketing and Communications Director",
-      description: "Adam is a marketing and communications expert with over 25 years of experience, including founding two successful agencies.",
-      imageUrl: "/adam.png",
-      long1: "Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations. After graduating from university with a marketing degree, Adam moved to London and worked in a busy press office for the National Consumer Council. Following two years in the capital, Adam returned to Birmingham as head of communications for Birmingham City Football Club. The role included hosting and organising manager and player press conferences, dealing with media enquiries and setting up the club's first online TV channel, Blues TV. Adam then stayed in the sports industry when he became head of marketing for Birmingham City Council's sports events department. Responsible for the commercial partnerships, ticket sales, marketing and promotion of world and European championships including the World BMX Championships, European Gymnastics Championships, Diamond League Athletics and many more held at the National Indoor Arena and Birmingham Alexander Stadium.",
-      long2: "After working in sport, Adam took the step of setting up his own company - a video production company called CMA Video. He built the company into a widely recognised video agency which produced TV and cinema adverts for Sea Life Centre, Lego Land, Brooks running shoes and many more. After 12 years of successful trading, Adam sold the business and set up an off-shoot marketing company called CMA Media which specialises in digital marketing, social media and website services. Current clients include Aston University and Birmingham based charity, Help Harry Help Others",
-      long3: ""
-    },
-    {
       id: 3,
       name: "Joan Smith",
       role: "Membership Director",
@@ -49,7 +39,18 @@ export default function AboutUsPage() {
       long1: "With over 20 years of experience in business advice and guidance, Joan brings a wealth of knowledge in all areas of business support. Having worked with hundreds of companies across diverse sectors, Joan has always managed to understand their unique challenges and opportunities that businesses face. Her approach is centred around learning about each business, analysing their needs, and providing tailored solutions to help them achieve their goals.",
       long2: "As an impartial broker, she specialises in connecting businesses with the right experts and resources, ensuring they receive the guidance needed to thrive. Past experience includes managing members for the Chamber of Commerce and successfully fostering a thriving business community in the Solihull area. This included organising and hosting prestigious business awards evenings - celebrating local success stories, recognising outstanding achievements, and creating opportunities for businesses to showcase their impact on the local, national and global stage. These events not only strengthened connections within the business community but also inspired growth and collaboration.",
       long3: "Joan's philosophy is 'Let's Make a Difference Together' and she genuinely believes that every business deserves access to expert advice and guidance in all areas. By working together, any business can thrive, achieving goals with clarity, expertise, and a shared purpose."
+    },
+    {
+      id: 1,
+      name: "Adam Snelleksz",
+      role: "Marketing and Communications Director",
+      description: "Adam is a marketing and communications expert with over 25 years of experience, including founding two successful agencies.",
+      imageUrl: "/adam.png",
+      long1: "Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations. After graduating from university with a marketing degree, Adam moved to London and worked in a busy press office for the National Consumer Council. Following two years in the capital, Adam returned to Birmingham as head of communications for Birmingham City Football Club. The role included hosting and organising manager and player press conferences, dealing with media enquiries and setting up the club's first online TV channel, Blues TV. Adam then stayed in the sports industry when he became head of marketing for Birmingham City Council's sports events department. Responsible for the commercial partnerships, ticket sales, marketing and promotion of world and European championships including the World BMX Championships, European Gymnastics Championships, Diamond League Athletics and many more held at the National Indoor Arena and Birmingham Alexander Stadium.",
+      long2: "After working in sport, Adam took the step of setting up his own company - a video production company called CMA Video. He built the company into a widely recognised video agency which produced TV and cinema adverts for Sea Life Centre, Lego Land, Brooks running shoes and many more. After 12 years of successful trading, Adam sold the business and set up an off-shoot marketing company called CMA Media which specialises in digital marketing, social media and website services. Current clients include Aston University and Birmingham based charity, Help Harry Help Others",
+      long3: ""
     }
+
   ];
 
   return (
