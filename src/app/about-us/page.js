@@ -89,7 +89,7 @@ export default function AboutUsPage() {
 
       {/* Our Values */}
       <section className="py-16 px-4 md:px-8 bg-gray-50">
-        <div className="container mx-auto">
+        <div className="container mx-auto text-right">
           <SectionHeader 
             title="Our Story" 
             subtitle="What We Stand For" 
