@@ -23,6 +23,12 @@ export default function PartnersPage() {
       name: "CMA Media",
       logo: "/cmamedia.png",
       description: "CMA Media provides marketing support to businesses who need assistance with digital marketing, websites, SEO, video and communications. Our experience of working with SMEs and large corporate organisations means that we can work to any particular requirements and circumstances."
+    },
+    {
+      id: 4,
+      name: "Tool Life",
+      logo: "/tbc.png",
+      description: "TooLife brings all the elements of the tool making industry together to create awareness of best manufacturing practices for businesses and individuals. We aim to address not only the needs of today’s manufacturing process but look to shape the industry for future generations."
     }
   ];
 
@@ -80,7 +86,7 @@ export default function PartnersPage() {
             subtitle="Primary Partners" 
           />
           
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {primarySponsors.map((sponsor) => (
               <SponsorCard
                 key={sponsor.id}
