@@ -89,7 +89,7 @@ export default function ArticlesPage() {
       {/* Hero Section */}
       <section className="bg-arteng-dark text-white py-12 pt-24">
         <div className="container mx-auto px-4 md:px-8">
-          <h1 className="text-4xl font-bold mb-4">Articles</h1>
+          <h1 className="text-4xl font-bold mb-4">News</h1>
           <p className="text-lg">Stay updated with the latest from ArtEng and the industry.</p>
         </div>
       </section>
