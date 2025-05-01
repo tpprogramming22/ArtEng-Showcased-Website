@@ -243,7 +243,7 @@ export default function Home() {
             />
             <SponsorCard 
               name="Toolife" 
-              logo="/toolife.png" 
+              logo="/tool_ife.png" 
               description="Toolife provides innovative tools and solutions for creative professionals and engineers, bridging the gap between artistic vision and technical implementation."
             />
           </div>
