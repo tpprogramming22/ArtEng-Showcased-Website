@@ -162,7 +162,7 @@ export default function EventsPage() {
           </div>
 
           <div className="flex justify-center w-full mt-8">
-            <button onClick={toggleForm} className="bg-arteng-dark text-white px-6 py-2 rounded hover:bg-opacity-90 transition-colors"> {showForm ? 'Hide Form' : 'Notify Me'} </button>
+            <button onClick={toggleForm} className="bg-arteng-dark text-white px-6 py-2 rounded hover:bg-opacity-90 transition-colors"> {showForm ? '' : 'Notify Me'} </button>
             {showForm && (
               <div className="mt-6 border-t pt-6 border-gray-200">
                 <MailtoNotifyForm />
