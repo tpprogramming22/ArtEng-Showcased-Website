@@ -90,14 +90,15 @@ export default function PartnersPage() {
           />
           
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {primarySponsors.map((sponsor) => (
-            <SponsorCard
-              key={sponsor.id}
-              name={sponsor.name}
-              logo={sponsor.logo}
-              description={sponsor.description}
-            />
-          ))}
+            {primarySponsors.map((sponsor) => (
+              <SponsorCard
+                key={sponsor.id}
+                name={sponsor.name}
+                logo={sponsor.logo}
+                description={sponsor.description}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
