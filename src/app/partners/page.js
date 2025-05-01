@@ -1,7 +1,6 @@
-import Image from 'next/image';
+wimport Image from 'next/image';
 import Link from 'next/link';
 import SectionHeader from '@/components/SectionHeader';
-import SponsorCard from '@/components/SponsorCard';
 const SponsorCard = ({ name, logo, description }) => (
   <div className="bg-white p-4 rounded shadow text-center">
     <div className="relative w-32 h-32 md:w-40 md:h-40 mx-auto mb-4">
