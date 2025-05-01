@@ -101,7 +101,7 @@ export default function AboutUsPage() {
               />
             </div>
             <div>
-              <div className="text-right">
+              <div>
                 <SectionHeader 
                   title="Our Story" 
                   subtitle="What We Stand For" 
