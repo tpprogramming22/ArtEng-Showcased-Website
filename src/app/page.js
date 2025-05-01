@@ -141,7 +141,7 @@ export default function Home() {
             <TeamMemberCard
               name="Wendy Bennett"
               role="Technical Director"
-              imageUrl="/wendy.png" 
+              imageUrl="/wendynew.png" 
               description="Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields."
             />
             <TeamMemberCard
