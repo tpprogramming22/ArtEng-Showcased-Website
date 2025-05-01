@@ -27,7 +27,7 @@ export default function PartnersPage() {
     {
       id: 4,
       name: "Tool Life",
-      logo: "/tbc.png",
+      logo: "/tool_life.png",
       description: "TooLife brings all the elements of the tool making industry together to create awareness of best manufacturing practices for businesses and individuals. We aim to address not only the needs of today’s manufacturing process but look to shape the industry for future generations."
     }
   ];
