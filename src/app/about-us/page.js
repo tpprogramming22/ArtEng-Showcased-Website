@@ -95,6 +95,14 @@ export default function AboutUsPage() {
             subtitle="What We Stand For" 
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="relative h-80 rounded-md overflow-hidden">
+              <Image 
+                src="/award-background.png" 
+                alt="ArtEng History" 
+                fill
+                className="object-cover"
+              />
+            </div>
             <div>
               <p className="mb-4">
                 ArtEng is an innovative initiative that merges the worlds of art and engineering to encourage creativity and problem-solving in industry. It was established to bridge the gap between art and engineering, offering a platform for artists, engineers, and creators to collaborate and develop groundbreaking solutions. The idea behind ArtEng is to recognise that art and engineering, when combined, can lead to fresh perspectives, new technologies and creative ideas.
@@ -106,14 +114,7 @@ export default function AboutUsPage() {
                 At ArtEng we want to foster a creative community that blurs the lines between art and engineering, providing the tools, resources and opportunities to experiment, collaborate, and develop projects that challenge traditional perspectives. In the long term, we want to inspire future generations to approach challenges with a balance of technical skill and artistic imagination.
               </p>
             </div>
-            <div className="relative h-80 rounded-md overflow-hidden">
-              <Image 
-                src="/award-background.png" 
-                alt="ArtEng History" 
-                fill
-                className="object-cover"
-              />
-            </div>
+            
           </div>
         </div>
       </section>
