@@ -137,7 +137,7 @@ export default function AboutUsPage() {
                 onClick={() => setSelectedMember(member)}
                 className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all"
               >
-                <div className="relative w-32 h-32 mb-4">
+                <div className="relative w-50 h-50 mb-4">
                   <Image src={member.imageUrl} alt={member.name} fill className="object-cover rounded-md" />
                 </div>
                 <h3 className="text-lg font-bold">{member.name}</h3>
