@@ -90,7 +90,6 @@ export default function PartnersPage() {
             />
           ))}
         </div>
-        </div>
       </section>
 
       {/* Become a Partner */}
