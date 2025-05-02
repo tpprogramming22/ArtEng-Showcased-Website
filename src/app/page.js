@@ -142,7 +142,7 @@ export default function Home() {
               name="Wendy Bennett"
               role="Technical Director"
               imageUrl="/wendynew.png" 
-              description="Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields. She worked within the precision investment casting industry for 26 years and was CEO and previous owner of Lost Wax Development Limited"
+              description="Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields. She worked within the precision investment casting industry for 26 years and was CEO and previous owner of Lost Wax Development Limited."
             />
             <TeamMemberCard
               name="Stephen Fletcher"
