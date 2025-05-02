@@ -142,7 +142,7 @@ export default function Home() {
               name="Wendy Bennett"
               role="Technical Director"
               imageUrl="/wendynew.png" 
-              description="Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields."
+              description="Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields. She worked within the precision investment casting industry for 26 years and was CEO and previous owner of Lost Wax Development Limited."
             />
             <TeamMemberCard
               name="Stephen Fletcher"
@@ -154,14 +154,14 @@ export default function Home() {
               name="Joan Smith"
               role="Membership Director"
               imageUrl="/jess-smith.jpg" 
-              description="With over 20 years of experience in business advice and guidance, Joan brings a wealth of knowledge in all areas of business support."
+              description="With over 20 years of experience in business advice and guidance, Joan brings a wealth of knowledge in all areas of business support. Having worked with hundreds of companies across diverse sectors, Joan has always managed to understand their unique challenges and opportunities that businesses face."
             />
                 
             <TeamMemberCard
               name="Adam Snelleksz"
               role="Marketing and Communications Director"
               imageUrl="/adam.png" 
-              description="Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations."
+              description="Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations. After graduating from university with a marketing degree, Adam moved to London and worked in a busy press office for the National Consumer Council."
             />
             
           </div>
