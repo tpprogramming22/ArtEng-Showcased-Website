@@ -23,6 +23,12 @@ export default function PartnersPage() {
       name: "CMA Media",
       logo: "/cmamedia.png",
       description: "CMA Media provides marketing support to businesses who need assistance with digital marketing, websites, SEO, video and communications. Our experience of working with SMEs and large corporate organisations means that we can work to any particular requirements and circumstances."
+    },
+    {
+      id: 4,
+      name: "Tool Life",
+      logo: "/tool_life.png",
+      description: "TooLife brings all the elements of the tool making industry together to create awareness of best manufacturing practices for businesses and individuals. We aim to address not only the needs of today’s manufacturing process but look to shape the industry for future generations."
     }
   ];
 
@@ -50,7 +56,6 @@ export default function PartnersPage() {
                 src="/engineering-forum.jpg" 
                 alt="Partnership Opportunities" 
                 fill
-                className="object-cover grayscale"
               />
             </div>
             
@@ -80,7 +85,7 @@ export default function PartnersPage() {
             subtitle="Primary Partners" 
           />
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {primarySponsors.map((sponsor) => (
               <SponsorCard
                 key={sponsor.id}
@@ -100,7 +105,7 @@ export default function PartnersPage() {
           <p className="max-w-2xl mx-auto mb-8">
             Interested in supporting our mission to bring art and engineering together? We're always looking for new partners who share our vision.
           </p>
-          <Link href="/login">
+          <Link href="/contact">
             <button className="bg-white text-arteng-dark px-8 py-3 rounded-md font-bold hover:bg-gray-100 transition-colors">
               Get In Touch
             </button>

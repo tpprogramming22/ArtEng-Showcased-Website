@@ -141,7 +141,7 @@ export default function Home() {
             <TeamMemberCard
               name="Wendy Bennett"
               role="Technical Director"
-              imageUrl="/wendy.png" 
+              imageUrl="/wendynew.png" 
               description="Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields."
             />
             <TeamMemberCard
@@ -151,17 +151,19 @@ export default function Home() {
               description="Stephen's career spans more than 45 years covering a range of roles including Logistics/Transport management, Project management, Key Account management and Sales Business Development."
             />
             <TeamMemberCard
-              name="Adam Snelleksz"
-              role="Marketing and Communications Director"
-              imageUrl="/adam.png" 
-              description="Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations."
-            />
-            <TeamMemberCard
               name="Joan Smith"
               role="Membership Director"
               imageUrl="/jess-smith.jpg" 
               description="With over 20 years of experience in business advice and guidance, Joan brings a wealth of knowledge in all areas of business support."
             />
+                
+            <TeamMemberCard
+              name="Adam Snelleksz"
+              role="Marketing and Communications Director"
+              imageUrl="/adam.png" 
+              description="Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations."
+            />
+            
           </div>
         </div>
       </section>
@@ -243,7 +245,7 @@ export default function Home() {
             />
             <SponsorCard 
               name="Toolife" 
-              logo="/toolife.png" 
+              logo="/tool_life.png" 
               description="Toolife provides innovative tools and solutions for creative professionals and engineers, bridging the gap between artistic vision and technical implementation."
             />
           </div>

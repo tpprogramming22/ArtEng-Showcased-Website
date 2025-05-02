@@ -15,7 +15,7 @@ export default function AboutUsPage() {
       name: "Wendy Bennett",
       role: "Technical Director",
       description: "Wendy is a pioneering leader for women in engineering, with achievements in precision casting and leadership roles in industry.",
-      imageUrl: "/wendy.png",
+      imageUrl: "/wendynew.png",
       long1: "Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields. She worked within the precision investment casting industry for 26 years and was CEO and previous owner of Lost Wax Development Limited. Her achievements in the industry are far ranging and include recognition nationally and internationally. Wendy was the first female to be awarded a Fellowship to the Institute of Cast Metal Engineers (ICME) in 2012 and was also the first female Chair of the Cast Metal Federation (CMF) from 2015 to 2017 and is the current President of the West Midlands branch of the ICME.",
       long2: "In 2016 she visited Dresden for the International Foundry Forum and represented the UK Foundry Industry and has also been a Government advisor on industrial strategy on behalf of the Metals Council. She was invited to join the Council of 'Made in the Midlands' after being recognised as one of the only women within the region who was involved in industry and who owned a precision investment casting facility. Wendy has also been involved in the 'Advanced Engineering Cluster' which was set up to promote the use of students and under graduates for technical projects within the manufacturing sector, utilising the latest technologies available within the universities.",
       long3: ""
@@ -31,16 +31,6 @@ export default function AboutUsPage() {
       long3: "Stephen's experience has led to a passion for supporting the transition of students in the move towards a career environment, allowing them access to as much information as they need to complete their studies, because anything is possible if you are supported by the right people."
     },
     {
-      id: 1,
-      name: "Adam Snelleksz",
-      role: "Marketing and Communications Director",
-      description: "Adam is a marketing and communications expert with over 25 years of experience, including founding two successful agencies.",
-      imageUrl: "/adam.png",
-      long1: "Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations. After graduating from university with a marketing degree, Adam moved to London and worked in a busy press office for the National Consumer Council. Following two years in the capital, Adam returned to Birmingham as head of communications for Birmingham City Football Club. The role included hosting and organising manager and player press conferences, dealing with media enquiries and setting up the club's first online TV channel, Blues TV. Adam then stayed in the sports industry when he became head of marketing for Birmingham City Council's sports events department. Responsible for the commercial partnerships, ticket sales, marketing and promotion of world and European championships including the World BMX Championships, European Gymnastics Championships, Diamond League Athletics and many more held at the National Indoor Arena and Birmingham Alexander Stadium.",
-      long2: "After working in sport, Adam took the step of setting up his own company - a video production company called CMA Video. He built the company into a widely recognised video agency which produced TV and cinema adverts for Sea Life Centre, Lego Land, Brooks running shoes and many more. After 12 years of successful trading, Adam sold the business and set up an off-shoot marketing company called CMA Media which specialises in digital marketing, social media and website services. Current clients include Aston University and Birmingham based charity, Help Harry Help Others",
-      long3: ""
-    },
-    {
       id: 3,
       name: "Joan Smith",
       role: "Membership Director",
@@ -49,7 +39,18 @@ export default function AboutUsPage() {
       long1: "With over 20 years of experience in business advice and guidance, Joan brings a wealth of knowledge in all areas of business support. Having worked with hundreds of companies across diverse sectors, Joan has always managed to understand their unique challenges and opportunities that businesses face. Her approach is centred around learning about each business, analysing their needs, and providing tailored solutions to help them achieve their goals.",
       long2: "As an impartial broker, she specialises in connecting businesses with the right experts and resources, ensuring they receive the guidance needed to thrive. Past experience includes managing members for the Chamber of Commerce and successfully fostering a thriving business community in the Solihull area. This included organising and hosting prestigious business awards evenings - celebrating local success stories, recognising outstanding achievements, and creating opportunities for businesses to showcase their impact on the local, national and global stage. These events not only strengthened connections within the business community but also inspired growth and collaboration.",
       long3: "Joan's philosophy is 'Let's Make a Difference Together' and she genuinely believes that every business deserves access to expert advice and guidance in all areas. By working together, any business can thrive, achieving goals with clarity, expertise, and a shared purpose."
+    },
+    {
+      id: 1,
+      name: "Adam Snelleksz",
+      role: "Marketing and Communications Director",
+      description: "Adam is a marketing and communications expert with over 25 years of experience, including founding two successful agencies.",
+      imageUrl: "/adam.png",
+      long1: "Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations. After graduating from university with a marketing degree, Adam moved to London and worked in a busy press office for the National Consumer Council. Following two years in the capital, Adam returned to Birmingham as head of communications for Birmingham City Football Club. The role included hosting and organising manager and player press conferences, dealing with media enquiries and setting up the club's first online TV channel, Blues TV. Adam then stayed in the sports industry when he became head of marketing for Birmingham City Council's sports events department. Responsible for the commercial partnerships, ticket sales, marketing and promotion of world and European championships including the World BMX Championships, European Gymnastics Championships, Diamond League Athletics and many more held at the National Indoor Arena and Birmingham Alexander Stadium.",
+      long2: "After working in sport, Adam took the step of setting up his own company - a video production company called CMA Video. He built the company into a widely recognised video agency which produced TV and cinema adverts for Sea Life Centre, Lego Land, Brooks running shoes and many more. After 12 years of successful trading, Adam sold the business and set up an off-shoot marketing company called CMA Media which specialises in digital marketing, social media and website services. Current clients include Aston University and Birmingham based charity, Help Harry Help Others",
+      long3: ""
     }
+
   ];
 
   return (
@@ -87,9 +88,44 @@ export default function AboutUsPage() {
         </div>
       </section>
 
+      {/* Our Values */}
+      <section className="py-16 px-4 md:px-8 bg-gray-50">
+        <div className="container mx-auto">
+                
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="relative h-80 rounded-md overflow-hidden">
+              <Image 
+                src="/award-background.png" 
+                alt="ArtEng History" 
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div>
+              <div>
+                <SectionHeader 
+                  title="Our Story" 
+                  subtitle="What We Stand For" 
+                />
+              </div>
+              <p className="mb-4">
+                ArtEng is an innovative initiative that merges the worlds of art and engineering to encourage creativity and problem-solving in industry. It was established to bridge the gap between art and engineering, offering a platform for artists, engineers, and creators to collaborate and develop groundbreaking solutions. The idea behind ArtEng is to recognise that art and engineering, when combined, can lead to fresh perspectives, new technologies and creative ideas.
+              </p>
+              <p className="mb-4">
+                ArtEng was set up to address the need for cross-industry approaches to problem-solving in today's evolving world. In a time where technology is shaping every aspect of life, ArtEng seeks to take artistic thinking and engineering expertise to create innovative solutions that are both functional and visually impactful. We want to promote an environment where diverse perspectives thrive, encouraging participants to think outside traditional boundaries.
+              </p>
+              <p className="mb-4">
+                At ArtEng we want to foster a creative community that blurs the lines between art and engineering, providing the tools, resources and opportunities to experiment, collaborate, and develop projects that challenge traditional perspectives. In the long term, we want to inspire future generations to approach challenges with a balance of technical skill and artistic imagination.
+              </p>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
 
       {/* Meet the Team */}
-      <section className="py-16 px-4 md:px-8 bg-gray-50">
+      <section className="py-16 px-4 md:px-8">
         <div className="container mx-auto">
           <SectionHeader 
             title="Meet The Team" 
@@ -102,7 +138,7 @@ export default function AboutUsPage() {
                 onClick={() => setSelectedMember(member)}
                 className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all"
               >
-                <div className="relative w-32 h-32 mb-4">
+                <div className="relative w-56 h-56 mb-4">
                   <Image src={member.imageUrl} alt={member.name} fill className="object-cover rounded-md" />
                 </div>
                 <h3 className="text-lg font-bold">{member.name}</h3>
@@ -121,7 +157,7 @@ export default function AboutUsPage() {
           onClick={() => setSelectedMember(null)}
         >
           <div 
-            className="bg-white text-black rounded-lg p-8 max-w-3xl w-11/12 relative flex flex-col md:flex-row items-center gap-6"
+            className="bg-white text-black rounded-lg p-8 max-w-5xl w-11/12 relative flex flex-col md:flex-row items-center gap-6"
             onClick={(e) => e.stopPropagation()}
           >
             <button 
@@ -130,7 +166,7 @@ export default function AboutUsPage() {
             >
               &times;
             </button>
-            <div className="relative w-64 h-64 flex-shrink-0">
+            <div className="relative w-96 h-96 flex-shrink-0">
               <Image src={selectedMember.imageUrl} alt={selectedMember.name} fill className="object-cover rounded-md" />
             </div>
             <div className="flex flex-col">
@@ -144,36 +180,7 @@ export default function AboutUsPage() {
         </div>
       )}
 
-      {/* Our Values */}
-      <section className="py-16 px-4 md:px-8">
-        <div className="container mx-auto">
-          <SectionHeader 
-            title="Our Story" 
-            subtitle="What We Stand For" 
-          />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="mb-4">
-                ArtEng is an innovative initiative that merges the worlds of art and engineering to encourage creativity and problem-solving in industry. It was established to bridge the gap between art and engineering, offering a platform for artists, engineers, and creators to collaborate and develop groundbreaking solutions. The idea behind ArtEng is to recognise that art and engineering, when combined, can lead to fresh perspectives, new technologies and creative ideas.
-              </p>
-              <p className="mb-4">
-                ArtEng was set up to address the need for cross-industry approaches to problem-solving in today's evolving world. In a time where technology is shaping every aspect of life, ArtEng seeks to take artistic thinking and engineering expertise to create innovative solutions that are both functional and visually impactful. We want to promote an environment where diverse perspectives thrive, encouraging participants to think outside traditional boundaries.
-              </p>
-              <p className="mb-4">
-                At ArtEng we want to foster a creative community that blurs the lines between art and engineering, providing the tools, resources and opportunities to experiment, collaborate, and develop projects that challenge traditional perspectives. In the long term, we want to inspire future generations to approach challenges with a balance of technical skill and artistic imagination.
-              </p>
-            </div>
-            <div className="relative h-80 rounded-md overflow-hidden">
-              <Image 
-                src="/award-background.png" 
-                alt="ArtEng History" 
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      
     </div>
   );
 }
