@@ -92,7 +92,7 @@ export default function Home() {
             <div className="lg:col-span-6">
               <div>
                 <Image 
-                  src="/about-arteng-team.jpg" 
+                  src="/newaboutushome.jpg" 
                   alt="ArtEng Team" 
                   width={600} 
                   height={400} 
