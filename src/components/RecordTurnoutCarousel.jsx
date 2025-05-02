@@ -23,21 +23,21 @@ const RecordTurnoutCarousel = () => {
       description: "ArtEng is dedicated to fostering creativity, innovation, and collaboration between artists and engineers.",
       link: "/news/record-turnout",
       linkText: "More Info",
-      backgroundImage: "/backgroundforarteng.png"
+      backgroundImage: "/carosel1.jpg"
     },
     {
       title: "Networking Opportunities",
       description: "Connect with professionals from both art and engineering fields to create unique solutions.",
       link: "/news/new-partnerships",
       linkText: "Learn More",
-      backgroundImage: "/partnership-background.png"
+      backgroundImage: "/carosel2.jpg"
     },
     {
       title: "Upcoming Events",
       description: "Join us for workshops, exhibitions, and forums that bring together creative minds and technical expertise.",
       link: "/news/innovation-award",
       linkText: "See Details",
-      backgroundImage: "/award-background.png"
+      backgroundImage: "/carosel3.jpg"
     }
   ];
 
