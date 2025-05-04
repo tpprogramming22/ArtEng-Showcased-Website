@@ -78,7 +78,7 @@ export default function AboutUsPage() {
             </div>
             <div className="relative h-80 bg-gray-200 rounded-md overflow-hidden">
               <Image 
-                src="/team-photo.png" 
+                src="/aboutus1.jpg" 
                 alt="ArtEng History" 
                 fill
                 className="object-cover"
@@ -95,7 +95,7 @@ export default function AboutUsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative h-80 rounded-md overflow-hidden">
               <Image 
-                src="/award-background.png" 
+                src="/aboutus2.jpg" 
                 alt="ArtEng History" 
                 fill
                 className="object-cover"
