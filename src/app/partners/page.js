@@ -38,7 +38,6 @@ export default function PartnersPage() {
       <section className="bg-arteng-dark text-white py-12 pt-24">
         <div className="container mx-auto px-4 md:px-8">
           <h1 className="text-4xl font-bold mb-4">Our Partners</h1>
-          <p className="text-lg">The organisations and companies that make our work possible.</p>
         </div>
       </section>
 
@@ -47,7 +46,6 @@ export default function PartnersPage() {
         <div className="container mx-auto">
           <SectionHeader 
             title="Partner With Us" 
-            subtitle="Collaboration Opportunities" 
           />
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -60,12 +58,17 @@ export default function PartnersPage() {
             </div>
             
             <div>
-              <h3 className="text-xl font-bold text-arteng-dark mb-4">Why Partner With ArtEng?</h3>
               <p className="mb-4">
-                Partnering with ArtEng offers a unique opportunity to support innovation at the intersection of art and technology. Our partners gain visibility among a diverse community of creators, access to cutting-edge projects, and the chance to participate in shaping the future of creative technology.
+                Partnering with Arteng offers a unique opportunity for companies seeking to innovate, stand out in competitive markets, and connect with stakeholders in the art and engineering industries. We offer a unique approach that blends creativity with technical precision and this synergy leads to the development of products, services, and experiences that are not only functional but also visually engaging.  By collaborating with Arteng professionals or initiatives, companies gain access to fresh perspectives that can reimagine how their brand communicates, operates, and evolves. In marketing and branding, Arteng driven ideas can create more immersive and memorable experiences.
               </p>
               <p className="mb-6">
-                We offer various partnership levels to accommodate organizations of all sizes and objectives, from financial sponsorship to in-kind support and collaborative projects.
+                In sectors like technology and manufacturing where innovation is essential, Arteng fosters agile problem-solving by encouraging teams to think beyond conventional boundaries. It also supports a culture of innovation that attracts top talent and resonates with socially and environmentally conscious consumers.
+              </p>
+              <p className="mb-6">
+                Ultimately, partnering with Arteng will assist your business in meeting and collaborating with the right people to drive your business forward.  Access to exclusive events, networking meetings and industry led activities will help to develop relationships and grow your organisation.
+              </p>
+              <p className="mb-6">
+                We offer various partnership levels to accommodate organisations of all sizes and objectives, from financial sponsorship to in-kind support and collaborative projects. 
               </p>
               <Link href="/login">
                 <button className="bg-arteng-dark text-white px-6 py-2 rounded hover:bg-opacity-90 transition-colors">
