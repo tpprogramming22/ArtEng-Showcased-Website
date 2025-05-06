@@ -77,7 +77,7 @@ export default function AboutUsPage() {
             </div>
             <div className="relative h-80 bg-gray-200 rounded-md overflow-hidden">
               <Image 
-                src="/aboutus1.jpg" 
+                src="/silverstatue.jpg" 
                 alt="ArtEng History" 
                 fill
                 className="object-cover"
