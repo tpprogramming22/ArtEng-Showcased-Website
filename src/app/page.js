@@ -74,7 +74,7 @@ export default function Home() {
               <h1 className="text-4xl font-bold mb-4">Bringing Art &<br />Engineering Together</h1>
             </div>
             <div className="text-center">
-              <p className="text-lg">Bringing creatives and innovators together to transform ideas into unforgettable experiences.</p>
+              <p className="text-lg">Connecting, nurturing and developing the artistic and engineering worlds..</p>
             </div>
           </div>
         </div>
