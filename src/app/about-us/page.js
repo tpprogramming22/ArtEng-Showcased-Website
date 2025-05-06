@@ -13,7 +13,7 @@ export default function AboutUsPage() {
     {
       id: 4,
       name: "Wendy Bennett",
-      role: "Technical Director",
+      role: "Managing Director",
       description: "Wendy is a pioneering leader for women in engineering, with achievements in precision casting and leadership roles in industry.",
       imageUrl: "/wendynew.png",
       long1: "Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields. She worked within the precision investment casting industry for 26 years and was CEO and previous owner of Lost Wax Development Limited. Her achievements in the industry are far ranging and include recognition nationally and internationally. Wendy was the first female to be awarded a Fellowship to the Institute of Cast Metal Engineers (ICME) in 2012 and was also the first female Chair of the Cast Metal Federation (CMF) from 2015 to 2017 and is the current President of the West Midlands branch of the ICME.",
@@ -23,7 +23,7 @@ export default function AboutUsPage() {
     {
       id: 2,
       name: "Stephen Fletcher",
-      role: "Business Development Director",
+      role: "Creative Director",
       description: "Stephen has over 45 years of experience in logistics, projects, sales, and the arts, focusing on supporting student career transitions.",
       imageUrl: "/steve.png",
       long1: "Stephen's career spans more than 45 years covering a range of roles including Logistics/Transport management, Project management, Key Account management and Sales Business Development. He has worked on behalf of a range of manufacturing and service suppliers including Metal fabrication, Flexible packaging, Precision Engineering and Commercial Heat Treatment",
@@ -33,7 +33,7 @@ export default function AboutUsPage() {
     {
       id: 3,
       name: "Joan Smith",
-      role: "Membership Director",
+      role: "Corporate Director",
       description: "Joan is an experienced business advisor who connects companies with expert support to help them grow and succeed.",
       imageUrl: "/jess-smith.jpg",
       long1: "With over 20 years of experience in business advice and guidance, Joan brings a wealth of knowledge in all areas of business support. Having worked with hundreds of companies across diverse sectors, Joan has always managed to understand their unique challenges and opportunities that businesses face. Her approach is centred around learning about each business, analysing their needs, and providing tailored solutions to help them achieve their goals.",
@@ -43,7 +43,7 @@ export default function AboutUsPage() {
     {
       id: 1,
       name: "Adam Snelleksz",
-      role: "Marketing and Communications Director",
+      role: "Marketing Director",
       description: "Adam is a marketing and communications expert with over 25 years of experience, including founding two successful agencies.",
       imageUrl: "/adam.png",
       long1: "Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations. After graduating from university with a marketing degree, Adam moved to London and worked in a busy press office for the National Consumer Council. Following two years in the capital, Adam returned to Birmingham as head of communications for Birmingham City Football Club. The role included hosting and organising manager and player press conferences, dealing with media enquiries and setting up the club's first online TV channel, Blues TV. Adam then stayed in the sports industry when he became head of marketing for Birmingham City Council's sports events department. Responsible for the commercial partnerships, ticket sales, marketing and promotion of world and European championships including the World BMX Championships, European Gymnastics Championships, Diamond League Athletics and many more held at the National Indoor Arena and Birmingham Alexander Stadium.",
@@ -69,11 +69,10 @@ export default function AboutUsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <SectionHeader 
-                title="Our Beginning" 
-                subtitle="How We Started" 
+                title="Who We Are" 
               />
               <p className="mb-4">
-                We are four individuals brought together by our expertise in our respective fields. ArtEng came from the idea that the diverse worlds of art and engineering could work together to offer innovative solutions in their own unique ways. To find out more about who we are, take a look at who are.
+                ArtEng consists of four experienced business professionals who currently run successful businesses in their respective fields.  The combination of experience across different sectors and industries means that between these four directors of the company, the contacts, knowledge, connections and overall work history creates a business that operates in and brings together different cultures.
               </p>
             </div>
             <div className="relative h-80 bg-gray-200 rounded-md overflow-hidden">
@@ -109,13 +108,16 @@ export default function AboutUsPage() {
                 />
               </div>
               <p className="mb-4">
-                ArtEng is an innovative initiative that merges the worlds of art and engineering to encourage creativity and problem-solving in industry. It was established to bridge the gap between art and engineering, offering a platform for artists, engineers, and creators to collaborate and develop groundbreaking solutions. The idea behind ArtEng is to recognise that art and engineering, when combined, can lead to fresh perspectives, new technologies and creative ideas.
+                ArtEng is an innovative concept that merges the worlds of art and engineering to encourage creativity and problem-solving in industry. It was established to bridge the gap between art and engineering, offering a platform for artists, engineers, and creators to collaborate and develop groundbreaking solutions. 
               </p>
               <p className="mb-4">
-                ArtEng was set up to address the need for cross-industry approaches to problem-solving in today's evolving world. In a time where technology is shaping every aspect of life, ArtEng seeks to take artistic thinking and engineering expertise to create innovative solutions that are both functional and visually impactful. We want to promote an environment where diverse perspectives thrive, encouraging participants to think outside traditional boundaries.
+                Through networking, events and a programme of activities, ArtEng is striving to cultivate a dynamic space where imagination meets engineering, resulting in groundbreaking works that shape the future of both art and technology.
               </p>
               <p className="mb-4">
-                At ArtEng we want to foster a creative community that blurs the lines between art and engineering, providing the tools, resources and opportunities to experiment, collaborate, and develop projects that challenge traditional perspectives. In the long term, we want to inspire future generations to approach challenges with a balance of technical skill and artistic imagination.
+                We want to foster a creative community that blurs the lines between art and engineering, providing the tools, resources and opportunities to experiment, collaborate, and develop projects that challenge traditional perspectives. 
+              </p>
+              <p className="mb-4">
+                Arteng is especially relevant in today’s innovation-driven world, where many designs often require both technical skill and imaginative vision. It encourages engineers to think creatively and artists to embrace technology, breaking down traditional barriers between the two fields. In education, Arteng can foster interdisciplinary learning, helping students develop both problem-solving abilities and artistic sensibility.  Our work with universities and educational institutions means that we can develop and ensure that the two industries can gain new entrants to continue, develop and innovate for decades to come. 
               </p>
             </div>
             
@@ -129,7 +131,6 @@ export default function AboutUsPage() {
         <div className="container mx-auto">
           <SectionHeader 
             title="Meet The Team" 
-            subtitle="Our Leaders" 
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {teamMembers.map((member) => (
