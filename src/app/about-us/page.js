@@ -75,7 +75,7 @@ export default function AboutUsPage() {
                 ArtEng consists of four experienced business professionals who currently run successful businesses in their respective fields.  The combination of experience across different sectors and industries means that between these four directors of the company, the contacts, knowledge, connections and overall work history creates a business that operates in and brings together different cultures.
               </p>
             </div>
-            <div className="relative h-80 bg-gray-200 rounded-md overflow-hidden">
+            <div className="relative h-100 bg-gray-200 rounded-md overflow-hidden">
               <Image 
                 src="/silverstatue.jpg" 
                 alt="ArtEng History" 
