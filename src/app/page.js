@@ -86,7 +86,7 @@ export default function Home() {
       {/* About ArtEng Section - Now with white background */}
       <section className="py-16 px-4 md:px-8 bg-white">
         <div className="container mx-auto">
-          <SectionHeader title="About ArtEng" subtitle="Who We Are" />
+          <SectionHeader title="About ArtEng" />
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             <div className="lg:col-span-6">
@@ -103,13 +103,16 @@ export default function Home() {
             
             <div className="lg:col-span-6">
               <p className="mb-4 text-gray-800">
-                ArtEng is an innovative initiative that merges the worlds of art and engineering to encourage creativity and problem-solving in industry. It was established to bridge the gap between art and engineering, offering a platform for artists, engineers, and creators to collaborate and develop groundbreaking solutions.
+                ArtEng is an innovative concept that merges the worlds of art and engineering to encourage creativity and problem-solving in industry. It was established to bridge the gap between art and engineering, offering a platform for artists, engineers, and creators to collaborate and develop groundbreaking solutions.
               </p>
               <p className="mb-4 text-gray-800">
                 Through networking, events and a programme of activities, ArtEng is striving to cultivate a dynamic space where imagination meets engineering, resulting in groundbreaking works that shape the future of both art and technology.
               </p>
               <p className="mb-4 text-gray-800">
-                At ArtEng we want to foster a creative community that blurs the lines between art and engineering, providing the tools, resources and opportunities to experiment, collaborate, and develop projects that challenge traditional perspectives.
+                We want to foster a creative community that blurs the lines between art and engineering, providing the tools, resources and opportunities to experiment, collaborate, and develop projects that challenge traditional perspectives.
+              </p>
+              <p className="mb-4 text-gray-800">
+                Arteng is especially relevant in today’s innovation-driven world, where many designs often require both technical skill and imaginative vision. It encourages engineers to think creatively and artists to embrace technology, breaking down traditional barriers between the two fields. In education, Arteng can foster interdisciplinary learning, helping students develop both problem-solving abilities and artistic sensibility.  Our work with universities and educational institutions means that we can develop and ensure that the two industries can gain new entrants to continue, develop and innovate for decades to come. 
               </p>
               
               {/* Button centered under the right column content */}
@@ -129,7 +132,7 @@ export default function Home() {
           <div className="flex justify-between items-center mb-6">
             <div>
               <h2 className="text-2xl font-bold text-arteng-dark">Meet The Team</h2>
-              <p className="text-gray-600">Meet the team behind ArtEng, click here to find out more about us all</p>
+              <p className="text-gray-600">Meet the team behind ArtEng</p>
             </div>
             <Link href="/about-us" className="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition-colors">
               More Info
@@ -140,26 +143,26 @@ export default function Home() {
             {/* Team members arranged by surname alphabetical order */}
             <TeamMemberCard
               name="Wendy Bennett"
-              role="Technical Director"
+              role="Managing Director"
               imageUrl="/wendynew.png" 
               description="Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields. She worked within the precision investment casting industry for 26 years and was CEO and previous owner of Lost Wax Development Limited."
             />
             <TeamMemberCard
               name="Stephen Fletcher"
-              role="Business Development Director"
+              role="Creative Director"
               imageUrl="/steve.png" 
               description="Stephen's career spans more than 45 years covering a range of roles including Logistics/Transport management, Project management, Key Account management and Sales Business Development."
             />
             <TeamMemberCard
               name="Joan Smith"
-              role="Membership Director"
+              role="Corporate Director"
               imageUrl="/jess-smith.jpg" 
               description="With over 20 years of experience in business advice and guidance, Joan brings a wealth of knowledge in all areas of business support. Having worked with hundreds of companies across diverse sectors, Joan has always managed to understand their unique challenges and opportunities that businesses face."
             />
                 
             <TeamMemberCard
               name="Adam Snelleksz"
-              role="Marketing and Communications Director"
+              role="Marketing Director"
               imageUrl="/adam.png" 
               description="Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations. After graduating from university with a marketing degree, Adam moved to London and worked in a busy press office for the National Consumer Council."
             />
