@@ -17,7 +17,7 @@ const TeamMemberCard = ({ name, role, imageUrl, description, linkToAbout = true 
       </div>
       <h3 className="font-bold text-lg text-arteng-dark group-hover:text-arteng-dark transition-colors duration-300">{name}</h3>
       <p className="text-gray-600 font-medium mb-2">{role}</p>
-      <p className="text-gray-500 text-sm text-center line-clamp-2">{description}</p>
+      <p className="text-gray-500 text-sm text-center">{description}</p>
       
       {linkToAbout && (
         <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
