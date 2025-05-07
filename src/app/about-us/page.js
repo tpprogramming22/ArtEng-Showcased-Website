@@ -137,7 +137,7 @@ export default function AboutUsPage() {
                 onClick={() => setSelectedMember(member)}
                 className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative h-[420px]"
               >
-                <div className="relative w-56 h-56 mb-4 overflow-hidden">
+                <div className="relative w-64 h-64 mb-4 overflow-hidden">
                   <Image src={member.imageUrl} alt={member.name} fill className="object-cover rounded-md" />
                   <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
                 </div>
