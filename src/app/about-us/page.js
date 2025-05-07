@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import SectionHeader from '@/components/SectionHeader';
-import TeamMemberCard from '@/components/TeamMemberCard';
 
 export default function AboutUsPage() {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -50,7 +49,6 @@ export default function AboutUsPage() {
       long2: "After working in sport, Adam took the step of setting up his own company - a video production company called CMA Video. He built the company into a widely recognised video agency which produced TV and cinema adverts for Sea Life Centre, Lego Land, Brooks running shoes and many more. After 12 years of successful trading, Adam sold the business and set up an off-shoot marketing company called CMA Media which specialises in digital marketing, social media and website services. Current clients include Aston University and Birmingham based charity, Help Harry Help Others",
       long3: ""
     }
-
   ];
 
   return (
@@ -75,9 +73,9 @@ export default function AboutUsPage() {
                 ArtEng consists of four experienced business professionals who currently run successful businesses in their respective fields.  The combination of experience across different sectors and industries means that between these four directors of the company, the contacts, knowledge, connections and overall work history creates a business that operates in and brings together different cultures.
               </p>
             </div>
-            <div className="relative h-80 bg-gray-200 rounded-md overflow-hidden">
+            <div className="relative h-96 bg-gray-200 rounded-md overflow-hidden">
               <Image 
-                src="/aboutus1.jpg" 
+                src="/silverstatue.jpg" 
                 alt="ArtEng History" 
                 fill
                 className="object-cover"
@@ -117,7 +115,7 @@ export default function AboutUsPage() {
                 We want to foster a creative community that blurs the lines between art and engineering, providing the tools, resources and opportunities to experiment, collaborate, and develop projects that challenge traditional perspectives. 
               </p>
               <p className="mb-4">
-                Arteng is especially relevant in today’s innovation-driven world, where many designs often require both technical skill and imaginative vision. It encourages engineers to think creatively and artists to embrace technology, breaking down traditional barriers between the two fields. In education, Arteng can foster interdisciplinary learning, helping students develop both problem-solving abilities and artistic sensibility.  Our work with universities and educational institutions means that we can develop and ensure that the two industries can gain new entrants to continue, develop and innovate for decades to come. 
+                Arteng is especially relevant in today's innovation-driven world, where many designs often require both technical skill and imaginative vision. It encourages engineers to think creatively and artists to embrace technology, breaking down traditional barriers between the two fields. In education, Arteng can foster interdisciplinary learning, helping students develop both problem-solving abilities and artistic sensibility.  Our work with universities and educational institutions means that we can develop and ensure that the two industries can gain new entrants to continue, develop and innovate for decades to come. 
               </p>
             </div>
             
@@ -126,7 +124,7 @@ export default function AboutUsPage() {
       </section>
 
 
-      {/* Meet the Team */}
+      {/* Meet the Team - Enhanced with hover effects */}
       <section className="py-16 px-4 md:px-8">
         <div className="container mx-auto">
           <SectionHeader 
@@ -137,14 +135,25 @@ export default function AboutUsPage() {
               <div
                 key={member.id}
                 onClick={() => setSelectedMember(member)}
-                className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all"
+                className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative h-[420px]"
               >
-                <div className="relative w-56 h-56 mb-4">
+                <div className="relative w-56 h-56 mb-4 overflow-hidden">
                   <Image src={member.imageUrl} alt={member.name} fill className="object-cover rounded-md" />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
                 </div>
-                <h3 className="text-lg font-bold">{member.name}</h3>
+                <h3 className="text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">{member.name}</h3>
                 <p className="text-sm">{member.role}</p>
-                <p className="text-sm text-center">{member.description}</p>
+                <p className="text-sm text-center line-clamp-2">{member.description}</p>
+                
+                {/* Click indicator - Fixed position at bottom */}
+                <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="flex items-center text-arteng-dark">
+                    <span className="text-sm font-medium mr-1">Click for more</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
