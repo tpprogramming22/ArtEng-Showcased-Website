@@ -185,8 +185,7 @@ export default function Home() {
               </div>
               <h3 className="text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Stephen Fletcher</h3>
               <p className="text-sm">Creative Director</p>
-              <p className="text-sm text-center">Stephen's career spans more than 45 years covering a range of roles including Logistics/Transport management, Project management, Key Account management and Sales Business Development.</p>
-              <p> className="text-sm text-center"></p>
+              <p className="text-sm text-center">Stephen's career spans more than 45 years covering a range of roles including Logistics/Transport management, Project management, Key Account management and Sales Business Development.<br /><br /></p>
               <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="flex items-center text-arteng-dark">
                   <span className="text-sm font-medium mr-1">Learn more</span>
