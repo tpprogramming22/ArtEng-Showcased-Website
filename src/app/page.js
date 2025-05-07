@@ -198,10 +198,10 @@ export default function Home() {
             </div>
 
             <div 
-              className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative h-[420px]"
+              className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative"
               onClick={() => window.location.href = '/about-us'}
             >
-              <div className="relative w-56 h-56 mb-4 overflow-hidden">
+              <div className="relative w-56 h-56 mb-4">
                 <Image 
                   src="/jess-smith.jpg" 
                   alt="Joan Smith"
