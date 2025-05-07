@@ -158,7 +158,7 @@ export default function Home() {
               </div>
               <h3 className="text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Wendy Bennett</h3>
               <p className="text-sm">Managing Director</p>
-              <p className="text-sm text-center line-clamp-2">Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields. She worked within the precision investment casting industry for 26 years and was CEO and previous owner of Lost Wax Development Limited.</p>
+              <p className="text-sm text-center">Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields. She worked within the precision investment casting industry for 26 years and was CEO and previous owner of Lost Wax Development Limited.</p>
               
               <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="flex items-center text-arteng-dark">
@@ -185,7 +185,7 @@ export default function Home() {
               </div>
               <h3 className="text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Stephen Fletcher</h3>
               <p className="text-sm">Creative Director</p>
-              <p className="text-sm text-center line-clamp-2">Stephen's career spans more than 45 years covering a range of roles including Logistics/Transport management, Project management, Key Account management and Sales Business Development.</p>
+              <p className="text-sm text-center">Stephen's career spans more than 45 years covering a range of roles including Logistics/Transport management, Project management, Key Account management and Sales Business Development.</p>
               
               <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="flex items-center text-arteng-dark">
@@ -212,7 +212,7 @@ export default function Home() {
               </div>
               <h3 className="text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Joan Smith</h3>
               <p className="text-sm">Corporate Director</p>
-              <p className="text-sm text-center line-clamp-2">With over 20 years of experience in business advice and guidance, Joan brings a wealth of knowledge in all areas of business support. Having worked with hundreds of companies across diverse sectors, Joan has always managed to understand their unique challenges and opportunities that businesses face.</p>
+              <p className="text-sm text-center">With over 20 years of experience in business advice and guidance, Joan brings a wealth of knowledge in all areas of business support. Having worked with hundreds of companies across diverse sectors, Joan has always managed to understand their unique challenges and opportunities that businesses face.</p>
               
               <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="flex items-center text-arteng-dark">
@@ -239,7 +239,7 @@ export default function Home() {
               </div>
               <h3 className="text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Adam Snelleksz</h3>
               <p className="text-sm">Marketing Director</p>
-              <p className="text-sm text-center line-clamp-2">Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations. After graduating from university with a marketing degree, Adam moved to London and worked in a busy press office for the National Consumer Council.</p>
+              <p className="text-sm text-center">Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations. After graduating from university with a marketing degree, Adam moved to London and worked in a busy press office for the National Consumer Council.</p>
               
               <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="flex items-center text-arteng-dark">
