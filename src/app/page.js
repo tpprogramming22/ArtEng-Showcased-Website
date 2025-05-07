@@ -1,3 +1,4 @@
+'use client';
 import Link from 'next/link';
 import Image from 'next/image';
 import HeroSection from '@/components/HeroSection';
@@ -127,6 +128,7 @@ export default function Home() {
       </section>
       
       {/* Meet the Team Section - Now with light gray background */}
+      {/* Meet the Team Section - Now with enhanced cards matching About Us page */}
       <section className="py-16 px-4 md:px-8 bg-gray-50">
         <div className="container mx-auto">
           <div className="flex justify-between items-center mb-6">
@@ -141,32 +143,113 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {/* Team members arranged by surname alphabetical order */}
-            <TeamMemberCard
-              name="Wendy Bennett"
-              role="Managing Director"
-              imageUrl="/wendynew.png" 
-              description="Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields. She worked within the precision investment casting industry for 26 years and was CEO and previous owner of Lost Wax Development Limited."
-            />
-            <TeamMemberCard
-              name="Stephen Fletcher"
-              role="Creative Director"
-              imageUrl="/steve.png" 
-              description="Stephen's career spans more than 45 years covering a range of roles including Logistics/Transport management, Project management, Key Account management and Sales Business Development."
-            />
-            <TeamMemberCard
-              name="Joan Smith"
-              role="Corporate Director"
-              imageUrl="/jess-smith.jpg" 
-              description="With over 20 years of experience in business advice and guidance, Joan brings a wealth of knowledge in all areas of business support. Having worked with hundreds of companies across diverse sectors, Joan has always managed to understand their unique challenges and opportunities that businesses face."
-            />
+            <div 
+              className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative h-[420px]"
+              onClick={() => window.location.href = '/about-us'}
+            >
+              <div className="relative w-56 h-56 mb-4 overflow-hidden">
+                <Image 
+                  src="/wendynew.png" 
+                  alt="Wendy Bennett"
+                  fill 
+                  className="object-cover rounded-md"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+              </div>
+              <h3 className="text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Wendy Bennett</h3>
+              <p className="text-sm">Managing Director</p>
+              <p className="text-sm text-center line-clamp-2">Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields. She worked within the precision investment casting industry for 26 years and was CEO and previous owner of Lost Wax Development Limited.</p>
+              
+              <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="flex items-center text-arteng-dark">
+                  <span className="text-sm font-medium mr-1">Learn more</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div 
+              className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative h-[420px]"
+              onClick={() => window.location.href = '/about-us'}
+            >
+              <div className="relative w-56 h-56 mb-4 overflow-hidden">
+                <Image 
+                  src="/steve.png" 
+                  alt="Stephen Fletcher"
+                  fill 
+                  className="object-cover rounded-md"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+              </div>
+              <h3 className="text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Stephen Fletcher</h3>
+              <p className="text-sm">Creative Director</p>
+              <p className="text-sm text-center line-clamp-2">Stephen's career spans more than 45 years covering a range of roles including Logistics/Transport management, Project management, Key Account management and Sales Business Development.</p>
+              
+              <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="flex items-center text-arteng-dark">
+                  <span className="text-sm font-medium mr-1">Learn more</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div 
+              className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative h-[420px]"
+              onClick={() => window.location.href = '/about-us'}
+            >
+              <div className="relative w-56 h-56 mb-4 overflow-hidden">
+                <Image 
+                  src="/jess-smith.jpg" 
+                  alt="Joan Smith"
+                  fill 
+                  className="object-cover rounded-md"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+              </div>
+              <h3 className="text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Joan Smith</h3>
+              <p className="text-sm">Corporate Director</p>
+              <p className="text-sm text-center line-clamp-2">With over 20 years of experience in business advice and guidance, Joan brings a wealth of knowledge in all areas of business support. Having worked with hundreds of companies across diverse sectors, Joan has always managed to understand their unique challenges and opportunities that businesses face.</p>
+              
+              <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="flex items-center text-arteng-dark">
+                  <span className="text-sm font-medium mr-1">Learn more</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </div>
+              </div>
+            </div>
                 
-            <TeamMemberCard
-              name="Adam Snelleksz"
-              role="Marketing Director"
-              imageUrl="/adam.png" 
-              description="Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations. After graduating from university with a marketing degree, Adam moved to London and worked in a busy press office for the National Consumer Council."
-            />
-            
+            <div 
+              className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative h-[420px]"
+              onClick={() => window.location.href = '/about-us'}
+            >
+              <div className="relative w-56 h-56 mb-4 overflow-hidden">
+                <Image 
+                  src="/adam.png" 
+                  alt="Adam Snelleksz"
+                  fill 
+                  className="object-cover rounded-md"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+              </div>
+              <h3 className="text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Adam Snelleksz</h3>
+              <p className="text-sm">Marketing Director</p>
+              <p className="text-sm text-center line-clamp-2">Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations. After graduating from university with a marketing degree, Adam moved to London and worked in a busy press office for the National Consumer Council.</p>
+              
+              <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="flex items-center text-arteng-dark">
+                  <span className="text-sm font-medium mr-1">Learn more</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

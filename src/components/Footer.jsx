@@ -20,15 +20,12 @@ const Footer = () => {
             </div>
           </div>
           
-          {/* Quick Links */}
+          {/* Quick Links - Updated order to match navbar */}
           <div>
             <h3 className="text-lg font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/" className="text-sm hover:text-gray-300">Home</Link>
-              </li>
-              <li>
-                <Link href="/about-us" className="text-sm hover:text-gray-300">About Us</Link>
               </li>
               <li>
                 <Link href="/events" className="text-sm hover:text-gray-300">Events</Link>
@@ -37,10 +34,13 @@ const Footer = () => {
                 <Link href="/news" className="text-sm hover:text-gray-300">News</Link>
               </li>
               <li>
-                <Link href="/partners" className="text-sm hover:text-gray-300">Partners</Link>
+                <Link href="/about-us" className="text-sm hover:text-gray-300">About Us</Link>
               </li>
               <li>
                 <Link href="/membership" className="text-sm hover:text-gray-300">Membership</Link>
+              </li>
+              <li>
+                <Link href="/partners" className="text-sm hover:text-gray-300">Partners</Link>
               </li>
               <li>
                 <Link href="/faq" className="text-sm hover:text-gray-300">FAQ</Link>

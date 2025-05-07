@@ -135,7 +135,7 @@ export default function AboutUsPage() {
               <div
                 key={member.id}
                 onClick={() => setSelectedMember(member)}
-                className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative"
+                className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative h-[420px]"
               >
                 <div className="relative w-56 h-56 mb-4 overflow-hidden">
                   <Image src={member.imageUrl} alt={member.name} fill className="object-cover rounded-md" />
@@ -143,9 +143,9 @@ export default function AboutUsPage() {
                 </div>
                 <h3 className="text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">{member.name}</h3>
                 <p className="text-sm">{member.role}</p>
-                <p className="text-sm text-center">{member.description}</p>
+                <p className="text-sm text-center line-clamp-2">{member.description}</p>
                 
-                {/* Click indicator */}
+                {/* Click indicator - Fixed position at bottom */}
                 <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="flex items-center text-arteng-dark">
                     <span className="text-sm font-medium mr-1">Click for more</span>
