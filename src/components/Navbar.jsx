@@ -26,7 +26,7 @@ const Navbar = () => {
         <Link href="/partners" className="text-lg hover:underline">Partners</Link>
         <Link href="/faq" className="text-lg hover:underline">FAQ</Link>
         <Link href="/contact" className="text-lg hover:underline">Contact</Link>
-        <Link href="/login" className="ml-4 px-6 py-2 rounded bg-arteng-dark text-white hover:bg-opacity-90 transition-colors font-bold text-lg flex items-center justify-center">
+        <Link href="/login" className="ml-4 bg-arteng-dark text-white font-bold text-lg rounded flex items-center justify-center h-10 w-28 pt-[3px]">
           SIGN UP
         </Link>
       </div>

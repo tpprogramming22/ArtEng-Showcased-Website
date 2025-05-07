@@ -34,10 +34,13 @@ const Footer = () => {
                 <Link href="/events" className="text-sm hover:text-gray-300">Events</Link>
               </li>
               <li>
-                <Link href="/news" className="text-sm hover:text-gray-300">Articles</Link>
+                <Link href="/news" className="text-sm hover:text-gray-300">News</Link>
               </li>
               <li>
                 <Link href="/partners" className="text-sm hover:text-gray-300">Partners</Link>
+              </li>
+              <li>
+                <Link href="/membership" className="text-sm hover:text-gray-300">Membership</Link>
               </li>
               <li>
                 <Link href="/faq" className="text-sm hover:text-gray-300">FAQ</Link>
@@ -53,7 +56,6 @@ const Footer = () => {
             <h3 className="text-lg font-bold mb-4">Contact</h3>
             <address className="not-italic text-sm">
               <p className="mb-2">Email: <a href="mailto:info@arteng.co.uk" className="hover:text-gray-300">info@arteng.co.uk</a></p>
-              <p className="mb-2">Phone: <a href="tel:+1234567890" className="hover:text-gray-300">(123) 456-7890</a></p>
             </address>
           </div>
         </div>

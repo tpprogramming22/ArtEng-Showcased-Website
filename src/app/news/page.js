@@ -9,7 +9,7 @@ import { useState } from 'react';
 export default function ArticlesPage() {
   const [showForm, setShowForm] = useState(false);
 
-  // Updated with more diverse images
+  // Updated with different images
   const featuredArticles = [
     {
       id: 1,
@@ -22,60 +22,60 @@ export default function ArticlesPage() {
       id: 2,
       title: "CEO named as finalist for Innovation Award",
       description: "Our leadership continues to be recognized in the industry with this prestigious nomination that highlights our commitment to pushing boundaries.",
-      imageUrl: "/engineering-forum.jpg", 
+      imageUrl: "/award-background.png", 
       date: "February 28, 2025"
     },
     {
       id: 3,
       title: "2024 - What a Year",
       description: "A look back at our achievements and milestones from the past year, celebrating the growth and success of our community and projects.",
-      imageUrl: "/digital-art-workshop.jpg",
+      imageUrl: "/year-review.jpg",
       date: "January 15, 2025"
     }
   ];
 
-  // Updated with more diverse images from across the site
+  // Updated with completely different images from events
   const recentArticles = [
     {
       id: 4,
       title: "The Intersection of Art and Engineering",
       description: "Exploring how creative vision and technical expertise can combine to create innovative solutions that serve both practical and aesthetic purposes.",
-      imageUrl: "/exhibition-opening.jpg",
+      imageUrl: "/artinhand.jpg",
       date: "March 1, 2025"
     },
     {
       id: 5,
       title: "Innovation Through Collaboration",
       description: "How partnerships between artists and engineers lead to groundbreaking projects that neither discipline could achieve alone.",
-      imageUrl: "/ceo-award.jpg",
+      imageUrl: "/partnership-background.png",
       date: "March 2, 2025"
     },
     {
       id: 6,
       title: "The Future of Creative Technology",
       description: "Examining emerging trends at the intersection of art and engineering that are shaping the next generation of experiences.",
-      imageUrl: "/award-background.png",
+      imageUrl: "/silverstatue.jpg",
       date: "March 3, 2025"
     },
     {
       id: 7,
       title: "Sustainability in Design",
       description: "How art and engineering collaborate to create sustainable solutions that address environmental challenges while maintaining aesthetic appeal.",
-      imageUrl: "/partnership-background.png",
+      imageUrl: "/aboutus2.jpg",
       date: "March 4, 2025"
     },
     {
       id: 8,
       title: "Art-Inspired Engineering Solutions",
       description: "Case studies of engineering projects that found inspiration and innovative approaches through artistic thinking and creative processes.",
-      imageUrl: "/year-review.jpg",
+      imageUrl: "/engineering-celebration.jpg",
       date: "March 5, 2025"
     },
     {
       id: 9,
       title: "Building Bridges Between Disciplines",
       description: "The importance of cross-disciplinary education and collaboration in fostering innovation across art and engineering sectors.",
-      imageUrl: "/eoy-celebration.jpg",
+      imageUrl: "/acquisition-news.jpg",
       date: "March 6, 2025"
     }
   ];
@@ -101,7 +101,7 @@ export default function ArticlesPage() {
         <section className="py-16 px-4 md:px-8">
           <div className="container mx-auto">
             <SectionHeader 
-              title="Articles" 
+              title="News" 
               subtitle="Featured Articles" 
             />
             
@@ -142,9 +142,9 @@ export default function ArticlesPage() {
             </div>
 
             <div className="mt-8 flex justify-center">
-              <button className="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition-colors">
+              <Link href="/news" className="inline-block bg-arteng-dark text-white px-4 py-2 rounded text-sm hover:bg-opacity-90 transition-colors w-32 text-center">
                 Load More
-              </button>
+              </Link>
             </div>
           </div>
         </section>

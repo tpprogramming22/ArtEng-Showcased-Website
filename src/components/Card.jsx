@@ -62,8 +62,8 @@ const Card = ({
           </div>
         )}
         
-        <div className="mt-auto">
-          <Link href={link} className="inline-block bg-arteng-dark text-white px-4 py-1 rounded text-sm hover:bg-opacity-90 transition-colors w-24 text-center">
+        <div className="mt-auto flex justify-center w-full">
+          <Link href={link} className="inline-block bg-arteng-dark text-white px-4 py-2 rounded text-sm hover:bg-opacity-90 transition-colors w-32 text-center">
             {linkText}
           </Link>
         </div>

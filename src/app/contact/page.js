@@ -79,10 +79,6 @@ export default function ContactPage() {
                   <p><a href="mailto:info@arteng.co.uk" className="text-blue-600 hover:underline">info@arteng.co.uk</a></p>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg">Phone</h3>
-                  <p><a href="tel:+441234567890" className="text-blue-600 hover:underline">+44 (0) 1234 567890</a></p>
-                </div>
-                <div>
                   <h3 className="font-semibold text-lg">Social Media</h3>
                   <div className="flex space-x-4 mt-2">
                     <a href="https://www.linkedin.com/company/arteng-uk" className="text-blue-600 hover:text-blue-800" target="_blank" rel="noopener noreferrer">
@@ -92,12 +88,6 @@ export default function ContactPage() {
                     </a>
                   </div>
                 </div>
-              </div>
-
-              <div className="mt-8">
-                <h3 className="font-semibold text-lg mb-2">Office Hours</h3>
-                <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
-                <p>Saturday - Sunday: Closed</p>
               </div>
             </div>
           </div>
