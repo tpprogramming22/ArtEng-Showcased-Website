@@ -6,7 +6,7 @@ const TeamMemberCard = ({ name, role, imageUrl, description, linkToAbout = true 
     <div 
       className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200 hover:shadow-lg transition-all transform hover:scale-105 group relative h-[420px] flex flex-col items-center justify-center p-4"
     >
-      <div className="relative w-56 h-56 mb-4 overflow-hidden">
+      <div className="relative w-56 h-56 mb-4">
         <Image 
           src={imageUrl} 
           alt={name} 
