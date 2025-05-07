@@ -144,10 +144,10 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {/* Team members arranged by surname alphabetical order */}
             <div 
-              className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative h-[420px]"
+              className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative"
               onClick={() => window.location.href = '/about-us'}
             >
-              <div className="relative w-56 h-56 mb-4 overflow-hidden">
+              <div className="relative w-56 h-56 mb-4">
                 <Image 
                   src="/wendynew.png" 
                   alt="Wendy Bennett"
@@ -171,10 +171,10 @@ export default function Home() {
             </div>
 
             <div 
-              className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative h-[420px]"
+              className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative"
               onClick={() => window.location.href = '/about-us'}
             >
-              <div className="relative w-56 h-56 mb-4 overflow-hidden">
+              <div className="relative w-56 h-56 mb-4">
                 <Image 
                   src="/steve.png" 
                   alt="Stephen Fletcher"
@@ -225,10 +225,10 @@ export default function Home() {
             </div>
                 
             <div 
-              className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative h-[420px]"
+              className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative"
               onClick={() => window.location.href = '/about-us'}
             >
-              <div className="relative w-56 h-56 mb-4 overflow-hidden">
+              <div className="relative w-56 h-56 mb-4">
                 <Image 
                   src="/adam.png" 
                   alt="Adam Snelleksz"
