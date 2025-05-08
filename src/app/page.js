@@ -144,10 +144,10 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {/* Team members arranged by surname alphabetical order */}
             <div 
-              className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative h-[420px]"
+              className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative"
               onClick={() => window.location.href = '/about-us'}
             >
-              <div className="relative w-56 h-56 mb-4 overflow-hidden">
+              <div className="relative w-56 h-56 mb-4">
                 <Image 
                   src="/wendynew.png" 
                   alt="Wendy Bennett"
@@ -158,11 +158,10 @@ export default function Home() {
               </div>
               <h3 className="text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Wendy Bennett</h3>
               <p className="text-sm">Managing Director</p>
-              <p className="text-sm text-center line-clamp-2">Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields. She worked within the precision investment casting industry for 26 years and was CEO and previous owner of Lost Wax Development Limited.</p>
+              <p className="text-sm text-center">Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields. She worked within the precision investment casting industry for 26 years and was CEO and previous owner of Lost Wax Development Limited.</p>
               
               <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="flex items-center text-arteng-dark">
-                  <span className="text-sm font-medium mr-1">Learn more</span>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
@@ -171,10 +170,10 @@ export default function Home() {
             </div>
 
             <div 
-              className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative h-[420px]"
+              className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative"
               onClick={() => window.location.href = '/about-us'}
             >
-              <div className="relative w-56 h-56 mb-4 overflow-hidden">
+              <div className="relative w-56 h-56 mb-4">
                 <Image 
                   src="/steve.png" 
                   alt="Stephen Fletcher"
@@ -185,11 +184,9 @@ export default function Home() {
               </div>
               <h3 className="text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Stephen Fletcher</h3>
               <p className="text-sm">Creative Director</p>
-              <p className="text-sm text-center line-clamp-2">Stephen's career spans more than 45 years covering a range of roles including Logistics/Transport management, Project management, Key Account management and Sales Business Development.</p>
-              
+              <p className="text-sm text-center mb-10">Stephen's career spans more than 45 years covering a range of roles including Logistics/Transport management, Project management, Key Account management and Sales Business Development.</p>
               <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="flex items-center text-arteng-dark">
-                  <span className="text-sm font-medium mr-1">Learn more</span>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
@@ -198,10 +195,10 @@ export default function Home() {
             </div>
 
             <div 
-              className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative h-[420px]"
+              className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative"
               onClick={() => window.location.href = '/about-us'}
             >
-              <div className="relative w-56 h-56 mb-4 overflow-hidden">
+              <div className="relative w-56 h-56 mb-4">
                 <Image 
                   src="/jess-smith.jpg" 
                   alt="Joan Smith"
@@ -212,11 +209,10 @@ export default function Home() {
               </div>
               <h3 className="text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Joan Smith</h3>
               <p className="text-sm">Corporate Director</p>
-              <p className="text-sm text-center line-clamp-2">With over 20 years of experience in business advice and guidance, Joan brings a wealth of knowledge in all areas of business support. Having worked with hundreds of companies across diverse sectors, Joan has always managed to understand their unique challenges and opportunities that businesses face.</p>
+              <p className="text-sm text-center">With over 20 years of experience in business advice and guidance, Joan brings a wealth of knowledge in all areas of business support. Having worked with hundreds of companies across diverse sectors, Joan has always managed to understand their unique challenges and opportunities that businesses face.</p>
               
               <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="flex items-center text-arteng-dark">
-                  <span className="text-sm font-medium mr-1">Learn more</span>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
@@ -225,10 +221,10 @@ export default function Home() {
             </div>
                 
             <div 
-              className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative h-[420px]"
+              className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative"
               onClick={() => window.location.href = '/about-us'}
             >
-              <div className="relative w-56 h-56 mb-4 overflow-hidden">
+              <div className="relative w-56 h-56 mb-4">
                 <Image 
                   src="/adam.png" 
                   alt="Adam Snelleksz"
@@ -239,11 +235,10 @@ export default function Home() {
               </div>
               <h3 className="text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Adam Snelleksz</h3>
               <p className="text-sm">Marketing Director</p>
-              <p className="text-sm text-center line-clamp-2">Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations. After graduating from university with a marketing degree, Adam moved to London and worked in a busy press office for the National Consumer Council.</p>
+              <p className="text-sm text-center">Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations. After graduating from university with a marketing degree, Adam moved to London and worked in a busy press office for the National Consumer Council.</p>
               
               <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="flex items-center text-arteng-dark">
-                  <span className="text-sm font-medium mr-1">Learn more</span>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>

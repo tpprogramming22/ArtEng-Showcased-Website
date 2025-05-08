@@ -4,9 +4,9 @@ import Link from 'next/link';
 const TeamMemberCard = ({ name, role, imageUrl, description, linkToAbout = true }) => {
   return (
     <div 
-      className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200 hover:shadow-lg transition-all transform hover:scale-105 group relative h-[420px] flex flex-col items-center justify-center p-4"
+      className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200 hover:shadow-lg transition-all transform hover:scale-105 group relative flex flex-col items-center justify-center p-4"
     >
-      <div className="relative w-56 h-56 mb-4 overflow-hidden">
+      <div className="relative w-56 h-56 mb-4">
         <Image 
           src={imageUrl} 
           alt={name} 
@@ -17,7 +17,7 @@ const TeamMemberCard = ({ name, role, imageUrl, description, linkToAbout = true 
       </div>
       <h3 className="font-bold text-lg text-arteng-dark group-hover:text-arteng-dark transition-colors duration-300">{name}</h3>
       <p className="text-gray-600 font-medium mb-2">{role}</p>
-      <p className="text-gray-500 text-sm text-center line-clamp-2">{description}</p>
+      <p className="text-gray-500 text-sm text-center">{description}</p>
       
       {linkToAbout && (
         <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

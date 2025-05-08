@@ -13,7 +13,7 @@ export default function AboutUsPage() {
       id: 4,
       name: "Wendy Bennett",
       role: "Managing Director",
-      description: "Wendy is a pioneering leader for women in engineering, with achievements in precision casting and leadership roles in industry.",
+      description: "Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields. She worked within the precision investment casting industry for 26 years and was CEO and previous owner of Lost Wax Development Limited.",
       imageUrl: "/wendynew.png",
       long1: "Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields. She worked within the precision investment casting industry for 26 years and was CEO and previous owner of Lost Wax Development Limited. Her achievements in the industry are far ranging and include recognition nationally and internationally. Wendy was the first female to be awarded a Fellowship to the Institute of Cast Metal Engineers (ICME) in 2012 and was also the first female Chair of the Cast Metal Federation (CMF) from 2015 to 2017 and is the current President of the West Midlands branch of the ICME.",
       long2: "In 2016 she visited Dresden for the International Foundry Forum and represented the UK Foundry Industry and has also been a Government advisor on industrial strategy on behalf of the Metals Council. She was invited to join the Council of 'Made in the Midlands' after being recognised as one of the only women within the region who was involved in industry and who owned a precision investment casting facility. Wendy has also been involved in the 'Advanced Engineering Cluster' which was set up to promote the use of students and under graduates for technical projects within the manufacturing sector, utilising the latest technologies available within the universities.",
@@ -23,7 +23,7 @@ export default function AboutUsPage() {
       id: 2,
       name: "Stephen Fletcher",
       role: "Creative Director",
-      description: "Stephen has over 45 years of experience in logistics, projects, sales, and the arts, focusing on supporting student career transitions.",
+      description: "Stephen's career spans more than 45 years covering a range of roles including Logistics/Transport management, Project management, Key Account management and Sales Business Development.",
       imageUrl: "/steve.png",
       long1: "Stephen's career spans more than 45 years covering a range of roles including Logistics/Transport management, Project management, Key Account management and Sales Business Development. He has worked on behalf of a range of manufacturing and service suppliers including Metal fabrication, Flexible packaging, Precision Engineering and Commercial Heat Treatment",
       long2: "Stephen's experience covers a broad range of industrial sectors including Automotive, Agricultural, Aerospace, General Industrial [including tool making and precision engineering] and Defence across UK and Europe. In addition, Stephen's vast range of experience also incorporates a deep involvement in the arts and media. A long term involvement in theatre has seen him take on roles of acting, producing and directing in a variety of productions. This has led to a passion for promoting and supporting the theatre and creative media sector including writing, live performance, independent film making and production. Similarly, he has managed, overseen and facilitated creative media driven projects, awareness programmes and initiatives for the NHS and Schools. This has also extended to sales networking and training in the corporate sector.",
@@ -33,7 +33,7 @@ export default function AboutUsPage() {
       id: 3,
       name: "Joan Smith",
       role: "Corporate Director",
-      description: "Joan is an experienced business advisor who connects companies with expert support to help them grow and succeed.",
+      description: "With over 20 years of experience in business advice and guidance, Joan brings a wealth of knowledge in all areas of business support. Having worked with hundreds of companies across diverse sectors, Joan has always managed to understand their unique challenges and opportunities that businesses face.",
       imageUrl: "/jess-smith.jpg",
       long1: "With over 20 years of experience in business advice and guidance, Joan brings a wealth of knowledge in all areas of business support. Having worked with hundreds of companies across diverse sectors, Joan has always managed to understand their unique challenges and opportunities that businesses face. Her approach is centred around learning about each business, analysing their needs, and providing tailored solutions to help them achieve their goals.",
       long2: "As an impartial broker, she specialises in connecting businesses with the right experts and resources, ensuring they receive the guidance needed to thrive. Past experience includes managing members for the Chamber of Commerce and successfully fostering a thriving business community in the Solihull area. This included organising and hosting prestigious business awards evenings - celebrating local success stories, recognising outstanding achievements, and creating opportunities for businesses to showcase their impact on the local, national and global stage. These events not only strengthened connections within the business community but also inspired growth and collaboration.",
@@ -43,7 +43,7 @@ export default function AboutUsPage() {
       id: 1,
       name: "Adam Snelleksz",
       role: "Marketing Director",
-      description: "Adam is a marketing and communications expert with over 25 years of experience, including founding two successful agencies.",
+      description: "Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations. After graduating from university with a marketing degree, Adam moved to London and worked in a busy press office for the National Consumer Council.",
       imageUrl: "/adam.png",
       long1: "Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations. After graduating from university with a marketing degree, Adam moved to London and worked in a busy press office for the National Consumer Council. Following two years in the capital, Adam returned to Birmingham as head of communications for Birmingham City Football Club. The role included hosting and organising manager and player press conferences, dealing with media enquiries and setting up the club's first online TV channel, Blues TV. Adam then stayed in the sports industry when he became head of marketing for Birmingham City Council's sports events department. Responsible for the commercial partnerships, ticket sales, marketing and promotion of world and European championships including the World BMX Championships, European Gymnastics Championships, Diamond League Athletics and many more held at the National Indoor Arena and Birmingham Alexander Stadium.",
       long2: "After working in sport, Adam took the step of setting up his own company - a video production company called CMA Video. He built the company into a widely recognised video agency which produced TV and cinema adverts for Sea Life Centre, Lego Land, Brooks running shoes and many more. After 12 years of successful trading, Adam sold the business and set up an off-shoot marketing company called CMA Media which specialises in digital marketing, social media and website services. Current clients include Aston University and Birmingham based charity, Help Harry Help Others",
@@ -135,15 +135,15 @@ export default function AboutUsPage() {
               <div
                 key={member.id}
                 onClick={() => setSelectedMember(member)}
-                className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative h-[420px]"
+                className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative"
               >
-                <div className="relative w-56 h-56 mb-4 overflow-hidden">
+                <div className="relative w-56 h-56 mb-4 ">
                   <Image src={member.imageUrl} alt={member.name} fill className="object-cover rounded-md" />
                   <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
                 </div>
                 <h3 className="text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">{member.name}</h3>
                 <p className="text-sm">{member.role}</p>
-                <p className="text-sm text-center line-clamp-2">{member.description}</p>
+                <p className={`text-sm text-center ${member.id === 2 ? 'mb-16' : 'mb-6'}`}>{member.description}</p>
                 
                 {/* Click indicator - Fixed position at bottom */}
                 <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
