@@ -7,6 +7,19 @@ import Image from 'next/image';
 const RecordTurnoutCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [imagesLoaded, setImagesLoaded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  
+  // Check if we're on mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   
   // Carousel dimensions - these can be used for image preparation
   // The carousel is 100% width of the viewport
@@ -90,8 +103,8 @@ const RecordTurnoutCarousel = () => {
 
   return (
     <section className="relative">
-      {/* Fixed height for carousel */}
-      <div className="relative h-[700px] w-full overflow-hidden">
+      {/* Height is responsive on mobile only, desktop remains the same */}
+      <div className="relative h-[450px] md:h-[700px] w-full overflow-hidden">
         {/* Background image - dynamically selected based on current slide */}
         <Image 
           src={slides[currentSlide].backgroundImage}
@@ -103,68 +116,104 @@ const RecordTurnoutCarousel = () => {
         />
         
         <div className="absolute inset-0 flex items-center">
-          {/* Diagonal overlay with increased transparency */}
-          <div className="absolute inset-0" style={{ 
-            background: 'linear-gradient(75deg, transparent 50%, rgba(0,0,0,0.5) 50%)',
-            transform: 'translateX(0)'
-          }}></div>
+          {/* Mobile-specific overlay */}
+          {isMobile ? (
+            <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40"></div>
+          ) : (
+            /* Desktop diagonal overlay exactly as before */
+            <div className="absolute inset-0" style={{ 
+              background: 'linear-gradient(75deg, transparent 50%, rgba(0,0,0,0.5) 50%)',
+              transform: 'translateX(0)'
+            }}></div>
+          )}
           
-          {/* Content positioned on the right with fixed heights */}
-          <div className="absolute right-0 w-2/3 pr-12 text-white flex items-center justify-center h-full">
-            <div className="flex flex-col items-center">
-              {/* Fixed width and height container for title and description */}
-              <div className="w-[500px] text-center h-[200px] flex flex-col justify-center">
-                <h2 className="text-6xl font-bold mb-6">{slides[currentSlide].title}</h2>
-                <p className="mb-8 flex items-center justify-center text-xl h-[60px]">{slides[currentSlide].description}</p>
-              </div>
-              
-              {/* Fixed width button with consistent positioning */}
-              <div className="h-[80px] flex items-center justify-center">
+          {/* Content positioned differently on mobile vs desktop */}
+          {isMobile ? (
+            // Mobile layout - centered content
+            <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-white z-10">
+              <div className="text-center">
+                <h2 className="text-4xl font-bold mb-4">{slides[currentSlide].title}</h2>
+                <p className="mb-6 text-lg">{slides[currentSlide].description}</p>
                 <Link 
                   href={slides[currentSlide].link} 
-                  className="bg-white text-arteng-dark px-8 py-3 rounded-md text-lg inline-block hover:bg-gray-100 transition-colors w-48 text-center font-medium"
+                  className="bg-white text-arteng-dark px-6 py-2 rounded-md text-base inline-block hover:bg-gray-100 transition-colors w-36 text-center font-medium"
                 >
                   {slides[currentSlide].linkText}
                 </Link>
               </div>
               
-              {/* Navigation controls with fixed height */}
-              <div className="flex justify-center items-center space-x-6 h-[60px]">
-                {/* Left arrow */}
-                <button 
-                  onClick={goToPrevSlide}
-                  className="bg-white bg-opacity-50 p-2 rounded-full hover:bg-opacity-70 transition-opacity"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="white">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                  </svg>
-                </button>
-                
-                {/* Indicators */}
-                <div className="flex space-x-3">
-                  {slides.map((_, index) => (
-                    <button 
-                      key={index}
-                      onClick={() => goToSlide(index)}
-                      className={`w-8 h-2 rounded-full transition-all ${
-                        index === currentSlide ? "bg-white" : "bg-white bg-opacity-50"
-                      }`}
-                    />
-                  ))}
-                </div>
-                
-                {/* Right arrow */}
-                <button 
-                  onClick={goToNextSlide}
-                  className="bg-white bg-opacity-50 p-2 rounded-full hover:bg-opacity-70 transition-opacity"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="white">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
+              {/* Dots navigation for mobile */}
+              <div className="absolute bottom-6 flex justify-center space-x-2">
+                {slides.map((_, index) => (
+                  <button 
+                    key={index}
+                    onClick={() => goToSlide(index)}
+                    className={`w-6 h-1.5 rounded-full transition-all ${
+                      index === currentSlide ? "bg-white" : "bg-white bg-opacity-50"
+                    }`}
+                    aria-label={`Go to slide ${index + 1}`}
+                  />
+                ))}
               </div>
             </div>
-          </div>
+          ) : (
+            // Desktop layout - exactly as before
+            <div className="absolute right-0 w-2/3 pr-12 text-white flex items-center justify-center h-full">
+              <div className="flex flex-col items-center">
+                {/* Fixed width and height container for title and description */}
+                <div className="w-[500px] text-center h-[200px] flex flex-col justify-center">
+                  <h2 className="text-6xl font-bold mb-6">{slides[currentSlide].title}</h2>
+                  <p className="mb-8 flex items-center justify-center text-xl h-[60px]">{slides[currentSlide].description}</p>
+                </div>
+                
+                {/* Fixed width button with consistent positioning */}
+                <div className="h-[80px] flex items-center justify-center">
+                  <Link 
+                    href={slides[currentSlide].link} 
+                    className="bg-white text-arteng-dark px-8 py-3 rounded-md text-lg inline-block hover:bg-gray-100 transition-colors w-48 text-center font-medium"
+                  >
+                    {slides[currentSlide].linkText}
+                  </Link>
+                </div>
+                
+                {/* Navigation controls with fixed height */}
+                <div className="flex justify-center items-center space-x-6 h-[60px]">
+                  {/* Left arrow */}
+                  <button 
+                    onClick={goToPrevSlide}
+                    className="bg-white bg-opacity-50 p-2 rounded-full hover:bg-opacity-70 transition-opacity"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="white">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                  
+                  {/* Indicators */}
+                  <div className="flex space-x-3">
+                    {slides.map((_, index) => (
+                      <button 
+                        key={index}
+                        onClick={() => goToSlide(index)}
+                        className={`w-8 h-2 rounded-full transition-all ${
+                          index === currentSlide ? "bg-white" : "bg-white bg-opacity-50"
+                        }`}
+                      />
+                    ))}
+                  </div>
+                  
+                  {/* Right arrow */}
+                  <button 
+                    onClick={goToNextSlide}
+                    className="bg-white bg-opacity-50 p-2 rounded-full hover:bg-opacity-70 transition-opacity"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="white">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </section>

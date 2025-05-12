@@ -67,15 +67,15 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section - Updated with white background and extra padding for navbar */}
-      <section className="bg-white text-arteng-dark py-16 pt-24">
+      {/* Hero Section - With responsive padding */}
+      <section className="bg-white text-arteng-dark py-10 md:py-16 pt-20 md:pt-24">
         <div className="container mx-auto px-4 md:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h1 className="text-4xl font-bold mb-4">Bringing Art &<br />Engineering Together</h1>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+            <div className="text-center lg:text-left">
+              <h1 className="text-3xl md:text-4xl font-bold mb-4">Bringing Art &<br />Engineering Together</h1>
             </div>
             <div className="text-center">
-              <p className="text-lg">Connecting, nurturing and developing the artistic and engineering worlds..</p>
+              <p className="text-base md:text-lg">Connecting, nurturing and developing the artistic and engineering worlds...</p>
             </div>
           </div>
         </div>
@@ -84,12 +84,12 @@ export default function Home() {
       {/* Record Turnout Carousel Section */}
       <RecordTurnoutCarousel />
       
-      {/* About ArtEng Section - Now with white background */}
-      <section className="py-16 px-4 md:px-8 bg-white">
+      {/* About ArtEng Section - Now with white background and responsive layout */}
+      <section className="py-10 md:py-16 px-4 md:px-8 bg-white">
         <div className="container mx-auto">
           <SectionHeader title="About ArtEng" />
           
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
             <div className="lg:col-span-6">
               <div>
                 <Image 
@@ -103,22 +103,22 @@ export default function Home() {
             </div>
             
             <div className="lg:col-span-6">
-              <p className="mb-4 text-gray-800">
+              <p className="mb-3 md:mb-4 text-gray-800 text-sm md:text-base">
                 ArtEng is an innovative concept that merges the worlds of art and engineering to encourage creativity and problem-solving in industry. It was established to bridge the gap between art and engineering, offering a platform for artists, engineers, and creators to collaborate and develop groundbreaking solutions.
               </p>
-              <p className="mb-4 text-gray-800">
+              <p className="mb-3 md:mb-4 text-gray-800 text-sm md:text-base">
                 Through networking, events and a programme of activities, ArtEng is striving to cultivate a dynamic space where imagination meets engineering, resulting in groundbreaking works that shape the future of both art and technology.
               </p>
-              <p className="mb-4 text-gray-800">
+              <p className="mb-3 md:mb-4 text-gray-800 text-sm md:text-base">
                 We want to foster a creative community that blurs the lines between art and engineering, providing the tools, resources and opportunities to experiment, collaborate, and develop projects that challenge traditional perspectives.
               </p>
-              <p className="mb-4 text-gray-800">
-                Arteng is especially relevant in today’s innovation-driven world, where many designs often require both technical skill and imaginative vision. It encourages engineers to think creatively and artists to embrace technology, breaking down traditional barriers between the two fields. In education, Arteng can foster interdisciplinary learning, helping students develop both problem-solving abilities and artistic sensibility.  Our work with universities and educational institutions means that we can develop and ensure that the two industries can gain new entrants to continue, develop and innovate for decades to come. 
+              <p className="mb-3 md:mb-4 text-gray-800 text-sm md:text-base">
+                Arteng is especially relevant in today's innovation-driven world, where many designs often require both technical skill and imaginative vision. It encourages engineers to think creatively and artists to embrace technology, breaking down traditional barriers between the two fields. In education, Arteng can foster interdisciplinary learning, helping students develop both problem-solving abilities and artistic sensibility.  Our work with universities and educational institutions means that we can develop and ensure that the two industries can gain new entrants to continue, develop and innovate for decades to come. 
               </p>
               
               {/* Button centered under the right column content */}
-              <div className="flex justify-center mt-6">
-                <Link href="/about-us" className="bg-arteng-dark text-white px-6 py-2 rounded inline-block hover:bg-opacity-90 transition-colors">
+              <div className="flex justify-center mt-4 md:mt-6">
+                <Link href="/about-us" className="bg-arteng-dark text-white px-4 md:px-6 py-1.5 md:py-2 rounded inline-block hover:bg-opacity-90 transition-colors text-sm md:text-base">
                   More Info
                 </Link>
               </div>
@@ -127,27 +127,26 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Meet the Team Section - Now with light gray background */}
-      {/* Meet the Team Section - Now with enhanced cards matching About Us page */}
-      <section className="py-16 px-4 md:px-8 bg-gray-50">
+      {/* Meet the Team Section - With responsive grid for team members */}
+      <section className="py-10 md:py-16 px-4 md:px-8 bg-gray-50">
         <div className="container mx-auto">
-          <div className="flex justify-between items-center mb-6">
+          <div className="flex flex-col sm:flex-row justify-between items-center mb-6">
             <div>
-              <h2 className="text-2xl font-bold text-arteng-dark">Meet The Team</h2>
-              <p className="text-gray-600">Meet the team behind ArtEng</p>
+              <h2 className="text-xl sm:text-2xl font-bold text-arteng-dark text-center sm:text-left">Meet The Team</h2>
+              <p className="text-gray-600 text-center sm:text-left text-sm sm:text-base">Meet the team behind ArtEng</p>
             </div>
-            <Link href="/about-us" className="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition-colors">
+            <Link href="/about-us" className="mt-3 sm:mt-0 bg-black text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded text-xs sm:text-sm hover:bg-gray-800 transition-colors">
               More Info
             </Link>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {/* Team members arranged by surname alphabetical order */}
             <div 
-              className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative"
+              className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative"
               onClick={() => window.location.href = '/about-us'}
             >
-              <div className="relative w-56 h-56 mb-4">
+              <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4">
                 <Image 
                   src="/wendynew.png" 
                   alt="Wendy Bennett"
@@ -156,13 +155,13 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
               </div>
-              <h3 className="text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Wendy Bennett</h3>
-              <p className="text-sm">Managing Director</p>
-              <p className="text-sm text-center">Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields. She worked within the precision investment casting industry for 26 years and was CEO and previous owner of Lost Wax Development Limited.</p>
+              <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Wendy Bennett</h3>
+              <p className="text-xs sm:text-sm">Managing Director</p>
+              <p className="text-xs sm:text-sm text-center line-clamp-4 sm:line-clamp-5">Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields. She worked within the precision investment casting industry for 26 years and was CEO and previous owner of Lost Wax Development Limited.</p>
               
-              <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="flex items-center text-arteng-dark">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </div>
@@ -170,10 +169,10 @@ export default function Home() {
             </div>
 
             <div 
-              className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative"
+              className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative"
               onClick={() => window.location.href = '/about-us'}
             >
-              <div className="relative w-56 h-56 mb-4">
+              <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4">
                 <Image 
                   src="/steve.png" 
                   alt="Stephen Fletcher"
@@ -182,12 +181,12 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
               </div>
-              <h3 className="text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Stephen Fletcher</h3>
-              <p className="text-sm">Creative Director</p>
-              <p className="text-sm text-center mb-10">Stephen's career spans more than 45 years covering a range of roles including Logistics/Transport management, Project management, Key Account management and Sales Business Development.</p>
-              <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Stephen Fletcher</h3>
+              <p className="text-xs sm:text-sm">Creative Director</p>
+              <p className="text-xs sm:text-sm text-center line-clamp-4 sm:line-clamp-5 mb-4 sm:mb-10">Stephen's career spans more than 45 years covering a range of roles including Logistics/Transport management, Project management, Key Account management and Sales Business Development.</p>
+              <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="flex items-center text-arteng-dark">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </div>
@@ -195,10 +194,10 @@ export default function Home() {
             </div>
 
             <div 
-              className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative"
+              className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative"
               onClick={() => window.location.href = '/about-us'}
             >
-              <div className="relative w-56 h-56 mb-4">
+              <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4">
                 <Image 
                   src="/jess-smith.jpg" 
                   alt="Joan Smith"
@@ -207,13 +206,13 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
               </div>
-              <h3 className="text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Joan Smith</h3>
-              <p className="text-sm">Corporate Director</p>
-              <p className="text-sm text-center">With over 20 years of experience in business advice and guidance, Joan brings a wealth of knowledge in all areas of business support. Having worked with hundreds of companies across diverse sectors, Joan has always managed to understand their unique challenges and opportunities that businesses face.</p>
+              <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Joan Smith</h3>
+              <p className="text-xs sm:text-sm">Corporate Director</p>
+              <p className="text-xs sm:text-sm text-center line-clamp-4 sm:line-clamp-5">With over 20 years of experience in business advice and guidance, Joan brings a wealth of knowledge in all areas of business support. Having worked with hundreds of companies across diverse sectors, Joan has always managed to understand their unique challenges and opportunities that businesses face.</p>
               
-              <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="flex items-center text-arteng-dark">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </div>
@@ -221,10 +220,10 @@ export default function Home() {
             </div>
                 
             <div 
-              className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative"
+              className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative"
               onClick={() => window.location.href = '/about-us'}
             >
-              <div className="relative w-56 h-56 mb-4">
+              <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4">
                 <Image 
                   src="/adam.png" 
                   alt="Adam Snelleksz"
@@ -233,13 +232,13 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
               </div>
-              <h3 className="text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Adam Snelleksz</h3>
-              <p className="text-sm">Marketing Director</p>
-              <p className="text-sm text-center">Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations. After graduating from university with a marketing degree, Adam moved to London and worked in a busy press office for the National Consumer Council.</p>
+              <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Adam Snelleksz</h3>
+              <p className="text-xs sm:text-sm">Marketing Director</p>
+              <p className="text-xs sm:text-sm text-center line-clamp-4 sm:line-clamp-5">Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations. After graduating from university with a marketing degree, Adam moved to London and worked in a busy press office for the National Consumer Council.</p>
               
-              <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="flex items-center text-arteng-dark">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </div>
@@ -250,7 +249,7 @@ export default function Home() {
       </section>
       
       {/* Latest News Section */}
-      <section className="py-16 px-4 md:px-8 bg-white">
+      <section className="py-10 md:py-16 px-4 md:px-8 bg-white">
         <div className="container mx-auto">
           <SectionHeader 
             title="Latest News" 
@@ -258,7 +257,7 @@ export default function Home() {
             viewAllLink="/news" 
           />
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {featuredNews.map((article) => (
               <Card
                 key={article.id}
@@ -274,7 +273,7 @@ export default function Home() {
       </section>
       
       {/* Upcoming Events Section */}
-      <section className="py-16 px-4 md:px-8 bg-gray-50">
+      <section className="py-10 md:py-16 px-4 md:px-8 bg-gray-50">
         <div className="container mx-auto">
           <SectionHeader 
             title="Upcoming Events" 
@@ -282,7 +281,7 @@ export default function Home() {
             viewAllLink="/events" 
           />
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {upcomingEvents.map((event) => (
               <Card
                 key={event.id}
@@ -300,7 +299,7 @@ export default function Home() {
       </section>
       
       {/* Our Partners Section (renamed from Sponsors) */}
-      <section className="py-16 px-4 md:px-8 bg-white">
+      <section className="py-10 md:py-16 px-4 md:px-8 bg-white">
         <div className="container mx-auto">
           <SectionHeader 
             title="Our Partners" 
@@ -308,7 +307,7 @@ export default function Home() {
             viewAllLink="/partners" 
           />
           
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             <SponsorCard 
               name="Forusall" 
               logo="/forusall.jpg" 

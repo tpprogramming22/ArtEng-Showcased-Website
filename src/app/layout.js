@@ -9,14 +9,18 @@ export const metadata = {
   description: 'Bringing creatives and inventors together to transform ideas into unforgettable experiences.',
 };
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="font-spartan flex flex-col min-h-screen">
-        <div className="bg-white pt-20">
-          <Navbar />
-        </div>
-        <main className="flex-grow">{children}</main>
+        <Navbar />
+        <main className="flex-grow pt-14 sm:pt-16 md:pt-20">{children}</main>
         <Footer />
       </body>
     </html>

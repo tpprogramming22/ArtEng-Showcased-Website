@@ -26,12 +26,12 @@ const Article = ({
           </div>
         )}
       </div>
-      <div className="p-4 flex-grow flex flex-col">
-        <h3 className="font-bold text-lg mb-2 text-arteng-dark">{title}</h3>
-        <p className="text-gray-600 mb-4 text-sm line-clamp-3">{description}</p>
-        <p className="text-gray-600 mb-4 text-sm line-clamp-3">{readTime} minutes</p>
+      <div className="p-3 sm:p-4 flex-grow flex flex-col">
+        <h3 className="font-bold text-base sm:text-lg mb-2 text-arteng-dark line-clamp-2">{title}</h3>
+        <p className="text-gray-600 mb-2 sm:mb-3 text-xs sm:text-sm line-clamp-3">{description}</p>
+        <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">{readTime} minutes</p>
         <div className="mt-auto">
-          <Link href={link} className="inline-block bg-arteng-dark text-white px-4 py-1 rounded text-sm hover:bg-opacity-90 transition-colors w-24 text-center">
+          <Link href={link} className="inline-block bg-arteng-dark text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded text-xs sm:text-sm hover:bg-opacity-90 transition-colors w-20 sm:w-24 text-center">
             {linkText}
           </Link>
         </div>
