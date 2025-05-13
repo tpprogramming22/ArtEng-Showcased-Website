@@ -38,14 +38,14 @@ const Card = ({
         <p className={"text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm line-clamp-3 ${isShort ? 'mb-28' : 'mb-6'}"}>{description}</p>
         
         {(dateTime || location || hostedBy) && (
-          <div className="mb-3 sm:mb-4 text-xs sm:text-sm space-y-1">
-            <div className="flex items-start sm:items-center gap-1 sm:gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4 mt-0.5 sm:mt-0 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              <span className="flex-grow">{dateTime || "Date TBA"}</span>
-            </div>
+        <div className="mb-3 sm:mb-4 text-xs sm:text-sm space-y-1">
+          <div className="flex items-start sm:items-center gap-1 sm:gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4 mt-0.5 sm:mt-0 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <span className="flex-grow">{dateTime || "Date TBA"}</span>
           </div>
+        </div>
             )}
             {location && (
               <div className="flex items-start sm:items-center gap-1 sm:gap-2">
