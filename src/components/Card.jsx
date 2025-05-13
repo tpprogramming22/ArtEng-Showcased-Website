@@ -16,7 +16,7 @@ const Card = ({
 }) => {
 
   const wordCount = description.trim().split(/\s+/).length;
-  const isShort = wordCount < 20;
+  const isShort = wordCount < 30;
   return (
     <div className="bg-white rounded-md overflow-hidden shadow-sm border border-gray-200 flex flex-col h-full">
       <div className={`relative ${aspectRatio} bg-gray-200`}>
@@ -35,7 +35,7 @@ const Card = ({
       </div>
       <div className="p-3 sm:p-4 flex-grow flex flex-col">
         <h3 className="font-bold text-base sm:text-lg mb-2 text-arteng-dark line-clamp-2">{title}</h3>
-        <p className={"text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm line-clamp-3 ${isShort ? 'mb-16' : 'mb-6'}"}>{description}</p>
+        <p className={"text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm line-clamp-3 ${isShort ? 'mb-28' : 'mb-6'}"}>{description}</p>
         
         {(dateTime || location || hostedBy) && (
           <div className="mb-3 sm:mb-4 text-xs sm:text-sm space-y-1 flex-grow">
