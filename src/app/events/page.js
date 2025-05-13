@@ -193,7 +193,7 @@ export default function EventsPage() {
         <section className="py-16 px-4 md:px-8 bg-gray-50">
           <div className="container mx-auto">
             <SectionHeader 
-              title="This Week" 
+              title="Featured Events" 
               subtitle="Upcoming at ArtEng" 
             />
             
