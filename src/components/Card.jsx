@@ -38,7 +38,7 @@ const Card = ({
         <p className={"text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm line-clamp-3 ${isShort ? 'mb-28' : 'mb-6'}"}>{description}</p>
         
         {(dateTime || location || hostedBy) && (
-          <div className="mb-3 sm:mb-4 text-xs sm:text-sm space-y-1 flex-grow">
+          <div className="mb-3 sm:mb-4 text-xs sm:text-sm space-y-1">
             {dateTime && (
               <div className="flex items-start sm:items-center gap-1 sm:gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4 mt-0.5 sm:mt-0 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
