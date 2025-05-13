@@ -1,13 +1,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-const wordCount = description.trim().split(/\s+/).length;
-const isShort = wordCount < 20; // Adjust this threshold as needed
+
 
 const Card = ({ 
   imageUrl, 
   title, 
   description, 
+  const wordCount = description.trim().split(/\s+/).length;
+  const isShort = wordCount < 20;
   link, 
   linkText = "More Info",
   aspectRatio = "aspect-video",
