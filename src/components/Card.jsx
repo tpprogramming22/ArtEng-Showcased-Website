@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-
-
 const Card = ({ 
   imageUrl, 
   title, 
@@ -14,9 +12,6 @@ const Card = ({
   dateTime = null,
   location = null
 }) => {
-
-  const wordCount = description.trim().split(/\s+/).length;
-  const isShort = wordCount < 30;
   return (
     <div className="bg-white rounded-md overflow-hidden shadow-sm border border-gray-200 flex flex-col h-full">
       <div className={`relative ${aspectRatio} bg-gray-200`}>
@@ -35,15 +30,17 @@ const Card = ({
       </div>
       <div className="p-3 sm:p-4 flex-grow flex flex-col">
         <h3 className="font-bold text-base sm:text-lg mb-2 text-arteng-dark line-clamp-2">{title}</h3>
-        <p className={"text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm line-clamp-3 ${isShort ? 'mb-28' : 'mb-6'}"}>{description}</p>
+        <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm line-clamp-3">{description}</p>
         
         {(dateTime || location || hostedBy) && (
-          <div className="flex items-start sm:items-center gap-1 sm:gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4 mt-0.5 sm:mt-0 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-            <span className="flex-grow">{dateTime}</span>
-          </div>
+          <div className="mb-3 sm:mb-4 text-xs sm:text-sm space-y-1 flex-grow">
+            {dateTime && (
+              <div className="flex items-start sm:items-center gap-1 sm:gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4 mt-0.5 sm:mt-0 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <span className="flex-grow">{dateTime}</span>
+              </div>
             )}
             {location && (
               <div className="flex items-start sm:items-center gap-1 sm:gap-2">
