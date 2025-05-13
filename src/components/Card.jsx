@@ -7,8 +7,6 @@ const Card = ({
   imageUrl, 
   title, 
   description, 
-  const wordCount = description.trim().split(/\s+/).length;
-  const isShort = wordCount < 20;
   link, 
   linkText = "More Info",
   aspectRatio = "aspect-video",
@@ -16,6 +14,9 @@ const Card = ({
   dateTime = null,
   location = null
 }) => {
+
+  const wordCount = description.trim().split(/\s+/).length;
+  const isShort = wordCount < 20;
   return (
     <div className="bg-white rounded-md overflow-hidden shadow-sm border border-gray-200 flex flex-col h-full">
       <div className={`relative ${aspectRatio} bg-gray-200`}>
