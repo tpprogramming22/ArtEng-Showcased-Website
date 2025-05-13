@@ -117,7 +117,7 @@ export default function Home() {
               </p>
               
               {/* Button centered under the right column content */}
-              <div className="flex justify-center mt-4 md:mt-6">
+              <div className="flex items-center justify-center mt-4 md:mt-6">
                 <Link href="/about-us" className="bg-arteng-dark text-white px-4 md:px-6 py-1.5 md:py-2 rounded inline-block hover:bg-opacity-90 transition-colors text-sm md:text-base">
                   More Info
                 </Link>
