@@ -192,11 +192,6 @@ export default function AboutUsPage() {
               <p className="text-black mb-4 text-sm md:text-base">{selectedMember.long2}</p>
               {selectedMember.long3 && <p className="text-black mb-4 text-sm md:text-base">{selectedMember.long3}</p>}
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="relative w-full md:w-10 h-10 md:h-10 flex-shrink-0">
-                <Image src={selectedMember.imageUrl} alt={selectedMember.name} fill className="object-cover rounded-md" />
-              </div>
-            </div>
                 
           </div>
         </div>
