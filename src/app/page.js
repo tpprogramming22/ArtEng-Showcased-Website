@@ -128,8 +128,7 @@ export default function Home() {
       </section>
       
       {/* Meet the Team Section - With responsive grid for team members */}
-      {/* Meet the Team Section - With responsive grid for team members */}
-<section className="py-10 md:py-16 px-4 md:px-8 bg-gray-50">
+      <section className="py-10 md:py-16 px-4 md:px-8 bg-gray-50">
   <div className="container mx-auto">
     <div className="flex flex-col sm:flex-row justify-between items-center mb-6">
       <div>
@@ -142,23 +141,27 @@ export default function Home() {
     </div>
     
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-      {/* Team members with consistent image dimensions */}
+      {/* Team members with consistent image and text height */}
       <div 
-        className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-md transition-all transform hover:translate-y-[-3px] group relative"
+        className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-md transition-all transform hover:translate-y-[-3px] group relative h-full"
         onClick={() => window.location.href = '/about-us'}
       >
-        <div className="relative w-full aspect-square mb-3 sm:mb-4">
+        <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4">
           <Image 
             src="/wendynew.png" 
             alt="Wendy Bennett"
             fill 
-            className="object-cover rounded-md object-top"
+            className="object-cover rounded-md"
           />
           <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
         </div>
-        <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Wendy Bennett</h3>
-        <p className="text-xs sm:text-sm">Managing Director</p>
-        <p className="text-xs sm:text-sm text-center line-clamp-4 sm:line-clamp-5 min-h-[4.5rem]">Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields. She worked within the precision investment casting industry for 26 years and was CEO and previous owner of Lost Wax Development Limited.</p>
+        <div className="flex flex-col items-center flex-grow">
+          <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Wendy Bennett</h3>
+          <p className="text-xs sm:text-sm">Managing Director</p>
+          <div className="text-xs sm:text-sm text-center mt-2 mb-6">
+            <p className="line-clamp-3 sm:line-clamp-5">Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields. She worked within the precision investment casting industry for 26 years and was CEO and previous owner of Lost Wax Development Limited.</p>
+          </div>
+        </div>
         
         <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <div className="flex items-center text-arteng-dark">
@@ -170,21 +173,25 @@ export default function Home() {
       </div>
 
       <div 
-        className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-md transition-all transform hover:translate-y-[-3px] group relative"
+        className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-md transition-all transform hover:translate-y-[-3px] group relative h-full"
         onClick={() => window.location.href = '/about-us'}
       >
-        <div className="relative w-full aspect-square mb-3 sm:mb-4">
+        <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4">
           <Image 
             src="/steve.png" 
             alt="Stephen Fletcher"
             fill 
-            className="object-cover rounded-md object-top"
+            className="object-cover rounded-md"
           />
           <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
         </div>
-        <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Stephen Fletcher</h3>
-        <p className="text-xs sm:text-sm">Creative Director</p>
-        <p className="text-xs sm:text-sm text-center line-clamp-4 sm:line-clamp-5 min-h-[4.5rem]">Stephen's career spans more than 45 years covering a range of roles including Logistics/Transport management, Project management, Key Account management and Sales Business Development.</p>
+        <div className="flex flex-col items-center flex-grow">
+          <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Stephen Fletcher</h3>
+          <p className="text-xs sm:text-sm">Creative Director</p>
+          <div className="text-xs sm:text-sm text-center mt-2 mb-6">
+            <p className="line-clamp-3 sm:line-clamp-5">Stephen's career spans more than 45 years covering a range of roles including Logistics/Transport management, Project management, Key Account management and Sales Business Development.</p>
+          </div>
+        </div>
         <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <div className="flex items-center text-arteng-dark">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -195,21 +202,25 @@ export default function Home() {
       </div>
 
       <div 
-        className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-md transition-all transform hover:translate-y-[-3px] group relative"
+        className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-md transition-all transform hover:translate-y-[-3px] group relative h-full"
         onClick={() => window.location.href = '/about-us'}
       >
-        <div className="relative w-full aspect-square mb-3 sm:mb-4">
+        <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4">
           <Image 
             src="/jess-smith.jpg" 
             alt="Joan Smith"
             fill 
-            className="object-cover rounded-md object-top"
+            className="object-cover rounded-md"
           />
           <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
         </div>
-        <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Joan Smith</h3>
-        <p className="text-xs sm:text-sm">Corporate Director</p>
-        <p className="text-xs sm:text-sm text-center line-clamp-4 sm:line-clamp-5 min-h-[4.5rem]">With over 20 years of experience in business advice and guidance, Joan brings a wealth of knowledge in all areas of business support. Having worked with hundreds of companies across diverse sectors, Joan has always managed to understand their unique challenges and opportunities that businesses face.</p>
+        <div className="flex flex-col items-center flex-grow">
+          <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Joan Smith</h3>
+          <p className="text-xs sm:text-sm">Corporate Director</p>
+          <div className="text-xs sm:text-sm text-center mt-2 mb-6">
+            <p className="line-clamp-3 sm:line-clamp-5">With over 20 years of experience in business advice and guidance, Joan brings a wealth of knowledge in all areas of business support. Having worked with hundreds of companies across diverse sectors, Joan has always managed to understand their unique challenges and opportunities that businesses face.</p>
+          </div>
+        </div>
         
         <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <div className="flex items-center text-arteng-dark">
@@ -221,21 +232,25 @@ export default function Home() {
       </div>
           
       <div 
-        className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-md transition-all transform hover:translate-y-[-3px] group relative"
+        className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-md transition-all transform hover:translate-y-[-3px] group relative h-full"
         onClick={() => window.location.href = '/about-us'}
       >
-        <div className="relative w-full aspect-square mb-3 sm:mb-4">
+        <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4">
           <Image 
             src="/adam.png" 
             alt="Adam Snelleksz"
             fill 
-            className="object-cover rounded-md object-top"
+            className="object-cover rounded-md"
           />
           <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
         </div>
-        <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Adam Snelleksz</h3>
-        <p className="text-xs sm:text-sm">Marketing Director</p>
-        <p className="text-xs sm:text-sm text-center line-clamp-4 sm:line-clamp-5 min-h-[4.5rem]">Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations. After graduating from university with a marketing degree, Adam moved to London and worked in a busy press office for the National Consumer Council.</p>
+        <div className="flex flex-col items-center flex-grow">
+          <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Adam Snelleksz</h3>
+          <p className="text-xs sm:text-sm">Marketing Director</p>
+          <div className="text-xs sm:text-sm text-center mt-2 mb-6">
+            <p className="line-clamp-3 sm:line-clamp-5">Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations. After graduating from university with a marketing degree, Adam moved to London and worked in a busy press office for the National Consumer Council.</p>
+          </div>
+        </div>
         
         <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <div className="flex items-center text-arteng-dark">
