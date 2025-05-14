@@ -28,7 +28,7 @@ export default function ArticlesPage() {
     {
       id: 3,
       title: "2024 - What a Year",
-      description: "A look back at our achievements and milestones from the past year, celebrating the growth and success of our community and projects.",
+      description: "A look back at our achievements and milestones from the past year, proudly celebrating the growth, collaboration, and continued success of our community and projects.",
       imageUrl: "/year-review.jpg",
       date: "January 15, 2025"
     }
@@ -46,14 +46,14 @@ export default function ArticlesPage() {
     {
       id: 5,
       title: "Innovation Through Collaboration",
-      description: "How partnerships between artists and engineers lead to groundbreaking projects that neither discipline could achieve alone.",
+      description: "How strong partnerships between artists and innovative engineers lead to groundbreaking projects that neither discipline could achieve alone.",
       imageUrl: "/partnership-background.png",
       date: "March 2, 2025"
     },
     {
       id: 6,
       title: "The Future of Creative Technology",
-      description: "Examining emerging trends at the intersection of art and engineering that are shaping the next generation of experiences.",
+      description: "Examining emerging trends at the dynamic intersection of art and engineering that are rapidly shaping the next generation of creative experiences.",
       imageUrl: "/silverstatue.jpg",
       date: "March 3, 2025"
     },
@@ -74,7 +74,7 @@ export default function ArticlesPage() {
     {
       id: 9,
       title: "Building Bridges Between Disciplines",
-      description: "The importance of cross-disciplinary education and collaboration in fostering innovation across art and engineering sectors.",
+      description: "The growing importance of cross-disciplinary education and collaboration in effectively fostering innovation across diverse art and engineering sectors.",
       imageUrl: "/acquisition-news.jpg",
       date: "March 6, 2025"
     }
