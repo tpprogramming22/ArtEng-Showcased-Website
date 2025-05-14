@@ -10,16 +10,31 @@ const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const [menuHeight, setMenuHeight] = useState('100vh');
 
-  // Ref to track isOpen state in scroll handler
   const isOpenRef = useRef(isOpen);
 
   useEffect(() => {
     isOpenRef.current = isOpen;
   }, [isOpen]);
 
-  // Check if we're on mobile
+  // Handle viewport height changes for mobile menu
+  useEffect(() => {
+    const updateMenuHeight = () => {
+      if (isOpen) {
+        const vh = window.innerHeight * 0.01;
+        setMenuHeight(`${vh * 100}px`);
+      }
+    };
+
+    updateMenuHeight();
+    window.addEventListener('resize', updateMenuHeight);
+
+    return () => {
+      window.removeEventListener('resize', updateMenuHeight);
+    };
+  }, [isOpen]);
+
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
@@ -28,14 +43,10 @@ const Navbar = () => {
     checkMobile();
     window.addEventListener('resize', checkMobile);
 
-    // Add scroll event listener for mobile navbar collapse
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
-      setScrollPosition(currentScrollPos);
 
-      // Only apply hide/show behavior on mobile and when menu is closed
       if (isMobile && !isOpenRef.current) {
-        // Determine whether to show navbar based on scroll direction
         setVisible((prevScrollPos > currentScrollPos) || currentScrollPos < 10);
       }
 
@@ -53,13 +64,11 @@ const Navbar = () => {
   const toggleMenu = () => {
     const newIsOpen = !isOpen;
     setIsOpen(newIsOpen);
-    // When opening menu, ensure navbar is visible
+
     if (newIsOpen) {
       setVisible(true);
-      // Prevent body scrolling when menu is open
       document.body.style.overflow = 'hidden';
     } else {
-      // Re-enable scrolling when menu is closed
       document.body.style.overflow = 'auto';
     }
   };
@@ -87,7 +96,6 @@ const Navbar = () => {
         </Link>
       </div>
 
-      {/* Mobile menu button - only visible on mobile */}
       {isMobile && (
         <button 
           className="block md:hidden focus:outline-none" 
@@ -98,7 +106,6 @@ const Navbar = () => {
         </button>
       )}
 
-      {/* Desktop Navigation */}
       {!isMobile && (
         <div className="flex items-center space-x-8">
           <Link href="/" className="text-lg hover:underline">Home</Link>
@@ -115,9 +122,11 @@ const Navbar = () => {
         </div>
       )}
 
-      {/* Mobile Navigation Overlay */}
       {isMobile && isOpen && (
-        <div className="fixed inset-0 bg-white z-40 overflow-auto flex flex-col" style={{ top: 0, bottom: 0, height: '100vh' }}>
+        <div
+          className="fixed inset-0 bg-white z-40 overflow-auto flex flex-col"
+          style={{ top: 0, bottom: 0, height: menuHeight }}
+        >
           <div className="p-5 flex justify-between items-center border-b border-gray-200">
             <Link href="/" className="text-3xl font-bold flex items-center" onClick={closeMenu}>
               <div>
