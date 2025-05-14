@@ -70,13 +70,16 @@ export default function PartnersPage() {
               <p className="mb-6">
                 We offer various partnership levels to accommodate organisations of all sizes and objectives, from financial sponsorship to in-kind support and collaborative projects. 
               </p>
-              <Link href="/login">
-                <button className="bg-arteng-dark text-white px-6 py-2 rounded hover:bg-opacity-90 transition-colors">
-                  Contact Us
-                </button>
-              </Link>
             </div>
           </div>
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-12 items-center">
+            <Link href="/login">
+              <button className="bg-arteng-dark text-white px-6 py-2 rounded hover:bg-opacity-90 transition-colors">
+                Contact Us
+              </button>
+            </Link>
+          </div>
+          
         </div>
       </section>
 
