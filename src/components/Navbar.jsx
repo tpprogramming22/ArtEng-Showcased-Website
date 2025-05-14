@@ -10,6 +10,7 @@ const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   // Ref to track isOpen state in scroll handler
   const isOpenRef = useRef(isOpen);
@@ -30,6 +31,7 @@ const Navbar = () => {
     // Add scroll event listener for mobile navbar collapse
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
+      setScrollPosition(currentScrollPos);
 
       // Only apply hide/show behavior on mobile and when menu is closed
       if (isMobile && !isOpenRef.current) {
@@ -49,13 +51,17 @@ const Navbar = () => {
   }, [isMobile, prevScrollPos]);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    const newIsOpen = !isOpen;
+    setIsOpen(newIsOpen);
     // When opening menu, ensure navbar is visible
-    if (!isOpen) {
+    if (newIsOpen) {
       setVisible(true);
+      // Prevent body scrolling when menu is open
+      document.body.style.overflow = 'hidden';
+    } else {
+      // Re-enable scrolling when menu is closed
+      document.body.style.overflow = 'auto';
     }
-    // Prevent body scrolling when menu is open
-    document.body.style.overflow = isOpen ? 'auto' : 'hidden';
   };
 
   const closeMenu = () => {
@@ -111,16 +117,29 @@ const Navbar = () => {
 
       {/* Mobile Navigation Overlay */}
       {isMobile && isOpen && (
-        <div className="fixed inset-0 bg-white pt-20 z-40 overflow-auto">
-          <button 
-            onClick={closeMenu}
-            className="absolute top-5 right-5 text-arteng-dark focus:outline-none"
-            aria-label="Close menu"
-          >
-            <X size={24} />
-          </button>
+        <div className="fixed inset-0 bg-white z-40 overflow-auto flex flex-col" style={{ top: 0, bottom: 0, height: '100vh' }}>
+          <div className="p-5 flex justify-between items-center border-b border-gray-200">
+            <Link href="/" className="text-3xl font-bold flex items-center" onClick={closeMenu}>
+              <div>
+                <Image
+                  src="/logo.svg"
+                  alt="ArtEng Logo"
+                  width={180}
+                  height={60}
+                  priority
+                />
+              </div>
+            </Link>
+            <button 
+              onClick={closeMenu}
+              className="text-arteng-dark focus:outline-none"
+              aria-label="Close menu"
+            >
+              <X size={24} />
+            </button>
+          </div>
 
-          <div className="flex flex-col space-y-6 p-6">
+          <div className="flex flex-col space-y-6 p-6 flex-grow overflow-auto">
             <Link href="/" className="text-xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>Home</Link>
             <Link href="/events" className="text-xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>Events</Link>
             <Link href="/news" className="text-xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>News</Link>
