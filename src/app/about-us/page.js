@@ -135,11 +135,11 @@ export default function AboutUsPage() {
               <div
                 key={member.id}
                 onClick={() => setSelectedMember(member)}
-                className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative"
+                className="cursor-pointer flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-md transition-all transform hover:translate-y-[-3px] group relative"
               >
                 <div className="relative w-56 h-56 mb-4 ">
                   <Image src={member.imageUrl} alt={member.name} fill className="object-cover rounded-md" />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                 </div>
                 <h3 className="text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">{member.name}</h3>
                 <p className="text-sm">{member.role}</p>
@@ -160,38 +160,31 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {/* Member Modal */}
+      {/* Member Modal - Mobile Responsive */}
       {selectedMember && (
         <div 
-          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
           onClick={() => setSelectedMember(null)}
         >
           <div 
-            className="bg-white text-black rounded-lg p-8 max-w-5xl w-11/12 relative flex flex-col md:flex-row items-center gap-6"
+            className="bg-white text-black rounded-lg p-4 md:p-8 max-w-5xl w-11/12 md:w-11/12 relative flex flex-col md:flex-row items-center gap-4 md:gap-6 max-h-[90vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <button 
-              className="absolute top-4 right-4 text-black text-2xl"
+              className="absolute top-2 right-2 md:top-4 md:right-4 text-black text-2xl z-10 bg-white rounded-full w-8 h-8 flex items-center justify-center shadow-md"
               onClick={() => setSelectedMember(null)}
             >
               &times;
             </button>
-            <div className="grid grid-cols-1 md:grid-cols-1">
-              <div className="relative w-96 h-96 flex-shrink-0">
-                <Image src={selectedMember.imageUrl} alt={selectedMember.name} fill className="object-cover rounded-md" />
-              </div>
-              <div className="relative w-10 h-10 flex-shrink-0">
-                  <Image src={selectedMember.imageUrl} alt={selectedMember.name} fill className="object-cover rounded-md" />
-              </div>
-                
-              
+            <div className="relative w-full md:w-96 h-64 md:h-96 flex-shrink-0">
+              <Image src={selectedMember.imageUrl} alt={selectedMember.name} fill className="object-cover rounded-md" />
             </div>
-            <div className="flex flex-col">
-              <h2 className="text-2xl font-bold mb-2">{selectedMember.name}</h2>
-              <p className="text-lg mb-4">{selectedMember.role}</p>
-              <p className="text-black mb-4">{selectedMember.long1}</p>
-              <p className="text-black mb-4">{selectedMember.long2}</p>
-              {selectedMember.long3 && <p className="text-black mb-4">{selectedMember.long3}</p>}
+            <div className="flex flex-col w-full overflow-y-auto">
+              <h2 className="text-xl md:text-2xl font-bold mb-2">{selectedMember.name}</h2>
+              <p className="text-base md:text-lg mb-4">{selectedMember.role}</p>
+              <p className="text-black mb-4 text-sm md:text-base">{selectedMember.long1}</p>
+              <p className="text-black mb-4 text-sm md:text-base">{selectedMember.long2}</p>
+              {selectedMember.long3 && <p className="text-black mb-4 text-sm md:text-base">{selectedMember.long3}</p>}
             </div>
           </div>
         </div>
