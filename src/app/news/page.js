@@ -108,6 +108,9 @@ export default function ArticlesPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {featuredArticles.map((article) => {
 
+                const wordCount = article.description.split(' ').length;
+                const gapClass = wordCount < 20 ? "mt-6" : "mt-2";
+
                 <Card
                   key={article.id}
                   imageUrl={article.imageUrl}
