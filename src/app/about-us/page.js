@@ -188,7 +188,10 @@ export default function AboutUsPage() {
                   <Image src="whatsapp.jpg" alt={selectedMember.name} fill className="object-cover rounded-md" />
                 </div>
                 <div className="relative w-full md:w-10 h-10 md:h-10 flex-shrink-0">
-                  <Image src="gmail.jpg" alt={selectedMember.name} fill className="object-cover rounded-md" />
+                  <Image src="gmail.png" alt={selectedMember.name} fill className="object-cover rounded-md" />
+                </div>
+                <div className="relative w-full md:w-10 h-10 md:h-10 flex-shrink-0">
+                  <Image src="x.png" alt={selectedMember.name} fill className="object-cover rounded-md" />
                 </div>
               </div>
               
