@@ -29,8 +29,8 @@ const Card = ({
         )}
       </div>
       <div className="p-3 sm:p-4 flex-grow flex flex-col">
-        <h3 className="font-bold text-base sm:text-lg mb-2 text-arteng-dark line-clamp-2">{title}</h3>
-        <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm line-clamp-3">{description}</p>
+        <h3 className="font-bold text-base sm:text-lg mb-2 text-arteng-dark line-clamp-2 min-h-[2.5rem] sm:min-h-[3rem]">{title}</h3>
+        <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm line-clamp-3 min-h-[3rem] sm:min-h-[3.5rem]">{description}</p>
         
         {(dateTime || location || hostedBy) && (
           <div className="mb-3 sm:mb-4 text-xs sm:text-sm space-y-1 flex-grow">

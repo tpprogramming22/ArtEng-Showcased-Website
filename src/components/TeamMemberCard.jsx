@@ -4,20 +4,20 @@ import Link from 'next/link';
 const TeamMemberCard = ({ name, role, imageUrl, description, linkToAbout = true }) => {
   return (
     <div 
-      className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200 hover:shadow-md transition-all transform hover:translate-y-[-3px] group relative flex flex-col items-center justify-center p-3 sm:p-4"
+      className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-md transition-all transform hover:translate-y-[-3px] group relative"
     >
-      <div className="relative w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52 lg:w-56 lg:h-56 mb-3 sm:mb-4">
+      <div className="relative w-full aspect-square mb-3 sm:mb-4">
         <Image 
           src={imageUrl} 
           alt={name} 
           fill 
-          className="object-cover rounded-md"
+          className="object-cover rounded-md object-top"
         />
         <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
       </div>
       <h3 className="font-bold text-base sm:text-lg text-arteng-dark group-hover:text-arteng-dark transition-colors duration-300">{name}</h3>
       <p className="text-gray-600 font-medium mb-1 sm:mb-2 text-sm sm:text-base">{role}</p>
-      <p className="text-gray-500 text-xs sm:text-sm text-center line-clamp-4">{description}</p>
+      <p className="text-gray-500 text-xs sm:text-sm text-center line-clamp-4 min-h-[4.5rem]">{description}</p>
       
       {linkToAbout && (
         <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

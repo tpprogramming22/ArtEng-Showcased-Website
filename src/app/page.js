@@ -128,125 +128,126 @@ export default function Home() {
       </section>
       
       {/* Meet the Team Section - With responsive grid for team members */}
-      <section className="py-10 md:py-16 px-4 md:px-8 bg-gray-50">
-        <div className="container mx-auto">
-          <div className="flex flex-col sm:flex-row justify-between items-center mb-6">
-            <div>
-              <h2 className="text-xl sm:text-2xl font-bold text-arteng-dark text-center sm:text-left">Meet The Team</h2>
-              <p className="text-gray-600 text-center sm:text-left text-sm sm:text-base">Meet the team behind ArtEng</p>
-            </div>
-            <Link href="/about-us" className="mt-3 sm:mt-0 bg-arteng-dark text-white px-4 py-2 rounded text-sm hover:bg-opacity-90 transition-colors w-32 text-center">
-              More Info
-            </Link>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-            {/* Team members arranged by surname alphabetical order - animation made more subtle */}
-            <div 
-              className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-md transition-all transform hover:translate-y-[-3px] group relative"
-              onClick={() => window.location.href = '/about-us'}
-            >
-              <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4">
-                <Image 
-                  src="/wendynew.png" 
-                  alt="Wendy Bennett"
-                  fill 
-                  className="object-cover rounded-md"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
-              </div>
-              <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Wendy Bennett</h3>
-              <p className="text-xs sm:text-sm">Managing Director</p>
-              <p className="text-xs sm:text-sm text-center line-clamp-4 sm:line-clamp-5">Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields. She worked within the precision investment casting industry for 26 years and was CEO and previous owner of Lost Wax Development Limited.</p>
-              
-              <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="flex items-center text-arteng-dark">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            <div 
-              className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-md transition-all transform hover:translate-y-[-3px] group relative"
-              onClick={() => window.location.href = '/about-us'}
-            >
-              <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4">
-                <Image 
-                  src="/steve.png" 
-                  alt="Stephen Fletcher"
-                  fill 
-                  className="object-cover rounded-md"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
-              </div>
-              <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Stephen Fletcher</h3>
-              <p className="text-xs sm:text-sm">Creative Director</p>
-              <p className="text-xs sm:text-sm text-center line-clamp-4 sm:line-clamp-5 mb-4 sm:mb-10">Stephen's career spans more than 45 years covering a range of roles including Logistics/Transport management, Project management, Key Account management and Sales Business Development.</p>
-              <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="flex items-center text-arteng-dark">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            <div 
-              className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-md transition-all transform hover:translate-y-[-3px] group relative"
-              onClick={() => window.location.href = '/about-us'}
-            >
-              <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4">
-                <Image 
-                  src="/jess-smith.jpg" 
-                  alt="Joan Smith"
-                  fill 
-                  className="object-cover rounded-md"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
-              </div>
-              <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Joan Smith</h3>
-              <p className="text-xs sm:text-sm">Corporate Director</p>
-              <p className="text-xs sm:text-sm text-center line-clamp-4 sm:line-clamp-5">With over 20 years of experience in business advice and guidance, Joan brings a wealth of knowledge in all areas of business support. Having worked with hundreds of companies across diverse sectors, Joan has always managed to understand their unique challenges and opportunities that businesses face.</p>
-              
-              <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="flex items-center text-arteng-dark">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-                
-            <div 
-              className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-md transition-all transform hover:translate-y-[-3px] group relative"
-              onClick={() => window.location.href = '/about-us'}
-            >
-              <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4">
-                <Image 
-                  src="/adam.png" 
-                  alt="Adam Snelleksz"
-                  fill 
-                  className="object-cover rounded-md"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
-              </div>
-              <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Adam Snelleksz</h3>
-              <p className="text-xs sm:text-sm">Marketing Director</p>
-              <p className="text-xs sm:text-sm text-center line-clamp-4 sm:line-clamp-5">Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations. After graduating from university with a marketing degree, Adam moved to London and worked in a busy press office for the National Consumer Council.</p>
-              
-              <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="flex items-center text-arteng-dark">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </div>
-              </div>
-            </div>
+      {/* Meet the Team Section - With responsive grid for team members */}
+<section className="py-10 md:py-16 px-4 md:px-8 bg-gray-50">
+  <div className="container mx-auto">
+    <div className="flex flex-col sm:flex-row justify-between items-center mb-6">
+      <div>
+        <h2 className="text-xl sm:text-2xl font-bold text-arteng-dark text-center sm:text-left">Meet The Team</h2>
+        <p className="text-gray-600 text-center sm:text-left text-sm sm:text-base">Meet the team behind ArtEng</p>
+      </div>
+      <Link href="/about-us" className="mt-3 sm:mt-0 bg-arteng-dark text-white px-4 py-2 rounded text-sm hover:bg-opacity-90 transition-colors w-32 text-center">
+        More Info
+      </Link>
+    </div>
+    
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+      {/* Team members with consistent image dimensions */}
+      <div 
+        className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-md transition-all transform hover:translate-y-[-3px] group relative"
+        onClick={() => window.location.href = '/about-us'}
+      >
+        <div className="relative w-full aspect-square mb-3 sm:mb-4">
+          <Image 
+            src="/wendynew.png" 
+            alt="Wendy Bennett"
+            fill 
+            className="object-cover rounded-md object-top"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
+        </div>
+        <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Wendy Bennett</h3>
+        <p className="text-xs sm:text-sm">Managing Director</p>
+        <p className="text-xs sm:text-sm text-center line-clamp-4 sm:line-clamp-5 min-h-[4.5rem]">Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields. She worked within the precision investment casting industry for 26 years and was CEO and previous owner of Lost Wax Development Limited.</p>
+        
+        <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="flex items-center text-arteng-dark">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
           </div>
         </div>
-      </section>
+      </div>
+
+      <div 
+        className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-md transition-all transform hover:translate-y-[-3px] group relative"
+        onClick={() => window.location.href = '/about-us'}
+      >
+        <div className="relative w-full aspect-square mb-3 sm:mb-4">
+          <Image 
+            src="/steve.png" 
+            alt="Stephen Fletcher"
+            fill 
+            className="object-cover rounded-md object-top"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
+        </div>
+        <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Stephen Fletcher</h3>
+        <p className="text-xs sm:text-sm">Creative Director</p>
+        <p className="text-xs sm:text-sm text-center line-clamp-4 sm:line-clamp-5 min-h-[4.5rem]">Stephen's career spans more than 45 years covering a range of roles including Logistics/Transport management, Project management, Key Account management and Sales Business Development.</p>
+        <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="flex items-center text-arteng-dark">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div 
+        className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-md transition-all transform hover:translate-y-[-3px] group relative"
+        onClick={() => window.location.href = '/about-us'}
+      >
+        <div className="relative w-full aspect-square mb-3 sm:mb-4">
+          <Image 
+            src="/jess-smith.jpg" 
+            alt="Joan Smith"
+            fill 
+            className="object-cover rounded-md object-top"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
+        </div>
+        <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Joan Smith</h3>
+        <p className="text-xs sm:text-sm">Corporate Director</p>
+        <p className="text-xs sm:text-sm text-center line-clamp-4 sm:line-clamp-5 min-h-[4.5rem]">With over 20 years of experience in business advice and guidance, Joan brings a wealth of knowledge in all areas of business support. Having worked with hundreds of companies across diverse sectors, Joan has always managed to understand their unique challenges and opportunities that businesses face.</p>
+        
+        <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="flex items-center text-arteng-dark">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </div>
+        </div>
+      </div>
+          
+      <div 
+        className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-md transition-all transform hover:translate-y-[-3px] group relative"
+        onClick={() => window.location.href = '/about-us'}
+      >
+        <div className="relative w-full aspect-square mb-3 sm:mb-4">
+          <Image 
+            src="/adam.png" 
+            alt="Adam Snelleksz"
+            fill 
+            className="object-cover rounded-md object-top"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
+        </div>
+        <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Adam Snelleksz</h3>
+        <p className="text-xs sm:text-sm">Marketing Director</p>
+        <p className="text-xs sm:text-sm text-center line-clamp-4 sm:line-clamp-5 min-h-[4.5rem]">Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations. After graduating from university with a marketing degree, Adam moved to London and worked in a busy press office for the National Consumer Council.</p>
+        
+        <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="flex items-center text-arteng-dark">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
       
       {/* Latest News Section */}
       <section className="py-10 md:py-16 px-4 md:px-8 bg-white">
