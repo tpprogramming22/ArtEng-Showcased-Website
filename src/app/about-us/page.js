@@ -176,7 +176,7 @@ export default function AboutUsPage() {
             >
               &times;
             </button>
-            <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 relative w-full flex-shrink-0">
+            <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 relative flex-shrink-0">
               <div className="relative w-full md:w-96 h-64 md:h-96 flex-shrink-0">
                 <Image src={selectedMember.imageUrl} alt={selectedMember.name} fill className="object-cover rounded-md" />
               </div>
