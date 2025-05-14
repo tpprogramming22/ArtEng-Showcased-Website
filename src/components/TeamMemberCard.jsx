@@ -2,6 +2,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const TeamMemberCard = ({ name, role, imageUrl, description, linkToAbout = true }) => {
+  // Create a shortened version of the description for mobile
+  const shortDescription = description.length > 100 
+    ? description.substring(0, 100) + '...' 
+    : description;
+
   return (
     <div 
       className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-md transition-all transform hover:translate-y-[-3px] group relative"
@@ -17,7 +22,11 @@ const TeamMemberCard = ({ name, role, imageUrl, description, linkToAbout = true 
       </div>
       <h3 className="font-bold text-base sm:text-lg text-arteng-dark group-hover:text-arteng-dark transition-colors duration-300">{name}</h3>
       <p className="text-gray-600 font-medium mb-1 sm:mb-2 text-sm sm:text-base">{role}</p>
-      <p className="text-gray-500 text-xs sm:text-sm text-center line-clamp-4 min-h-[4.5rem]">{description}</p>
+      
+      <div className="text-gray-500 text-xs sm:text-sm text-center">
+        <p className="hidden sm:block">{description}</p>
+        <p className="block sm:hidden">{shortDescription}</p>
+      </div>
       
       {linkToAbout && (
         <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
