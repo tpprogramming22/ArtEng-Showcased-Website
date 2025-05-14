@@ -176,8 +176,17 @@ export default function AboutUsPage() {
             >
               &times;
             </button>
-            <div className="relative w-96 h-96 flex-shrink-0">
-              <Image src={selectedMember.imageUrl} alt={selectedMember.name} fill className="object-cover rounded-md" />
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              <div
+                className="relative w-96 h-96 flex-shrink-0"
+                  <Image src={selectedMember.imageUrl} alt={selectedMember.name} fill className="object-cover rounded-md" />
+              </div>
+              <div
+                className="relative w-10 h-10 flex-shrink-0"
+                  <Image src={selectedMember.imageUrl} alt={selectedMember.name} fill className="object-cover rounded-md" />
+              </div>
+                
+              
             </div>
             <div className="flex flex-col">
               <h2 className="text-2xl font-bold mb-2">{selectedMember.name}</h2>
@@ -185,9 +194,6 @@ export default function AboutUsPage() {
               <p className="text-black mb-4">{selectedMember.long1}</p>
               <p className="text-black mb-4">{selectedMember.long2}</p>
               {selectedMember.long3 && <p className="text-black mb-4">{selectedMember.long3}</p>}
-            </div>
-            <div className="relative w-10 h-10 flex-shrink-0">
-              <Image src={selectedMember.imageUrl} alt={selectedMember.name} fill className="object-cover rounded-md" />
             </div>
           </div>
         </div>
