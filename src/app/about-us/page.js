@@ -176,13 +176,11 @@ export default function AboutUsPage() {
             >
               &times;
             </button>
-            <div className="grid grid-cols-1 md:grid-cols-2">
-              <div
-                className="relative w-96 h-96 flex-shrink-0"
-                  <Image src={selectedMember.imageUrl} alt={selectedMember.name} fill className="object-cover rounded-md" />
+            <div className="grid grid-cols-1 md:grid-cols-1">
+              <div className="relative w-96 h-96 flex-shrink-0">
+                <Image src={selectedMember.imageUrl} alt={selectedMember.name} fill className="object-cover rounded-md" />
               </div>
-              <div
-                className="relative w-10 h-10 flex-shrink-0"
+              <div className="relative w-10 h-10 flex-shrink-0">
                   <Image src={selectedMember.imageUrl} alt={selectedMember.name} fill className="object-cover rounded-md" />
               </div>
                 
