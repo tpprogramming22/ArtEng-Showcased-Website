@@ -72,7 +72,7 @@ export default function PartnersPage() {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-1 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-12 justify-items-center items-center">
             <Link href="/login">
               <button className="bg-arteng-dark text-white px-6 py-2 rounded hover:bg-opacity-90 transition-colors">
                 Contact Us
