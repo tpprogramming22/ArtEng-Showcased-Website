@@ -116,6 +116,7 @@ export default function ArticlesPage() {
                   imageUrl={article.imageUrl}
                   title={article.title}
                   description={article.description}
+                  gapClass={gapClass}
                   dateTime={article.date}
                   link={`/articles/${article.id}`}
                 />
