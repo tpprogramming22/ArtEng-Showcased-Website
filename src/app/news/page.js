@@ -109,7 +109,7 @@ export default function ArticlesPage() {
               {featuredArticles.map((article) => {
 
                 const wordCount = article.description.split(' ').length;
-                const gapClass = wordCount < 20 ? "mt-6" : "mt-2";
+                const gapClass = wordCount < 20 ? "mb-2" : "mb-2";
 
                 <Card
                   key={article.id}
