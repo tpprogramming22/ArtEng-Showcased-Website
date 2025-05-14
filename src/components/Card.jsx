@@ -30,10 +30,10 @@ const Card = ({
       </div>
       <div className="p-3 sm:p-4 flex-grow flex flex-col">
         <h3 className="font-bold text-base sm:text-lg mb-2 text-arteng-dark line-clamp-2">{title}</h3>
-        <p className={`text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm line-clamp-3 ${gapClass}`}>{description}</p>
+        <p className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm line-clamp-3">{description}</p>
         
         {(dateTime || location || hostedBy) && (
-          <div className="mb-3 sm:mb-4 text-xs sm:text-sm space-y-1 flex-grow">
+          <div className="{mb-3 sm:mb-4 text-xs sm:text-sm space-y-1 flex-grow ${gapClass}"}>
             {dateTime && (
               <div className="flex items-start sm:items-center gap-1 sm:gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4 mt-0.5 sm:mt-0 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
