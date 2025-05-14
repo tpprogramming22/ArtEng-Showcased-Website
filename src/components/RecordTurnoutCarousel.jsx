@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -8,6 +8,7 @@ const RecordTurnoutCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [imagesLoaded, setImagesLoaded] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const timerRef = useRef(null);
   
   // Check if we're on mobile
   useEffect(() => {
@@ -34,21 +35,21 @@ const RecordTurnoutCarousel = () => {
     {
       title: "Bringing Art & Engineering Together",
       description: "ArtEng is dedicated to fostering creativity, innovation, and collaboration between artists and engineers.",
-      link: "/news/record-turnout",
+      link: "#", // Changed to prevent 404s
       linkText: "More Info",
       backgroundImage: "/carosel1.jpg"
     },
     {
       title: "Networking Opportunities",
       description: "Connect with professionals from both art and engineering fields to create unique solutions.",
-      link: "/news/new-partnerships",
+      link: "#", // Changed to prevent 404s
       linkText: "Learn More",
       backgroundImage: "/carosel2.jpg"
     },
     {
       title: "Upcoming Events",
       description: "Join us for workshops, exhibitions, and forums that bring together creative minds and technical expertise.",
-      link: "/news/innovation-award",
+      link: "#", // Changed to prevent 404s
       linkText: "See Details",
       backgroundImage: "/carosel3.jpg"
     }
@@ -80,25 +81,41 @@ const RecordTurnoutCarousel = () => {
     preloadImages();
   }, []);
 
-  useEffect(() => {
-    // Auto-rotate slides every 5 seconds
-    const intervalId = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
+  // Add timer reset functionality
+  const startAutoRotation = () => {
+    // Clear any existing timer
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+    }
     
-    return () => clearInterval(intervalId);
+    // Set new timer
+    timerRef.current = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 7000); // Extended to 7 seconds
+  };
+
+  useEffect(() => {
+    startAutoRotation();
+    return () => {
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+      }
+    };
   }, []);
 
   const goToSlide = (index) => {
     setCurrentSlide(index);
+    startAutoRotation(); // Reset timer when user changes slide
   };
 
   const goToPrevSlide = () => {
     setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+    startAutoRotation(); // Reset timer when user changes slide
   };
 
   const goToNextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
+    startAutoRotation(); // Reset timer when user changes slide
   };
 
   return (
@@ -157,7 +174,7 @@ const RecordTurnoutCarousel = () => {
               </div>
             </div>
           ) : (
-            // Desktop layout - exactly as before
+            // Desktop layout - exactly as it was originally
             <div className="absolute right-0 w-2/3 pr-12 text-white flex items-center justify-center h-full">
               <div className="flex flex-col items-center">
                 {/* Fixed width and height container for title and description */}

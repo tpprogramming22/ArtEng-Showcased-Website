@@ -18,13 +18,13 @@ export default function MembershipPage() {
 
       {/* Tabs */}
       <Tabs defaultValue="member" className="max-w-4xl mx-auto">
-      <TabsList className="grid w-full h-auto grid-cols-2 mb-4 p-0 gap-2">
+      <TabsList className="grid w-full h-auto grid-cols-2 mb-4 p-0 gap-2 bg-white">
         <TabsTrigger value="member" className="text-lg py-3 font-medium h-14 w-full data-[state=active]:bg-black data-[state=active]:text-white data-[state=inactive]:bg-gray-200 rounded-lg">Member</TabsTrigger>
         <TabsTrigger value="partner" className="text-lg py-3 font-medium h-14 w-full data-[state=active]:bg-black data-[state=active]:text-white data-[state=inactive]:bg-gray-200 rounded-lg">Partner</TabsTrigger>
       </TabsList>
 
         {/* Member Tab */}
-        <TabsContent value="member">
+        <TabsContent value="member" className="bg-white">
           <Card>
             <CardHeader className="pb-6 border-b border-gray-100">
               <CardTitle className="text-3xl font-bold text-black">Membership</CardTitle>
@@ -80,7 +80,7 @@ export default function MembershipPage() {
         </TabsContent>
 
         {/* Partner Tab */}
-        <TabsContent value="partner">
+        <TabsContent value="partner" className="bg-white">
           <Card>
             <CardHeader className="pb-6 border-b border-gray-100">
               <CardTitle className="text-3xl font-bold text-black">Partner Membership</CardTitle>

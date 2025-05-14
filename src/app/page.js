@@ -118,7 +118,7 @@ export default function Home() {
               
               {/* Button centered under the right column content */}
               <div className="flex justify-center mt-4 md:mt-6">
-                <Link href="/about-us" className="bg-arteng-dark text-white px-4 md:px-6 py-1.5 md:py-2 rounded inline-block hover:bg-opacity-90 transition-colors text-sm md:text-base">
+                <Link href="/about-us" className="bg-arteng-dark text-white px-4 md:px-6 py-1.5 md:py-2 rounded inline-block hover:bg-opacity-90 transition-colors text-sm md:text-base w-32 text-center">
                   More Info
                 </Link>
               </div>
@@ -135,15 +135,15 @@ export default function Home() {
               <h2 className="text-xl sm:text-2xl font-bold text-arteng-dark text-center sm:text-left">Meet The Team</h2>
               <p className="text-gray-600 text-center sm:text-left text-sm sm:text-base">Meet the team behind ArtEng</p>
             </div>
-            <Link href="/about-us" className="mt-3 sm:mt-0 bg-black text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded text-xs sm:text-sm hover:bg-gray-800 transition-colors">
+            <Link href="/about-us" className="mt-3 sm:mt-0 bg-arteng-dark text-white px-4 py-2 rounded text-sm hover:bg-opacity-90 transition-colors w-32 text-center">
               More Info
             </Link>
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-            {/* Team members arranged by surname alphabetical order */}
+            {/* Team members arranged by surname alphabetical order - animation made more subtle */}
             <div 
-              className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative"
+              className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-md transition-all transform hover:translate-y-[-3px] group relative"
               onClick={() => window.location.href = '/about-us'}
             >
               <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4">
@@ -153,7 +153,7 @@ export default function Home() {
                   fill 
                   className="object-cover rounded-md"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
               </div>
               <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Wendy Bennett</h3>
               <p className="text-xs sm:text-sm">Managing Director</p>
@@ -169,7 +169,7 @@ export default function Home() {
             </div>
 
             <div 
-              className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative"
+              className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-md transition-all transform hover:translate-y-[-3px] group relative"
               onClick={() => window.location.href = '/about-us'}
             >
               <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4">
@@ -179,7 +179,7 @@ export default function Home() {
                   fill 
                   className="object-cover rounded-md"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
               </div>
               <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Stephen Fletcher</h3>
               <p className="text-xs sm:text-sm">Creative Director</p>
@@ -194,7 +194,7 @@ export default function Home() {
             </div>
 
             <div 
-              className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative"
+              className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-md transition-all transform hover:translate-y-[-3px] group relative"
               onClick={() => window.location.href = '/about-us'}
             >
               <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4">
@@ -204,7 +204,7 @@ export default function Home() {
                   fill 
                   className="object-cover rounded-md"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
               </div>
               <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Joan Smith</h3>
               <p className="text-xs sm:text-sm">Corporate Director</p>
@@ -220,7 +220,7 @@ export default function Home() {
             </div>
                 
             <div 
-              className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative"
+              className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-md transition-all transform hover:translate-y-[-3px] group relative"
               onClick={() => window.location.href = '/about-us'}
             >
               <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4">
@@ -230,7 +230,7 @@ export default function Home() {
                   fill 
                   className="object-cover rounded-md"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
               </div>
               <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">Adam Snelleksz</h3>
               <p className="text-xs sm:text-sm">Marketing Director</p>

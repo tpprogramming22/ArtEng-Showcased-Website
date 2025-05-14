@@ -63,7 +63,7 @@ const Card = ({
         )}
         
         <div className="mt-auto flex justify-center w-full">
-          <Link href={link} className="inline-block bg-arteng-dark text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded text-xs sm:text-sm hover:bg-opacity-90 transition-colors w-28 sm:w-32 text-center">
+          <Link href={link} className="inline-block bg-arteng-dark text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded text-xs sm:text-sm hover:bg-opacity-90 transition-colors w-32 text-center">
             {linkText}
           </Link>
         </div>

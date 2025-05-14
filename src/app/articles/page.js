@@ -2,56 +2,81 @@
 
 import Link from 'next/link';
 import SectionHeader from '@/components/SectionHeader';
-import Article from '@/components/Article';
+import Card from '@/components/Card';
 import MailtoNotifyForm from '@/components/SignUp';
 import { useState } from 'react';
 
-export default function EventsPage() {
-
+export default function ArticlesPage() {
   const [showForm, setShowForm] = useState(false);
 
-  const eventsMain = [
+  // Updated with different images
+  const featuredArticles = [
     {
       id: 1,
-      title: "The Intersection of Art and Engineering",
-      description: "Discover how creative vision and technical precision combine to create innovative solutions that are both functional and aesthetically pleasing.",
+      title: "ArtEng Acquires Tecla Studios",
+      description: "Exciting news as we expand our capabilities with this new acquisition, providing greater opportunities for innovative projects and partnerships.",
       imageUrl: "/acquisition-news.jpg",
-      readTime: "5-7"
+      date: "March 5, 2025"
     },
     {
       id: 2,
-      title: "Sustainable Design Principles",
-      description: "Exploring eco-friendly approaches to design that minimize environmental impact while maximizing creative potential and engineering efficiency.",
-      imageUrl: "/award-background.png",
-      readTime: "8-10"
+      title: "CEO named as finalist for Innovation Award",
+      description: "Our leadership continues to be recognized in the industry with this prestigious nomination that highlights our commitment to pushing boundaries.",
+      imageUrl: "/award-background.png", 
+      date: "February 28, 2025"
     },
     {
       id: 3,
-      title: "Digital Fabrication Techniques",
-      description: "A deep dive into modern fabrication methods that are revolutionizing how artists and engineers bring their ideas from concept to reality.",
-      imageUrl: "/ceo-award.jpg",
-      readTime: "6-8"
-    },
+      title: "2024 - What a Year",
+      description: "A look back at our achievements and milestones from the past year, celebrating the growth and success of our community and projects.",
+      imageUrl: "/year-review.jpg",
+      date: "January 15, 2025"
+    }
+  ];
+
+  // Updated with completely different images from events
+  const recentArticles = [
     {
       id: 4,
-      title: "Material Innovation in Creative Fields",
-      description: "How new materials and composites are opening unprecedented possibilities for artistic expression and engineering solutions.",
-      imageUrl: "/engineering-celebration.jpg",
-      readTime: "4-6"
+      title: "The Intersection of Art and Engineering",
+      description: "Exploring how creative vision and technical expertise can combine to create innovative solutions that serve both practical and aesthetic purposes.",
+      imageUrl: "/artinhand.jpg",
+      date: "March 1, 2025"
     },
     {
       id: 5,
-      title: "Interactive Installations: Behind the Scenes",
-      description: "The technical challenges and creative problem-solving required to build engaging interactive art installations that captivate audiences.",
-      imageUrl: "/eoy-celebration.jpg",
-      readTime: "7-9"
+      title: "Innovation Through Collaboration",
+      description: "How partnerships between artists and engineers lead to groundbreaking projects that neither discipline could achieve alone.",
+      imageUrl: "/partnership-background.png",
+      date: "March 2, 2025"
     },
     {
       id: 6,
-      title: "From Concept to Exhibition: A Technical Journey",
-      description: "Following the process of transforming an artistic concept into a fully realized exhibition through collaboration between artists and engineers.",
-      imageUrl: "/exhibition-opening.jpg",
-      readTime: "10-12"
+      title: "The Future of Creative Technology",
+      description: "Examining emerging trends at the intersection of art and engineering that are shaping the next generation of experiences.",
+      imageUrl: "/silverstatue.jpg",
+      date: "March 3, 2025"
+    },
+    {
+      id: 7,
+      title: "Sustainability in Design",
+      description: "How art and engineering collaborate to create sustainable solutions that address environmental challenges while maintaining aesthetic appeal.",
+      imageUrl: "/aboutus2.jpg",
+      date: "March 4, 2025"
+    },
+    {
+      id: 8,
+      title: "Art-Inspired Engineering Solutions",
+      description: "Case studies of engineering projects that found inspiration and innovative approaches through artistic thinking and creative processes.",
+      imageUrl: "/engineering-celebration.jpg",
+      date: "March 5, 2025"
+    },
+    {
+      id: 9,
+      title: "Building Bridges Between Disciplines",
+      description: "The importance of cross-disciplinary education and collaboration in fostering innovation across art and engineering sectors.",
+      imageUrl: "/acquisition-news.jpg",
+      date: "March 6, 2025"
     }
   ];
 
@@ -60,58 +85,70 @@ export default function EventsPage() {
   };
 
   return (
-<div className="min-h-screen flex flex-col bg-white">
-  {/* Hero Section */}
-  <section className="bg-arteng-dark text-white py-12 relative z-50">
-    <div className="container mx-auto px-4 md:px-8">
-      <h1 className="text-4xl font-bold mb-4">Articles</h1>
-      <p className="text-lg">Curated by ArtEng specifically for you.</p>
-    </div>
-  </section>
-  
-  <div className="relative flex-grow flex flex-col bg-white">
-    <div className="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-md flex items-center justify-center z-10">
-      <div className="bg-white p-8 rounded-lg shadow-lg text-center max-w-md mt-[-115px]">
-        <h2 className="text-2xl font-bold text-gray-800 mb-3">Coming Soon</h2>
-        <p className="text-gray-600 mb-4">We're working hard to bring you the highest quality content. Please check back later!</p>
-          <button onClick={toggleForm} className="bg-arteng-dark text-white px-6 py-2 rounded hover:bg-opacity-90 transition-colors"> {showForm ? 'Hide Form' : 'Notify Me'} </button>
-          {showForm && (
-          <div className="mt-6 border-t pt-6 border-gray-200">
-            <MailtoNotifyForm />
-          </div>
-        )}
-      </div>
-    </div>
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="bg-arteng-dark text-white py-12 pt-24">
+        <div className="container mx-auto px-4 md:px-8">
+          <h1 className="text-4xl font-bold mb-4">News</h1>
+          <p className="text-lg">Stay updated with the latest from ArtEng and the industry.</p>
+        </div>
+      </section>
 
-    {/* Featured Events */}
-    <section className="py-16 px-4 md:px-8 flex-grow">
-      <div className="container mx-auto h-full">
-        <SectionHeader 
-          title="Event Schedule" 
-          subtitle="Featured Events" 
-        />
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {eventsMain.map((event) => (
-            <Article
-              key={event.id}
-              imageUrl={event.imageUrl}
-              title={event.title}
-              description={event.description}
-              readTime={event.readTime}
-              link={`/articles/${event.id}`}
+    
+      <div className="relative">
+
+        {/* Featured Articles */}
+        <section className="py-16 px-4 md:px-8">
+          <div className="container mx-auto">
+            <SectionHeader 
+              title="News" 
+              subtitle="Featured Articles" 
             />
-          ))}
-        </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {featuredArticles.map((article) => (
+                <Card
+                  key={article.id}
+                  imageUrl={article.imageUrl}
+                  title={article.title}
+                  description={article.description}
+                  dateTime={article.date}
+                  link={`/articles/${article.id}`}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
 
-        <div className="flex justify-center w-full mt-8">
-          <Link href="/events" className="inline-block bg-arteng-dark text-white px-4 py-1 rounded text-sm hover:bg-opacity-90 transition-colors w-24 text-center">
-            View All
-          </Link>
-        </div>
+        {/* Recent Articles */}
+        <section className="py-16 px-4 md:px-8 bg-gray-50">
+          <div className="container mx-auto">
+            <SectionHeader 
+              title="Recent Articles" 
+              subtitle="What's New" 
+            />
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {recentArticles.map((article) => (
+                <Card
+                  key={article.id}
+                  imageUrl={article.imageUrl}
+                  title={article.title}
+                  description={article.description}
+                  dateTime={article.date}
+                  link={`/articles/${article.id}`}
+                />
+              ))}
+            </div>
+
+            <div className="mt-8 flex justify-center">
+              <Link href="/news" className="inline-block bg-arteng-dark text-white px-4 py-2 rounded text-sm hover:bg-opacity-90 transition-colors w-32 text-center">
+                Load More
+              </Link>
+            </div>
+          </div>
+        </section>
       </div>
-    </section>
-  </div>
-</div>
+    </div>
   );
 }

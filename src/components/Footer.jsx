@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="text-center sm:text-left">
             <h3 className="text-lg font-bold mb-4">About ArtEng</h3>
             <p className="text-sm mb-4">
-              Bringing creatives and innovators together to transform ideas into unforgettable experiences.
+              Connecting, nurturing and developing the artistic and engineering worlds...
             </p>
             <div className="flex justify-center sm:justify-start space-x-4">
               <a href="https://www.linkedin.com/company/arteng-uk" className="hover:text-gray-300" target="_blank" rel="noopener noreferrer">

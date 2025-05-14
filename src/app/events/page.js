@@ -247,12 +247,12 @@ export default function EventsPage() {
         </section>
       </div>
 
-      {/* Event Modal */}
+      {/* Event Modal - Made mobile friendly */}
       {selectedEvent && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
             <div className="relative">
-              <div className="h-64 relative">
+              <div className="h-48 md:h-64 relative">
                 <Image 
                   src={selectedEvent.imageUrl} 
                   alt={selectedEvent.title} 
@@ -261,7 +261,7 @@ export default function EventsPage() {
                 />
                 <button 
                   onClick={closeModal}
-                  className="absolute top-4 right-4 bg-white rounded-full p-2 shadow-md"
+                  className="absolute top-4 right-4 bg-white rounded-full p-2 shadow-md z-10"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -269,10 +269,10 @@ export default function EventsPage() {
                 </button>
               </div>
               
-              <div className="p-6">
-                <h2 className="text-2xl font-bold mb-2 text-arteng-dark">{selectedEvent.title}</h2>
+              <div className="p-4 md:p-6">
+                <h2 className="text-xl md:text-2xl font-bold mb-2 text-arteng-dark">{selectedEvent.title}</h2>
                 
-                <div className="flex flex-wrap gap-4 mb-4 text-sm">
+                <div className="flex flex-col md:flex-row flex-wrap gap-2 md:gap-4 mb-4 text-sm">
                   <div className="flex items-center gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -296,7 +296,7 @@ export default function EventsPage() {
                   </div>
                 </div>
                 
-                <p className="text-gray-700 mb-6">{selectedEvent.longDescription}</p>
+                <p className="text-gray-700 mb-6 text-sm md:text-base">{selectedEvent.longDescription}</p>
                 
                 <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 justify-center">
                   <Link href="/login" className="bg-arteng-dark text-white py-2 px-6 rounded hover:bg-opacity-90 transition-colors text-center">
