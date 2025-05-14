@@ -197,8 +197,8 @@ export default function AboutUsPage() {
               
             </div>
             <div className="flex flex-col w-full overflow-y-auto">
-              <h2 className="text-xl md:text-2xl font-bold mb-2">{selectedMember.name}</h2>
-              <p className="text-base md:text-lg mb-4">{selectedMember.role}</p>
+              <h2 className="text-xl md:text-3xl font-bold mb-2">{selectedMember.name}</h2>
+              <p className="text-base md:text-2xl mb-4">{selectedMember.role}</p>
               <p className="text-black mb-4 text-sm md:text-base">{selectedMember.long1}</p>
               <p className="text-black mb-4 text-sm md:text-base">{selectedMember.long2}</p>
               {selectedMember.long3 && <p className="text-black mb-4 text-sm md:text-base">{selectedMember.long3}</p>}
