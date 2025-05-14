@@ -106,7 +106,7 @@ export default function ArticlesPage() {
             />
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {featuredArticles.map((article) => (
+              {featuredArticles.map((article) => {
 
 
                 const wordCount = article.description.split(' ').length;
@@ -121,7 +121,7 @@ export default function ArticlesPage() {
                   dateTime={article.date}
                   link={`/articles/${article.id}`}
                 />
-              ))}
+              })}
             </div>
           </div>
         </section>
