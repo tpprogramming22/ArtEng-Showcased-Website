@@ -37,7 +37,7 @@ export default function PartnersPage() {
       {/* Hero Section */}
       <section className="bg-arteng-dark text-white py-12 pt-24">
         <div className="container mx-auto px-4 md:px-8">
-          <h1 className="text-4xl font-bold mb-4">Our Partners</h1>
+          <h1 className="text-5xl font-bold mb-4">Our Partners</h1>
         </div>
       </section>
 
@@ -58,10 +58,10 @@ export default function PartnersPage() {
             </div>
             
             <div>
-              <p className="mb-4">
+              <p className="mb-4 text-lg">
                 Partnering with Arteng offers a unique opportunity for companies seeking to innovate, stand out in competitive markets, and connect with stakeholders in the art and engineering industries. We offer a unique approach that blends creativity with technical precision and this synergy leads to the development of products, services, and experiences that are not only functional but also visually engaging.  By collaborating with Arteng professionals or initiatives, companies gain access to fresh perspectives that can reimagine how their brand communicates, operates, and evolves. In marketing and branding, Arteng driven ideas can create more immersive and memorable experiences.
               </p>
-              <p className="mb-6">
+              <p className="mb-6 text-lg">
                 In sectors like technology and manufacturing where innovation is essential, Arteng fosters agile problem-solving by encouraging teams to think beyond conventional boundaries. It also supports a culture of innovation that attracts top talent and resonates with socially and environmentally conscious consumers.
               </p>
             </div>
@@ -101,8 +101,8 @@ export default function PartnersPage() {
       {/* Become a Partner */}
       <section className="py-16 px-4 md:px-8 bg-arteng-dark text-white">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Become a Partner</h2>
-          <p className="max-w-2xl mx-auto mb-8">
+          <h2 className="text-4xl font-bold mb-4">Become a Partner</h2>
+          <p className="max-w-2xl mx-auto mb-8 text-lg">
             Interested in supporting our mission to bring art and engineering together? We're always looking for new partners who share our vision.
           </p>
           <Link href="/contact">
