@@ -51,7 +51,7 @@ export default function PartnersPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 bg-gray-200 rounded-md overflow-hidden">
               <Image 
-                src="/partnersimage.jpg" 
+                src="/partnerspagenew.jpg" 
                 alt="Partnership Opportunities" 
                 fill
               />
