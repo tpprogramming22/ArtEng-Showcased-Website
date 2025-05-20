@@ -129,8 +129,8 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="flex flex-col sm:flex-row justify-between items-center mb-6">
             <div>
-              <h2 className="text-4xl sm:text-2xl font-bold text-arteng-dark text-center sm:text-left">Meet The Team</h2>
-              <p className="text-gray-600 text-center sm:text-left text-lg sm:text-base">Meet the team behind ArtEng</p>
+              <h2 className="text-4xl sm:text-4xl font-bold text-arteng-dark text-center sm:text-left">Meet The Team</h2>
+              <p className="text-gray-600 text-center sm:text-left text-lg sm:text-lg">Meet the team behind ArtEng</p>
             </div>
             <Link href="/about-us" className="mt-3 sm:mt-0 bg-black text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded text-xs sm:text-sm hover:bg-gray-800 transition-colors">
               More Info
