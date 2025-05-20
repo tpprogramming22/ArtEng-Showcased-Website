@@ -103,13 +103,13 @@ export default function Home() {
             </div>
             
             <div className="lg:col-span-6">
-              <p className="mb-3 md:mb-4 text-gray-800 text-lg md:text-base">
+              <p className="mb-3 md:mb-4 text-gray-800 text-lg md:text-lg">
                 ArtEng is an innovative concept that merges the worlds of art and engineering to encourage creativity and problem-solving in industry. It was established to bridge the gap between art and engineering, offering a platform for artists, engineers, and creators to collaborate and develop groundbreaking solutions.
               </p>
-              <p className="mb-3 md:mb-4 text-gray-800 text-lg md:text-base">
+              <p className="mb-3 md:mb-4 text-gray-800 text-lg md:text-lg">
                 Through networking, events and a programme of activities, ArtEng is striving to cultivate a dynamic space where imagination meets engineering, resulting in groundbreaking works that shape the future of both art and technology.
               </p>
-              <p className="mb-3 md:mb-4 text-gray-800 text-lg md:text-base">
+              <p className="mb-3 md:mb-4 text-gray-800 text-lg md:text-lg">
                 We want to foster a creative community that blurs the lines between art and engineering, providing the tools, resources and opportunities to experiment, collaborate, and develop projects that challenge traditional perspectives.
               </p>
               
