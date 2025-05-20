@@ -72,10 +72,10 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div className="text-center lg:text-left">
-              <h1 className="text-3xl md:text-4xl font-bold mb-4">Bringing Art &<br />Engineering Together</h1>
+              <h1 className="text-5xl md:text-5xl font-bold mb-4">Bringing Art &<br />Engineering Together</h1>
             </div>
             <div className="text-center">
-              <p className="text-base md:text-lg">Connecting, nurturing and developing the artistic and engineering worlds...</p>
+              <p className="text-base md:text-2xl">Connecting, nurturing and developing the artistic and engineering worlds...</p>
             </div>
           </div>
         </div>
