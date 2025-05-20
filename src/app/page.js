@@ -86,7 +86,7 @@ export default function Home() {
       
       {/* About ArtEng Section - Now with white background and responsive layout */}
       <section className="py-10 md:py-16 px-4 md:px-8 bg-white">
-        <div className="container mx-auto">
+        <div className="container mx-auto text-2xl">
           <SectionHeader title="About ArtEng" />
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
