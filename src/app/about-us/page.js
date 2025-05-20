@@ -56,8 +56,8 @@ export default function AboutUsPage() {
       {/* Hero Section */}
       <section className="bg-arteng-dark text-white py-12 pt-24">
         <div className="container mx-auto px-4 md:px-8">
-          <h1 className="text-4xl font-bold mb-4">About Us</h1>
-          <p className="text-lg">Learn about our mission, values, and the team behind ArtEng.</p>
+          <h1 className="text-5xl font-bold mb-4">About Us</h1>
+          <p className="text-xl">Learn about our mission, values, and the team behind ArtEng.</p>
         </div>
       </section>
 
@@ -69,7 +69,7 @@ export default function AboutUsPage() {
               <SectionHeader 
                 title="Who We Are" 
               />
-              <p className="mb-4">
+              <p className="mb-4 text-lg">
                 ArtEng consists of four experienced business professionals who currently run successful businesses in their respective fields.  The combination of experience across different sectors and industries means that between these four directors of the company, the contacts, knowledge, connections and overall work history creates a business that operates in and brings together different cultures.
               </p>
             </div>
@@ -105,10 +105,10 @@ export default function AboutUsPage() {
                   subtitle="What We Stand For" 
                 />
               </div>
-              <p className="mb-4">
+              <p className="mb-4 text-lg">
                 ArtEng is an innovative concept that merges the worlds of art and engineering to encourage creativity and problem-solving in industry. It was established to bridge the gap between art and engineering, offering a platform for artists, engineers, and creators to collaborate and develop groundbreaking solutions. 
               </p>
-              <p className="mb-4">
+              <p className="mb-4 text-lg">
                 Through networking, events and a programme of activities, ArtEng is striving to cultivate a dynamic space where imagination meets engineering, resulting in groundbreaking works that shape the future of both art and technology.
               </p>
             </div>
