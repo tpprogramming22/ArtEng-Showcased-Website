@@ -112,9 +112,6 @@ export default function Home() {
               <p className="mb-3 md:mb-4 text-gray-800 text-sm md:text-base">
                 We want to foster a creative community that blurs the lines between art and engineering, providing the tools, resources and opportunities to experiment, collaborate, and develop projects that challenge traditional perspectives.
               </p>
-              <p className="mb-3 md:mb-4 text-gray-800 text-sm md:text-base">
-                Arteng is especially relevant in today's innovation-driven world, where many designs often require both technical skill and imaginative vision. It encourages engineers to think creatively and artists to embrace technology, breaking down traditional barriers between the two fields. In education, Arteng can foster interdisciplinary learning, helping students develop both problem-solving abilities and artistic sensibility.  Our work with universities and educational institutions means that we can develop and ensure that the two industries can gain new entrants to continue, develop and innovate for decades to come. 
-              </p>
               
               {/* Button centered under the right column content */}
               <div className="flex items-center justify-center mt-4 md:mt-6">
