@@ -64,12 +64,6 @@ export default function PartnersPage() {
               <p className="mb-6">
                 In sectors like technology and manufacturing where innovation is essential, Arteng fosters agile problem-solving by encouraging teams to think beyond conventional boundaries. It also supports a culture of innovation that attracts top talent and resonates with socially and environmentally conscious consumers.
               </p>
-              <p className="mb-6">
-                Ultimately, partnering with Arteng will assist your business in meeting and collaborating with the right people to drive your business forward.  Access to exclusive events, networking meetings and industry led activities will help to develop relationships and grow your organisation.
-              </p>
-              <p className="mb-6">
-                We offer various partnership levels to accommodate organisations of all sizes and objectives, from financial sponsorship to in-kind support and collaborative projects. 
-              </p>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-1 gap-12 justify-items-center items-center">
