@@ -183,8 +183,8 @@ export default function EventsPage() {
       {/* Hero Section */}
       <section className="bg-arteng-dark text-white py-12 pt-24">
         <div className="container mx-auto px-4 md:px-8">
-          <h1 className="text-4xl font-bold mb-4">Event Schedule</h1>
-          <p className="text-lg">Browse our upcoming events and reserve your spot today.</p>
+          <h1 className="text-5xl font-bold mb-4">Event Schedule</h1>
+          <p className="text-xl">Browse our upcoming events and reserve your spot today.</p>
         </div>
       </section>
       
