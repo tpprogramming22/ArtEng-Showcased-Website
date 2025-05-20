@@ -103,13 +103,13 @@ export default function Home() {
             </div>
             
             <div className="lg:col-span-6">
-              <p className="mb-3 md:mb-4 text-gray-800 text-lg md:text-lg">
+              <p className="mb-3 md:mb-4 text-gray-800 text-sm md:text-lg">
                 ArtEng is an innovative concept that merges the worlds of art and engineering to encourage creativity and problem-solving in industry. It was established to bridge the gap between art and engineering, offering a platform for artists, engineers, and creators to collaborate and develop groundbreaking solutions.
               </p>
-              <p className="mb-3 md:mb-4 text-gray-800 text-lg md:text-lg">
+              <p className="mb-3 md:mb-4 text-gray-800 text-sm md:text-lg">
                 Through networking, events and a programme of activities, ArtEng is striving to cultivate a dynamic space where imagination meets engineering, resulting in groundbreaking works that shape the future of both art and technology.
               </p>
-              <p className="mb-3 md:mb-4 text-gray-800 text-lg md:text-lg">
+              <p className="mb-3 md:mb-4 text-gray-800 text-sm md:text-lg">
                 We want to foster a creative community that blurs the lines between art and engineering, providing the tools, resources and opportunities to experiment, collaborate, and develop projects that challenge traditional perspectives.
               </p>
               
@@ -129,8 +129,8 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="flex flex-col sm:flex-row justify-between items-center mb-6">
             <div>
-              <h2 className="text-xl sm:text-2xl font-bold text-arteng-dark text-center sm:text-left">Meet The Team</h2>
-              <p className="text-gray-600 text-center sm:text-left text-sm sm:text-base">Meet the team behind ArtEng</p>
+              <h2 className="text-4xl sm:text-2xl font-bold text-arteng-dark text-center sm:text-left">Meet The Team</h2>
+              <p className="text-gray-600 text-center sm:text-left text-lg sm:text-base">Meet the team behind ArtEng</p>
             </div>
             <Link href="/about-us" className="mt-3 sm:mt-0 bg-black text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded text-xs sm:text-sm hover:bg-gray-800 transition-colors">
               More Info
