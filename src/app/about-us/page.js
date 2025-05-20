@@ -92,7 +92,7 @@ export default function AboutUsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative h-80 rounded-md overflow-hidden">
               <Image 
-                src="/aboutus2.jpg" 
+                src="/aboutusnew.jpg" 
                 alt="ArtEng History" 
                 fill
                 className="object-cover"
