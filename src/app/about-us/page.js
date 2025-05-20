@@ -111,12 +111,6 @@ export default function AboutUsPage() {
               <p className="mb-4">
                 Through networking, events and a programme of activities, ArtEng is striving to cultivate a dynamic space where imagination meets engineering, resulting in groundbreaking works that shape the future of both art and technology.
               </p>
-              <p className="mb-4">
-                We want to foster a creative community that blurs the lines between art and engineering, providing the tools, resources and opportunities to experiment, collaborate, and develop projects that challenge traditional perspectives. 
-              </p>
-              <p className="mb-4">
-                Arteng is especially relevant in today's innovation-driven world, where many designs often require both technical skill and imaginative vision. It encourages engineers to think creatively and artists to embrace technology, breaking down traditional barriers between the two fields. In education, Arteng can foster interdisciplinary learning, helping students develop both problem-solving abilities and artistic sensibility.  Our work with universities and educational institutions means that we can develop and ensure that the two industries can gain new entrants to continue, develop and innovate for decades to come. 
-              </p>
             </div>
             
           </div>
