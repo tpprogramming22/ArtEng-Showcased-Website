@@ -44,9 +44,9 @@ export default function PartnersPage() {
       {/* Partnership Information */}
       <section className="py-16 px-4 md:px-8 ">
         <div className="container mx-auto">
-          <SectionHeader 
-            title="Partner With Us" 
-          />
+          <div>
+            <h2 className="text-4xl sm:text-4xl font-bold text-arteng-dark text-center sm:text-left">Partner With Us</h2>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 bg-gray-200 rounded-md overflow-hidden mb-16">
@@ -80,10 +80,10 @@ export default function PartnersPage() {
       {/* Primary Sponsors */}
       <section className="py-16 px-4 md:px-8 bg-gray-50">
         <div className="container mx-auto">
-          <SectionHeader 
-            title="Our Partners" 
-            subtitle="Primary Partners" 
-          />
+          <div>
+            <h2 className="text-4xl sm:text-4xl font-bold text-arteng-dark text-center sm:text-left">Our Partners</h2>
+            <p className="text-gray-600 text-center sm:text-left text-lg sm:text-lg">Primary Partners</p>
+          </div>
           
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {primarySponsors.map((sponsor) => (
