@@ -100,10 +100,10 @@ export default function ArticlesPage() {
         {/* Featured Articles */}
         <section className="py-16 px-4 md:px-8">
           <div className="container mx-auto">
-            <SectionHeader 
-              title="News" 
-              subtitle="Featured Articles" 
-            />
+            <div>
+              <h2 className="text-4xl sm:text-4xl font-bold text-arteng-dark text-center sm:text-left">News</h2>
+              <p className="text-gray-600 text-center sm:text-left text-lg sm:text-lg">Featured Articles</p>
+            </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {featuredArticles.map((article) => (
@@ -125,10 +125,10 @@ export default function ArticlesPage() {
         {/* Recent Articles */}
         <section className="py-16 px-4 md:px-8 bg-gray-50">
           <div className="container mx-auto">
-            <SectionHeader 
-              title="Recent Articles" 
-              subtitle="What's New" 
-            />
+            <div>
+              <h2 className="text-4xl sm:text-4xl font-bold text-arteng-dark text-center sm:text-left">Recent Articles</h2>
+              <p className="text-gray-600 text-center sm:text-left text-lg sm:text-lg">What's New</p>
+            </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {recentArticles.map((article) => (
