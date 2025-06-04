@@ -276,20 +276,19 @@ export default function Home() {
           <p className="text-gray-600 text-center sm:text-left text-lg sm:text-lg">Meet the team behind ArtEng</p>
         </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {upcomingEvents.map((event) => (
-              <Card
-                key={event.id}
-                imageUrl={event.imageUrl}
-                title={event.title}
-                description={event.description}
-                dateTime={event.dateTime}
-                location={event.location}
-                hostedBy={event.hostedBy}
-                link={`/events/event-${event.id}`}
-              />
-            ))}
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          {upcomingEvents.map((event) => (
+            <Card
+              key={event.id}
+              imageUrl={event.imageUrl}
+              title={event.title}
+              description={event.description}
+              dateTime={event.dateTime}
+              location={event.location}
+              hostedBy={event.hostedBy}
+              link={`/events/event-${event.id}`}
+            />
+          ))}
         </div>
       </section>
       
