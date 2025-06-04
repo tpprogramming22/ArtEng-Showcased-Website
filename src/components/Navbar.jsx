@@ -80,14 +80,14 @@ const Navbar = () => {
       {isMobile && isOpen && (
         <div className="fixed inset-0 bg-white pt-20 z-40 overflow-auto">
           <div className="flex flex-col space-y-6 p-6">
-            <Link href="/" className="text-xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>Home</Link>
-            <Link href="/events" className="text-xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>Events</Link>
-            <Link href="/news" className="text-xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>News</Link>
-            <Link href="/about-us" className="text-xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>About Us</Link>
-            <Link href="/membership" className="text-xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>Membership</Link>
-            <Link href="/partners" className="text-xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>Partners</Link>
-            <Link href="/faq" className="text-xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>FAQ</Link>
-            <Link href="/contact" className="text-xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>Contact</Link>
+            <Link href="/" className="text-2xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>Home</Link>
+            <Link href="/events" className="text-2xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>Events</Link>
+            <Link href="/news" className="text-2xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>News</Link>
+            <Link href="/about-us" className="text-2xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>About Us</Link>
+            <Link href="/membership" className="text-2xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>Membership</Link>
+            <Link href="/partners" className="text-2xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>Partners</Link>
+            <Link href="/faq" className="text-2xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>FAQ</Link>
+            <Link href="/contact" className="text-2xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>Contact</Link>
             <Link 
               href="/login" 
               className="bg-arteng-dark text-white font-bold text-xl rounded flex items-center justify-center py-3 px-6 mt-4"
