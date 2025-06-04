@@ -248,11 +248,10 @@ export default function Home() {
       {/* Latest News Section */}
       <section className="py-10 md:py-16 px-4 md:px-8 bg-white">
         <div className="container mx-auto">
-          <SectionHeader 
-            title="Latest News" 
-            subtitle="Keep up to date with what's happening, what our partners have been up to and all our news" 
-            viewAllLink="/news" 
-          />
+          <div>
+            <h2 className="text-4xl sm:text-4xl font-bold text-arteng-dark text-center sm:text-left">Latest News</h2>
+            <p className="text-gray-600 text-center sm:text-left text-lg sm:text-lg">Keep up to date with what's happening, what our partners have been up to and all our news</p>
+          </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {featuredNews.map((article) => (
@@ -273,8 +272,8 @@ export default function Home() {
       <section className="py-10 md:py-16 px-4 md:px-8 bg-gray-50">
         <div className="container mx-auto">
           <div>
-            <h2 className="text-4xl sm:text-4xl font-bold text-arteng-dark text-center sm:text-left">Meet The Team</h2>
-            <p className="text-gray-600 text-center sm:text-left text-lg sm:text-lg">Meet the team behind ArtEng</p>
+            <h2 className="text-4xl sm:text-4xl font-bold text-arteng-dark text-center sm:text-left">Upcoming Events</h2>
+            <p className="text-gray-600 text-center sm:text-left text-lg sm:text-lg">Events coming soon, to book and find out more click on each image</p>
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
