@@ -66,9 +66,9 @@ export default function AboutUsPage() {
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
-              <SectionHeader 
-                title="Who We Are" 
-              />
+              <div>
+                <h2 className="text-4xl sm:text-4xl font-bold text-arteng-dark text-center sm:text-left">Who We Are</h2>
+              </div>
               <p className="mb-4 text-lg">
                 ArtEng consists of four experienced business professionals who currently run successful businesses in their respective fields.  The combination of experience across different sectors and industries means that between these four directors of the company, the contacts, knowledge, connections and overall work history creates a business that operates in and brings together different cultures.
               </p>
@@ -100,10 +100,8 @@ export default function AboutUsPage() {
             </div>
             <div>
               <div>
-                <SectionHeader 
-                  title="Our Story" 
-                  subtitle="What We Stand For" 
-                />
+                <h2 className="text-4xl sm:text-4xl font-bold text-arteng-dark text-center sm:text-left">Our Story</h2>
+                <p className="text-gray-600 text-center sm:text-left text-lg sm:text-lg">What We Stand For</p>
               </div>
               <p className="mb-4 text-lg">
                 ArtEng is an innovative concept that merges the worlds of art and engineering to encourage creativity and problem-solving in industry. It was established to bridge the gap between art and engineering, offering a platform for artists, engineers, and creators to collaborate and develop groundbreaking solutions. 
@@ -121,9 +119,9 @@ export default function AboutUsPage() {
       {/* Meet the Team - Enhanced with hover effects */}
       <section className="py-16 px-4 md:px-8">
         <div className="container mx-auto">
-          <SectionHeader 
-            title="Meet The Team" 
-          />
+          <div>
+            <h2 className="text-4xl sm:text-4xl font-bold text-arteng-dark text-center sm:text-left">Meet The Team</h2>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {teamMembers.map((member) => (
               <div
