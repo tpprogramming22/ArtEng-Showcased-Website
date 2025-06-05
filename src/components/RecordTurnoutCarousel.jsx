@@ -132,8 +132,6 @@ const RecordTurnoutCarousel = () => {
             // Mobile layout - centered content
             <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-white z-10">
               <div className="text-center">
-                <h2 className="text-4xl font-bold mb-4">{slides[currentSlide].title}</h2>
-                <p className="mb-6 text-lg">{slides[currentSlide].description}</p>
                 <Link 
                   href={slides[currentSlide].link} 
                   className="bg-white text-arteng-dark px-6 py-2 rounded-md text-base inline-block hover:bg-gray-100 transition-colors w-36 text-center font-medium"
@@ -162,8 +160,6 @@ const RecordTurnoutCarousel = () => {
               <div className="flex flex-col items-center">
                 {/* Fixed width and height container for title and description */}
                 <div className="w-[500px] text-center h-[200px] flex flex-col justify-center">
-                  <h2 className="text-6xl font-bold mb-6">{slides[currentSlide].title}</h2>
-                  <p className="mb-8 flex items-center justify-center text-xl h-[60px]">{slides[currentSlide].description}</p>
                 </div>
                 
                 {/* Fixed width button with consistent positioning */}
