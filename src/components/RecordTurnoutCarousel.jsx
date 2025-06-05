@@ -147,33 +147,6 @@ const RecordTurnoutCarousel = () => {
                 <div className="h-[80px] flex items-center justify-center">
                 </div>
                 
-                {/* Navigation controls with fixed height */}
-                <div className="flex justify-center items-center space-x-6 h-[60px]">
-                  {/* Left arrow */}
-                  <button 
-                    onClick={goToPrevSlide}
-                    className="bg-white bg-opacity-50 p-2 rounded-full hover:bg-opacity-70 transition-opacity"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="white">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                    </svg>
-                  </button>
-                  
-                  {/* Indicators */}
-                  <div className="flex space-x-3">
-                    {slides.map((_, index) => (
-                      <button 
-                        key={index}
-                        onClick={() => goToSlide(index)}
-                        className={`w-8 h-2 rounded-full transition-all ${
-                          index === currentSlide ? "bg-white" : "bg-white bg-opacity-50"
-                        }`}
-                      />
-                    ))}
-                  </div>
-                  
-                
-                </div>
               </div>
             </div>
           )}
