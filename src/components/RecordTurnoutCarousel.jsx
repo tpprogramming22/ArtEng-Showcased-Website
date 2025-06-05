@@ -128,6 +128,16 @@ const RecordTurnoutCarousel = () => {
           )}
           
                 
+                {/* Fixed width button with consistent positioning */}
+                <div className="h-[80px] flex items-center justify-center">
+                  <Link 
+                    href={slides[currentSlide].link} 
+                    className="bg-white text-arteng-dark px-8 py-3 rounded-md text-lg inline-block hover:bg-gray-100 transition-colors w-48 text-center font-medium"
+                  >
+                    {slides[currentSlide].linkText}
+                  </Link>
+                </div>
+                
                 {/* Navigation controls with fixed height */}
                 <div className="flex justify-center items-center space-x-6 h-[60px]">
                   {/* Left arrow */}
@@ -153,7 +163,15 @@ const RecordTurnoutCarousel = () => {
                     ))}
                   </div>
                   
-
+                  {/* Right arrow */}
+                  <button 
+                    onClick={goToNextSlide}
+                    className="bg-white bg-opacity-50 p-2 rounded-full hover:bg-opacity-70 transition-opacity"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="white">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
                 </div>
               </div>
             </div>
