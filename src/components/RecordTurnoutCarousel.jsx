@@ -121,7 +121,10 @@ const RecordTurnoutCarousel = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40"></div>
           ) : (
             /* Desktop diagonal overlay exactly as before */
-
+            <div className="absolute inset-0" style={{ 
+              background: 'linear-gradient(75deg, transparent 0%, rgba(0,0,0,0.5) 0%)',
+              transform: 'translateX(0)'
+            }}></div>
           )}
           
           {/* Content positioned differently on mobile vs desktop */}
