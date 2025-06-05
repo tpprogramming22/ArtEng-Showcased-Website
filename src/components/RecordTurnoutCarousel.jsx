@@ -132,12 +132,6 @@ const RecordTurnoutCarousel = () => {
             // Mobile layout - centered content
             <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-white z-10">
               <div className="text-center">
-                <Link 
-                  href={slides[currentSlide].link} 
-                  className="bg-white text-arteng-dark px-6 py-2 rounded-md text-base inline-block hover:bg-gray-100 transition-colors w-36 text-center font-medium"
-                >
-                  {slides[currentSlide].linkText}
-                </Link>
               </div>
               
               {/* Dots navigation for mobile */}
@@ -164,12 +158,6 @@ const RecordTurnoutCarousel = () => {
                 
                 {/* Fixed width button with consistent positioning */}
                 <div className="h-[80px] flex items-center justify-center">
-                  <Link 
-                    href={slides[currentSlide].link} 
-                    className="bg-white text-arteng-dark px-8 py-3 rounded-md text-lg inline-block hover:bg-gray-100 transition-colors w-48 text-center font-medium"
-                  >
-                    {slides[currentSlide].linkText}
-                  </Link>
                 </div>
                 
                 {/* Navigation controls with fixed height */}
