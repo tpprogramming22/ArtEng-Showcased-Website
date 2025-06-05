@@ -134,19 +134,6 @@ const RecordTurnoutCarousel = () => {
               <div className="text-center">
               </div>
               
-              {/* Dots navigation for mobile */}
-              <div className="absolute bottom-6 flex justify-center space-x-2">
-                {slides.map((_, index) => (
-                  <button 
-                    key={index}
-                    onClick={() => goToSlide(index)}
-                    className={`w-6 h-1.5 rounded-full transition-all ${
-                      index === currentSlide ? "bg-white" : "bg-white bg-opacity-50"
-                    }`}
-                    aria-label={`Go to slide ${index + 1}`}
-                  />
-                ))}
-              </div>
             </div>
           ) : (
             // Desktop layout - exactly as before
@@ -185,15 +172,7 @@ const RecordTurnoutCarousel = () => {
                     ))}
                   </div>
                   
-                  {/* Right arrow */}
-                  <button 
-                    onClick={goToNextSlide}
-                    className="bg-white bg-opacity-50 p-2 rounded-full hover:bg-opacity-70 transition-opacity"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="white">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </button>
+                
                 </div>
               </div>
             </div>
