@@ -127,6 +127,44 @@ const RecordTurnoutCarousel = () => {
             }}></div>
           )}
           
+          {/* Content positioned differently on mobile vs desktop */}
+          {isMobile ? (
+            // Mobile layout - centered content
+            <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-white z-10">
+              <div className="text-center">
+                <h2 className="text-4xl font-bold mb-4">{slides[currentSlide].title}</h2>
+                <p className="mb-6 text-lg">{slides[currentSlide].description}</p>
+                <Link 
+                  href={slides[currentSlide].link} 
+                  className="bg-white text-arteng-dark px-6 py-2 rounded-md text-base inline-block hover:bg-gray-100 transition-colors w-36 text-center font-medium"
+                >
+                  {slides[currentSlide].linkText}
+                </Link>
+              </div>
+              
+              {/* Dots navigation for mobile */}
+              <div className="absolute bottom-6 flex justify-center space-x-2">
+                {slides.map((_, index) => (
+                  <button 
+                    key={index}
+                    onClick={() => goToSlide(index)}
+                    className={`w-6 h-1.5 rounded-full transition-all ${
+                      index === currentSlide ? "bg-white" : "bg-white bg-opacity-50"
+                    }`}
+                    aria-label={`Go to slide ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
+          ) : (
+            // Desktop layout - exactly as before
+            <div className="absolute right-0 w-2/3 pr-12 text-white flex items-center justify-center h-full">
+              <div className="flex flex-col items-center">
+                {/* Fixed width and height container for title and description */}
+                <div className="w-[500px] text-center h-[200px] flex flex-col justify-center">
+                  <h2 className="text-6xl font-bold mb-6">{slides[currentSlide].title}</h2>
+                  <p className="mb-8 flex items-center justify-center text-xl h-[60px]">{slides[currentSlide].description}</p>
+                </div>
                 
                 {/* Fixed width button with consistent positioning */}
                 <div className="h-[80px] flex items-center justify-center">
