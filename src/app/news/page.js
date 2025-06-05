@@ -28,7 +28,7 @@ export default function ArticlesPage() {
     {
       id: 3,
       title: "2024 - What a Year",
-      description: "A look back at our achievements and milestones from the past year, celebrating the growth and success of our community and projects.",
+      description: "A look back at our achievements and milestones from the past year, proudly celebrating the growth, collaboration, and continued success of our community and projects.",
       imageUrl: "/year-review.jpg",
       date: "January 15, 2025"
     }
@@ -46,14 +46,14 @@ export default function ArticlesPage() {
     {
       id: 5,
       title: "Innovation Through Collaboration",
-      description: "How partnerships between artists and engineers lead to groundbreaking projects that neither discipline could achieve alone.",
+      description: "How strong partnerships between artists and innovative engineers lead to groundbreaking projects that neither discipline could achieve alone.",
       imageUrl: "/partnership-background.png",
       date: "March 2, 2025"
     },
     {
       id: 6,
       title: "The Future of Creative Technology",
-      description: "Examining emerging trends at the intersection of art and engineering that are shaping the next generation of experiences.",
+      description: "Examining emerging trends at the dynamic intersection of art and engineering that are rapidly shaping the next generation of creative experiences.",
       imageUrl: "/silverstatue.jpg",
       date: "March 3, 2025"
     },
@@ -74,7 +74,7 @@ export default function ArticlesPage() {
     {
       id: 9,
       title: "Building Bridges Between Disciplines",
-      description: "The importance of cross-disciplinary education and collaboration in fostering innovation across art and engineering sectors.",
+      description: "The growing importance of cross-disciplinary education and collaboration in effectively fostering innovation across diverse art and engineering sectors.",
       imageUrl: "/acquisition-news.jpg",
       date: "March 6, 2025"
     }
@@ -89,8 +89,8 @@ export default function ArticlesPage() {
       {/* Hero Section */}
       <section className="bg-arteng-dark text-white py-12 pt-24">
         <div className="container mx-auto px-4 md:px-8">
-          <h1 className="text-4xl font-bold mb-4">News</h1>
-          <p className="text-lg">Stay updated with the latest from ArtEng and the industry.</p>
+          <h1 className="text-5xl font-bold mb-4">News</h1>
+          <p className="text-xl">Stay updated with the latest from ArtEng and the industry.</p>
         </div>
       </section>
 
@@ -100,13 +100,15 @@ export default function ArticlesPage() {
         {/* Featured Articles */}
         <section className="py-16 px-4 md:px-8">
           <div className="container mx-auto">
-            <SectionHeader 
-              title="News" 
-              subtitle="Featured Articles" 
-            />
+            <div>
+              <h2 className="text-4xl sm:text-4xl font-bold text-arteng-dark text-center sm:text-left">News</h2>
+              <p className="text-gray-600 text-center sm:text-left text-lg sm:text-lg">Featured Articles</p>
+            </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {featuredArticles.map((article) => (
+
+
                 <Card
                   key={article.id}
                   imageUrl={article.imageUrl}
@@ -123,10 +125,10 @@ export default function ArticlesPage() {
         {/* Recent Articles */}
         <section className="py-16 px-4 md:px-8 bg-gray-50">
           <div className="container mx-auto">
-            <SectionHeader 
-              title="Recent Articles" 
-              subtitle="What's New" 
-            />
+            <div>
+              <h2 className="text-4xl sm:text-4xl font-bold text-arteng-dark text-center sm:text-left">Recent Articles</h2>
+              <p className="text-gray-600 text-center sm:text-left text-lg sm:text-lg">What's New</p>
+            </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {recentArticles.map((article) => (
