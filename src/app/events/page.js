@@ -183,8 +183,8 @@ export default function EventsPage() {
       {/* Hero Section */}
       <section className="bg-arteng-dark text-white py-12 pt-24">
         <div className="container mx-auto px-4 md:px-8">
-          <h1 className="text-4xl font-bold mb-4">Event Schedule</h1>
-          <p className="text-lg">Browse our upcoming events and reserve your spot today.</p>
+          <h1 className="text-5xl font-bold mb-4">Event Schedule</h1>
+          <p className="text-xl">Browse our upcoming events and reserve your spot today.</p>
         </div>
       </section>
       
@@ -192,10 +192,10 @@ export default function EventsPage() {
         {/* This Week's Events */}
         <section className="py-16 px-4 md:px-8 bg-gray-50">
           <div className="container mx-auto">
-            <SectionHeader 
-              title="This Week" 
-              subtitle="Upcoming at ArtEng" 
-            />
+          <div>
+            <h2 className="text-4xl sm:text-4xl font-bold text-arteng-dark text-center sm:text-left">Featured Events</h2>
+            <p className="text-gray-600 text-center sm:text-left text-lg sm:text-lg">Upcoming at ArtEng</p>
+          </div>
             
             {/* Custom carousel implementation to avoid reloading issues */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -218,10 +218,10 @@ export default function EventsPage() {
         {/* Featured Events */}
         <section className="py-16 px-4 md:px-8">
           <div className="container mx-auto">
-            <SectionHeader 
-              title="Event Schedule" 
-              subtitle="Featured Events" 
-            />
+          <div>
+            <h2 className="text-4xl sm:text-4xl font-bold text-arteng-dark text-center sm:text-left">Event Schedule</h2>
+            <p className="text-gray-600 text-center sm:text-left text-lg sm:text-lg">Featured Events</p>
+          </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {featuredEvents.map((event) => (

@@ -8,8 +8,8 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="bg-arteng-dark text-white py-12 pt-24">
         <div className="container mx-auto px-4 md:px-8">
-          <h1 className="text-4xl font-bold mb-4">Contact Page</h1>
-          <p className="text-lg">Get in touch by filling in the contact form and if you'd like us to stay in touch with you, sign up to our newsletter below</p>
+          <h1 className="text-5xl font-bold mb-4">Contact Page</h1>
+          <p className="text-xl">Get in touch by filling in the contact form and if you'd like us to stay in touch with you, sign up to our newsletter below</p>
         </div>
       </section>
 
@@ -18,10 +18,10 @@ export default function ContactPage() {
         <div className="container mx-auto max-w-4xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-2xl font-bold text-arteng-dark mb-6">Send Us a Message</h2>
+              <h2 className="text-4xl font-bold text-arteng-dark mb-6">Send Us a Message</h2>
               <form className="space-y-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                  <label htmlFor="name" className="block text-lg font-medium text-gray-700 mb-1">Name</label>
                   <input 
                     type="text" 
                     id="name" 
@@ -31,7 +31,7 @@ export default function ContactPage() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                  <label htmlFor="email" className="block text-lg font-medium text-gray-700 mb-1">Email</label>
                   <input 
                     type="email" 
                     id="email" 
@@ -41,7 +41,7 @@ export default function ContactPage() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                  <label htmlFor="subject" className="block text-lg font-medium text-gray-700 mb-1">Subject</label>
                   <input 
                     type="text" 
                     id="subject" 
@@ -51,7 +51,7 @@ export default function ContactPage() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                  <label htmlFor="message" className="block text-lg font-medium text-gray-700 mb-1">Message</label>
                   <textarea 
                     id="message" 
                     name="message" 
@@ -72,7 +72,7 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-arteng-dark mb-6">Contact Details</h2>
+              <h2 className="text-4xl font-bold text-arteng-dark mb-6">Contact Details</h2>
               <div className="space-y-4">
                 <div>
                   <h3 className="font-semibold text-lg">Email</h3>
@@ -97,8 +97,8 @@ export default function ContactPage() {
       {/* Newsletter Section */}
       <section className="py-16 px-4 md:px-8 bg-gray-50">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-2xl font-bold text-arteng-dark mb-6 text-center">Sign Up To Our Newsletter</h2>
-          <p className="text-center mb-8">Stay up to date with the latest news, events, and opportunities from ArtEng.</p>
+          <h2 className="text-4xl font-bold text-arteng-dark mb-6 text-center">Sign Up To Our Newsletter</h2>
+          <p className="text-center text-lg mb-8">Stay up to date with the latest news, events, and opportunities from ArtEng.</p>
           
           <div className="max-w-md mx-auto">
             <MailtoNotifyForm />

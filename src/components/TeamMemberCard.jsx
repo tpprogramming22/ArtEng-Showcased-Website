@@ -20,16 +20,19 @@ const TeamMemberCard = ({ name, role, imageUrl, description, linkToAbout = true 
         />
         <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
       </div>
-      <h3 className="font-bold text-base sm:text-lg text-arteng-dark group-hover:text-arteng-dark transition-colors duration-300">{name}</h3>
+
+      <h3 className="font-bold text-base sm:text-lg text-arteng-dark group-hover:text-arteng-dark transition-colors">
+        {name}
+      </h3>
       <p className="text-gray-600 font-medium mb-1 sm:mb-2 text-sm sm:text-base">{role}</p>
       
       <div className="text-gray-500 text-xs sm:text-sm text-center">
         <p className="hidden sm:block">{description}</p>
         <p className="block sm:hidden">{shortDescription}</p>
       </div>
-      
+
       {linkToAbout && (
-        <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity">
           <Link href="/about-us" className="flex items-center text-arteng-dark">
             <span className="text-xs sm:text-sm font-medium mr-1">Learn more</span>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

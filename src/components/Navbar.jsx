@@ -11,14 +11,12 @@ const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
   const [menuHeight, setMenuHeight] = useState('100vh');
-
   const isOpenRef = useRef(isOpen);
 
   useEffect(() => {
     isOpenRef.current = isOpen;
   }, [isOpen]);
 
-  // Handle viewport height changes for mobile menu
   useEffect(() => {
     const updateMenuHeight = () => {
       if (isOpen) {
@@ -29,32 +27,23 @@ const Navbar = () => {
 
     updateMenuHeight();
     window.addEventListener('resize', updateMenuHeight);
-
-    return () => {
-      window.removeEventListener('resize', updateMenuHeight);
-    };
+    return () => window.removeEventListener('resize', updateMenuHeight);
   }, [isOpen]);
 
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile();
     window.addEventListener('resize', checkMobile);
 
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
-
       if (isMobile && !isOpenRef.current) {
         setVisible((prevScrollPos > currentScrollPos) || currentScrollPos < 10);
       }
-
       setPrevScrollPos(currentScrollPos);
     };
 
     window.addEventListener('scroll', handleScroll);
-
     return () => {
       window.removeEventListener('resize', checkMobile);
       window.removeEventListener('scroll', handleScroll);
@@ -62,15 +51,8 @@ const Navbar = () => {
   }, [isMobile, prevScrollPos]);
 
   const toggleMenu = () => {
-    const newIsOpen = !isOpen;
-    setIsOpen(newIsOpen);
-
-    if (newIsOpen) {
-      setVisible(true);
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
+    setIsOpen(!isOpen);
+    document.body.style.overflow = !isOpen ? 'hidden' : 'auto';
   };
 
   const closeMenu = () => {
@@ -123,40 +105,16 @@ const Navbar = () => {
       )}
 
       {isMobile && isOpen && (
-        <div
-          className="fixed inset-0 bg-white z-40 overflow-auto flex flex-col"
-          style={{ top: 0, bottom: 0, height: menuHeight }}
-        >
-          <div className="p-5 flex justify-between items-center border-b border-gray-200">
-            <Link href="/" className="text-3xl font-bold flex items-center" onClick={closeMenu}>
-              <div>
-                <Image
-                  src="/logo.svg"
-                  alt="ArtEng Logo"
-                  width={180}
-                  height={60}
-                  priority
-                />
-              </div>
-            </Link>
-            <button 
-              onClick={closeMenu}
-              className="text-arteng-dark focus:outline-none"
-              aria-label="Close menu"
-            >
-              <X size={24} />
-            </button>
-          </div>
-
-          <div className="flex flex-col space-y-6 p-6 flex-grow overflow-auto">
-            <Link href="/" className="text-xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>Home</Link>
-            <Link href="/events" className="text-xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>Events</Link>
-            <Link href="/news" className="text-xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>News</Link>
-            <Link href="/about-us" className="text-xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>About Us</Link>
-            <Link href="/membership" className="text-xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>Membership</Link>
-            <Link href="/partners" className="text-xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>Partners</Link>
-            <Link href="/faq" className="text-xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>FAQ</Link>
-            <Link href="/contact" className="text-xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>Contact</Link>
+        <div className="fixed inset-0 bg-white pt-20 z-40 overflow-auto" style={{ height: menuHeight }}>
+          <div className="flex flex-col space-y-6 p-6">
+            <Link href="/" className="text-2xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>Home</Link>
+            <Link href="/events" className="text-2xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>Events</Link>
+            <Link href="/news" className="text-2xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>News</Link>
+            <Link href="/about-us" className="text-2xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>About Us</Link>
+            <Link href="/membership" className="text-2xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>Membership</Link>
+            <Link href="/partners" className="text-2xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>Partners</Link>
+            <Link href="/faq" className="text-2xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>FAQ</Link>
+            <Link href="/contact" className="text-2xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>Contact</Link>
             <Link 
               href="/login" 
               className="bg-arteng-dark text-white font-bold text-xl rounded flex items-center justify-center py-3 px-6 mt-4"

@@ -7,9 +7,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* About Column */}
           <div className="text-center sm:text-left">
-            <h3 className="text-lg font-bold mb-4">About ArtEng</h3>
-            <p className="text-sm mb-4">
-              Connecting, nurturing and developing the artistic and engineering worlds...
+            <h3 className="text-xl font-bold mb-4">About ArtEng</h3>
+            <p className="text-lg mb-4">
+              Bringing creatives and innovators together to transform ideas into unforgettable experiences.
             </p>
             <div className="flex justify-center sm:justify-start space-x-4">
               <a href="https://www.linkedin.com/company/arteng-uk" className="hover:text-gray-300" target="_blank" rel="noopener noreferrer">
@@ -19,47 +19,33 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          
-          {/* Quick Links - Updated order to match navbar */}
+
+          {/* Quick Links */}
           <div className="text-center sm:text-left">
-            <h3 className="text-lg font-bold mb-4">Quick Links</h3>
+            <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li>
-                <Link href="/" className="text-sm hover:text-gray-300">Home</Link>
-              </li>
-              <li>
-                <Link href="/events" className="text-sm hover:text-gray-300">Events</Link>
-              </li>
-              <li>
-                <Link href="/news" className="text-sm hover:text-gray-300">News</Link>
-              </li>
-              <li>
-                <Link href="/about-us" className="text-sm hover:text-gray-300">About Us</Link>
-              </li>
-              <li>
-                <Link href="/membership" className="text-sm hover:text-gray-300">Membership</Link>
-              </li>
-              <li>
-                <Link href="/partners" className="text-sm hover:text-gray-300">Partners</Link>
-              </li>
-              <li>
-                <Link href="/faq" className="text-sm hover:text-gray-300">FAQ</Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-sm hover:text-gray-300">Contact</Link>
-              </li>
+              <li><Link href="/" className="text-lg hover:text-gray-300">Home</Link></li>
+              <li><Link href="/events" className="text-lg hover:text-gray-300">Events</Link></li>
+              <li><Link href="/news" className="text-lg hover:text-gray-300">News</Link></li>
+              <li><Link href="/about-us" className="text-lg hover:text-gray-300">About Us</Link></li>
+              <li><Link href="/membership" className="text-lg hover:text-gray-300">Membership</Link></li>
+              <li><Link href="/partners" className="text-lg hover:text-gray-300">Partners</Link></li>
+              <li><Link href="/faq" className="text-lg hover:text-gray-300">FAQ</Link></li>
+              <li><Link href="/contact" className="text-lg hover:text-gray-300">Contact</Link></li>
             </ul>
           </div>
-          
+
           {/* Contact */}
           <div className="text-center lg:text-left">
-            <h3 className="text-lg font-bold mb-4">Contact</h3>
-            <address className="not-italic text-sm">
-              <p className="mb-2">Email: <a href="mailto:info@arteng.co.uk" className="hover:text-gray-300">info@arteng.co.uk</a></p>
+            <h3 className="text-xl font-bold mb-4">Contact</h3>
+            <address className="not-italic text-lg">
+              <p className="mb-2">
+                Email: <a href="mailto:info@arteng.co.uk" className="hover:text-gray-300">info@arteng.co.uk</a>
+              </p>
             </address>
           </div>
         </div>
-        
+
         <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
           <div className="text-sm">
             &copy; {new Date().getFullYear()} ArtEng. All rights reserved.
