@@ -154,7 +154,7 @@ export default function Home() {
               </div>
               <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors">Wendy Bennett</h3>
               <p className="text-m sm:text-m">Managing Director</p>
-              <p className="text-m sm:text-m text-center lg:min-h-[24rem] sm:min-h-[24rem] md:min-h-[24rem]">Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields. She worked within the precision investment casting industry for 26 years and was CEO and previous owner of Lost Wax Development Limited.</p>
+              <p className="text-m sm:text-s text-center lg:min-h-[24rem] sm:min-h-[24rem] md:min-h-[24rem]">Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields. She worked within the precision investment casting industry for 26 years and was CEO and previous owner of Lost Wax Development Limited.</p>
               
               <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity ">
                 <div className="flex items-center text-arteng-dark">
