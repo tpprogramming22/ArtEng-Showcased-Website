@@ -143,7 +143,7 @@ export default function Home() {
               className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative"
               onClick={() => window.location.href = '/about-us'}
             >
-              <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4 mt-6">
+              <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4 mt-2">
                 <Image 
                   src="/wendynew.png" 
                   alt="Wendy Bennett"
@@ -154,7 +154,7 @@ export default function Home() {
               </div>
               <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors">Wendy Bennett</h3>
               <p className="text-m sm:text-m">Managing Director</p>
-              <p className="text-m sm:text-s text-center lg:min-h-[14rem] sm:min-h-[14rem] md:min-h-[14rem] lg:max-h-[14rem] sm:max-h-[14rem] md:max-h-[14rem] line-clamp-10 sm:line-clamp-10">Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields. She worked within the precision investment casting industry for 26 years and was CEO and previous owner of Lost Wax Development Limited.</p>
+              <p className="text-m sm:text-s text-center lg:min-h-[12rem] sm:min-h-[12rem] md:min-h-[12rem] lg:max-h-[12rem] sm:max-h-[12rem] md:max-h-[12rem] line-clamp-10 sm:line-clamp-10">Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields. She worked within the precision investment casting industry for 26 years and was CEO and previous owner of Lost Wax Development Limited.</p>
               
               <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity ">
                 <div className="flex items-center text-arteng-dark">
@@ -169,7 +169,7 @@ export default function Home() {
               className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative"
               onClick={() => window.location.href = '/about-us'}
             >
-              <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4 mt-6">
+              <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4 mt-2">
                 <Image 
                   src="/steve.png" 
                   alt="Stephen Fletcher"
@@ -180,7 +180,7 @@ export default function Home() {
               </div>
               <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors ">Stephen Fletcher</h3>
               <p className="text-m sm:text-m">Creative Director</p>
-              <p className="text-m sm:text-m text-center lg:min-h-[14rem] sm:min-h-[14rem] md:min-h-[14rem] lg:max-h-[14rem] sm:max-h-[14rem] md:max-h-[14rem] line-clamp-10 sm:line-clamp-10">Stephen's career spans more than 45 years covering a range of roles including Logistics/Transport management, Project management, Key Account management and Sales Business Development.</p>
+              <p className="text-m sm:text-m text-center lg:min-h-[12rem] sm:min-h-[12rem] md:min-h-[12rem] lg:max-h-[12rem] sm:max-h-[12rem] md:max-h-[12rem] line-clamp-10 sm:line-clamp-10">Stephen's career spans more than 45 years covering a range of roles including Logistics/Transport management, Project management, Key Account management and Sales Business Development.</p>
               <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity">
                 <div className="flex items-center text-arteng-dark">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -194,7 +194,7 @@ export default function Home() {
               className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative"
               onClick={() => window.location.href = '/about-us'}
             >
-              <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4 mt-6">
+              <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4 mt-2">
                 <Image 
                   src="/jess-smith.jpg" 
                   alt="Joan Smith"
@@ -205,7 +205,7 @@ export default function Home() {
               </div>
               <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors">Joan Smith</h3>
               <p className="text-m sm:text-m">Corporate Director</p>
-              <p className="text-m sm:text-m text-center lg:min-h-[14rem] sm:min-h-[14rem] md:min-h-[14rem] lg:max-h-[14rem] sm:max-h-[14rem] md:max-h-[14rem] line-clamp-10 sm:line-clamp-10">With over 20 years of experience in business advice and guidance, Joan brings a wealth of knowledge in all areas of business support. Having worked with hundreds of companies across diverse sectors, Joan has always managed to understand their unique challenges and opportunities that businesses face.</p>
+              <p className="text-m sm:text-m text-center lg:min-h-[12rem] sm:min-h-[12rem] md:min-h-[12rem] lg:max-h-[12rem] sm:max-h-[12rem] md:max-h-[12rem] line-clamp-10 sm:line-clamp-10">With over 20 years of experience in business advice and guidance, Joan brings a wealth of knowledge in all areas of business support. Having worked with hundreds of companies across diverse sectors, Joan has always managed to understand their unique challenges and opportunities that businesses face.</p>
               
               <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity">
                 <div className="flex items-center text-arteng-dark">
@@ -220,7 +220,7 @@ export default function Home() {
               className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative"
               onClick={() => window.location.href = '/about-us'}
             >
-              <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4 mt-6">
+              <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4 mt-2">
                 <Image 
                   src="/adam.png" 
                   alt="Adam Snelleksz"
@@ -231,7 +231,7 @@ export default function Home() {
               </div>
               <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors ">Adam Snelleksz</h3>
               <p className="text-m sm:text-m">Marketing Director</p>
-              <p className="text-m sm:text-m text-center lg:min-h-[18rem] sm:min-h-[18rem] md:min-h-[18rem] lg:max-h-[18rem] sm:max-h-[18rem] md:max-h-[18rem] line-clamp-10 sm:line-clamp-10">Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations. After graduating from university with a marketing degree, Adam moved to London and worked in a busy press office for the National Consumer Council.</p>
+              <p className="text-m sm:text-m text-center lg:min-h-[12rem] sm:min-h-[12rem] md:min-h-[12rem] lg:max-h-[12rem] sm:max-h-[12rem] md:max-h-[12rem] line-clamp-10 sm:line-clamp-10">Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations. After graduating from university with a marketing degree, Adam moved to London and worked in a busy press office for the National Consumer Council.</p>
               
               <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity ">
                 <div className="flex items-center text-arteng-dark">
