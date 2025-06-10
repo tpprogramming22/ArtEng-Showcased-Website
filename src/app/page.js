@@ -1,4 +1,4 @@
-w'use client';
+'use client';
 import Link from 'next/link';
 import Image from 'next/image';
 import HeroSection from '@/components/HeroSection';
