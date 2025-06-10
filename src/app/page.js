@@ -169,7 +169,7 @@ export default function Home() {
               className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative"
               onClick={() => window.location.href = '/about-us'}
             >
-              <div className="relative w-32 h-32 sm:w-30 sm:h-30 md:w-30 md:h-30 lg:w-56 lg:h-56 mb-3 sm:mb-4">
+              <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4">
                 <Image 
                   src="/steve.png" 
                   alt="Stephen Fletcher"
