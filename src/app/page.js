@@ -126,8 +126,8 @@ export default function Home() {
       
       {/* Meet the Team Section - With responsive grid for team members */}
       <section className="py-10 md:py-16 px-4 md:px-8 bg-gray-50">
-        <div className="container mx-auto">
-          <div className="flex flex-col sm:flex-row justify-between items-center mb-6">
+        <div className="container mx-auto mb-6">
+          <div className="flex flex-col sm:flex-row justify-between items-center">
             <div>
               <h2 className="text-4xl sm:text-4xl font-bold text-arteng-dark text-center sm:text-left">Meet The Team</h2>
               <p className="text-gray-600 text-center sm:text-left text-lg sm:text-lg">Meet the team behind ArtEng</p>
