@@ -1,4 +1,4 @@
-'use client';
+w'use client';
 import Link from 'next/link';
 import Image from 'next/image';
 import HeroSection from '@/components/HeroSection';
@@ -153,8 +153,8 @@ export default function Home() {
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all"></div>
               </div>
               <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors">Wendy Bennett</h3>
-              <p className="text-xs sm:text-sm">Managing Director</p>
-              <p className="text-xs sm:text-sm text-center lg:min-h-[12rem] sm:min-h-[18rem] md:min-h-[18rem]">Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields. She worked within the precision investment casting industry for 26 years and was CEO and previous owner of Lost Wax Development Limited.</p>
+              <p className="text-m sm:text-m">Managing Director</p>
+              <p className="text-m sm:text-m text-center lg:min-h-[14rem] sm:min-h-[18rem] md:min-h-[18rem]">Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields. She worked within the precision investment casting industry for 26 years and was CEO and previous owner of Lost Wax Development Limited.</p>
               
               <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity ">
                 <div className="flex items-center text-arteng-dark">
@@ -179,8 +179,8 @@ export default function Home() {
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all "></div>
               </div>
               <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors ">Stephen Fletcher</h3>
-              <p className="text-xs sm:text-sm">Creative Director</p>
-              <p className="text-xs sm:text-sm text-center lg:min-h-[12rem] sm:min-h-[18rem] md:min-h-[18rem]">Stephen's career spans more than 45 years covering a range of roles including Logistics/Transport management, Project management, Key Account management and Sales Business Development.</p>
+              <p className="text-m sm:text-m">Creative Director</p>
+              <p className="text-m sm:text-m text-center lg:min-h-[14rem] sm:min-h-[18rem] md:min-h-[18rem]">Stephen's career spans more than 45 years covering a range of roles including Logistics/Transport management, Project management, Key Account management and Sales Business Development.</p>
               <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity">
                 <div className="flex items-center text-arteng-dark">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -204,8 +204,8 @@ export default function Home() {
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all "></div>
               </div>
               <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors">Joan Smith</h3>
-              <p className="text-xs sm:text-sm">Corporate Director</p>
-              <p className="text-xs sm:text-sm text-center lg:min-h-[12rem] sm:min-h-[14rem] md:min-h-[14rem]">With over 20 years of experience in business advice and guidance, Joan brings a wealth of knowledge in all areas of business support. Having worked with hundreds of companies across diverse sectors, Joan has always managed to understand their unique challenges and opportunities that businesses face.</p>
+              <p className="text-m sm:text-m">Corporate Director</p>
+              <p className="text-m sm:text-m text-center lg:min-h-[14rem] sm:min-h-[18rem] md:min-h-[18rem]">With over 20 years of experience in business advice and guidance, Joan brings a wealth of knowledge in all areas of business support. Having worked with hundreds of companies across diverse sectors, Joan has always managed to understand their unique challenges and opportunities that businesses face.</p>
               
               <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity">
                 <div className="flex items-center text-arteng-dark">
@@ -230,8 +230,8 @@ export default function Home() {
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all"></div>
               </div>
               <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors ">Adam Snelleksz</h3>
-              <p className="text-xs sm:text-sm">Marketing Director</p>
-              <p className="text-xs sm:text-sm text-center lg:min-h-[12rem] sm:min-h-[14rem] md:min-h-[14rem]">Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations. After graduating from university with a marketing degree, Adam moved to London and worked in a busy press office for the National Consumer Council.</p>
+              <p className="text-m sm:text-m">Marketing Director</p>
+              <p className="text-m sm:text-m text-center lg:min-h-[14rem] sm:min-h-[18rem] md:min-h-[18rem]">Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations. After graduating from university with a marketing degree, Adam moved to London and worked in a busy press office for the National Consumer Council.</p>
               
               <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity ">
                 <div className="flex items-center text-arteng-dark">
