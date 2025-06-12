@@ -134,7 +134,7 @@ export default function AboutUsPage() {
                   <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                 </div>
                 <h3 className="text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">{member.name}</h3>
-                <p className="text-sm">{member.role}</p>
+                <p className="text-m">{member.role}</p>
                 <p className={`text-m text-center ${member.id === 2 ? 'mb-16' : 'mb-6'}`}>{member.description}</p>
                 
                 {/* Click indicator - Fixed position at bottom */}
