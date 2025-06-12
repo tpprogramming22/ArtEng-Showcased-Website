@@ -135,7 +135,7 @@ export default function AboutUsPage() {
                 </div>
                 <h3 className="text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">{member.name}</h3>
                 <p className="text-sm">{member.role}</p>
-                <p className={`text-sm text-center ${member.id === 2 ? 'mb-16' : 'mb-6'}`}>{member.description}</p>
+                <p className={`text-m text-center ${member.id === 2 ? 'mb-16' : 'mb-6'}`}>{member.description}</p>
                 
                 {/* Click indicator - Fixed position at bottom */}
                 <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -191,9 +191,9 @@ export default function AboutUsPage() {
             <div className="flex flex-col w-full overflow-y-auto">
               <h2 className="text-xl md:text-3xl font-bold mb-2">{selectedMember.name}</h2>
               <p className="text-base md:text-2xl mb-4">{selectedMember.role}</p>
-              <p className="text-black mb-4 text-sm md:text-base">{selectedMember.long1}</p>
-              <p className="text-black mb-4 text-sm md:text-base">{selectedMember.long2}</p>
-              {selectedMember.long3 && <p className="text-black mb-4 text-sm md:text-base">{selectedMember.long3}</p>}
+              <p className="text-black mb-4 text-m md:text-base">{selectedMember.long1}</p>
+              <p className="text-black mb-4 text-m md:text-base">{selectedMember.long2}</p>
+              {selectedMember.long3 && <p className="text-black mb-4 text-m md:text-base">{selectedMember.long3}</p>}
             </div>
                 
           </div>
