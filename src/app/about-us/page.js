@@ -135,7 +135,7 @@ export default function AboutUsPage() {
                 </div>
                 <h3 className="text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300">{member.name}</h3>
                 <p className="text-m">{member.role}</p>
-                <p className={`text-m text-center ${member.id === 2 ? 'mb-18' : 'mb-6'}`}>{member.description}</p>
+                <p className={`text-m text-center ${member.id === 2 ? 'mb-14' : 'mb-6'}`}>{member.description}</p>
                 
                 {/* Click indicator - Fixed position at bottom */}
                 <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -172,17 +172,17 @@ export default function AboutUsPage() {
               <div className="relative w-56 h-56 mb-6 ">
                 <Image src={selectedMember.imageUrl} alt={selectedMember.name} fill className="object-cover rounded-md" />
               </div>
-              <div className="grid grid-cols-4 md:grid-cols-4 lg:grid-cols-4 ml-8 relative flex-shrink-0 mb-6 ">
-                <div className="relative w-full md:w-10 h-10 md:h-10 flex-shrink-0">
+              <div className="grid grid-cols-4 md:grid-cols-4 lg:grid-cols-4 ml-8 relative flex-shrink-0">
+                <div className="relative w-full md:w-8 h-8 md:h-8 flex-shrink-0">
                   <Image src="linkedin.png" alt={selectedMember.name} fill className="object-cover rounded-md" />
                 </div>
-                <div className="relative w-full md:w-10 h-10 md:h-10 flex-shrink-0">
+                <div className="relative w-full md:w-8 h-8 md:h-8 flex-shrink-0">
                   <Image src="whatsapp.jpg" alt={selectedMember.name} fill className="object-cover rounded-md" />
                 </div>
-                <div className="relative w-full md:w-10 h-10 md:h-10 flex-shrink-0">
+                <div className="relative w-full md:w-8 h-8 md:h-8 flex-shrink-0">
                   <Image src="gmail.png" alt={selectedMember.name} fill className="object-cover rounded-md" />
                 </div>
-                <div className="relative w-full md:w-10 h-10 md:h-10 flex-shrink-0">
+                <div className="relative w-full md:w-8 h-8 md:h-8 flex-shrink-0">
                   <Image src="x.png" alt={selectedMember.name} fill className="object-cover rounded-md" />
                 </div>
               </div>
