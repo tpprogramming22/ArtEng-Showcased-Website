@@ -75,7 +75,7 @@ export default function Home() {
               <h1 className="text-5xl md:text-5xl font-bold mb-4">Bringing Art &<br />Engineering Together</h1>
             </div>
             <div className="text-center">
-              <p className="text-base md:text-2xl">Connecting, nurturing and developing the artistic and engineering worlds...</p>
+              <p className="text-base md:text-2xl text-lg">Connecting, nurturing and developing the artistic and engineering worlds...</p>
             </div>
           </div>
         </div>
@@ -103,13 +103,13 @@ export default function Home() {
             </div>
             
             <div className="lg:col-span-6">
-              <p className="mb-3 md:mb-4 text-gray-800 text-sm md:text-lg">
+              <p className="mb-3 md:mb-4 text-gray-800 text-lg">
                 ArtEng is an innovative concept that merges the worlds of art and engineering to encourage creativity and problem-solving in industry. It was established to bridge the gap between art and engineering, offering a platform for artists, engineers, and creators to collaborate and develop groundbreaking solutions.
               </p>
-              <p className="mb-3 md:mb-4 text-gray-800 text-sm md:text-lg">
+              <p className="mb-3 md:mb-4 text-gray-800 text-lg">
                 Through networking, events and a programme of activities, ArtEng is striving to cultivate a dynamic space where imagination meets engineering, resulting in groundbreaking works that shape the future of both art and technology.
               </p>
-              <p className="mb-3 md:mb-4 text-gray-800 text-sm md:text-lg">
+              <p className="mb-3 md:mb-4 text-gray-800 text-lg">
                 We want to foster a creative community that blurs the lines between art and engineering, providing the tools, resources and opportunities to experiment, collaborate, and develop projects that challenge traditional perspectives.
               </p>
               
@@ -250,7 +250,7 @@ export default function Home() {
         <div className="container mx-auto">
           <div>
             <h2 className="text-4xl sm:text-4xl font-bold text-arteng-dark text-center sm:text-left">Latest News</h2>
-            <p className="text-gray-600 text-center sm:text-left text-lg sm:text-lg">Keep up to date with what's happening, what our partners have been up to and all our news</p>
+            <p className="text-gray-600 text-center text-lg">Keep up to date with what's happening, what our partners have been up to and all our news</p>
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -301,7 +301,7 @@ export default function Home() {
             <p className="text-gray-600 text-center sm:text-left text-lg sm:text-lg">Primary Partners</p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 text-m">
             <SponsorCard 
               name="Forusall" 
               logo="/forusall.jpg" 
