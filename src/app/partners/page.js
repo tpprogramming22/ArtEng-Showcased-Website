@@ -49,7 +49,7 @@ export default function PartnersPage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-auto w-auto bg-gray-200 rounded-md overflow-hidden mb-16">
+            <div className="relative h-3/4 w-3/4 bg-gray-200 rounded-md overflow-hidden mb-16">
               <Image 
                 src="/partnerspagenew.jpg" 
                 alt="Partnership Opportunities" 
