@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import SectionHeader from '@/components/SectionHeader';
 import MailtoNotifyForm from '@/components/SignUp';
 
@@ -87,88 +87,96 @@ const EventCard = ({
 export default function EventsPage() {
   const [showForm, setShowForm] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
+  const [events, setEvents] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  // Carousel events
-  const carouselEvents = [
-    {
-      id: 1,
-      title: "Web Development Workshop",
-      description: "A hands-on workshop covering modern web development techniques and best practices.",
-      imageUrl: "/exhibition-opening.jpg",
-      dateTime: "Monday 15th May - 10:00 AM - 4:00 PM",
-      location: "Tech Hub",
-      hostedBy: "David Johnson",
-      longDescription: "This intensive one-day workshop will cover the latest web development techniques, frameworks, and best practices. Participants will get hands-on experience building responsive websites using modern tools like React, Next.js, and Tailwind CSS. Whether you're a beginner looking to enter the field or an experienced developer wanting to update your skills, this workshop offers valuable insights and practical knowledge. All participants will receive a certificate of completion and follow-up resources to continue their learning journey."
-    },
-    {
-      id: 2,
-      title: "Creative Thinking Masterclass",
-      description: "Learn how to unlock your creative potential and apply innovative thinking to technical challenges.",
-      imageUrl: "/engineering-forum.jpg",
-      dateTime: "Wednesday 17th May - 2:00 PM - 5:00 PM",
-      location: "Innovation Studio",
-      hostedBy: "Maria Chen",
-      longDescription: "This masterclass focuses on unlocking your creative potential and applying innovative thinking to technical challenges. Led by design thinking expert Maria Chen, the session will guide participants through proven creativity techniques, brainstorming methods, and problem-solving frameworks used by leading innovators. You'll participate in collaborative exercises designed to break down mental barriers and discover new approaches to familiar problems. This session is ideal for engineers looking to incorporate more creative approaches into their work and artists seeking to understand how their skills can apply to technical domains."
-    },
-    {
-      id: 3,
-      title: "Networking Mixer",
-      description: "Connect with professionals from both artistic and technical fields in this casual networking event.",
-      imageUrl: "/digital-art-workshop.jpg",
-      dateTime: "Friday 19th May - 6:00 PM - 9:00 PM",
-      location: "Urban Lounge",
-      hostedBy: "Community Team",
-      longDescription: "Join us for a relaxed evening of meaningful connections at our Networking Mixer. This event brings together professionals from both artistic and technical fields, creating a unique environment for cross-disciplinary networking. Enjoy complimentary refreshments while meeting potential collaborators, mentors, and friends who share your interest in the intersection of art and engineering. The evening will include structured networking activities designed to facilitate genuine conversations and relationship-building. Whether you're looking for project partners, career opportunities, or simply to expand your professional circle, this mixer provides the perfect setting to connect with like-minded individuals."
+  // Helper function to format date
+  const formatEventDate = (dateString) => {
+    try {
+      const date = new Date(dateString);
+      const options = {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+      };
+      return date.toLocaleDateString('en-GB', options);
+    } catch (error) {
+      return dateString; // Fallback to original string if parsing fails
     }
-  ];
+  };
 
-  // Featured events
-  const featuredEvents = [
-    {
-      id: 4,
-      title: "Annual CEO Innovation Award",
-      description: "Join us for our prestigious ceremony recognizing outstanding leadership and innovation within the company, with keynote speeches from industry pioneers.",
-      imageUrl: "/ceo-award.jpg",
-      dateTime: "Friday 12th May - 7:00 PM - 10:00 PM",
-      location: "Grand Ballroom",
-      hostedBy: "Executive Board",
-      longDescription: "The Annual CEO Innovation Award is our flagship event recognizing outstanding leadership, innovation, and transformative thinking within the company. The evening will feature keynote speeches from industry pioneers, networking opportunities with leaders in both art and engineering fields, and the much-anticipated award ceremony. This is an excellent opportunity to celebrate excellence, gain insights from successful innovators, and build valuable connections within the ArtEng community."
-    },
-    {
-      id: 5,
-      title: "ArtEng Innovation Awards",
-      description: "Celebrating creative breakthroughs and technical excellence across disciplines, showcasing the most groundbreaking projects of the year.",
-      imageUrl: "/innovation-awards.jpg",
-      dateTime: "Saturday 20th May - 6:30 PM - 9:30 PM",
-      location: "Innovation Gallery",
-      hostedBy: "Dr. Sarah Chen",
-      longDescription: "The ArtEng Innovation Awards celebrate creative breakthroughs and technical excellence across multiple disciplines. This prestigious event showcases the most groundbreaking projects of the year, highlighting the powerful results achieved when artistic vision meets engineering precision. Attendees will enjoy an interactive exhibition of nominated projects, panel discussions with award finalists, and a formal awards ceremony recognizing achievements in categories such as Sustainable Design, Digital Innovation, and Collaborative Excellence. Join us for an inspiring evening that showcases the best of interdisciplinary creativity."
-    },
-    {
-      id: 6,
-      title: "End of Year Celebration",
-      description: "A festive gathering to reflect on our achievements, recognize team contributions, and unveil exciting new initiatives for the coming year.",
-      imageUrl: "/eoy-celebration.jpg",
-      dateTime: "Friday 15th December - 8:00 PM - 12:00 AM",
-      location: "Rooftop Garden",
-      hostedBy: "Community Team",
-      longDescription: "Join us for our End of Year Celebration, a festive gathering where we'll reflect on this year's remarkable achievements, recognize outstanding team contributions, and unveil exciting new initiatives planned for the coming year. The evening will feature immersive artistic installations created in collaboration with our engineering teams, live performances that blend technology and creative expression, and opportunities to connect with fellow members of the ArtEng community. Refreshments and entertainment will be provided in a relaxed atmosphere designed to celebrate our collective successes and build excitement for future opportunities."
+  // Helper function to determine if event is "this week"
+  const isThisWeek = (dateString) => {
+    try {
+      const eventDate = new Date(dateString);
+      const now = new Date();
+      const weekFromNow = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000);
+      
+      return eventDate >= now && eventDate <= weekFromNow;
+    } catch (error) {
+      return false;
     }
-  ];
+  };
 
-  // Create carousel components with the proper event handlers
-  const carouselCards = carouselEvents.map((event) => (
-    <EventCard
-      key={event.id}
-      imageUrl={event.imageUrl}
-      title={event.title}
-      description={event.description}
-      dateTime={event.dateTime}
-      location={event.location}
-      hostedBy={event.hostedBy}
-      onCardClick={() => setSelectedEvent(event)}
-    />
-  ));
+  // Transform API event to match component expectations
+  const transformEvent = (apiEvent) => ({
+    id: apiEvent.id,
+    title: apiEvent.title,
+    subtitle: apiEvent.subtitle,
+    description: apiEvent.description,
+    imageUrl: apiEvent.bannerImage || apiEvent.thumbImage, // Use banner image, fallback to thumb
+    thumbImage: apiEvent.thumbImage,
+    dateTime: formatEventDate(apiEvent.date),
+    rawDate: apiEvent.date,
+    location: apiEvent.location,
+    hostedBy: apiEvent.sponsor || 'ArtEng Community', // Use sponsor as host, fallback to default
+    capacity: apiEvent.capacity,
+    price: apiEvent.price,
+    sponsorLogo: apiEvent.sponsorLogo,
+    publishDate: apiEvent.publishDate,
+    longDescription: apiEvent.description // Using description as long description since API doesn't provide separate field
+  });
+
+  // Fetch events from API
+  useEffect(() => {
+    const fetchEvents = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch('https://arteng-be.onrender.com/api/v1/events');
+        
+        if (!response.ok) {
+          throw new Error('Failed to fetch events');
+        }
+        
+        const data = await response.json();
+        
+        if (data.success && data.data) {
+          const transformedEvents = data.data.map(transformEvent);
+          setEvents(transformedEvents);
+        } else {
+          setEvents([]);
+        }
+        
+        setError(null);
+      } catch (err) {
+        console.error('Error fetching events:', err);
+        setError('Failed to load events. Please try again later.');
+        setEvents([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchEvents();
+  }, []);
+
+  // Separate events into this week and featured
+  const thisWeekEvents = events.filter(event => isThisWeek(event.rawDate));
+  const featuredEvents = events.filter(event => !isThisWeek(event.rawDate));
 
   const toggleForm = () => {
     setShowForm(prevState => !prevState);
@@ -177,6 +185,55 @@ export default function EventsPage() {
   const closeModal = () => {
     setSelectedEvent(null);
   };
+
+  // Loading state
+  if (loading) {
+    return (
+      <div className="min-h-screen">
+        {/* Hero Section */}
+        <section className="bg-arteng-dark text-white py-12 pt-24">
+          <div className="container mx-auto px-4 md:px-8">
+            <h1 className="text-4xl font-bold mb-4">Event Schedule</h1>
+            <p className="text-lg">Browse our upcoming events and reserve your spot today.</p>
+          </div>
+        </section>
+        
+        <div className="flex items-center justify-center py-20">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-arteng-dark mx-auto mb-4"></div>
+            <p className="text-gray-600">Loading events...</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Error state
+  if (error) {
+    return (
+      <div className="min-h-screen">
+        {/* Hero Section */}
+        <section className="bg-arteng-dark text-white py-12 pt-24">
+          <div className="container mx-auto px-4 md:px-8">
+            <h1 className="text-4xl font-bold mb-4">Event Schedule</h1>
+            <p className="text-lg">Browse our upcoming events and reserve your spot today.</p>
+          </div>
+        </section>
+        
+        <div className="flex items-center justify-center py-20">
+          <div className="text-center">
+            <p className="text-red-600 mb-4">{error}</p>
+            <button 
+              onClick={() => window.location.reload()} 
+              className="bg-arteng-dark text-white px-4 py-2 rounded hover:bg-opacity-90 transition-colors"
+            >
+              Try Again
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen">
@@ -190,59 +247,76 @@ export default function EventsPage() {
       
       <div className='relative'>
         {/* This Week's Events */}
-        <section className="py-16 px-4 md:px-8 bg-gray-50">
-          <div className="container mx-auto">
-            <SectionHeader 
-              title="This Week" 
-              subtitle="Upcoming at ArtEng" 
-            />
-            
-            {/* Custom carousel implementation to avoid reloading issues */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {carouselEvents.map((event) => (
-                <EventCard
-                  key={event.id}
-                  imageUrl={event.imageUrl}
-                  title={event.title}
-                  description={event.description}
-                  dateTime={event.dateTime}
-                  location={event.location}
-                  hostedBy={event.hostedBy}
-                  onCardClick={() => setSelectedEvent(event)}
-                />
-              ))}
+        {thisWeekEvents.length > 0 && (
+          <section className="py-16 px-4 md:px-8 bg-gray-50">
+            <div className="container mx-auto">
+              <SectionHeader 
+                title="This Week" 
+                subtitle="Upcoming at ArtEng" 
+              />
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {thisWeekEvents.map((event) => (
+                  <EventCard
+                    key={event.id}
+                    imageUrl={event.imageUrl}
+                    title={event.title}
+                    description={event.description}
+                    dateTime={event.dateTime}
+                    location={event.location}
+                    hostedBy={event.hostedBy}
+                    onCardClick={() => setSelectedEvent(event)}
+                  />
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
 
         {/* Featured Events */}
         <section className="py-16 px-4 md:px-8">
           <div className="container mx-auto">
             <SectionHeader 
               title="Event Schedule" 
-              subtitle="Featured Events" 
+              subtitle={featuredEvents.length > 0 ? "Featured Events" : "All Events"} 
             />
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {featuredEvents.map((event) => (
-                <EventCard
-                  key={event.id}
-                  imageUrl={event.imageUrl}
-                  title={event.title}
-                  description={event.description}
-                  dateTime={event.dateTime}
-                  location={event.location}
-                  hostedBy={event.hostedBy}
-                  onCardClick={() => setSelectedEvent(event)}
-                />
-              ))}
-            </div>
+            {events.length === 0 ? (
+              <div className="text-center py-12">
+                <p className="text-gray-600 text-lg mb-4">No events available at the moment.</p>
+                <p className="text-gray-500">Check back later for upcoming events!</p>
+              </div>
+            ) : featuredEvents.length === 0 && thisWeekEvents.length > 0 ? (
+              <div className="text-center py-12">
+                <p className="text-gray-600 text-lg">All upcoming events are happening this week!</p>
+                <p className="text-gray-500">Check the "This Week" section above.</p>
+              </div>
+            ) : (
+              <>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {featuredEvents.map((event) => (
+                    <EventCard
+                      key={event.id}
+                      imageUrl={event.imageUrl}
+                      title={event.title}
+                      description={event.description}
+                      dateTime={event.dateTime}
+                      location={event.location}
+                      hostedBy={event.hostedBy}
+                      onCardClick={() => setSelectedEvent(event)}
+                    />
+                  ))}
+                </div>
 
-            <div className="flex justify-center w-full mt-8">
-              <Link href="/events" className="inline-block bg-arteng-dark text-white px-4 py-2 rounded text-sm hover:bg-opacity-90 transition-colors w-32 text-center">
-                View All
-              </Link>
-            </div>
+                {featuredEvents.length > 6 && (
+                  <div className="flex justify-center w-full mt-8">
+                    <Link href="/events" className="inline-block bg-arteng-dark text-white px-4 py-2 rounded text-sm hover:bg-opacity-90 transition-colors w-32 text-center">
+                      View All
+                    </Link>
+                  </div>
+                )}
+              </>
+            )}
           </div>
         </section>
       </div>
@@ -271,6 +345,9 @@ export default function EventsPage() {
               
               <div className="p-4 md:p-6">
                 <h2 className="text-xl md:text-2xl font-bold mb-2 text-arteng-dark">{selectedEvent.title}</h2>
+                {selectedEvent.subtitle && (
+                  <h3 className="text-lg text-gray-600 mb-3">{selectedEvent.subtitle}</h3>
+                )}
                 
                 <div className="flex flex-col md:flex-row flex-wrap gap-2 md:gap-4 mb-4 text-sm">
                   <div className="flex items-center gap-2">
@@ -294,6 +371,24 @@ export default function EventsPage() {
                     </svg>
                     <span>Hosted by {selectedEvent.hostedBy}</span>
                   </div>
+
+                  {selectedEvent.capacity && (
+                    <div className="flex items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                      </svg>
+                      <span>Capacity: {selectedEvent.capacity}</span>
+                    </div>
+                  )}
+
+                  {selectedEvent.price !== undefined && (
+                    <div className="flex items-center gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                      </svg>
+                      <span>{selectedEvent.price === 0 ? 'Free' : `£${(selectedEvent.price / 100).toFixed(2)}`}</span>
+                    </div>
+                  )}
                 </div>
                 
                 <p className="text-gray-700 mb-6 text-sm md:text-base">{selectedEvent.longDescription}</p>
