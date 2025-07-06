@@ -38,7 +38,7 @@ const Navbar = () => {
         <Link href="/" className="text-3xl font-bold flex items-center" onClick={closeMenu}>
           <div className="mr-2">
             <Image
-              src="/logo.svg"
+              src="/my-logo.png"
               alt="ArtEng Logo"
               width={180}
               height={60}

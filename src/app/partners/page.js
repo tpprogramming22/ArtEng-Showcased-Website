@@ -28,7 +28,7 @@ export default function PartnersPage() {
       id: 4,
       name: "Tool Life",
       logo: "/tool_life.png",
-      description: "TooLife brings all the elements of the tool making industry together to create awareness of best manufacturing practices for businesses and individuals. We aim to address not only the needs of today’s manufacturing process but look to shape the industry for future generations."
+      description: "TooLife brings all the elements of the tool making industry together to create awareness of best manufacturing practices for businesses and individuals. We aim to address not only the needs of today's manufacturing process but look to shape the industry for future generations."
     }
   ];
 
@@ -54,15 +54,13 @@ export default function PartnersPage() {
                 src="/partnerspagenew.jpg" 
                 alt="Partnership Opportunities" 
                 fill
+                className="object-cover"
               />
             </div>
             
             <div>
-              <p className="mb-4 text-lg">
+              <p className="mb-6 text-xl">
                 Partnering with Arteng offers a unique opportunity for companies seeking to innovate, stand out in competitive markets, and connect with stakeholders in the art and engineering industries. We offer a unique approach that blends creativity with technical precision and this synergy leads to the development of products, services, and experiences that are not only functional but also visually engaging.  By collaborating with Arteng professionals or initiatives, companies gain access to fresh perspectives that can reimagine how their brand communicates, operates, and evolves. In marketing and branding, Arteng driven ideas can create more immersive and memorable experiences.
-              </p>
-              <p className="mb-6 text-lg">
-                In sectors like technology and manufacturing where innovation is essential, Arteng fosters agile problem-solving by encouraging teams to think beyond conventional boundaries. It also supports a culture of innovation that attracts top talent and resonates with socially and environmentally conscious consumers.
               </p>
             </div>
           </div>
@@ -82,7 +80,6 @@ export default function PartnersPage() {
         <div className="container mx-auto">
           <div>
             <h2 className="text-4xl sm:text-4xl font-bold text-arteng-dark text-center sm:text-left">Our Partners</h2>
-            <p className="text-gray-600 text-center sm:text-left text-lg sm:text-lg">Primary Partners</p>
           </div>
           
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">

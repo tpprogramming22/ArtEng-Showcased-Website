@@ -103,14 +103,11 @@ export default function Home() {
             </div>
             
             <div className="lg:col-span-6">
-              <p className="mb-3 md:mb-4 text-gray-800 text-sm md:text-lg">
+              <p className="mb-3 md:mb-4 text-gray-800 text-base md:text-xl">
                 ArtEng is an innovative concept that merges the worlds of art and engineering to encourage creativity and problem-solving in industry. It was established to bridge the gap between art and engineering, offering a platform for artists, engineers, and creators to collaborate and develop groundbreaking solutions.
               </p>
-              <p className="mb-3 md:mb-4 text-gray-800 text-sm md:text-lg">
+              <p className="mb-3 md:mb-4 text-gray-800 text-base md:text-xl">
                 Through networking, events and a programme of activities, ArtEng is striving to cultivate a dynamic space where imagination meets engineering, resulting in groundbreaking works that shape the future of both art and technology.
-              </p>
-              <p className="mb-3 md:mb-4 text-gray-800 text-sm md:text-lg">
-                We want to foster a creative community that blurs the lines between art and engineering, providing the tools, resources and opportunities to experiment, collaborate, and develop projects that challenge traditional perspectives.
               </p>
               
               {/* Button centered under the right column content */}
@@ -154,7 +151,7 @@ export default function Home() {
               </div>
               <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors">Wendy Bennett</h3>
               <p className="text-m sm:text-m">Managing Director</p>
-              <p className="text-m sm:text-s text-center lg:min-h-[14rem] sm:min-h-[12rem] md:min-h-[10rem] lg:max-h-[14rem] sm:max-h-[12rem] md:max-h-[10rem] line-clamp-10 sm:line-clamp-10">Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields. She worked within the precision investment casting industry for 26 years and was CEO and previous owner of Lost Wax Development Limited.</p>
+              <p className="text-sm sm:text-base text-center lg:min-h-[14rem] sm:min-h-[12rem] md:min-h-[10rem] lg:max-h-[14rem] sm:max-h-[12rem] md:max-h-[10rem] line-clamp-10 sm:line-clamp-10">Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields.</p>
               
               <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity ">
                 <div className="flex items-center text-arteng-dark">
@@ -180,7 +177,7 @@ export default function Home() {
               </div>
               <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors ">Stephen Fletcher</h3>
               <p className="text-m sm:text-m">Creative Director</p>
-              <p className="text-m sm:text-m text-center lg:min-h-[14rem] sm:min-h-[12rem] md:min-h-[10rem] lg:max-h-[14rem] sm:max-h-[12rem] md:max-h-[10rem] line-clamp-10 sm:line-clamp-10">Stephen's career spans more than 45 years covering a range of roles including Logistics/Transport management, Project management, Key Account management and Sales Business Development.</p>
+              <p className="text-sm sm:text-base text-center lg:min-h-[14rem] sm:min-h-[12rem] md:min-h-[10rem] lg:max-h-[14rem] sm:max-h-[12rem] md:max-h-[10rem] line-clamp-10 sm:line-clamp-10">Stephen's career spans more than 45 years covering a range of roles including Logistics/Transport management, Project management, Key Account management and Sales Business Development.</p>
               <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity">
                 <div className="flex items-center text-arteng-dark">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -205,7 +202,7 @@ export default function Home() {
               </div>
               <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors">Joan Smith</h3>
               <p className="text-m sm:text-m">Corporate Director</p>
-              <p className="text-m sm:text-m text-center lg:min-h-[14rem] sm:min-h-[12rem] md:min-h-[10rem] lg:max-h-[14rem] sm:max-h-[12rem] md:max-h-[10rem] line-clamp-10 sm:line-clamp-10">With over 20 years of experience in business advice and guidance, Joan brings a wealth of knowledge in all areas of business support. Having worked with hundreds of companies across diverse sectors, Joan has always managed to understand their unique challenges and opportunities that businesses face.</p>
+              <p className="text-sm sm:text-base text-center lg:min-h-[14rem] sm:min-h-[12rem] md:min-h-[10rem] lg:max-h-[14rem] sm:max-h-[12rem] md:max-h-[10rem] line-clamp-10 sm:line-clamp-10">With over 20 years of experience in business advice and guidance, Joan brings a wealth of knowledge in all areas of business support.</p>
               
               <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity">
                 <div className="flex items-center text-arteng-dark">
@@ -231,7 +228,7 @@ export default function Home() {
               </div>
               <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors ">Adam Snelleksz</h3>
               <p className="text-m sm:text-m">Marketing Director</p>
-              <p className="text-m sm:text-m text-center lg:min-h-[14rem] sm:min-h-[12rem] md:min-h-[10rem] lg:max-h-[14rem] sm:max-h-[12rem] md:max-h-[10rem] line-clamp-10 sm:line-clamp-10">Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations. After graduating from university with a marketing degree, Adam moved to London and worked in a busy press office for the National Consumer Council.</p>
+              <p className="text-sm sm:text-base text-center lg:min-h-[14rem] sm:min-h-[12rem] md:min-h-[10rem] lg:max-h-[14rem] sm:max-h-[12rem] md:max-h-[10rem] line-clamp-10 sm:line-clamp-10">Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations.</p>
               
               <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity ">
                 <div className="flex items-center text-arteng-dark">
