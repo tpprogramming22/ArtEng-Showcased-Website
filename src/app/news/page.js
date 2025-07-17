@@ -145,9 +145,10 @@ export default function ArticlesPage() {
     fetchArticles();
   }, []);
 
-  // Separate articles into featured (recent) and other articles
-  const featuredArticles = articles.filter(article => isFeaturedArticle(article.rawDate));
-  const recentArticles = articles.filter(article => !isFeaturedArticle(article.rawDate));
+  // For articles page: 
+  // Show the 1 latest article as "featured" and ALL articles in "all articles"
+  const featuredArticles = articles.slice(0, 1); // Only the latest article
+  const allArticles = articles; // All articles including the featured one
 
   const toggleForm = () => {
     setShowForm(prevState => !prevState);
@@ -248,16 +249,12 @@ export default function ArticlesPage() {
           </section>
         )}
 
-        {/* All Articles / Recent Articles */}
+        {/* All Articles Section */}
         <section className={`py-16 px-4 md:px-8 ${featuredArticles.length > 0 ? 'bg-gray-50' : ''}`}>
           <div className="container mx-auto">
             <div>
-              <h2 className="text-4xl sm:text-4xl font-bold text-arteng-dark text-center sm:text-left">
-                {featuredArticles.length > 0 ? 'All Articles' : 'News'}
-              </h2>
-              <p className="text-gray-600 text-center sm:text-left text-lg sm:text-lg">
-                {articles.length > 0 ? 'Stay Informed' : 'Articles'}
-              </p>
+              <h2 className="text-4xl sm:text-4xl font-bold text-arteng-dark text-center sm:text-left">All Articles</h2>
+              <p className="text-gray-600 text-center sm:text-left text-lg sm:text-lg">Stay Informed</p>
             </div>
             
             {articles.length === 0 ? (
@@ -265,15 +262,10 @@ export default function ArticlesPage() {
                 <p className="text-gray-600 text-lg mb-4">No articles available at the moment.</p>
                 <p className="text-gray-500">Check back later for the latest news and updates!</p>
               </div>
-            ) : featuredArticles.length > 0 && recentArticles.length === 0 ? (
-              <div className="text-center py-12">
-                <p className="text-gray-600 text-lg">All recent articles are featured above!</p>
-                <p className="text-gray-500">Check the "Featured News" section.</p>
-              </div>
             ) : (
               <>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {(featuredArticles.length > 0 ? recentArticles : articles).map((article) => (
+                  {allArticles.map((article) => (
                     <div
                       key={article.id}
                       onClick={() => setSelectedArticle(article)}
@@ -291,7 +283,7 @@ export default function ArticlesPage() {
                   ))}
                 </div>
 
-                {(featuredArticles.length > 0 ? recentArticles : articles).length > 6 && (
+                {allArticles.length > 6 && (
                   <div className="mt-8 flex justify-center">
                     <Link href="/news" className="inline-block bg-arteng-dark text-white px-4 py-2 rounded text-sm hover:bg-opacity-90 transition-colors w-32 text-center">
                       Load More
@@ -315,7 +307,7 @@ export default function ArticlesPage() {
                     src={selectedArticle.imageUrl} 
                     alt={selectedArticle.title} 
                     fill 
-                    className="object-cover"
+                    className="object-cover object-center"
                   />
                   <button 
                     onClick={closeModal}

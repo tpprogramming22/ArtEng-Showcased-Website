@@ -500,7 +500,7 @@ export default function Home() {
                     src={selectedArticle.imageUrl} 
                     alt={selectedArticle.title} 
                     fill 
-                    className="object-cover"
+                    className="object-cover object-center"
                   />
                   <button 
                     onClick={closeArticleModal}
@@ -578,14 +578,15 @@ export default function Home() {
       {/* Event Modal */}
       {selectedEvent && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+          <div className="bg-white rounded-lg shadow-xl max-w-5xl w-full max-h-[90vh] overflow-y-auto">
             <div className="relative">
+              {/* Main Banner Image */}
               <div className="h-64 relative">
                 <Image 
                   src={selectedEvent.imageUrl} 
                   alt={selectedEvent.title} 
                   fill 
-                  className="object-cover"
+                  className="object-cover object-center"
                 />
                 <button 
                   onClick={closeEventModal}
@@ -598,56 +599,95 @@ export default function Home() {
               </div>
               
               <div className="p-6">
-                <h2 className="text-2xl font-bold mb-2 text-arteng-dark">{selectedEvent.title}</h2>
-                {selectedEvent.subtitle && (
-                  <h3 className="text-lg text-gray-600 mb-3">{selectedEvent.subtitle}</h3>
-                )}
-                
-                <div className="flex flex-wrap gap-4 mb-4 text-sm">
-                  <div className="flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                    <span>{selectedEvent.dateTime}</span>
-                  </div>
-                  
-                  <div className="flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    <span>{selectedEvent.location}</span>
-                  </div>
-                  
-                  <div className="flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                    </svg>
-                    <span>Hosted by {selectedEvent.hostedBy}</span>
+                <div className="flex flex-col lg:flex-row gap-6">
+                  {/* Main Content */}
+                  <div className="flex-1">
+                    <h2 className="text-2xl font-bold mb-2 text-arteng-dark">{selectedEvent.title}</h2>
+                    {selectedEvent.subtitle && (
+                      <h3 className="text-lg text-gray-600 mb-3">{selectedEvent.subtitle}</h3>
+                    )}
+                    
+                    <div className="flex flex-wrap gap-4 mb-4 text-sm">
+                      <div className="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        <span>{selectedEvent.dateTime}</span>
+                      </div>
+                      
+                      <div className="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        <span>{selectedEvent.location}</span>
+                      </div>
+                      
+                      <div className="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                        <span>Hosted by {selectedEvent.hostedBy}</span>
+                      </div>
+
+                      {selectedEvent.capacity && (
+                        <div className="flex items-center gap-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                          </svg>
+                          <span>Capacity: {selectedEvent.capacity}</span>
+                        </div>
+                      )}
+
+                      {selectedEvent.price !== undefined && (
+                        <div className="flex items-center gap-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                          </svg>
+                          <span>{selectedEvent.price === 0 ? 'Free' : `£${(selectedEvent.price / 100).toFixed(2)}`}</span>
+                        </div>
+                      )}
+                    </div>
+                    
+                    <p className="text-gray-700 mb-6">{selectedEvent.longDescription}</p>
                   </div>
 
-                  {selectedEvent.capacity && (
-                    <div className="flex items-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                      </svg>
-                      <span>Capacity: {selectedEvent.capacity}</span>
-                    </div>
-                  )}
+                  {/* Side Panel with Additional Images */}
+                  <div className="lg:w-80 space-y-4">
+                    {/* Thumbnail Image */}
+                    {selectedEvent.thumbImage && selectedEvent.thumbImage !== selectedEvent.imageUrl && (
+                      <div className="bg-gray-50 p-4 rounded-lg">
+                        <h4 className="text-sm font-semibold text-gray-700 mb-2">Event Gallery</h4>
+                        <div className="relative h-32 rounded-md overflow-hidden">
+                          <Image 
+                            src={selectedEvent.thumbImage} 
+                            alt="Event thumbnail" 
+                            fill 
+                            className="object-cover"
+                          />
+                        </div>
+                      </div>
+                    )}
 
-                  {selectedEvent.price !== undefined && (
-                    <div className="flex items-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                      </svg>
-                      <span>{selectedEvent.price === 0 ? 'Free' : `£${(selectedEvent.price / 100).toFixed(2)}`}</span>
-                    </div>
-                  )}
+                    {/* Sponsor Logo */}
+                    {selectedEvent.sponsorLogo && (
+                      <div className="bg-gray-50 p-4 rounded-lg">
+                        <h4 className="text-sm font-semibold text-gray-700 mb-2">Event Sponsor</h4>
+                        <div className="relative h-20 bg-white rounded-md p-2 flex items-center justify-center">
+                          <Image 
+                            src={selectedEvent.sponsorLogo} 
+                            alt="Sponsor logo" 
+                            fill 
+                            className="object-contain p-2"
+                          />
+                        </div>
+                        <p className="text-xs text-gray-600 mt-2 text-center">Sponsored by {selectedEvent.hostedBy}</p>
+                      </div>
+                    )}
+                  </div>
                 </div>
                 
-                <p className="text-gray-700 mb-6">{selectedEvent.longDescription}</p>
-                
-                <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 justify-center">
+                <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 justify-center mt-6 pt-6 border-t border-gray-200">
                   <Link href="/login" className="bg-arteng-dark text-white py-2 px-6 rounded hover:bg-opacity-90 transition-colors text-center">
                     Register Now
                   </Link>
