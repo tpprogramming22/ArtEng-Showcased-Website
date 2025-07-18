@@ -260,8 +260,8 @@ export default function Home() {
         <div className="container mx-auto mb-6">
           <div className="flex flex-col sm:flex-row justify-between items-center">
             <div>
-              <h2 className="text-4xl sm:text-4xl font-bold text-arteng-dark text-center sm:text-left">Meet The Team</h2>
-              <p className="text-gray-600 text-center sm:text-left text-lg sm:text-lg">Meet the team behind ArtEng</p>
+              <h2 className="text-4xl sm:text-4xl font-bold text-arteng-dark text-center sm:text-left">Co-Founders</h2>
+              <p className="text-gray-600 text-center sm:text-left text-lg sm:text-lg">The team behind ArtEng</p>
             </div>
             <Link href="/about-us" className="mt-3 sm:mt-0 bg-black text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded text-xs sm:text-sm hover:bg-gray-800 transition-colors">
               More Info
@@ -284,8 +284,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all"></div>
               </div>
               <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors">Wendy Bennett</h3>
-              <p className="text-m sm:text-m">Managing Director</p>
-              <p className="text-sm sm:text-base text-center lg:min-h-[14rem] sm:min-h-[12rem] md:min-h-[10rem] lg:max-h-[14rem] sm:max-h-[12rem] md:max-h-[10rem] line-clamp-10 sm:line-clamp-10">Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields.</p>
+              <p className="text-sm sm:text-base text-center mb-4">Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields.</p>
               
               <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity ">
                 <div className="flex items-center text-arteng-dark">
@@ -310,8 +309,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all "></div>
               </div>
               <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors ">Stephen Fletcher</h3>
-              <p className="text-m sm:text-m">Creative Director</p>
-              <p className="text-sm sm:text-base text-center lg:min-h-[14rem] sm:min-h-[12rem] md:min-h-[10rem] lg:max-h-[14rem] sm:max-h-[12rem] md:max-h-[10rem] line-clamp-10 sm:line-clamp-10">Stephen's career spans more than 45 years covering a range of roles including Logistics/Transport management, Project management, Key Account management and Sales Business Development.</p>
+              <p className="text-sm sm:text-base text-center mb-4">Stephen's career spans more than 45 years covering a range of roles including Logistics/Transport management, Project management, Key Account management and Sales Business Development.</p>
               <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity">
                 <div className="flex items-center text-arteng-dark">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -335,8 +333,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all "></div>
               </div>
               <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors">Joan Smith</h3>
-              <p className="text-m sm:text-m">Corporate Director</p>
-              <p className="text-sm sm:text-base text-center lg:min-h-[14rem] sm:min-h-[12rem] md:min-h-[10rem] lg:max-h-[14rem] sm:max-h-[12rem] md:max-h-[10rem] line-clamp-10 sm:line-clamp-10">With over 20 years of experience in business advice and guidance, Joan brings a wealth of knowledge in all areas of business support.</p>
+              <p className="text-sm sm:text-base text-center mb-4">With over 20 years of experience in business advice and guidance, Joan brings a wealth of knowledge in all areas of business support.</p>
               
               <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity">
                 <div className="flex items-center text-arteng-dark">
@@ -361,8 +358,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all"></div>
               </div>
               <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors ">Adam Snelleksz</h3>
-              <p className="text-m sm:text-m">Marketing Director</p>
-              <p className="text-sm sm:text-base text-center lg:min-h-[14rem] sm:min-h-[12rem] md:min-h-[10rem] lg:max-h-[14rem] sm:max-h-[12rem] md:max-h-[10rem] line-clamp-10 sm:line-clamp-10">Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations.</p>
+              <p className="text-sm sm:text-base text-center mb-4">Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations.</p>
               
               <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity ">
                 <div className="flex items-center text-arteng-dark">
@@ -467,7 +463,7 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             <SponsorCard 
               name="Forusall" 
-              logo="/forusall.jpg" 
+              logo="/hello123.jpg" 
               description="Forusall is a company that is at the heart of connecting people, promoting product awareness, championing innovation and joining likeminded businesses."
             />
             <SponsorCard 

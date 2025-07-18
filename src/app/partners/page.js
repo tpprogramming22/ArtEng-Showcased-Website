@@ -9,7 +9,7 @@ export default function PartnersPage() {
     {
       id: 1,
       name: "Forusall",
-      logo: "/forusall.jpg",
+      logo: "/Forusall.jpg",
       description: "Forusall is a company that is at the heart of connecting people, promoting product awareness, championing innovation and joining likeminded businesses. With a commitment to supporting and promoting engineering and manufacturing in its many forms, Forusall is passionate about the very shapes, designs and innovations that influence the everyday lives of each and everyone of us."
     },
     {
@@ -54,7 +54,7 @@ export default function PartnersPage() {
                 src="/partnerspagenew.jpg" 
                 alt="Partnership Opportunities" 
                 fill
-                className="object-cover"
+                className="object-cover object-center"
               />
             </div>
             
