@@ -55,8 +55,8 @@ export default function FAQPage() {
       {/* Hero Section */}
       <section className="bg-arteng-dark text-white py-12 pt-24">
         <div className="container mx-auto px-4 md:px-8">
-          <h1 className="text-4xl font-bold mb-4">Frequently Asked Questions</h1>
-          <p className="text-lg">Have a question about ArtEng? Whether it’s about membership, becoming a partner, one of our networking events or how to get the best out of ArtEng, your question could be answered here. If you can’t find what you’re looking for in our Frequently Asked Questions then please get in touch with us at info@arteng.co.uk</p>
+          <h1 className="text-4xl font-bold mb-4 text-left">Frequently Asked Questions</h1>
+          <p className="text-lg text-left">Have a question about ArtEng? Whether it's about membership, becoming a partner, one of our networking events or how to get the best out of ArtEng, your question could be answered here. If you can't find what you're looking for in our Frequently Asked Questions then please get in touch with us at info@arteng.co.uk</p>
         </div>
       </section>
 
@@ -66,11 +66,11 @@ export default function FAQPage() {
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border border-gray-200 rounded-md overflow-hidden">
-                <AccordionTrigger className="px-6 py-4 bg-gray-50 hover:bg-gray-100 font-medium text-arteng-dark">
+                <AccordionTrigger className="px-6 py-4 bg-gray-50 hover:bg-gray-100 font-medium text-arteng-dark text-left">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="px-6 py-4">
-                  <p className="text-gray-700">{faq.answer}</p>
+                  <p className="text-gray-700 text-left">{faq.answer}</p>
                 </AccordionContent>
               </AccordionItem>
             ))}
@@ -80,14 +80,16 @@ export default function FAQPage() {
 
       {/* Contact Section */}
       <section className="py-16 px-4 md:px-8 bg-gray-50">
-        <div className="container mx-auto max-w-3xl text-center">
-          <h2 className="text-2xl font-bold text-arteng-dark mb-4">Still Have Questions?</h2>
-          <p className="mb-8">
+        <div className="container mx-auto max-w-3xl">
+          <h2 className="text-2xl font-bold text-arteng-dark mb-4 text-left">Still Have Questions?</h2>
+          <p className="mb-8 text-left">
             If you couldn't find the answer to your question, feel free to contact us directly.
           </p>
-          <button className="bg-arteng-dark text-white px-8 py-3 rounded-md font-medium hover:bg-opacity-90 transition-colors">
-            Contact Us
-          </button>
+          <div className="text-left">
+            <button className="bg-arteng-dark text-white px-8 py-3 rounded-md font-medium hover:bg-opacity-90 transition-colors">
+              Contact Us
+            </button>
+          </div>
         </div>
       </section>
     </div>

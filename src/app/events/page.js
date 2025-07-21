@@ -128,7 +128,8 @@ export default function EventsPage() {
     title: apiEvent.title,
     subtitle: apiEvent.subtitle,
     description: apiEvent.description,
-    imageUrl: apiEvent.bannerImage || apiEvent.thumbImage, // Use banner image, fallback to thumb
+    imageUrl: apiEvent.thumbImage || apiEvent.bannerImage, // Use thumb image first, fallback to banner
+    bannerImage: apiEvent.bannerImage, // Keep banner for modal
     thumbImage: apiEvent.thumbImage,
     dateTime: formatEventDate(apiEvent.date),
     rawDate: apiEvent.date,
@@ -332,7 +333,7 @@ export default function EventsPage() {
               {/* Main Banner Image */}
               <div className="h-64 relative">
                 <Image 
-                  src={selectedEvent.imageUrl} 
+                  src={selectedEvent.bannerImage || selectedEvent.imageUrl} 
                   alt={selectedEvent.title} 
                   fill 
                   className="object-cover object-center"
@@ -403,14 +404,14 @@ export default function EventsPage() {
 
                   {/* Side Panel with Additional Images */}
                   <div className="lg:w-80 space-y-4">
-                    {/* Thumbnail Image */}
-                    {selectedEvent.thumbImage && selectedEvent.thumbImage !== selectedEvent.imageUrl && (
+                    {/* Additional Images - only show if different from main card image */}
+                    {selectedEvent.bannerImage && selectedEvent.bannerImage !== selectedEvent.imageUrl && (
                       <div className="bg-gray-50 p-4 rounded-lg">
                         <h4 className="text-sm font-semibold text-gray-700 mb-2">Event Gallery</h4>
                         <div className="relative h-32 rounded-md overflow-hidden">
                           <Image 
-                            src={selectedEvent.thumbImage} 
-                            alt="Event thumbnail" 
+                            src={selectedEvent.bannerImage} 
+                            alt="Event banner" 
                             fill 
                             className="object-cover"
                           />

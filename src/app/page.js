@@ -126,7 +126,8 @@ export default function Home() {
     title: apiEvent.title,
     subtitle: apiEvent.subtitle,
     description: apiEvent.description,
-    imageUrl: apiEvent.bannerImage || apiEvent.thumbImage,
+    imageUrl: apiEvent.thumbImage || apiEvent.bannerImage, // Use thumb image first, fallback to banner
+    bannerImage: apiEvent.bannerImage, // Keep banner for modal
     thumbImage: apiEvent.thumbImage,
     dateTime: formatEventDate(apiEvent.date),
     rawDate: apiEvent.date,
@@ -271,8 +272,7 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-2">
             {/* Team members arranged by surname alphabetical order */}
             <div 
-              className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative"
-              onClick={() => window.location.href = '/about-us'}
+              className="flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow"
             >
               <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4 mt-2">
                 <Image 
@@ -281,23 +281,13 @@ export default function Home() {
                   fill 
                   className="object-cover rounded-md"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all"></div>
               </div>
-              <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors">Wendy Bennett</h3>
+              <h3 className="text-base sm:text-lg font-bold">Wendy Bennett</h3>
               <p className="text-sm sm:text-base text-center mb-4">Wendy is a trailblazer for women in industry and has a reputation for becoming the first female in a variety of positions across many engineering fields.</p>
-              
-              <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity ">
-                <div className="flex items-center text-arteng-dark">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </div>
-              </div>
             </div>
 
             <div 
-              className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative"
-              onClick={() => window.location.href = '/about-us'}
+              className="flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow"
             >
               <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4 mt-2">
                 <Image 
@@ -306,22 +296,13 @@ export default function Home() {
                   fill 
                   className="object-cover rounded-md"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all "></div>
               </div>
-              <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors ">Stephen Fletcher</h3>
+              <h3 className="text-base sm:text-lg font-bold">Stephen Fletcher</h3>
               <p className="text-sm sm:text-base text-center mb-4">Stephen's career spans more than 45 years covering a range of roles including Logistics/Transport management, Project management, Key Account management and Sales Business Development.</p>
-              <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                <div className="flex items-center text-arteng-dark">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </div>
-              </div>
             </div>
 
             <div 
-              className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative"
-              onClick={() => window.location.href = '/about-us'}
+              className="flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow"
             >
               <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4 mt-2">
                 <Image 
@@ -330,23 +311,13 @@ export default function Home() {
                   fill 
                   className="object-cover rounded-md"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all "></div>
               </div>
-              <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors">Joan Smith</h3>
+              <h3 className="text-base sm:text-lg font-bold">Joan Smith</h3>
               <p className="text-sm sm:text-base text-center mb-4">With over 20 years of experience in business advice and guidance, Joan brings a wealth of knowledge in all areas of business support.</p>
-              
-              <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                <div className="flex items-center text-arteng-dark">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </div>
-              </div>
             </div>
                 
             <div 
-              className="cursor-pointer flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-105 group relative"
-              onClick={() => window.location.href = '/about-us'}
+              className="flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow"
             >
               <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4 mt-2">
                 <Image 
@@ -355,18 +326,9 @@ export default function Home() {
                   fill 
                   className="object-cover rounded-md"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all"></div>
               </div>
-              <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors ">Adam Snelleksz</h3>
+              <h3 className="text-base sm:text-lg font-bold">Adam Snelleksz</h3>
               <p className="text-sm sm:text-base text-center mb-4">Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations.</p>
-              
-              <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity ">
-                <div className="flex items-center text-arteng-dark">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -389,7 +351,10 @@ export default function Home() {
               {featuredNews.map((article) => (
                 <div
                   key={article.id}
-                  onClick={() => setSelectedArticle(article)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setSelectedArticle(article);
+                  }}
                   className="cursor-pointer"
                 >
                   <Card
@@ -428,7 +393,10 @@ export default function Home() {
               {upcomingEvents.map((event) => (
                 <div
                   key={event.id}
-                  onClick={() => setSelectedEvent(event)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setSelectedEvent(event);
+                  }}
                   className="cursor-pointer"
                 >
                   <Card
@@ -463,7 +431,7 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             <SponsorCard 
               name="Forusall" 
-              logo="/hello123.jpg" 
+              logo="/thisoneisit.png" 
               description="Forusall is a company that is at the heart of connecting people, promoting product awareness, championing innovation and joining likeminded businesses."
             />
             <SponsorCard 
@@ -579,7 +547,7 @@ export default function Home() {
               {/* Main Banner Image */}
               <div className="h-64 relative">
                 <Image 
-                  src={selectedEvent.imageUrl} 
+                  src={selectedEvent.bannerImage || selectedEvent.imageUrl} 
                   alt={selectedEvent.title} 
                   fill 
                   className="object-cover object-center"
@@ -650,14 +618,14 @@ export default function Home() {
 
                   {/* Side Panel with Additional Images */}
                   <div className="lg:w-80 space-y-4">
-                    {/* Thumbnail Image */}
-                    {selectedEvent.thumbImage && selectedEvent.thumbImage !== selectedEvent.imageUrl && (
+                    {/* Additional Images - only show if different from main card image */}
+                    {selectedEvent.bannerImage && selectedEvent.bannerImage !== selectedEvent.imageUrl && (
                       <div className="bg-gray-50 p-4 rounded-lg">
                         <h4 className="text-sm font-semibold text-gray-700 mb-2">Event Gallery</h4>
                         <div className="relative h-32 rounded-md overflow-hidden">
                           <Image 
-                            src={selectedEvent.thumbImage} 
-                            alt="Event thumbnail" 
+                            src={selectedEvent.bannerImage} 
+                            alt="Event banner" 
                             fill 
                             className="object-cover"
                           />
