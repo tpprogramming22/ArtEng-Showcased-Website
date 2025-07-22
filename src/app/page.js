@@ -140,12 +140,19 @@ export default function Home() {
     longDescription: apiEvent.description
   });
 
-  // Fetch articles from API
+  // Fetch articles from API with retry logic
   useEffect(() => {
-    const fetchArticles = async () => {
+    const fetchArticles = async (retryCount = 0) => {
       try {
         setLoadingNews(true);
         const response = await fetch('https://arteng-be.onrender.com/api/v1/articles');
+        
+        if (response.status === 429 && retryCount < 2) {
+          // Wait and retry for rate limit
+          console.log('Rate limited, retrying in 3 seconds...');
+          setTimeout(() => fetchArticles(retryCount + 1), 3000);
+          return;
+        }
         
         if (response.ok) {
           const data = await response.json();
@@ -154,9 +161,15 @@ export default function Home() {
             // Take the first 3 articles for the homepage
             setFeaturedNews(transformedArticles.slice(0, 3));
           }
+        } else {
+          console.error('Failed to fetch articles:', response.status, response.statusText);
         }
       } catch (err) {
         console.error('Error fetching articles:', err);
+        if (retryCount < 2) {
+          console.log('Retrying articles fetch in 2 seconds...');
+          setTimeout(() => fetchArticles(retryCount + 1), 2000);
+        }
         // Keep empty array on error
       } finally {
         setLoadingNews(false);
@@ -166,12 +179,19 @@ export default function Home() {
     fetchArticles();
   }, []);
 
-  // Fetch events from API
+  // Fetch events from API with retry logic
   useEffect(() => {
-    const fetchEvents = async () => {
+    const fetchEvents = async (retryCount = 0) => {
       try {
         setLoadingEvents(true);
         const response = await fetch('https://arteng-be.onrender.com/api/v1/events');
+        
+        if (response.status === 429 && retryCount < 2) {
+          // Wait and retry for rate limit
+          console.log('Rate limited, retrying in 3 seconds...');
+          setTimeout(() => fetchEvents(retryCount + 1), 3000);
+          return;
+        }
         
         if (response.ok) {
           const data = await response.json();
@@ -180,9 +200,15 @@ export default function Home() {
             // Take the first 3 events for the homepage
             setUpcomingEvents(transformedEvents.slice(0, 3));
           }
+        } else {
+          console.error('Failed to fetch events:', response.status, response.statusText);
         }
       } catch (err) {
         console.error('Error fetching events:', err);
+        if (retryCount < 2) {
+          console.log('Retrying events fetch in 2 seconds...');
+          setTimeout(() => fetchEvents(retryCount + 1), 2000);
+        }
         // Keep empty array on error
       } finally {
         setLoadingEvents(false);
@@ -618,21 +644,6 @@ export default function Home() {
 
                   {/* Side Panel with Additional Images */}
                   <div className="lg:w-80 space-y-4">
-                    {/* Additional Images - only show if different from main card image */}
-                    {selectedEvent.bannerImage && selectedEvent.bannerImage !== selectedEvent.imageUrl && (
-                      <div className="bg-gray-50 p-4 rounded-lg">
-                        <h4 className="text-sm font-semibold text-gray-700 mb-2">Event Gallery</h4>
-                        <div className="relative h-32 rounded-md overflow-hidden">
-                          <Image 
-                            src={selectedEvent.bannerImage} 
-                            alt="Event banner" 
-                            fill 
-                            className="object-cover"
-                          />
-                        </div>
-                      </div>
-                    )}
-
                     {/* Sponsor Logo */}
                     {selectedEvent.sponsorLogo && (
                       <div className="bg-gray-50 p-4 rounded-lg">

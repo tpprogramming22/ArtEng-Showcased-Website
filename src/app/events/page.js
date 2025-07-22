@@ -404,21 +404,6 @@ export default function EventsPage() {
 
                   {/* Side Panel with Additional Images */}
                   <div className="lg:w-80 space-y-4">
-                    {/* Additional Images - only show if different from main card image */}
-                    {selectedEvent.bannerImage && selectedEvent.bannerImage !== selectedEvent.imageUrl && (
-                      <div className="bg-gray-50 p-4 rounded-lg">
-                        <h4 className="text-sm font-semibold text-gray-700 mb-2">Event Gallery</h4>
-                        <div className="relative h-32 rounded-md overflow-hidden">
-                          <Image 
-                            src={selectedEvent.bannerImage} 
-                            alt="Event banner" 
-                            fill 
-                            className="object-cover"
-                          />
-                        </div>
-                      </div>
-                    )}
-
                     {/* Sponsor Logo */}
                     {selectedEvent.sponsorLogo && (
                       <div className="bg-gray-50 p-4 rounded-lg">
