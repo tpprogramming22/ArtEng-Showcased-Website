@@ -423,9 +423,9 @@ export default function EventsPage() {
                 </div>
                 
                 <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 justify-center mt-6 pt-6 border-t border-gray-200">
-                  <Link href="/login" className="bg-arteng-dark text-white py-2 px-6 rounded hover:bg-opacity-90 transition-colors text-center">
-                    Register Now
-                  </Link>
+<Link href={`/events/signup?eventId=${selectedEvent.id}`} className="bg-arteng-dark text-white py-2 px-6 rounded hover:bg-opacity-90 transition-colors text-center">
+  Register Now
+</Link>
                   
                   <button 
                     onClick={closeModal}
