@@ -14,7 +14,6 @@ export default function Home() {
   const [upcomingEvents, setUpcomingEvents] = useState([]);
   const [loadingNews, setLoadingNews] = useState(true);
   const [loadingEvents, setLoadingEvents] = useState(true);
-  const [selectedArticle, setSelectedArticle] = useState(null);
   const [selectedEvent, setSelectedEvent] = useState(null);
 
   // Helper function to format article date
@@ -67,39 +66,6 @@ export default function Home() {
     return text;
   };
 
-  // Helper function to render rich text content as JSX
-  const renderRichText = (richTextContent) => {
-    if (!richTextContent || !richTextContent.content) return '';
-    
-    const renderNode = (node, index) => {
-      if (node.nodeType === 'text') {
-        if (node.marks && node.marks.length > 0) {
-          let text = node.value;
-          node.marks.forEach(mark => {
-            if (mark.type === 'italic') {
-              text = <em key={index}>{text}</em>;
-            } else if (mark.type === 'bold') {
-              text = <strong key={index}>{text}</strong>;
-            }
-          });
-          return text;
-        }
-        return node.value;
-      } else if (node.nodeType === 'paragraph') {
-        return (
-          <p key={index} className="mb-4">
-            {node.content.map((child, childIndex) => renderNode(child, childIndex))}
-          </p>
-        );
-      } else if (node.content) {
-        return node.content.map((child, childIndex) => renderNode(child, childIndex));
-      }
-      return null;
-    };
-    
-    return richTextContent.content.map((node, index) => renderNode(node, index));
-  };
-
   // Transform API article to match component expectations
   const transformArticle = (apiArticle) => {
     const imageUrl = apiArticle.fields.featuredImage?.fields?.file?.url 
@@ -111,7 +77,6 @@ export default function Home() {
       title: apiArticle.fields.title,
       slug: apiArticle.fields.slug,
       description: apiArticle.fields.excerpt || extractPlainText(apiArticle.fields.content).substring(0, 150) + '...',
-      fullContent: apiArticle.fields.content,
       imageUrl: imageUrl,
       date: formatArticleDate(apiArticle.sys.createdAt),
       rawDate: apiArticle.sys.createdAt,
@@ -158,6 +123,7 @@ export default function Home() {
           const data = await response.json();
           if (data.success && data.data) {
             const transformedArticles = data.data.map(transformArticle);
+            console.log('Homepage articles:', transformedArticles); // Debug log
             // Take the first 3 articles for the homepage
             setFeaturedNews(transformedArticles.slice(0, 3));
           }
@@ -217,10 +183,6 @@ export default function Home() {
 
     fetchEvents();
   }, []);
-
-  const closeArticleModal = () => {
-    setSelectedArticle(null);
-  };
 
   const closeEventModal = () => {
     setSelectedEvent(null);
@@ -375,23 +337,15 @@ export default function Home() {
           ) : featuredNews.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {featuredNews.map((article) => (
-                <div
+                <Card
                   key={article.id}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setSelectedArticle(article);
-                  }}
-                  className="cursor-pointer"
-                >
-                  <Card
-                    imageUrl={article.imageUrl}
-                    title={article.title}
-                    description={article.description}
-                    dateTime={article.date}
-                    link="#"
-                    linkText="Read More"
-                  />
-                </div>
+                  imageUrl={article.imageUrl}
+                  title={article.title}
+                  description={article.description}
+                  dateTime={article.date}
+                  link={`/news/${encodeURIComponent(article.id)}`}
+                  linkText="Read More"
+                />
               ))}
             </div>
           ) : (
@@ -417,25 +371,21 @@ export default function Home() {
           ) : upcomingEvents.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {upcomingEvents.map((event) => (
-                <div
+                <Card
                   key={event.id}
-                  onClick={(e) => {
+                  imageUrl={event.imageUrl}
+                  title={event.title}
+                  description={event.description}
+                  dateTime={event.dateTime}
+                  location={event.location}
+                  hostedBy={event.hostedBy}
+                  link="#"
+                  linkText="More Info"
+                  onCardClick={(e) => {
                     e.preventDefault();
                     setSelectedEvent(event);
                   }}
-                  className="cursor-pointer"
-                >
-                  <Card
-                    imageUrl={event.imageUrl}
-                    title={event.title}
-                    description={event.description}
-                    dateTime={event.dateTime}
-                    location={event.location}
-                    hostedBy={event.hostedBy}
-                    link="#"
-                    linkText="More Info"
-                  />
-                </div>
+                />
               ))}
             </div>
           ) : (
@@ -478,92 +428,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Article Modal */}
-      {selectedArticle && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-            <div className="relative">
-              {selectedArticle.imageUrl && (
-                <div className="h-64 relative">
-                  <Image 
-                    src={selectedArticle.imageUrl} 
-                    alt={selectedArticle.title} 
-                    fill 
-                    className="object-cover object-center"
-                  />
-                  <button 
-                    onClick={closeArticleModal}
-                    className="absolute top-4 right-4 bg-white rounded-full p-2 shadow-md"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
-                </div>
-              )}
-              
-              {!selectedArticle.imageUrl && (
-                <button 
-                  onClick={closeArticleModal}
-                  className="absolute top-4 right-4 bg-gray-100 rounded-full p-2 shadow-md"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              )}
-              
-              <div className="p-6">
-                <h2 className="text-2xl font-bold mb-2 text-arteng-dark">{selectedArticle.title}</h2>
-                
-                <div className="flex flex-wrap gap-4 mb-4 text-sm text-gray-600">
-                  <div className="flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                    <span>{selectedArticle.date}</span>
-                  </div>
-                  
-                  {selectedArticle.author && (
-                    <div className="flex items-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                      </svg>
-                      <span>By {selectedArticle.author}</span>
-                    </div>
-                  )}
-                </div>
-
-                {selectedArticle.tags && selectedArticle.tags.length > 0 && (
-                  <div className="mb-4">
-                    <div className="flex flex-wrap gap-2">
-                      {selectedArticle.tags.map((tag, index) => (
-                        <span key={index} className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-                
-                <div className="text-gray-700 mb-6 leading-relaxed">
-                  {renderRichText(selectedArticle.fullContent)}
-                </div>
-                
-                <div className="flex justify-center">
-                  <button 
-                    onClick={closeArticleModal}
-                    className="border border-gray-300 py-2 px-6 rounded hover:bg-gray-50 transition-colors"
-                  >
-                    Close
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Event Modal */}
       {selectedEvent && (

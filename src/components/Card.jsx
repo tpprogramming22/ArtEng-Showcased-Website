@@ -10,7 +10,8 @@ const Card = ({
   aspectRatio = "aspect-video",
   hostedBy = null,
   dateTime = null,
-  location = null
+  location = null,
+  onCardClick = null
 }) => {
   return (
     <div className="bg-white rounded-md overflow-hidden shadow-sm border border-gray-200 flex flex-col h-full">
@@ -63,9 +64,22 @@ const Card = ({
         )}
         
         <div className="mt-auto flex justify-center w-full">
-          <Link href={link} className="inline-block bg-arteng-dark text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded text-xs sm:text-sm hover:bg-opacity-90 transition-colors w-28 sm:w-32 text-center">
-            {linkText}
-          </Link>
+          {onCardClick ? (
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                onCardClick(e);
+              }}
+              className="inline-block bg-arteng-dark text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded text-xs sm:text-sm hover:bg-opacity-90 transition-colors w-28 sm:w-32 text-center"
+            >
+              {linkText}
+            </button>
+          ) : (
+            <Link href={link} className="inline-block bg-arteng-dark text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded text-xs sm:text-sm hover:bg-opacity-90 transition-colors w-28 sm:w-32 text-center">
+              {linkText}
+            </Link>
+          )}
         </div>
       </div>
     </div>
