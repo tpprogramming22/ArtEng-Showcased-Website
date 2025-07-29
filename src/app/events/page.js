@@ -278,7 +278,7 @@ export default function EventsPage() {
           <div className="container mx-auto">
             <SectionHeader 
               title="Event Schedule" 
-              subtitle={featuredEvents.length > 0 ? "Featured Events" : "All Events"} 
+              subtitle={featuredEvents.length > 0 ? "Featured Events" : "Upcoming Events"} 
             />
             
             {events.length === 0 ? (
