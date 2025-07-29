@@ -18,7 +18,7 @@ export default function MembershipPage() {
 
       {/* Tabs */}
       <Tabs defaultValue="member" className="max-w-4xl mx-auto">
-      <TabsList className="grid w-full h-auto grid-cols-2 mb-4 p-0 gap-2">
+      <TabsList className="grid w-full bg-force-override h-auto grid-cols-2 mb-4 p-0 gap-2">
         <TabsTrigger value="member" className="text-lg py-3 font-medium h-14 w-full data-[state=active]:bg-black data-[state=active]:text-white data-[state=inactive]:bg-gray-200 rounded-lg">Member</TabsTrigger>
         <TabsTrigger value="partner" className="text-lg py-3 font-medium h-14 w-full data-[state=active]:bg-black data-[state=active]:text-white data-[state=inactive]:bg-gray-200 rounded-lg">Partner</TabsTrigger>
       </TabsList>

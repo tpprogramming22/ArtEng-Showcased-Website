@@ -91,6 +91,10 @@
   color: white;
 }
 
+.bg-force-override {
+  background-color: var(--background);
+}
+
 .section-title {
   font-weight: 700;
   font-size: 2rem;
