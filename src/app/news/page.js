@@ -98,11 +98,6 @@ export default function ArticlesPage() {
     fetchArticles();
   }, []);
 
-  // For articles page: 
-  // Show the 1 latest article as "featured" and ALL articles in "all articles"
-  const featuredArticles = articles.slice(0, 1); // Only the latest article
-  const allArticles = articles; // All articles including the featured one
-
   // Loading state
   if (loading) {
     return (
@@ -162,18 +157,23 @@ export default function ArticlesPage() {
         </div>
       </section>
 
-      <div className="relative">
-        {/* Featured Articles */}
-        {featuredArticles.length > 0 && (
-          <section className="py-16 px-4 md:px-8">
-            <div className="container mx-auto">
-              <div>
-                <h2 className="text-4xl sm:text-4xl font-bold text-arteng-dark text-center sm:text-left">Featured News</h2>
-                <p className="text-gray-600 text-center sm:text-left text-lg sm:text-lg">Latest Articles</p>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {featuredArticles.map((article) => (
+      {/* All Articles Section */}
+      <section className="py-16 px-4 md:px-8">
+        <div className="container mx-auto">
+          <div>
+            <h2 className="text-4xl sm:text-4xl font-bold text-arteng-dark text-center sm:text-left">All Articles</h2>
+            <p className="text-gray-600 text-center sm:text-left text-lg sm:text-lg">Latest Articles</p>
+          </div>
+          
+          {articles.length === 0 ? (
+            <div className="text-center py-12">
+              <p className="text-gray-600 text-lg mb-4">No articles available at the moment.</p>
+              <p className="text-gray-500">Check back later for the latest news and updates!</p>
+            </div>
+          ) : (
+            <>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {articles.map((article) => (
                   <Card
                     key={article.id}
                     imageUrl={article.imageUrl}
@@ -185,51 +185,18 @@ export default function ArticlesPage() {
                   />
                 ))}
               </div>
-            </div>
-          </section>
-        )}
 
-        {/* All Articles Section */}
-        <section className={`py-16 px-4 md:px-8 ${featuredArticles.length > 0 ? 'bg-gray-50' : ''}`}>
-          <div className="container mx-auto">
-            <div>
-              <h2 className="text-4xl sm:text-4xl font-bold text-arteng-dark text-center sm:text-left">All Articles</h2>
-              <p className="text-gray-600 text-center sm:text-left text-lg sm:text-lg">Stay Informed</p>
-            </div>
-            
-            {articles.length === 0 ? (
-              <div className="text-center py-12">
-                <p className="text-gray-600 text-lg mb-4">No articles available at the moment.</p>
-                <p className="text-gray-500">Check back later for the latest news and updates!</p>
-              </div>
-            ) : (
-              <>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {allArticles.map((article) => (
-                    <Card
-                      key={article.id}
-                      imageUrl={article.imageUrl}
-                      title={article.title}
-                      description={article.description}
-                      dateTime={article.date}
-                      link={`/news/${encodeURIComponent(article.id)}`}
-                      linkText="Read More"
-                    />
-                  ))}
+              {articles.length > 6 && (
+                <div className="mt-8 flex justify-center">
+                  <Link href="/news" className="inline-block bg-arteng-dark text-white px-4 py-2 rounded text-sm hover:bg-opacity-90 transition-colors w-32 text-center">
+                    Load More
+                  </Link>
                 </div>
-
-                {allArticles.length > 6 && (
-                  <div className="mt-8 flex justify-center">
-                    <Link href="/news" className="inline-block bg-arteng-dark text-white px-4 py-2 rounded text-sm hover:bg-opacity-90 transition-colors w-32 text-center">
-                      Load More
-                    </Link>
-                  </div>
-                )}
-              </>
-            )}
-          </div>
-        </section>
-      </div>
+              )}
+            </>
+          )}
+        </div>
+      </section>
     </div>
   );
 }
