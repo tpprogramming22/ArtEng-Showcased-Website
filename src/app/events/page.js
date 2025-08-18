@@ -225,7 +225,7 @@ export default function EventsPage() {
   // Loading state
   if (loading) {
     return (
-      <div className="min-h-screen">
+      <div className="h-fit">
         {/* Hero Section */}
         <section className="bg-arteng-dark text-white py-12 pt-24">
           <div className="container mx-auto px-4 md:px-8">
@@ -319,72 +319,6 @@ export default function EventsPage() {
             </div>
           </section>
         )}
-
-        {/* All Events / Other Events */}
-        <section className="py-16 px-4 md:px-8">
-          <div className="container mx-auto">
-            <div>
-              <h2 className="text-4xl sm:text-4xl font-bold text-arteng-dark text-center sm:text-left">
-                Event Schedule
-              </h2>
-              <p className="text-gray-600 text-center sm:text-left text-lg sm:text-lg">
-                {otherEvents.length > 0
-                  ? "All Events"
-                  : featuredEvents.length > 0
-                  ? "All Events"
-                  : "Events"}
-              </p>
-            </div>
-
-            {events.length === 0 ? (
-              <div className="text-center py-12">
-                <p className="text-gray-600 text-lg mb-4">
-                  No events available at the moment.
-                </p>
-                <p className="text-gray-500">
-                  Check back later for upcoming events!
-                </p>
-              </div>
-            ) : otherEvents.length === 0 && featuredEvents.length > 0 ? (
-              <div className="text-center py-12">
-                <p className="text-gray-600 text-lg">
-                  All upcoming events are featured this week!
-                </p>
-                <p className="text-gray-500">
-                  Check the "Featured Events" section above.
-                </p>
-              </div>
-            ) : (
-              <>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-                  {otherEvents.map((event) => (
-                    <EventCard
-                      key={event.id}
-                      imageUrl={event.imageUrl}
-                      title={event.title}
-                      description={event.description}
-                      dateTime={event.dateTime}
-                      location={event.location}
-                      hostedBy={event.hostedBy}
-                      onCardClick={() => setSelectedEvent(event)}
-                    />
-                  ))}
-                </div>
-
-                {otherEvents.length > 6 && (
-                  <div className="flex justify-center w-full mt-8">
-                    <Link
-                      href="/events"
-                      className="inline-block bg-arteng-dark text-white px-4 py-2 rounded text-sm hover:bg-opacity-90 transition-colors w-32 text-center"
-                    >
-                      View All
-                    </Link>
-                  </div>
-                )}
-              </>
-            )}
-          </div>
-        </section>
       </div>
 
       {/* Enhanced Event Modal */}

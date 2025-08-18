@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="bg-arteng-dark text-white">
       <div className="container mx-auto py-8 md:py-12 px-4 md:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
           {/* About Column */}
           <div className="text-center sm:text-left">
             <h3 className="text-xl font-bold mb-4">About ArtEng</h3>
@@ -49,14 +49,6 @@ const Footer = () => {
                 <Link href="/contact" className="text-lg hover:text-gray-300">Contact</Link>
               </li>
             </ul>
-          </div>
-          
-          {/* Contact */}
-          <div className="text-center lg:text-left">
-            <h3 className="text-xl font-bold mb-4">Contact</h3>
-            <address className="not-italic text-lg">
-              <p className="mb-2">Email: <a href="mailto:info@arteng.co.uk" className="hover:text-gray-300">info@arteng.co.uk</a></p>
-            </address>
           </div>
         </div>
         
