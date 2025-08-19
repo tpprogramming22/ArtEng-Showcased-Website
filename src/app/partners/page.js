@@ -54,7 +54,11 @@ export default function PartnersPage() {
                 src="/partnerspagenew.jpg" 
                 alt="Partnership Opportunities" 
                 fill
-                className="object-cover"
+                className="object-cover mobile-image-fix"
+                style={{ 
+                  transform: 'rotate(0deg)',
+                  imageOrientation: 'none'
+                }}
               />
             </div>
             
