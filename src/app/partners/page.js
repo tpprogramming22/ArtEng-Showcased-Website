@@ -55,7 +55,6 @@ export default function PartnersPage() {
                 alt="Partnership Opportunities" 
                 fill
                 className="object-cover"
-                style={{ imageOrientation: 'from-image' }}
               />
             </div>
             
