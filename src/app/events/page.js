@@ -238,7 +238,7 @@ export default function EventsPage() {
 
         <div className="flex items-center justify-center py-20">
           <div className="text-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-arteng-dark mx-auto mb-4"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-arteng-dark mx-auto mb-4 mt-8"></div>
             <p className="text-gray-600">Loading events...</p>
           </div>
         </div>
@@ -319,6 +319,61 @@ export default function EventsPage() {
             </div>
           </section>
         )}
+
+        {/* All Events / Other Events */}
+        <section className="py-16 px-4 md:px-8">
+          <div className="container mx-auto">
+
+            {events.length === 0 ? (
+              <div className="text-center py-12">
+                <p className="text-gray-600 text-lg mb-4">
+                  No events available at the moment.
+                </p>
+                <p className="text-gray-500">
+                  Check back later for upcoming events!
+                </p>
+              </div>
+            ) : otherEvents.length === 0 && featuredEvents.length > 0 ? (
+              <div className="text-center py-12">
+                <p className="text-gray-600 text-lg">
+                  All upcoming events are featured this week!
+                </p>
+                <p className="text-gray-500">
+                  Check the "Featured Events" section above.
+                </p>
+              </div>
+            ) : (
+              <>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {otherEvents.map((event) => (
+                    <EventCard
+                      key={event.id}
+                      imageUrl={event.imageUrl}
+                      title={event.title}
+                      description={event.description}
+                      dateTime={event.dateTime}
+                      location={event.location}
+                      hostedBy={event.hostedBy}
+                      onCardClick={() => setSelectedEvent(event)}
+                    />
+                  ))}
+                </div>
+
+                {otherEvents.length > 6 && (
+                  <div className="flex justify-center w-full mt-8">
+                    <Link
+                      href="/events"
+                      className="inline-block bg-arteng-dark text-white px-4 py-2 rounded text-sm hover:bg-opacity-90 transition-colors w-32 text-center"
+                    >
+                      View All
+                    </Link>
+                  </div>
+                )}
+              </>
+            )}
+          </div>
+        </section>
+
       </div>
 
       {/* Enhanced Event Modal */}
