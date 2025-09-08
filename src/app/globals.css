@@ -154,3 +154,10 @@
 .carousel-indicator.active {
   opacity: 1;
 }
+
+/* Force correct image orientation on mobile devices */
+.mobile-image-fix {
+  transform: rotate(0deg) !important;
+  image-orientation: none !important;
+  -webkit-image-orientation: none !important;
+}

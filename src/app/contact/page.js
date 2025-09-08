@@ -17,10 +17,9 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="bg-arteng-dark text-white py-12 pt-24">
         <div className="container mx-auto px-4 md:px-8">
-          <h1 className="text-5xl font-bold mb-4">Contact Page</h1>
+          <h1 className="text-5xl font-bold mb-4">Contact Us</h1>
           <p className="text-xl">
-            Get in touch by filling in the contact form and if you'd like us to
-            stay in touch with you, sign up to our newsletter below
+            Get in touch with us via LinkedIn
           </p>
         </div>
       </section>
