@@ -3,6 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import SectionHeader from "@/components/SectionHeader";
 import MailtoNotifyForm from "@/components/SignUp";
 
@@ -531,9 +533,11 @@ export default function EventsPage() {
                       )}
                     </div>
 
-                    <p className="text-gray-700 mb-6">
-                      {selectedEvent.longDescription}
-                    </p>
+                    <div className="prose prose-sm max-w-none text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm line-clamp-3 overflow-y-auto">
+                      <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                        {selectedEvent.longDescription}
+                      </ReactMarkdown>
+                    </div>
                   </div>
 
                   {/* Side Panel with Additional Images */}
