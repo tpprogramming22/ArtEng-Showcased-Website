@@ -33,7 +33,11 @@ const EventCard = ({
       </div>
       <div className="p-4 flex-grow flex flex-col">
         <h3 className="font-bold text-lg mb-2 text-arteng-dark">{title}</h3>
-        <p className="text-gray-600 mb-4 text-sm line-clamp-3">{description}</p>
+        <div className="prose prose-sm max-w-none text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm line-clamp-3">
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>
+            {description}
+          </ReactMarkdown>
+        </div>
 
         <div className="mb-4 text-sm space-y-1 flex-grow">
           {dateTime && (
@@ -323,7 +327,6 @@ export default function EventsPage() {
         {/* All Events / Other Events */}
         <section className="py-16 px-4 md:px-8">
           <div className="container mx-auto">
-
             {events.length === 0 ? (
               <div className="text-center py-12">
                 <p className="text-gray-600 text-lg mb-4">
@@ -373,7 +376,6 @@ export default function EventsPage() {
             )}
           </div>
         </section>
-
       </div>
 
       {/* Enhanced Event Modal */}
