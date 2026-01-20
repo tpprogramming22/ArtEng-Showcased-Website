@@ -23,7 +23,7 @@ export default function FAQPage() {
     {
       question: "How do I join?",
       answer:
-        "You can become a member by visiting our membership page on our website. You can complete the application form and make payment.",
+        "You can become a member by reaching out to either Wendy or Stephen, their LinkedIns can be found on the membership page.",
     },
     {
       question: "What are the benefits of membership?",

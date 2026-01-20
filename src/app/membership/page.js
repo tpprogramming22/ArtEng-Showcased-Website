@@ -1,9 +1,16 @@
+'use client'
+
 import Link from 'next/link';
+import { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../components/ui/tabs";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../../components/ui/card";
 import { Button } from "../../components/ui/button";
 
 export default function MembershipPage() {
+
+  const [showMemberLinks, setShowMemberLinks] = useState(false);
+  const [showPartnerLinks, setShowPartnerLinks] = useState(false);
+
   return (
     <div className="container mx-auto px-4 py-12 font-['League_Spartan',sans-serif]">
 
@@ -69,13 +76,31 @@ export default function MembershipPage() {
                 <p className="font-bold text-lg text-black">Cost: <span className="text-xl">£495</span> + VAT</p>
               </div>
             </CardContent>
-            <CardFooter className="pt-0">
-              <Link href="/login">
-                <Button size="lg" className="w-full bg-black hover:bg-[rgb(40,40,40)] text-lg py-6 font-bold shadow-lg hover:shadow-xl transition-all duration-200">
-                  Become a Member
-                </Button>
-              </Link>
-            </CardFooter>
+<CardFooter className="pt-0 flex-col gap-3">
+  <Button 
+    size="lg" 
+    onClick={() => setShowMemberLinks(!showMemberLinks)}
+    className="w-full bg-black hover:bg-[rgb(40,40,40)] text-lg py-6 font-bold shadow-lg hover:shadow-xl transition-all duration-200"
+  >
+    Become a Member
+  </Button>
+  {showMemberLinks && (
+    <div className="flex justify-center gap-4 w-full">
+      <Link href="https://www.linkedin.com/in/wendy-bennett-8952631b/" target="_blank" className="flex flex-col items-center gap-1 hover:opacity-70 transition-opacity">
+        <svg className="w-8 h-8" fill="#0A66C2" viewBox="0 0 24 24">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+        <span className="text-xs font-medium text-gray-600">Wendy</span>
+      </Link>
+      <Link href="https://www.linkedin.com/in/steve-fletcher-46b097238/" target="_blank" className="flex flex-col items-center gap-1 hover:opacity-70 transition-opacity">
+        <svg className="w-8 h-8" fill="#0A66C2" viewBox="0 0 24 24">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+        <span className="text-xs font-medium text-gray-600">Stephen</span>
+      </Link>
+    </div>
+  )}
+</CardFooter>
           </Card>
         </TabsContent>
 
@@ -125,13 +150,31 @@ export default function MembershipPage() {
                 Please contact the ArtEng membership team to find out more about becoming a partner and the associated costs.
               </p>
             </CardContent>
-            <CardFooter className="pt-0">
-              <Link href="/login">
-                <Button size="lg" className="w-full bg-black hover:bg-[rgb(40,40,40)] text-lg py-6 font-bold shadow-lg hover:shadow-xl transition-all duration-200">
-                  Discuss Partnership
-                </Button>
-              </Link>
-            </CardFooter>
+<CardFooter className="pt-0 flex-col gap-3">
+  <Button 
+    size="lg" 
+    onClick={() => setShowPartnerLinks(!showPartnerLinks)}
+    className="w-full bg-black hover:bg-[rgb(40,40,40)] text-lg py-6 font-bold shadow-lg hover:shadow-xl transition-all duration-200"
+  >
+    Discuss Partnership
+  </Button>
+  {showPartnerLinks && (
+    <div className="flex justify-center gap-4 w-full">
+      <Link href="https://www.linkedin.com/in/wendy-bennett-8952631b/" target="_blank" className="flex flex-col items-center gap-1 hover:opacity-70 transition-opacity">
+        <svg className="w-8 h-8" fill="#0A66C2" viewBox="0 0 24 24">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+        <span className="text-xs font-medium text-gray-600">Wendy</span>
+      </Link>
+      <Link href="https://www.linkedin.com/in/steve-fletcher-46b097238/" target="_blank" className="flex flex-col items-center gap-1 hover:opacity-70 transition-opacity">
+        <svg className="w-8 h-8" fill="#0A66C2" viewBox="0 0 24 24">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+        <span className="text-xs font-medium text-gray-600">Stephen</span>
+      </Link>
+    </div>
+  )}
+</CardFooter>
           </Card>
         </TabsContent>
       </Tabs>

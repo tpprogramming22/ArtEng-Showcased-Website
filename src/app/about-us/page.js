@@ -35,34 +35,7 @@ export default function AboutUsPage() {
       long3:
         "Stephen's experience has led to a passion for supporting the transition of students in the move towards a career environment, allowing them access to as much information as they need to complete their studies, because anything is possible if you are supported by the right people.",
       linkedIn: "https://www.linkedin.com/in/steve-fletcher-46b097238/",
-    },
-    {
-      id: 3,
-      name: "Joan Smith",
-      description:
-        "With over 20 years of experience in business advice and guidance, Joan brings a wealth of knowledge in all areas of business support. Having worked with hundreds of companies across diverse sectors, Joan has always managed to understand their unique challenges and opportunities that businesses face.",
-      imageUrl: "/jess-smith.jpg",
-      long1:
-        "With over 20 years of experience in business advice and guidance, Joan brings a wealth of knowledge in all areas of business support. Having worked with hundreds of companies across diverse sectors, Joan has always managed to understand their unique challenges and opportunities that businesses face. Her approach is centred around learning about each business, analysing their needs, and providing tailored solutions to help them achieve their goals.",
-      long2:
-        "As an impartial broker, she specialises in connecting businesses with the right experts and resources, ensuring they receive the guidance needed to thrive. Past experience includes managing members for the Chamber of Commerce and successfully fostering a thriving business community in the Solihull area. This included organising and hosting prestigious business awards evenings - celebrating local success stories, recognising outstanding achievements, and creating opportunities for businesses to showcase their impact on the local, national and global stage. These events not only strengthened connections within the business community but also inspired growth and collaboration.",
-      long3:
-        "Joan's philosophy is 'Let's Make a Difference Together' and she genuinely believes that every business deserves access to expert advice and guidance in all areas. By working together, any business can thrive, achieving goals with clarity, expertise, and a shared purpose.",
-      linkedIn: "https://www.linkedin.com/in/joan--smith/",
-    },
-    {
-      id: 1,
-      name: "Adam Snelleksz",
-      description:
-        "Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations. After graduating from university with a marketing degree, Adam moved to London and worked in a busy press office for the National Consumer Council.",
-      imageUrl: "/adam.png",
-      long1:
-        "Adam has a wide and varied work history in marketing, communication and PR with over 25 years experience in many different roles and organisations. After graduating from university with a marketing degree, Adam moved to London and worked in a busy press office for the National Consumer Council. Following two years in the capital, Adam returned to Birmingham as head of communications for Birmingham City Football Club. The role included hosting and organising manager and player press conferences, dealing with media enquiries and setting up the club's first online TV channel, Blues TV. Adam then stayed in the sports industry when he became head of marketing for Birmingham City Council's sports events department. Responsible for the commercial partnerships, ticket sales, marketing and promotion of world and European championships including the World BMX Championships, European Gymnastics Championships, Diamond League Athletics and many more held at the National Indoor Arena and Birmingham Alexander Stadium.",
-      long2:
-        "After working in sport, Adam took the step of setting up his own company - a video production company called CMA Video. He built the company into a widely recognised video agency which produced TV and cinema adverts for Sea Life Centre, Lego Land, Brooks running shoes and many more. After 12 years of successful trading, Adam sold the business and set up an off-shoot marketing company called CMA Media which specialises in digital marketing, social media and website services. Current clients include Aston University and Birmingham based charity, Help Harry Help Others",
-      long3: "",
-      linkedIn: "https://www.linkedin.com/in/adamsnelleksz/",
-    },
+    }
   ];
 
   return (
@@ -148,66 +121,62 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {/* Co-Founders - Enhanced with hover effects */}
-      <section className="py-16 px-4 md:px-8">
-        <div className="container mx-auto">
-          <div>
-            <h2 className="text-4xl sm:text-4xl font-bold text-arteng-dark text-center sm:text-left">
-              Co-Founders
-            </h2>
+<section className="py-16 px-4 md:px-8">
+  <div className="container mx-auto">
+    <div>
+      <h2 className="text-4xl sm:text-4xl font-bold text-arteng-dark text-center sm:text-left mb-8">
+        Co-Founders
+      </h2>
+    </div>
+    <div className="flex flex-row justify-evenly items-start">
+      {teamMembers.map((member) => (
+        <div
+          key={member.id}
+          onClick={() => setSelectedMember(member)}
+          className="cursor-pointer flex flex-col items-center bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:translate-y-[-3px] group relative max-w-[25%]"
+        >
+          <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4 mt-2 flex-shrink-0">
+            <Image
+              src={member.imageUrl}
+              alt={member.name}
+              fill
+              className="object-cover rounded-md"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {teamMembers.map((member) => (
-              <div
-                key={member.id}
-                onClick={() => setSelectedMember(member)}
-                className="cursor-pointer flex flex-col items-center bg-white rounded-lg shadow hover:shadow-lg transition-all transform hover:translate-y-[-3px] group relative h-full"
-              >
-                <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4 mt-2 flex-shrink-0">
-                  <Image
-                    src={member.imageUrl}
-                    alt={member.name}
-                    fill
-                    className="object-cover rounded-md"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
-                </div>
-                <div className="flex flex-col items-center flex-grow p-3 sm:p-4 pt-0">
-                  <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300 mb-2">
-                    {member.name}
-                  </h3>
-                  <p className="text-sm sm:text-base text-center mb-4 flex-grow">
-                    {member.description}
-                  </p>
-                </div>
+          <div className="flex flex-col items-center flex-grow p-3 sm:p-4 pt-0">
+            <h3 className="text-base sm:text-lg font-bold group-hover:text-arteng-dark transition-colors duration-300 mb-2">
+              {member.name}
+            </h3>
+            <p className="text-sm sm:text-base text-center mb-4 flex-grow">
+              {member.description}
+            </p>
+          </div>
 
-                {/* Click indicator - Fixed position at bottom */}
-                <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="flex items-center text-arteng-dark">
-                    <span className="text-sm font-medium mr-1">
-                      Click for more
-                    </span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-3 w-3 sm:h-4 sm:w-4"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M13 7l5 5m0 0l-5 5m5-5H6"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            ))}
+          <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="flex items-center text-arteng-dark">
+              <span className="text-sm font-medium mr-1">Click for more</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-3 w-3 sm:h-4 sm:w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"
+                />
+              </svg>
+            </div>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Member Modal - Mobile Responsive */}
       {selectedMember && (

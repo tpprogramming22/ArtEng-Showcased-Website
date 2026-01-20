@@ -110,95 +110,95 @@ export default function Home() {
   });
 
   // Fetch articles from API with retry logic
-  useEffect(() => {
-    const fetchArticles = async (retryCount = 0) => {
-      try {
-        setLoadingNews(true);
-        const response = await fetch(
-          "https://arteng-be.onrender.com/api/v1/articles"
-        );
+  // useEffect(() => {
+  //   const fetchArticles = async (retryCount = 0) => {
+  //     try {
+  //       setLoadingNews(true);
+  //       const response = await fetch(
+  //         "https://arteng-be.onrender.com/api/v1/articles"
+  //       );
 
-        if (response.status === 429 && retryCount < 2) {
-          // Wait and retry for rate limit
-          console.log("Rate limited, retrying in 3 seconds...");
-          setTimeout(() => fetchArticles(retryCount + 1), 3000);
-          return;
-        }
+  //       if (response.status === 429 && retryCount < 2) {
+  //         // Wait and retry for rate limit
+  //         console.log("Rate limited, retrying in 3 seconds...");
+  //         setTimeout(() => fetchArticles(retryCount + 1), 3000);
+  //         return;
+  //       }
 
-        if (response.ok) {
-          const data = await response.json();
-          if (data.success && data.data) {
-            const transformedArticles = data.data.map(transformArticle);
-            console.log("Homepage articles:", transformedArticles); // Debug log
-            // Take the first 3 articles for the homepage
-            setFeaturedNews(transformedArticles.slice(0, 3));
-          }
-        } else {
-          console.error(
-            "Failed to fetch articles:",
-            response.status,
-            response.statusText
-          );
-        }
-      } catch (err) {
-        console.error("Error fetching articles:", err);
-        if (retryCount < 2) {
-          console.log("Retrying articles fetch in 2 seconds...");
-          setTimeout(() => fetchArticles(retryCount + 1), 2000);
-        }
-        // Keep empty array on error
-      } finally {
-        setLoadingNews(false);
-      }
-    };
+  //       if (response.ok) {
+  //         const data = await response.json();
+  //         if (data.success && data.data) {
+  //           const transformedArticles = data.data.map(transformArticle);
+  //           console.log("Homepage articles:", transformedArticles); // Debug log
+  //           // Take the first 3 articles for the homepage
+  //           setFeaturedNews(transformedArticles.slice(0, 3));
+  //         }
+  //       } else {
+  //         console.error(
+  //           "Failed to fetch articles:",
+  //           response.status,
+  //           response.statusText
+  //         );
+  //       }
+  //     } catch (err) {
+  //       console.error("Error fetching articles:", err);
+  //       if (retryCount < 2) {
+  //         console.log("Retrying articles fetch in 2 seconds...");
+  //         setTimeout(() => fetchArticles(retryCount + 1), 2000);
+  //       }
+  //       // Keep empty array on error
+  //     } finally {
+  //       setLoadingNews(false);
+  //     }
+  //   };
 
-    fetchArticles();
-  }, []);
+  //   fetchArticles();
+  // }, []);
 
   // Fetch events from API with retry logic
-  useEffect(() => {
-    const fetchEvents = async (retryCount = 0) => {
-      try {
-        setLoadingEvents(true);
-        const response = await fetch(
-          "https://arteng-be.onrender.com/api/v1/events"
-        );
+  // useEffect(() => {
+  //   const fetchEvents = async (retryCount = 0) => {
+  //     try {
+  //       setLoadingEvents(true);
+  //       const response = await fetch(
+  //         "https://arteng-be.onrender.com/api/v1/events"
+  //       );
 
-        if (response.status === 429 && retryCount < 2) {
-          // Wait and retry for rate limit
-          console.log("Rate limited, retrying in 3 seconds...");
-          setTimeout(() => fetchEvents(retryCount + 1), 3000);
-          return;
-        }
+  //       if (response.status === 429 && retryCount < 2) {
+  //         // Wait and retry for rate limit
+  //         console.log("Rate limited, retrying in 3 seconds...");
+  //         setTimeout(() => fetchEvents(retryCount + 1), 3000);
+  //         return;
+  //       }
 
-        if (response.ok) {
-          const data = await response.json();
-          if (data.success && data.data) {
-            const transformedEvents = data.data.map(transformEvent);
-            // Take the first 3 events for the homepage
-            setUpcomingEvents(transformedEvents.slice(0, 3));
-          }
-        } else {
-          console.error(
-            "Failed to fetch events:",
-            response.status,
-            response.statusText
-          );
-        }
-      } catch (err) {
-        console.error("Error fetching events:", err);
-        if (retryCount < 2) {
-          console.log("Retrying events fetch in 2 seconds...");
-          setTimeout(() => fetchEvents(retryCount + 1), 2000);
-        }
-        // Keep empty array on error
-      } finally {
-        setLoadingEvents(false);
-      }
-    };
+  //       if (response.ok) {
+  //         const data = await response.json();
+  //         if (data.success && data.data) {
+  //           const transformedEvents = data.data.map(transformEvent);
+  //           // Take the first 3 events for the homepage
+  //           setUpcomingEvents(transformedEvents.slice(0, 3));
+  //         }
+  //       } else {
+  //         console.error(
+  //           "Failed to fetch events:",
+  //           response.status,
+  //           response.statusText
+  //         );
+  //       }
+  //     } catch (err) {
+  //       console.error("Error fetching events:", err);
+  //       if (retryCount < 2) {
+  //         console.log("Retrying events fetch in 2 seconds...");
+  //         setTimeout(() => fetchEvents(retryCount + 1), 2000);
+  //       }
+  //       // Keep empty array on error
+  //     } finally {
+  //       setLoadingEvents(false);
+  //     }
+  //   };
 
-    fetchEvents();
-  }, []);
+  //   fetchEvents();
+  // }, []);
 
   const closeEventModal = () => {
     setSelectedEvent(null);
@@ -296,9 +296,8 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-2">
-            {/* Team members arranged by surname alphabetical order */}
-            <div className="flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow">
+<div className="flex flex-row justify-evenly items-center">
+  <div className="flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow max-w-[25%]">
               <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4 mt-2">
                 <Image
                   src="/wendynew.png"
@@ -315,7 +314,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow">
+  <div className="flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow max-w-[25%]">
               <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4 mt-2">
                 <Image
                   src="/steve.png"
@@ -334,46 +333,12 @@ export default function Home() {
                 Development.
               </p>
             </div>
-
-            <div className="flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow">
-              <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4 mt-2">
-                <Image
-                  src="/jess-smith.jpg"
-                  alt="Joan Smith"
-                  fill
-                  className="object-cover rounded-md"
-                />
-              </div>
-              <h3 className="text-base sm:text-lg font-bold">Joan Smith</h3>
-              <p className="text-sm sm:text-base text-center mb-4">
-                With over 20 years of experience in business advice and
-                guidance, Joan brings a wealth of knowledge in all areas of
-                business support.
-              </p>
-            </div>
-
-            <div className="flex flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow">
-              <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-3 sm:mb-4 mt-2">
-                <Image
-                  src="/adam.png"
-                  alt="Adam Snelleksz"
-                  fill
-                  className="object-cover rounded-md"
-                />
-              </div>
-              <h3 className="text-base sm:text-lg font-bold">Adam Snelleksz</h3>
-              <p className="text-sm sm:text-base text-center mb-4">
-                Adam has a wide and varied work history in marketing,
-                communication and PR with over 25 years experience in many
-                different roles and organisations.
-              </p>
-            </div>
           </div>
         </div>
       </section>
 
       {/* Latest News Section */}
-      <section className="py-10 md:py-16 px-4 md:px-8 bg-white">
+      {/* <section className="py-10 md:py-16 px-4 md:px-8 bg-white">
         <div className="container mx-auto">
           <div>
             <h2 className="text-4xl sm:text-4xl font-bold text-arteng-dark text-center sm:text-left">
@@ -411,10 +376,10 @@ export default function Home() {
             </div>
           )}
         </div>
-      </section>
+      </section> */}
 
       {/* Upcoming Events Section */}
-      <section className="py-10 md:py-16 px-4 md:px-8 bg-gray-50">
+      {/* <section className="py-10 md:py-16 px-4 md:px-8 bg-gray-50">
         <div className="container mx-auto">
           <div>
             <h2 className="text-4xl sm:text-4xl font-bold text-arteng-dark text-center sm:text-left">
@@ -457,7 +422,7 @@ export default function Home() {
             </div>
           )}
         </div>
-      </section>
+      </section> */}
 
       {/* Our Partners Section (renamed from Sponsors) */}
       <section className="py-10 md:py-16 px-4 md:px-8 bg-white">

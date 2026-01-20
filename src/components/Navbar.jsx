@@ -63,16 +63,16 @@ const Navbar = () => {
       {!isMobile && (
         <div className="flex items-center space-x-8">
           <Link href="/" className="text-lg hover:underline">Home</Link>
-          <Link href="/events" className="text-lg hover:underline">Events</Link>
-          <Link href="/news" className="text-lg hover:underline">News</Link>
+          {/* <Link href="/events" className="text-lg hover:underline">Events</Link>
+          <Link href="/news" className="text-lg hover:underline">News</Link> */}
           <Link href="/about-us" className="text-lg hover:underline">About Us</Link>
           <Link href="/membership" className="text-lg hover:underline">Membership</Link>
           <Link href="/partners" className="text-lg hover:underline">Partners</Link>
           <Link href="/faq" className="text-lg hover:underline">FAQ</Link>
           <Link href="/contact" className="text-lg hover:underline">Contact</Link>
-          <Link href="/login" className="ml-4 bg-arteng-dark text-white font-bold text-lg rounded flex items-center justify-center h-10 w-28 pt-[3px]">
+          {/* <Link href="/login" className="ml-4 bg-arteng-dark text-white font-bold text-lg rounded flex items-center justify-center h-10 w-28 pt-[3px]">
             SIGN UP
-          </Link>
+          </Link> */}
         </div>
       )}
 
@@ -81,20 +81,20 @@ const Navbar = () => {
         <div className="fixed inset-0 bg-white pt-20 z-40 overflow-auto">
           <div className="flex flex-col space-y-6 p-6">
             <Link href="/" className="text-2xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>Home</Link>
-            <Link href="/events" className="text-2xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>Events</Link>
-            <Link href="/news" className="text-2xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>News</Link>
+            {/* <Link href="/events" className="text-2xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>Events</Link>
+            <Link href="/news" className="text-2xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>News</Link> */}
             <Link href="/about-us" className="text-2xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>About Us</Link>
             <Link href="/membership" className="text-2xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>Membership</Link>
             <Link href="/partners" className="text-2xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>Partners</Link>
             <Link href="/faq" className="text-2xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>FAQ</Link>
             <Link href="/contact" className="text-2xl font-medium border-b border-gray-200 pb-2" onClick={closeMenu}>Contact</Link>
-            <Link 
+            {/* <Link 
               href="/login" 
               className="bg-arteng-dark text-white font-bold text-xl rounded flex items-center justify-center py-3 px-6 mt-4"
               onClick={closeMenu}
             >
               SIGN UP
-            </Link>
+            </Link> */}
           </div>
         </div>
       )}
