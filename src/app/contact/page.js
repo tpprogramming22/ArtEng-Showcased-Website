@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import MailtoNotifyForm from "@/components/SignUp";
+import MailtoNotifyForm from "../../../_drafts/SignUp";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({

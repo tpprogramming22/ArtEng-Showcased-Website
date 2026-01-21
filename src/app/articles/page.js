@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import SectionHeader from '@/components/SectionHeader';
 import Article from '@/components/Article';
-import MailtoNotifyForm from '@/components/SignUp';
+import MailtoNotifyForm from '../../../_drafts/SignUp';
 import { useState } from 'react';
 
 export default function EventsPage() {
